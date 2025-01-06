@@ -5,7 +5,12 @@
 [node name="DebugPanel" type="CanvasLayer"]
 script = ExtResource("1_mau52")
 
-[node name="LabelsContainer" type="VBoxContainer" parent="."]
-unique_name_in_owner = true
+[node name="MarginContainer" type="MarginContainer" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="LabelsContainer" type="VBoxContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
