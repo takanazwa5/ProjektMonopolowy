@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://byqugljogsx07"]
+[gd_scene load_steps=3 format=3 uid="uid://byqugljogsx07"]
 
 [ext_resource type="Script" path="res://features/main_menu/main_menu.gd" id="1_xtl3e"]
+[ext_resource type="AudioStream" uid="uid://dhtqahbcgq3xl" path="res://features/main_menu/61392__gleepglop__beercanopening.wav" id="2_4gv6e"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -39,3 +40,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "Wyjdź"
+
+[node name="BeerCanOpeningSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_4gv6e")
