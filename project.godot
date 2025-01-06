@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Debug="*res://features/debug_panel/debug_panel.tscn"
+DebugPanel="*res://features/debug_panel/debug_panel.tscn"
 
 [debug]
 

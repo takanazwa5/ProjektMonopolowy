@@ -1,4 +1,4 @@
-class_name DebugPanel extends CanvasLayer
+extends CanvasLayer
 
 
 var label_settings : LabelSettings = LabelSettings.new()
