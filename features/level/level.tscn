@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://bs2knhaaun6oi"]
+
+[ext_resource type="Texture2D" uid="uid://3ab7ffd0rw4f" path="res://icon.svg" id="1_tdkuc"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_raucf"]
+
+[sub_resource type="Sky" id="Sky_s5glk"]
+sky_material = SubResource("ProceduralSkyMaterial_raucf")
+
+[sub_resource type="Environment" id="Environment_l7qvs"]
+background_mode = 2
+sky = SubResource("Sky_s5glk")
+tonemap_mode = 3
+tonemap_white = 7.0
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wd0xt"]
+albedo_texture = ExtResource("1_tdkuc")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bpbos"]
+size = Vector2(20, 20)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_42hd5"]
+
+[node name="Level" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_l7qvs")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.965926, -0.0669873, -0.25, 0.258819, 0.25, 0.933013, 0, -0.965926, 0.258819, 0, 0, 0)
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+material_override = SubResource("StandardMaterial3D_wd0xt")
+mesh = SubResource("PlaneMesh_bpbos")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("WorldBoundaryShape3D_42hd5")
