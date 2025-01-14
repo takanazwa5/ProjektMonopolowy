@@ -37,3 +37,8 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+
+func _process(_delta: float) -> void:
+
+	DebugPanel.add_property(%StateMachine.state.name, "State", 3)

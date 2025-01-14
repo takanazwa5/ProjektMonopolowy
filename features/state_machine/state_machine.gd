@@ -4,7 +4,7 @@ class_name StateMachine extends Node
 @export var initial_state : State
 
 
-var state : State = initial_state
+@onready var state : State = initial_state
 
 
 func _ready() -> void:
@@ -14,7 +14,7 @@ func _ready() -> void:
 	for child : Node in get_children():
 
 		assert(child is State, "(%s) StateMachine contains incompatible child node." % get_path())
-		child.finished.connect(_on_state_finished)
+		child.transition.connect(_on_state_transition)
 
 	await owner.ready
 	state.enter()
@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 	state.physics_update(delta)
 
 
-func _on_state_finished(new_state: State) -> void:
+func _on_state_transition(new_state: State) -> void:
 
 	state.exit()
 	state = new_state

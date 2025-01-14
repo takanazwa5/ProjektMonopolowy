@@ -1,7 +1,7 @@
 class_name State extends Node
 
 
-signal finished(new_state: State)
+signal transition(new_state: State)
 
 
 func enter() -> void:
@@ -29,6 +29,6 @@ func exit() -> void:
 	pass
 
 
-func transition(new_state: State) -> void:
+func transition_to(new_state: State) -> void:
 
-	finished.emit(new_state)
+	transition.emit(new_state)
