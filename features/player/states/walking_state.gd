@@ -7,6 +7,8 @@ class_name PlayerWalkingState extends State
 func enter() -> void:
 
 	%HeadbobAnimationPlayer.play("Headbob")
+	%HeadbobAnimationPlayer.speed_scale = 1.5
+	player.speed = Player.SPEED_WALKING
 
 
 func input_event(event: InputEvent) -> void:
@@ -21,3 +23,8 @@ func update(_delta: float) -> void:
 	if is_zero_approx(player.velocity.length()):
 
 		transition.emit(%IdleState)
+
+
+func exit() -> void:
+
+	%HeadbobAnimationPlayer.speed_scale = 1.0

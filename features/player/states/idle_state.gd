@@ -6,7 +6,8 @@ class_name PlayerIdleState extends State
 
 func enter() -> void:
 
-	%HeadbobAnimationPlayer.pause()
+	%HeadbobAnimationPlayer.stop(true)
+	%Camera.create_tween().tween_property(%Camera, "position", Vector3.ZERO, 0.1).from_current()
 
 
 func input_event(event: InputEvent) -> void:

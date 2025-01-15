@@ -1,7 +1,11 @@
 class_name Player extends CharacterBody3D
 
 
-const SPEED : float = 2.5
+const SPEED_WALKING : float = 2.5
+const SPEED_CROUCHING : float = 1.5
+
+
+var speed : float = SPEED_WALKING
 
 
 func _ready() -> void:
@@ -21,6 +25,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 
 	if not is_on_floor():
+
 		velocity += get_gravity() * delta
 
 	var input_dir : Vector2 = Input.get_vector("walk_left", "walk_right", "walk_forward", "walk_backward")
@@ -30,11 +35,14 @@ func _physics_process(delta: float) -> void:
 	DebugPanel.add_property(direction, "direction", 2)
 
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
+
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+
+		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.z = move_toward(velocity.z, 0, speed)
 
 	move_and_slide()
 
