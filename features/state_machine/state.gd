@@ -1,6 +1,7 @@
 class_name State extends Node
 
 
+@warning_ignore("unused_signal")
 signal transition(new_state: State)
 
 
@@ -27,8 +28,3 @@ func physics_update(_delta: float) -> void:
 func exit() -> void:
 
 	pass
-
-
-func transition_to(new_state: State) -> void:
-
-	transition.emit(new_state)

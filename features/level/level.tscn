@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bs2knhaaun6oi"]
+[gd_scene load_steps=11 format=3 uid="uid://bs2knhaaun6oi"]
 
 [ext_resource type="Texture2D" uid="uid://3ab7ffd0rw4f" path="res://icon.svg" id="1_tdkuc"]
 
@@ -26,6 +26,15 @@ size = Vector2(20, 20)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_42hd5"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lyv7a"]
+albedo_texture = ExtResource("1_tdkuc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yfh3u"]
+albedo_texture = ExtResource("1_tdkuc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0hd4o"]
+albedo_texture = ExtResource("1_tdkuc")
+
 [node name="Level" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -42,3 +51,36 @@ mesh = SubResource("PlaneMesh_bpbos")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
 shape = SubResource("WorldBoundaryShape3D_42hd5")
+
+[node name="CrouchBoxes" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CrouchBoxes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.24, 0)
+material_override = SubResource("StandardMaterial3D_lyv7a")
+use_collision = true
+size = Vector3(1, 0.5, 1)
+
+[node name="Label3D" type="Label3D" parent="CrouchBoxes/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.51)
+text = "1.99m"
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CrouchBoxes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0)
+material_override = SubResource("StandardMaterial3D_yfh3u")
+use_collision = true
+size = Vector3(1, 0.5, 1)
+
+[node name="Label3D" type="Label3D" parent="CrouchBoxes/CSGBox3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00999999, 0.51)
+text = "2m"
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CrouchBoxes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.26, 0)
+material_override = SubResource("StandardMaterial3D_0hd4o")
+use_collision = true
+size = Vector3(1, 0.5, 1)
+
+[node name="Label3D" type="Label3D" parent="CrouchBoxes/CSGBox3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02, 0.51)
+text = "2.01m"
