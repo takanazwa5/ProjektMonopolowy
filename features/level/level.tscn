@@ -55,7 +55,7 @@ mesh = SubResource("PlaneMesh_bpbos")
 shape = SubResource("WorldBoundaryShape3D_42hd5")
 
 [node name="CrouchBoxes" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 8)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CrouchBoxes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.24, 0)
@@ -90,7 +90,113 @@ text = "2.01m"
 [node name="Trash" type="Node" parent="."]
 
 [node name="RubberDuck" parent="Trash" instance=ExtResource("2_cxhik")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 1.4, 0, -1.5)
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 1.1, 0, -2.7)
 
 [node name="CanRusted" parent="Trash" instance=ExtResource("3_v2jmj")]
-transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -1.3, 0, -1.5)
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 1.4, 0, -3.3)
+
+[node name="Prototype" type="Node3D" parent="."]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Prototype"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 1.3, 0)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Prototype/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.2)
+use_collision = true
+size = Vector3(0.1, 2.6, 12.4)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Prototype/CSGCombiner3D/CSGBox3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.38419e-07, -0.1, 0.0999999)
+operation = 2
+size = Vector3(1.2, 2.4, 0.6)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Prototype/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.2, 0, -1.2)
+use_collision = true
+size = Vector3(0.1, 2.6, 12.4)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Prototype/CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.6, 0, 5)
+use_collision = true
+size = Vector3(0.1, 2.6, 9.2)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Prototype/CSGCombiner3D/CSGBox3D4"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -0.1, 1.7)
+operation = 2
+size = Vector3(1.2, 2.4, 0.6)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Prototype/CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.6, 0, -7.4)
+use_collision = true
+size = Vector3(0.1, 2.6, 9.2)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Prototype"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.45, 1.1, 4.05)
+use_collision = true
+size = Vector3(0.5, 2.2, 1.7)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Prototype"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.45, 0.95, 0.1)
+use_collision = true
+size = Vector3(1.1, 1.9, 3)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Prototype"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95, 0.95, 0.1)
+use_collision = true
+size = Vector3(1.1, 1.9, 3)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Prototype"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.45, 1.1, 1)
+use_collision = true
+size = Vector3(0.5, 2.2, 3)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="Prototype"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.1, 1.25, -7.1)
+use_collision = true
+size = Vector3(0.5, 2.5, 7.5)
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="Prototype"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 2.05, 1.25, -6.1)
+use_collision = true
+size = Vector3(0.6, 2.5, 1.3)
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="Prototype"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1.05, 0.5, -4.95)
+use_collision = true
+size = Vector3(6.8, 1, 1)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Prototype"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.5, 1.1, 4.45)
+use_collision = true
+size = Vector3(0.8, 2.2, 1.5)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Prototype"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.9, 1.1, 2.15)
+use_collision = true
+size = Vector3(0.8, 2.2, 1.5)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Prototype"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.3, 1.1, -1.35)
+use_collision = true
+size = Vector3(0.8, 2.2, 1.5)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Prototype"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.3, 1.1, -4.45)
+use_collision = true
+size = Vector3(0.8, 2.2, 1.5)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Prototype"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.3, 1.1, -5.95)
+use_collision = true
+size = Vector3(0.8, 2.2, 1.5)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Prototype"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.1, 4.45)
+use_collision = true
+size = Vector3(0.8, 2.2, 1.5)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Prototype"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.25, 0.75, 4.55)
+use_collision = true
+size = Vector3(0.6, 1.5, 0.8)
