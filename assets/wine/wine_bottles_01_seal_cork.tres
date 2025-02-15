@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://b5uhy1b7ahihm"]
+
+[ext_resource type="Texture2D" uid="uid://ctmyissexw5re" path="res://assets/wine/textures/wine_bottles_01_diff_1k.jpg" id="1_b7jce"]
+[ext_resource type="Texture2D" uid="uid://ubnamjel6w83" path="res://assets/wine/textures/wine_bottles_01_arm_1k.jpg" id="2_xwxv7"]
+[ext_resource type="Texture2D" uid="uid://bguu2wacuhe7p" path="res://assets/wine/textures/wine_bottles_01_nor_gl_1k.jpg" id="3_idj62"]
+
+[resource]
+resource_name = "wine_bottles_01_seal_cork"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_b7jce")
+metallic = 1.0
+metallic_texture = ExtResource("2_xwxv7")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_xwxv7")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_idj62")

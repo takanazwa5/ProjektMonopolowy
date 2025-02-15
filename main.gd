@@ -1,6 +1,10 @@
 class_name Main extends Node
 
 
+static var player : Player
+static var level : Level
+
+
 func _ready() -> void:
 
 	print("Main scene ready.")

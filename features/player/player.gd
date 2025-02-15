@@ -10,9 +10,12 @@ var speed : float = SPEED_WALKING
 var _input_dir : Vector2 = Vector2()
 var _direction : Vector3 = Vector3()
 
+var item_in_hand : Item
+
 
 func _ready() -> void:
 
+	Main.player = self
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
@@ -23,6 +26,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		rotate_y(-event.relative.x * 0.001)
 		%Camera.rotate_x(-event.relative.y * 0.001)
 		%Camera.rotation.x = clampf(%Camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+
+	if item_in_hand is Item and event.is_action_pressed("drop_item"):
+
+		item_in_hand.reparent(Main.level, true)
+		item_in_hand.freeze = false
+		item_in_hand = null
 
 
 func _physics_process(delta: float) -> void:
