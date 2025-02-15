@@ -7,6 +7,9 @@ const SPEED_CROUCHING : float = 1.5
 
 var speed : float = SPEED_WALKING
 
+var _input_dir : Vector2 = Vector2()
+var _direction : Vector3 = Vector3()
+
 
 func _ready() -> void:
 
@@ -31,8 +34,8 @@ func _physics_process(delta: float) -> void:
 	var input_dir : Vector2 = Input.get_vector("walk_left", "walk_right", "walk_forward", "walk_backward")
 	var direction : Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
-	DebugPanel.add_property(input_dir, "input_dir", 1)
-	DebugPanel.add_property(direction, "direction", 2)
+	_input_dir = input_dir
+	_direction = direction
 
 	if direction:
 
@@ -49,4 +52,5 @@ func _physics_process(delta: float) -> void:
 
 func _process(_delta: float) -> void:
 
-	DebugPanel.add_property(%StateMachine.state.name, "State", 3)
+	DebugPanel.add_property(_input_dir, "input_dir", 2)
+	DebugPanel.add_property(_direction, "direction", 3)

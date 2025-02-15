@@ -1,8 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://x8jwi5g1tqbc"]
+[gd_scene load_steps=17 format=3 uid="uid://x8jwi5g1tqbc"]
 
 [ext_resource type="Script" path="res://features/player/player.gd" id="1_k7k3i"]
+[ext_resource type="Script" path="res://features/player/interaction_raycast.gd" id="2_8getu"]
 [ext_resource type="Script" path="res://features/state_machine/state_machine.gd" id="2_abh15"]
 [ext_resource type="Script" path="res://features/player/states/idle_state.gd" id="3_16d0v"]
+[ext_resource type="Script" path="res://features/player/reticle.gd" id="3_47jc2"]
 [ext_resource type="Script" path="res://features/player/states/walking_state.gd" id="4_5h70g"]
 [ext_resource type="Script" path="res://features/player/states/crouching_state.gd" id="5_uxnsi"]
 
@@ -208,6 +210,7 @@ _data = {
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 2
 script = ExtResource("1_k7k3i")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -228,6 +231,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 [node name="Camera" type="Camera3D" parent="CameraRoot"]
 unique_name_in_owner = true
 fov = 90.0
+
+[node name="InteractionRaycast" type="RayCast3D" parent="CameraRoot/Camera"]
+target_position = Vector3(0, 0, -1.5)
+collision_mask = 4
+script = ExtResource("2_8getu")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Reticle" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_47jc2")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 unique_name_in_owner = true
