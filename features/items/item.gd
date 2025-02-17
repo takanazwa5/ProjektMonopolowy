@@ -1,7 +1,7 @@
 class_name Item extends RigidBody3D
 
 
-@export var rig_position : Vector3
+var origin : Transform3D
 
 
 func _ready() -> void:
@@ -13,8 +13,11 @@ func _ready() -> void:
 
 func interact() -> void:
 
-	reparent(Main.player.item_rig, false)
-	position = rig_position
-	rotation = Vector3.ZERO
+	origin = global_transform
+	reparent(Main.player.item_preview)
+	transform = Transform3D()
 	freeze = true
-	Main.player.item_in_hand = self
+	Main.player.item_in_preview = self
+	Main.player.interaction_raycast.enabled = false
+	Main.player.can_move_camera = false
+	Main.player.can_move = false

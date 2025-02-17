@@ -9,7 +9,6 @@ points = PackedVector3Array(-0.0125, -0.0431746, -0.0290023, 0.0122035, 0.044659
 [node name="Marlboro" type="RigidBody3D"]
 collision_layer = 8
 script = ExtResource("1_r3ob2")
-rig_position = Vector3(0.093, -0.056, -0.123)
 
 [node name="marlboro256" parent="." instance=ExtResource("2_hm80g")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)

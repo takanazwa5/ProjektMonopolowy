@@ -13,3 +13,4 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 
 	get_collider().interact()
+	get_viewport().set_input_as_handled()
