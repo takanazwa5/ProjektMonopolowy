@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ec4tbts7gpl3"
-path.s3tc="res://.godot/imported/wine_bottles_01_label_clearwater_crystals_01_diff_1k.jpg-357450b834f44290e267959d17aa4015.s3tc.ctex"
+uid="uid://db8p7ba4f5s34"
+path.s3tc="res://.godot/imported/marlboro256_marlboro256.jpg-fb4dc27804bb058c12bf74a1bc0179aa.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "f9b85695fab5d9a2d113fec32c8a4b94"
+}
 
 [deps]
 
-source_file="res://assets/wine/textures/wine_bottles_01_label_clearwater_crystals_01_diff_1k.jpg"
-dest_files=["res://.godot/imported/wine_bottles_01_label_clearwater_crystals_01_diff_1k.jpg-357450b834f44290e267959d17aa4015.s3tc.ctex"]
+source_file="res://assets/fajki/marlboro/marlboro256_marlboro256.jpg"
+dest_files=["res://.godot/imported/marlboro256_marlboro256.jpg-fb4dc27804bb058c12bf74a1bc0179aa.s3tc.ctex"]
 
 [params]
 

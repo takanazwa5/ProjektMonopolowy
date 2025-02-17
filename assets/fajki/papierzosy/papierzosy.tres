@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dy5kofmapia6m"]
+
+[ext_resource type="Texture2D" uid="uid://45nvdrf8cepd" path="res://assets/fajki/papierzosy/papierzosy256_papierzosy256.jpg" id="1_70st6"]
+
+[resource]
+resource_name = "papierzosy"
+cull_mode = 2
+albedo_texture = ExtResource("1_70st6")

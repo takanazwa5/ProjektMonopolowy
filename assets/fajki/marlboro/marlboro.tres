@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://buc1b4tcfb1pu"]
+
+[ext_resource type="Texture2D" uid="uid://db8p7ba4f5s34" path="res://assets/fajki/marlboro/marlboro256_marlboro256.jpg" id="1_agwb8"]
+
+[resource]
+resource_name = "marlboro"
+cull_mode = 2
+albedo_texture = ExtResource("1_agwb8")

@@ -1,6 +1,9 @@
 class_name Item extends RigidBody3D
 
 
+@export var rig_position : Vector3
+
+
 func _ready() -> void:
 
 	if not collision_layer == 0b1000:
@@ -10,7 +13,8 @@ func _ready() -> void:
 
 func interact() -> void:
 
-	reparent(Main.player.get_node("%ItemRig"), false)
-	position = Vector3(0.125, -0.275, -0.215)
+	reparent(Main.player.item_rig, false)
+	position = rig_position
+	rotation = Vector3.ZERO
 	freeze = true
 	Main.player.item_in_hand = self

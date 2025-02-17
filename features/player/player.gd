@@ -13,6 +13,9 @@ var _direction : Vector3 = Vector3()
 var item_in_hand : Item
 
 
+@onready var item_rig : Node3D = %ItemRig
+
+
 func _ready() -> void:
 
 	Main.player = self
