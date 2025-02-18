@@ -19,12 +19,16 @@ var item_in_preview : Item
 @onready var item_rig : Node3D = %ItemRig
 @onready var item_preview : Node3D = %ItemPreview
 @onready var interaction_raycast : InteractionRaycast = %InteractionRaycast
+@onready var item_preview_prompt : Control = %ItemPreviewPrompt
 
 
 func _ready() -> void:
 
 	Main.player = self
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+	item_preview.child_entered_tree.connect(_on_item_entered_preview)
+	item_preview.child_exiting_tree.connect(_on_item_exited_preview)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -55,21 +59,15 @@ func _unhandled_input(event: InputEvent) -> void:
 
 		if event.is_action_pressed("interact"):
 
-			item_in_preview.reparent(item_rig, false)
 			item_in_hand = item_in_preview
-			item_in_preview = null
-			can_move_camera = true
-			can_move = true
 			item_preview.rotation = Vector3.ZERO
+			item_in_preview.reparent(item_rig, false)
 
 		elif event.is_action_pressed("drop_item"):
 
-			item_in_preview.reparent(Main.level)
 			item_in_preview.global_transform = item_in_preview.origin
-			item_in_preview = null
-			can_move_camera = true
-			can_move = true
 			interaction_raycast.enabled = true
+			item_in_preview.reparent(Main.level)
 			item_preview.rotation = Vector3.ZERO
 
 
@@ -110,3 +108,22 @@ func _process(_delta: float) -> void:
 	DebugPanel.add_property(can_move_camera, "can_move_camera", 7)
 	DebugPanel.add_property(item_in_hand, "item_in_hand", 8)
 	DebugPanel.add_property(item_in_preview, "item_in_preview", 9)
+
+
+func _on_item_entered_preview(item: Item) -> void:
+
+	item_in_preview = item
+	item_in_preview.transform = Transform3D()
+	item_in_preview.freeze = true
+	interaction_raycast.enabled = false
+	can_move_camera = false
+	can_move = false
+	item_preview_prompt.show()
+
+
+func _on_item_exited_preview(_item: Item) -> void:
+
+	item_in_preview = null
+	can_move_camera = true
+	can_move = true
+	item_preview_prompt.hide()

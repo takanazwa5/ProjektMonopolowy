@@ -14,10 +14,4 @@ func _ready() -> void:
 func interact() -> void:
 
 	origin = global_transform
-	reparent(Main.player.item_preview)
-	transform = Transform3D()
-	freeze = true
-	Main.player.item_in_preview = self
-	Main.player.interaction_raycast.enabled = false
-	Main.player.can_move_camera = false
-	Main.player.can_move = false
+	reparent(Main.player.item_preview, false)

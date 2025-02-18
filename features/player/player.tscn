@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://x8jwi5g1tqbc"]
+[gd_scene load_steps=18 format=3 uid="uid://x8jwi5g1tqbc"]
 
 [ext_resource type="Script" path="res://features/player/player.gd" id="1_k7k3i"]
 [ext_resource type="Script" path="res://features/player/interaction_raycast.gd" id="2_8getu"]
@@ -14,6 +14,10 @@ radial_segments = 16
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nkte3"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1j0sm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_set3t"]
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_xnuge"]
 resource_name = "Headbob"
@@ -262,6 +266,45 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("3_47jc2")
+
+[node name="ItemPreviewPrompt" type="Control" parent="UI"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/ItemPreviewPrompt"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -385.0
+offset_top = -247.0
+offset_right = 385.0
+offset_bottom = -207.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="UI/ItemPreviewPrompt/HBoxContainer"]
+layout_mode = 2
+text = "[E] Pick up"
+label_settings = SubResource("LabelSettings_set3t")
+
+[node name="Spacer" type="Control" parent="UI/ItemPreviewPrompt/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="UI/ItemPreviewPrompt/HBoxContainer"]
+layout_mode = 2
+text = "[G] Cancel"
+label_settings = SubResource("LabelSettings_set3t")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 unique_name_in_owner = true
