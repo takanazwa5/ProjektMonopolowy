@@ -1,10 +1,25 @@
 class_name InteractionRaycast extends RayCast3D
 
 
+var collider : Object
+
+
+@onready var reticle : Reticle = %Reticle
+
+
 func _process(_delta: float) -> void:
 
 	DebugPanel.add_property(get_collider(), "Collider", 5)
 
+	collider = get_collider()
+
+	if collider is Item or collider is Trash:
+
+		reticle.active = true
+
+	else:
+
+		reticle.active = false
 
 func _unhandled_input(event: InputEvent) -> void:
 
