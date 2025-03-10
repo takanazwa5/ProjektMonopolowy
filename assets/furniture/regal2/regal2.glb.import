@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c3kwweey3tj1k"
-path="res://.godot/imported/regal3.glb-d10799300f025a189fd42891393dcb49.scn"
+uid="uid://bju112nay1k2y"
+path="res://.godot/imported/regal2.glb-d3e4947d5401081d05dcafdd08f1a33e.scn"
 
 [deps]
 
-source_file="res://assets/furniture/regal3.glb"
-dest_files=["res://.godot/imported/regal3.glb-d10799300f025a189fd42891393dcb49.scn"]
+source_file="res://assets/furniture/regal2/regal2.glb"
+dest_files=["res://.godot/imported/regal2.glb-d3e4947d5401081d05dcafdd08f1a33e.scn"]
 
 [params]
 

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://0bcd4fv6wwk4"]
+
+[ext_resource type="PackedScene" uid="uid://bju112nay1k2y" path="res://assets/furniture/regal2/regal2.glb" id="1_ucnnx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ucnnx"]
+size = Vector3(2.50366, 1.13142, 1.0752)
+
+[node name="Regal2" type="StaticBody3D"]
+
+[node name="regal2" parent="." instance=ExtResource("1_ucnnx")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.565613, 0)
+shape = SubResource("BoxShape3D_ucnnx")

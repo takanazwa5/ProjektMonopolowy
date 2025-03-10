@@ -1,14 +1,12 @@
-[gd_scene load_steps=19 format=3 uid="uid://bs2knhaaun6oi"]
+[gd_scene load_steps=17 format=3 uid="uid://bs2knhaaun6oi"]
 
 [ext_resource type="Script" uid="uid://dlnqgbnp1auqy" path="res://features/level/level.gd" id="1_nw5ee"]
 [ext_resource type="Texture2D" uid="uid://3ab7ffd0rw4f" path="res://icon.svg" id="1_tdkuc"]
 [ext_resource type="PackedScene" uid="uid://bln3unycc30dx" path="res://features/trash/rubber_duck.tscn" id="2_cxhik"]
-[ext_resource type="PackedScene" uid="uid://bju112nay1k2y" path="res://assets/furniture/regal2.glb" id="3_qqrg4"]
 [ext_resource type="PackedScene" uid="uid://cleqmw7yeisb7" path="res://features/trash/can_rusted.tscn" id="3_v2jmj"]
-[ext_resource type="PackedScene" uid="uid://c3kwweey3tj1k" path="res://assets/furniture/regal3.glb" id="4_3y4uf"]
-[ext_resource type="PackedScene" uid="uid://c0s6fvw6piahv" path="res://features/items/marlboro.tscn" id="5_mfaqe"]
-[ext_resource type="PackedScene" uid="uid://daaf5b4tnvg2g" path="res://features/items/papierzosy.tscn" id="6_i578k"]
-[ext_resource type="PackedScene" uid="uid://cl3s31alslmw8" path="res://assets/furniture/regal1.glb" id="9_n722u"]
+[ext_resource type="PackedScene" uid="uid://bjlk17hxwguga" path="res://assets/furniture/regal1/regal_1.tscn" id="5_8yp3g"]
+[ext_resource type="PackedScene" uid="uid://pjcdy84i8lmn" path="res://assets/furniture/regal3/regal_3.tscn" id="6_v1stt"]
+[ext_resource type="PackedScene" uid="uid://0bcd4fv6wwk4" path="res://assets/furniture/regal2/regal_2.tscn" id="7_qqrg4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_raucf"]
 
@@ -60,24 +58,6 @@ mesh = SubResource("PlaneMesh_bpbos")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
 shape = SubResource("WorldBoundaryShape3D_42hd5")
-
-[node name="regal2" parent="Ground" instance=ExtResource("3_qqrg4")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.8, 0, -0.3)
-
-[node name="regal6" parent="Ground" instance=ExtResource("3_qqrg4")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -0.7, 0, -0.3)
-
-[node name="regal3" parent="Ground" instance=ExtResource("4_3y4uf")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 0, 1)
-
-[node name="regal7" parent="Ground" instance=ExtResource("4_3y4uf")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 0, -4.8)
-
-[node name="regal4" parent="Ground" instance=ExtResource("4_3y4uf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0, -7.05)
-
-[node name="regal5" parent="Ground" instance=ExtResource("4_3y4uf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, -7.05)
 
 [node name="CrouchBoxes" type="Node3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 8)
@@ -161,29 +141,38 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.15,
 use_collision = true
 size = Vector3(5, 1, 1)
 
-[node name="Marlboro" parent="." instance=ExtResource("5_mfaqe")]
-transform = Transform3D(0.965926, -0.258819, 0, 2.98023e-08, -4.37114e-08, 1, -0.258819, -0.965926, -2.98023e-08, -2.48984, 1.0125, -4.57094)
-
-[node name="Marlboro2" parent="." instance=ExtResource("5_mfaqe")]
-transform = Transform3D(0.997971, 0.0636788, 9.53087e-09, 2.98023e-08, -4.37114e-08, 1, 0.0636788, -0.997971, -2.82372e-08, -2.3847, 1.0125, -4.62797)
-
-[node name="Papierzosy" parent="." instance=ExtResource("6_i578k")]
-transform = Transform3D(0.99521, 0, -0.0977566, 0, 1, 0, 0.0977566, 0, 0.99521, -2.23907, 1.04466, -4.57307)
-
-[node name="regal1" parent="." instance=ExtResource("9_n722u")]
+[node name="Regal1" parent="Prototype" instance=ExtResource("5_8yp3g")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.05, 0, -6.1)
 
-[node name="regal3" parent="." instance=ExtResource("4_3y4uf")]
+[node name="Regal8" parent="Prototype" instance=ExtResource("6_v1stt")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.7, 0, 3.5)
 
-[node name="regal2" parent="." instance=ExtResource("9_n722u")]
+[node name="Regal9" parent="Prototype" instance=ExtResource("5_8yp3g")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1.2, 0, 3.5)
 
-[node name="regal5" parent="." instance=ExtResource("9_n722u")]
+[node name="Regal10" parent="Prototype" instance=ExtResource("5_8yp3g")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -5, 0, -1.3)
 
-[node name="regal6" parent="." instance=ExtResource("9_n722u")]
+[node name="Regal11" parent="Prototype" instance=ExtResource("5_8yp3g")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -5, 0, 3.2)
 
-[node name="regal4" parent="." instance=ExtResource("9_n722u")]
+[node name="Regal12" parent="Prototype" instance=ExtResource("5_8yp3g")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 1.2)
+
+[node name="Regal7" parent="Prototype" instance=ExtResource("7_qqrg4")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.8, 0, -0.3)
+
+[node name="Regal2" parent="Prototype" instance=ExtResource("7_qqrg4")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -0.7, 0, -0.3)
+
+[node name="Regal6" parent="Prototype" instance=ExtResource("6_v1stt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 0, 1)
+
+[node name="Regal5" parent="Prototype" instance=ExtResource("6_v1stt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 0, -4.8)
+
+[node name="Regal3" parent="Prototype" instance=ExtResource("6_v1stt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0, -7.05)
+
+[node name="Regal4" parent="Prototype" instance=ExtResource("6_v1stt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, -7.05)
