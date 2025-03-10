@@ -10,7 +10,7 @@ script = ExtResource("1_11aar")
 [node name="Level" parent="." instance=ExtResource("2_ouhrm")]
 
 [node name="Player" parent="." instance=ExtResource("3_txauv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0572, 1, 7.61406)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -2.4)
 
 [node name="DebugInfo" type="CanvasLayer" parent="."]
 
