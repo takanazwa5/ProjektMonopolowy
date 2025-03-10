@@ -1,9 +1,6 @@
 class_name Item extends RigidBody3D
 
 
-var origin : Transform3D
-
-
 func _ready() -> void:
 
 	if not collision_layer == 0b1000:
@@ -13,5 +10,5 @@ func _ready() -> void:
 
 func interact() -> void:
 
-	origin = global_transform
-	reparent(Main.player.item_preview, false)
+	var copy : Item = duplicate()
+	Main.player.item_preview.add_child(copy)

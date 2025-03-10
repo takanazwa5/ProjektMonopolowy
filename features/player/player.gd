@@ -50,8 +50,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	if item_in_hand is Item and event.is_action_pressed("drop_item"):
 
-		item_in_hand.reparent(Main.level, true)
-		item_in_hand.freeze = false
+		item_in_hand.queue_free()
 		item_in_hand = null
 		interaction_raycast.enabled = true
 
@@ -65,9 +64,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 		elif event.is_action_pressed("drop_item"):
 
-			item_in_preview.global_transform = item_in_preview.origin
+			item_in_preview.queue_free()
 			interaction_raycast.enabled = true
-			item_in_preview.reparent(Main.level)
 			item_preview.rotation = Vector3.ZERO
 
 
