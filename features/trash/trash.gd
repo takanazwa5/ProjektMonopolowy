@@ -1,4 +1,4 @@
-class_name Trash extends StaticBody3D
+class_name Trash extends Interactable
 
 
 func _ready() -> void:

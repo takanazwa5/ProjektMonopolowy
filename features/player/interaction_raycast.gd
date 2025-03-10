@@ -1,7 +1,7 @@
 class_name InteractionRaycast extends RayCast3D
 
 
-var collider : Object
+var collider : Interactable
 
 
 @onready var reticle : Reticle = %Reticle
@@ -13,7 +13,7 @@ func _process(_delta: float) -> void:
 
 	collider = get_collider()
 
-	if collider is Item or collider is Trash:
+	if collider and collider.can_interact:
 
 		reticle.active = true
 
@@ -27,5 +27,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 		return
 
+	if not collider.can_interact:
+
+		return
+
 	get_collider().interact()
-	get_viewport().set_input_as_handled()

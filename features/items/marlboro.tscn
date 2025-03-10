@@ -6,7 +6,7 @@
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4eye6"]
 points = PackedVector3Array(-0.0125, -0.0431746, -0.0290023, 0.0122035, 0.0446599, 0.03, 0.0122035, 0.0446599, -0.03, 0.0122035, -0.0446599, 0.03, -0.0125, 0.0431746, 0.0290023, 0.0122035, -0.0446599, -0.03, -0.0125, 0.0431746, -0.0290023, -0.0125, -0.0431746, 0.0290023)
 
-[node name="Marlboro" type="RigidBody3D"]
+[node name="Marlboro" type="StaticBody3D"]
 collision_layer = 8
 script = ExtResource("1_r3ob2")
 

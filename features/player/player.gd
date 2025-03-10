@@ -8,10 +8,6 @@ const SPEED_CROUCHING : float = 1.5
 var speed : float = SPEED_WALKING
 var can_move_camera : bool = true
 var can_move : bool = true
-
-var _input_dir : Vector2 = Vector2()
-var _direction : Vector3 = Vector3()
-
 var item_in_hand : Item
 var item_in_preview : Item
 
@@ -20,6 +16,7 @@ var item_in_preview : Item
 @onready var item_preview : Node3D = %ItemPreview
 @onready var interaction_raycast : InteractionRaycast = %InteractionRaycast
 @onready var item_preview_prompt : Control = %ItemPreviewPrompt
+@onready var camera : Camera3D = %Camera
 
 
 func _ready() -> void:
@@ -45,14 +42,13 @@ func _unhandled_input(event: InputEvent) -> void:
 			return
 
 		rotate_y(-event.relative.x * 0.001)
-		%Camera.rotate_x(-event.relative.y * 0.001)
-		%Camera.rotation.x = clampf(%Camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+		camera.rotate_x(-event.relative.y * 0.001)
+		camera.rotation.x = clampf(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
 	if item_in_hand is Item and event.is_action_pressed("drop_item"):
 
 		item_in_hand.queue_free()
 		item_in_hand = null
-		interaction_raycast.enabled = true
 
 	if item_in_preview is Item:
 
@@ -65,7 +61,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		elif event.is_action_pressed("drop_item"):
 
 			item_in_preview.queue_free()
-			interaction_raycast.enabled = true
 			item_preview.rotation = Vector3.ZERO
 
 
@@ -81,9 +76,6 @@ func _physics_process(delta: float) -> void:
 
 	var input_dir : Vector2 = Input.get_vector("walk_left", "walk_right", "walk_forward", "walk_backward")
 	var direction : Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-
-	_input_dir = input_dir
-	_direction = direction
 
 	if direction:
 
@@ -110,8 +102,6 @@ func _on_item_entered_preview(item: Item) -> void:
 
 	item_in_preview = item
 	item_in_preview.transform = Transform3D()
-	item_in_preview.freeze = true
-	interaction_raycast.enabled = false
 	can_move_camera = false
 	can_move = false
 	item_preview_prompt.show()

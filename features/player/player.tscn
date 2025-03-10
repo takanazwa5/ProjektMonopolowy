@@ -241,7 +241,8 @@ unique_name_in_owner = true
 [node name="InteractionRaycast" type="RayCast3D" parent="CameraRoot/Camera"]
 unique_name_in_owner = true
 target_position = Vector3(0, 0, -1.5)
-collision_mask = 12
+collision_mask = 28
+collide_with_areas = true
 script = ExtResource("2_8getu")
 
 [node name="ItemRig" type="Node3D" parent="CameraRoot/Camera"]

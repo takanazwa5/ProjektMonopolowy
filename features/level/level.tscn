@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://bs2knhaaun6oi"]
+[gd_scene load_steps=22 format=3 uid="uid://bs2knhaaun6oi"]
 
 [ext_resource type="Script" uid="uid://dlnqgbnp1auqy" path="res://features/level/level.gd" id="1_nw5ee"]
 [ext_resource type="Texture2D" uid="uid://3ab7ffd0rw4f" path="res://icon.svg" id="1_tdkuc"]
 [ext_resource type="PackedScene" uid="uid://bln3unycc30dx" path="res://features/trash/rubber_duck.tscn" id="2_cxhik"]
 [ext_resource type="PackedScene" uid="uid://cleqmw7yeisb7" path="res://features/trash/can_rusted.tscn" id="3_v2jmj"]
+[ext_resource type="Script" uid="uid://cvuxt0bojoyd8" path="res://features/level/counter.gd" id="5_3y4uf"]
 [ext_resource type="PackedScene" uid="uid://bjlk17hxwguga" path="res://assets/furniture/regal1/regal_1.tscn" id="5_8yp3g"]
 [ext_resource type="PackedScene" uid="uid://c0s6fvw6piahv" path="res://features/items/marlboro.tscn" id="5_mfaqe"]
 [ext_resource type="PackedScene" uid="uid://daaf5b4tnvg2g" path="res://features/items/papierzosy.tscn" id="6_i578k"]
@@ -42,6 +43,12 @@ albedo_texture = ExtResource("1_tdkuc")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0hd4o"]
 albedo_texture = ExtResource("1_tdkuc")
+
+[sub_resource type="BoxMesh" id="BoxMesh_qqrg4"]
+size = Vector3(5, 1, 0.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qqrg4"]
+size = Vector3(5, 1, 0.6)
 
 [node name="Level" type="Node3D"]
 script = ExtResource("1_nw5ee")
@@ -138,19 +145,29 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.9, 
 use_collision = true
 size = Vector3(0.1, 2.6, 7.8)
 
-[node name="CSGBox3D16" type="CSGBox3D" parent="Prototype"]
+[node name="Counter" type="StaticBody3D" parent="Prototype"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.15, 0.5, -4.95)
-use_collision = true
-size = Vector3(5, 1, 1)
+collision_layer = 17
+script = ExtResource("5_3y4uf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Prototype/Counter"]
+mesh = SubResource("BoxMesh_qqrg4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Prototype/Counter"]
+shape = SubResource("BoxShape3D_qqrg4")
+
+[node name="NextItemPos" type="Marker3D" parent="Prototype/Counter"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.559, 0)
 
 [node name="Regal1" parent="Prototype" instance=ExtResource("5_8yp3g")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.05, 0, -6.1)
 
 [node name="Marlboro" parent="Prototype/Regal1" instance=ExtResource("5_mfaqe")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -4.76837e-07, 0.878494, 0.182725)
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -4.76837e-07, 0.833494, 0.182725)
 
 [node name="Papierzosy" parent="Prototype/Regal1" instance=ExtResource("6_i578k")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 0.0999999, 0.878494, 0.182725)
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 0.0999999, 0.833494, 0.182725)
 
 [node name="Regal8" parent="Prototype" instance=ExtResource("6_v1stt")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.7, 0, 3.5)

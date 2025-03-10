@@ -13,7 +13,7 @@ func enter() -> void:
 
 func input_event(event: InputEvent) -> void:
 
-	if event.is_action_pressed("crouch"):
+	if event.is_action_pressed("crouch") and player.can_move:
 
 		transition.emit(%CrouchingState)
 
