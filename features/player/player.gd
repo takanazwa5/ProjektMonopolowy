@@ -102,12 +102,10 @@ func _physics_process(delta: float) -> void:
 
 func _process(_delta: float) -> void:
 
-	DebugPanel.add_property(_input_dir, "input_dir", 2)
-	DebugPanel.add_property(_direction, "direction", 3)
-	DebugPanel.add_property(can_move, "can_move", 6)
-	DebugPanel.add_property(can_move_camera, "can_move_camera", 7)
-	DebugPanel.add_property(item_in_hand, "item_in_hand", 8)
-	DebugPanel.add_property(item_in_preview, "item_in_preview", 9)
+	DebugPanel.add_property(can_move, "can_move", 50)
+	DebugPanel.add_property(can_move_camera, "can_move_camera", 51)
+	DebugPanel.add_property(item_in_hand, "item_in_hand", 52)
+	DebugPanel.add_property(item_in_preview, "item_in_preview", 53)
 
 
 func _on_item_entered_preview(item: Item) -> void:

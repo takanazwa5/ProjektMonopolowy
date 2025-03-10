@@ -28,7 +28,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _process(delta: float) -> void:
 
 	state.update(delta)
-	DebugPanel.add_property(state.name, "State", 4)
+	DebugPanel.add_property(state.name, "State", 100)
 
 
 func _physics_process(delta: float) -> void:

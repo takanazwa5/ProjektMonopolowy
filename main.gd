@@ -31,4 +31,4 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _process(_delta: float) -> void:
 
-	DebugPanel.add_property(Engine.get_frames_per_second(), "FPS", 1)
+	DebugPanel.add_property(Engine.get_frames_per_second(), "FPS", 1000)
