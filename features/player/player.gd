@@ -8,8 +8,8 @@ const SPEED_CROUCHING : float = 1.5
 var speed : float = SPEED_WALKING
 var can_move_camera : bool = true
 var can_move : bool = true
-var item_in_hand : Item
-var item_in_preview : Item
+var item_in_hand : Node3D
+var item_in_preview : Node3D
 
 
 @onready var item_rig : Node3D = %ItemRig
@@ -26,13 +26,15 @@ func _ready() -> void:
 
 	item_preview.child_entered_tree.connect(_on_item_entered_preview)
 	item_preview.child_exiting_tree.connect(_on_item_exited_preview)
+	item_rig.child_entered_tree.connect(_on_item_entered_rig)
+	item_rig.child_exiting_tree.connect(_on_item_exited_rig)
 
 
 func _unhandled_input(event: InputEvent) -> void:
 
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 
-		if item_in_preview is Item:
+		if not item_in_preview == null:
 
 			item_preview.rotate_y(event.relative.x * 0.001)
 			item_preview.rotate_x(event.relative.y * 0.001)
@@ -45,12 +47,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotate_x(-event.relative.y * 0.001)
 		camera.rotation.x = clampf(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
-	if item_in_hand is Item and event.is_action_pressed("drop_item"):
+	if not item_in_hand == null and event.is_action_pressed("drop_item"):
 
 		item_in_hand.queue_free()
 		item_in_hand = null
 
-	if item_in_preview is Item:
+	if not item_in_preview == null:
 
 		if event.is_action_pressed("interact"):
 
@@ -98,8 +100,9 @@ func _process(_delta: float) -> void:
 	DebugPanel.add_property(item_in_preview, "item_in_preview", 53)
 
 
-func _on_item_entered_preview(item: Item) -> void:
+func _on_item_entered_preview(item: Node3D) -> void:
 
+	SignalBus.item_entered_preview.emit()
 	item_in_preview = item
 	item_in_preview.transform = Transform3D()
 	can_move_camera = false
@@ -107,9 +110,20 @@ func _on_item_entered_preview(item: Item) -> void:
 	item_preview_prompt.show()
 
 
-func _on_item_exited_preview(_item: Item) -> void:
+func _on_item_exited_preview(_item: Node3D) -> void:
 
 	item_in_preview = null
 	can_move_camera = true
 	can_move = true
 	item_preview_prompt.hide()
+	SignalBus.item_exited_preview.emit()
+
+
+func _on_item_entered_rig(_item: Node3D) -> void:
+
+	SignalBus.item_entered_rig.emit()
+
+
+func _on_item_exited_rig(_item: Node3D) -> void:
+
+	SignalBus.item_exited_rig.emit()
