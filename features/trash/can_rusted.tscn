@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cleqmw7yeisb7"]
 
-[ext_resource type="Script" path="res://features/trash/trash.gd" id="1_ndrj5"]
+[ext_resource type="Script" uid="uid://xlj84wivrmgf" path="res://features/trash/trash.gd" id="1_ndrj5"]
 [ext_resource type="PackedScene" uid="uid://bll1mxi55dfjq" path="res://assets/trash/can_rusted/can_rusted_1k.gltf" id="1_nfi21"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_x446d"]

@@ -1,12 +1,12 @@
 [gd_scene load_steps=18 format=3 uid="uid://x8jwi5g1tqbc"]
 
-[ext_resource type="Script" path="res://features/player/player.gd" id="1_k7k3i"]
-[ext_resource type="Script" path="res://features/player/interaction_raycast.gd" id="2_8getu"]
-[ext_resource type="Script" path="res://features/state_machine/state_machine.gd" id="2_abh15"]
-[ext_resource type="Script" path="res://features/player/states/idle_state.gd" id="3_16d0v"]
-[ext_resource type="Script" path="res://features/player/reticle.gd" id="3_47jc2"]
-[ext_resource type="Script" path="res://features/player/states/walking_state.gd" id="4_5h70g"]
-[ext_resource type="Script" path="res://features/player/states/crouching_state.gd" id="5_uxnsi"]
+[ext_resource type="Script" uid="uid://xwirk8k81n2g" path="res://features/player/player.gd" id="1_k7k3i"]
+[ext_resource type="Script" uid="uid://beo5binq6caco" path="res://features/player/interaction_raycast.gd" id="2_8getu"]
+[ext_resource type="Script" uid="uid://de1lalif7l760" path="res://features/state_machine/state_machine.gd" id="2_abh15"]
+[ext_resource type="Script" uid="uid://bsraa8mh7ca5a" path="res://features/player/states/idle_state.gd" id="3_16d0v"]
+[ext_resource type="Script" uid="uid://bgq22t0u4tykr" path="res://features/player/reticle.gd" id="3_47jc2"]
+[ext_resource type="Script" uid="uid://d0gi7hdyudt7d" path="res://features/player/states/walking_state.gd" id="4_5h70g"]
+[ext_resource type="Script" uid="uid://er88pojphiqi" path="res://features/player/states/crouching_state.gd" id="5_uxnsi"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_u4ddl"]
 radial_segments = 16
@@ -74,8 +74,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lvrtv"]
 _data = {
-"Headbob": SubResource("Animation_xnuge"),
-"RESET": SubResource("Animation_1ufbu")
+&"Headbob": SubResource("Animation_xnuge"),
+&"RESET": SubResource("Animation_1ufbu")
 }
 
 [sub_resource type="Animation" id="Animation_ri31v"]
@@ -208,8 +208,8 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7rbjb"]
 _data = {
-"Crouch": SubResource("Animation_ri31v"),
-"RESET": SubResource("Animation_727pu")
+&"Crouch": SubResource("Animation_ri31v"),
+&"RESET": SubResource("Animation_727pu")
 }
 
 [node name="Player" type="CharacterBody3D"]
