@@ -165,10 +165,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.559, 0)
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.05, 0, -6.1)
 
 [node name="Marlboro" parent="Prototype/Regal1" instance=ExtResource("5_mfaqe")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -4.76837e-07, 0.833494, 0.182725)
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -4.76837e-07, 0.878494, 0.182725)
 
 [node name="Papierzosy" parent="Prototype/Regal1" instance=ExtResource("6_i578k")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 0.0999999, 0.833494, 0.182725)
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 0.0999999, 0.878494, 0.182725)
 
 [node name="Regal8" parent="Prototype" instance=ExtResource("6_v1stt")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.7, 0, 3.5)
