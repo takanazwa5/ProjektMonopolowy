@@ -1,28 +1,31 @@
 class_name Reticle extends Control
 
 
+enum Type {INACTIVE, ACTIVE}
+
+
 @export var radius : float = 2.0
 @export var color : Color = Color.WHITE
 
 
-var active : bool = false:
+var type : Type:
 
 	set(value):
 
-		if active == value:
+		if type == value:
 
 			return
 
-		active = value
+		type = value
 		queue_redraw()
 
 
 func _draw() -> void:
 
-	if not active:
+	if type == Type.INACTIVE:
 
 		draw_circle(size / 2, radius, color, true, -1.0, true)
 
-	else:
+	elif type == Type.ACTIVE:
 
 		draw_circle(size / 2, radius * 2, color, false, 2.0, true)

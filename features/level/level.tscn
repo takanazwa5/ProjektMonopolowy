@@ -1,6 +1,5 @@
-[gd_scene load_steps=22 format=3 uid="uid://bs2knhaaun6oi"]
+[gd_scene load_steps=21 format=3 uid="uid://bs2knhaaun6oi"]
 
-[ext_resource type="Script" uid="uid://dlnqgbnp1auqy" path="res://features/level/level.gd" id="1_nw5ee"]
 [ext_resource type="Texture2D" uid="uid://3ab7ffd0rw4f" path="res://icon.svg" id="1_tdkuc"]
 [ext_resource type="PackedScene" uid="uid://bln3unycc30dx" path="res://features/trash/rubber_duck.tscn" id="2_cxhik"]
 [ext_resource type="PackedScene" uid="uid://cleqmw7yeisb7" path="res://features/trash/can_rusted.tscn" id="3_v2jmj"]
@@ -51,7 +50,6 @@ size = Vector3(5, 1, 0.6)
 size = Vector3(5, 1, 0.6)
 
 [node name="Level" type="Node3D"]
-script = ExtResource("1_nw5ee")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_l7qvs")

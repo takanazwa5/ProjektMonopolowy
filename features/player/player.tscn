@@ -1,7 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://x8jwi5g1tqbc"]
+[gd_scene load_steps=17 format=3 uid="uid://x8jwi5g1tqbc"]
 
 [ext_resource type="Script" uid="uid://xwirk8k81n2g" path="res://features/player/player.gd" id="1_k7k3i"]
-[ext_resource type="Script" uid="uid://beo5binq6caco" path="res://features/player/interaction_raycast.gd" id="2_8getu"]
 [ext_resource type="Script" uid="uid://de1lalif7l760" path="res://features/state_machine/state_machine.gd" id="2_abh15"]
 [ext_resource type="Script" uid="uid://bsraa8mh7ca5a" path="res://features/player/states/idle_state.gd" id="3_16d0v"]
 [ext_resource type="Script" uid="uid://bgq22t0u4tykr" path="res://features/player/reticle.gd" id="3_47jc2"]
@@ -243,7 +242,6 @@ unique_name_in_owner = true
 target_position = Vector3(0, 0, -1.5)
 collision_mask = 28
 collide_with_areas = true
-script = ExtResource("2_8getu")
 
 [node name="ItemRig" type="Node3D" parent="CameraRoot/Camera"]
 unique_name_in_owner = true

@@ -1,13 +1,11 @@
 class_name Main extends Node
 
 
-static var player : Player
-static var level : Level
-
-
 func _ready() -> void:
 
 	print("Main scene ready.")
+
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
 func _unhandled_input(event: InputEvent) -> void:

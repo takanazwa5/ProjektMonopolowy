@@ -16,11 +16,11 @@ func _ready() -> void:
 		push_warning("%s: Item collision layer is not set to 0b1000." % get_path())
 
 
-func interact() -> void:
+func interact(player: Player) -> void:
 
 	var copy : StaticBody3D = duplicate(0)
 	copy.collision_layer = 0
-	Main.player.item_preview.add_child(copy)
+	player.item_preview.add_child(copy)
 	get_viewport().set_input_as_handled()
 
 

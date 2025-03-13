@@ -11,7 +11,7 @@ func _ready() -> void:
 		push_warning("%s: Trash collision layer is not set to 0b100." % get_path())
 
 
-func interact() -> void:
+func interact(_player: Player) -> void:
 
 	queue_free()
 

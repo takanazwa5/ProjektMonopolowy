@@ -14,15 +14,13 @@ var item_in_preview : Node3D
 
 @onready var item_rig : Node3D = %ItemRig
 @onready var item_preview : Node3D = %ItemPreview
-@onready var interaction_raycast : InteractionRaycast = %InteractionRaycast
+@onready var interaction_raycast : RayCast3D = %InteractionRaycast
 @onready var item_preview_prompt : Control = %ItemPreviewPrompt
 @onready var camera : Camera3D = %Camera
+@onready var reticle : Reticle = %Reticle
 
 
 func _ready() -> void:
-
-	Main.player = self
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 	item_preview.child_entered_tree.connect(_on_item_entered_preview)
 	item_preview.child_exiting_tree.connect(_on_item_exited_preview)
@@ -47,24 +45,33 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotate_x(-event.relative.y * 0.001)
 		camera.rotation.x = clampf(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
-	if not item_in_hand == null and event.is_action_pressed("drop_item"):
 
-		item_in_hand.queue_free()
-		item_in_hand = null
+func _unhandled_key_input(event: InputEvent) -> void:
 
-	if not item_in_preview == null:
+	if event.is_action_pressed(&"interact"):
 
-		if event.is_action_pressed("interact"):
+		var collider : Object = interaction_raycast.get_collider()
+		if collider is Interactable and collider.can_interact:
+
+			collider.interact(self)
+
+		elif not item_in_preview == null:
 
 			item_in_hand = item_in_preview
 			item_preview.rotation = Vector3.ZERO
 			item_in_preview.reparent(item_rig, false)
 
-		elif event.is_action_pressed("drop_item"):
+	if event.is_action_pressed("drop_item"):
+
+		if not item_in_preview == null:
 
 			item_in_preview.queue_free()
 			item_preview.rotation = Vector3.ZERO
 
+		elif not item_in_hand == null:
+
+			item_in_hand.queue_free()
+			item_in_hand = null
 
 func _physics_process(delta: float) -> void:
 
@@ -98,6 +105,15 @@ func _process(_delta: float) -> void:
 	DebugPanel.add_property(can_move_camera, "can_move_camera", 51)
 	DebugPanel.add_property(item_in_hand, "item_in_hand", 52)
 	DebugPanel.add_property(item_in_preview, "item_in_preview", 53)
+
+	var collider : Object = interaction_raycast.get_collider()
+	if collider is Interactable and collider.can_interact:
+
+		reticle.type = Reticle.Type.ACTIVE
+
+	else:
+
+		reticle.type = Reticle.Type.INACTIVE
 
 
 func _on_item_entered_preview(item: Node3D) -> void:

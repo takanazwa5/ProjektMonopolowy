@@ -10,13 +10,13 @@ func _ready() -> void:
 	SignalBus.item_exited_rig.connect(_on_item_exited_rig)
 
 
-func interact() -> void:
+func interact(player: Player) -> void:
 
-	Main.player.item_in_hand.reparent(self, false)
-	Main.player.item_in_hand.transform = next_item_pos.transform
-	Main.player.item_in_hand.collision_layer = 0
-	Main.player.item_in_hand.set_script(null)
-	Main.player.item_in_hand = null
+	player.item_in_hand.reparent(self, false)
+	player.item_in_hand.transform = next_item_pos.transform
+	player.item_in_hand.collision_layer = 0
+	player.item_in_hand.set_script(null)
+	player.item_in_hand = null
 	next_item_pos.position.x += 0.1
 
 
