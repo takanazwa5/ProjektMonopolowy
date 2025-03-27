@@ -34,15 +34,12 @@ func _unhandled_key_input(event: InputEvent) -> void:
 
 	if event.is_action_pressed(&"interact"):
 
-		#item_in_hand = item_in_preview
 		current_item.rotation = Vector3.ZERO
 		current_item.reparent(item_rig, false)
 
 	elif event.is_action_pressed(&"drop_item"):
 
-		get_viewport().set_input_as_handled()
 		current_item.queue_free()
-		rotation = Vector3.ZERO
 
 
 func _on_child_entered_tree(node: Node) -> void:
@@ -66,4 +63,5 @@ func _on_child_exited_tree(_node: Node) -> void:
 	GameManager.player.can_move = true
 	GameManager.player.can_move_camera = true
 	item_preview_prompt.hide()
+	rotation = Vector3.ZERO
 	SignalBus.item_exited_preview.emit()
