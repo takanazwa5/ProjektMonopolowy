@@ -29,3 +29,15 @@ func _draw() -> void:
 	elif type == Type.ACTIVE:
 
 		draw_circle(size / 2, radius * 2, color, false, 2.0, true)
+
+
+func _process(_delta: float) -> void:
+
+	var collider : Object = GameManager.player.interaction_raycast.collider
+	if collider is Interactable and collider.can_interact:
+
+		type = Type.ACTIVE
+
+	else:
+
+		type = Type.INACTIVE

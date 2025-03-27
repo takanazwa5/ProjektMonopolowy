@@ -103,15 +103,6 @@ func _process(_delta: float) -> void:
 	DebugPanel.add_property(item_in_hand, "item_in_hand", 52)
 	DebugPanel.add_property(item_in_preview, "item_in_preview", 53)
 
-	var collider : Object = interaction_raycast.get_collider()
-	if collider is Interactable and collider.can_interact:
-
-		reticle.type = Reticle.Type.ACTIVE
-
-	else:
-
-		reticle.type = Reticle.Type.INACTIVE
-
 
 func _on_item_entered_preview(item: Node3D) -> void:
 
