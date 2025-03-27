@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cn2jqnepjtpec"
-path="res://.godot/imported/CashRegister.glb-5220bb8f36418fb1a2c9d5444cf44188.scn"
+uid="uid://b4xala5h3xim8"
+path="res://.godot/imported/banknoty.glb-614989c42dfddf0fb69cdcedf78b8252.scn"
 
 [deps]
 
-source_file="res://assets/furniture/Cash Register/CashRegister.glb"
-dest_files=["res://.godot/imported/CashRegister.glb-5220bb8f36418fb1a2c9d5444cf44188.scn"]
+source_file="res://assets/furniture/Cash Register/banknoty.glb"
+dest_files=["res://.godot/imported/banknoty.glb-614989c42dfddf0fb69cdcedf78b8252.scn"]
 
 [params]
 

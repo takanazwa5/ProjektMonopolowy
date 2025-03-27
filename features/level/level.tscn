@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bs2knhaaun6oi"]
+[gd_scene load_steps=22 format=3 uid="uid://bs2knhaaun6oi"]
 
 [ext_resource type="Texture2D" uid="uid://3ab7ffd0rw4f" path="res://icon.svg" id="1_tdkuc"]
 [ext_resource type="PackedScene" uid="uid://bln3unycc30dx" path="res://features/trash/rubber_duck.tscn" id="2_cxhik"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://daaf5b4tnvg2g" path="res://features/items/papierzosy.tscn" id="6_i578k"]
 [ext_resource type="PackedScene" uid="uid://pjcdy84i8lmn" path="res://assets/furniture/regal3/regal_3.tscn" id="6_v1stt"]
 [ext_resource type="PackedScene" uid="uid://0bcd4fv6wwk4" path="res://assets/furniture/regal2/regal_2.tscn" id="7_qqrg4"]
+[ext_resource type="PackedScene" uid="uid://cnw60p50n4kaf" path="res://features/cash_register/cash_register.tscn" id="10_3y4uf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_raucf"]
 
@@ -200,3 +201,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0, -7.05)
 
 [node name="Regal4" parent="Prototype" instance=ExtResource("6_v1stt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, -7.05)
+
+[node name="CashRegister" parent="." instance=ExtResource("10_3y4uf")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.587556, 1, -4.96735)
