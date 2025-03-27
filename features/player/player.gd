@@ -22,6 +22,8 @@ var item_in_preview : Node3D
 
 func _ready() -> void:
 
+	GameManager.player = self
+
 	item_preview.child_entered_tree.connect(_on_item_entered_preview)
 	item_preview.child_exiting_tree.connect(_on_item_exited_preview)
 	item_rig.child_entered_tree.connect(_on_item_entered_rig)
@@ -53,7 +55,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		var collider : Object = interaction_raycast.get_collider()
 		if collider is Interactable and collider.can_interact:
 
-			collider.interact(self)
+			collider.interact()
 
 		elif not item_in_preview == null:
 

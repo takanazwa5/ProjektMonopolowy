@@ -12,11 +12,11 @@ func _ready() -> void:
 	SignalBus.item_exited_rig.connect(_on_item_exited_rig)
 
 
-func interact(player: Player) -> void:
+func interact() -> void:
 
 	var copy : StaticBody3D = duplicate(0)
 	copy.collision_layer = 0
-	player.item_preview.add_child(copy)
+	GameManager.player.item_preview.add_child(copy)
 	get_viewport().set_input_as_handled()
 
 

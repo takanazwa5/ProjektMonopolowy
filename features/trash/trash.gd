@@ -7,7 +7,7 @@ func _ready() -> void:
 	SignalBus.item_exited_rig.connect(_on_item_exited_rig)
 
 
-func interact(_player: Player) -> void:
+func interact() -> void:
 
 	queue_free()
 
