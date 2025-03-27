@@ -14,7 +14,7 @@ var item_in_preview : Node3D
 
 @onready var item_rig : Node3D = %ItemRig
 @onready var item_preview : Node3D = %ItemPreview
-@onready var interaction_raycast : RayCast3D = %InteractionRaycast
+@onready var interaction_raycast : InteractionRaycast = %InteractionRaycast
 @onready var item_preview_prompt : Control = %ItemPreviewPrompt
 @onready var camera : Camera3D = %Camera
 @onready var reticle : Reticle = %Reticle
@@ -52,12 +52,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 
 	if event.is_action_pressed(&"interact"):
 
-		var collider : Object = interaction_raycast.get_collider()
-		if collider is Interactable and collider.can_interact:
-
-			collider.interact()
-
-		elif not item_in_preview == null:
+		if not item_in_preview == null:
 
 			item_in_hand = item_in_preview
 			item_preview.rotation = Vector3.ZERO
