@@ -11,10 +11,6 @@ func _ready() -> void:
 	SignalBus.item_entered_rig.connect(_on_item_entered_rig)
 	SignalBus.item_exited_rig.connect(_on_item_exited_rig)
 
-	if not collision_layer == TARGET_COLLISION_LAYER:
-
-		push_warning("%s: Item collision layer is not set to 0b1000." % get_path())
-
 
 func interact(player: Player) -> void:
 
