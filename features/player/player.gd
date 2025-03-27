@@ -8,10 +8,9 @@ const SPEED_CROUCHING : float = 1.5
 var speed : float = SPEED_WALKING
 var can_move_camera : bool = true
 var can_move : bool = true
-var item_in_hand : Node3D
 
 
-@onready var item_rig : Node3D = %ItemRig
+@onready var item_rig : ItemRig = %ItemRig
 @onready var item_preview : ItemPreview = %ItemPreview
 @onready var interaction_raycast : InteractionRaycast = %InteractionRaycast
 @onready var item_preview_prompt : Control = %ItemPreviewPrompt
@@ -22,9 +21,6 @@ var item_in_hand : Node3D
 func _ready() -> void:
 
 	GameManager.player = self
-
-	item_rig.child_entered_tree.connect(_on_item_entered_rig)
-	item_rig.child_exiting_tree.connect(_on_item_exited_rig)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -38,16 +34,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		rotate_y(-event.relative.x * 0.001)
 		camera.rotate_x(-event.relative.y * 0.001)
 		camera.rotation.x = clampf(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
-
-
-func _unhandled_key_input(event: InputEvent) -> void:
-
-	if event.is_action_pressed("drop_item"):
-
-		if not item_in_hand == null:
-
-			item_in_hand.queue_free()
-			item_in_hand = null
 
 
 func _physics_process(delta: float) -> void:
@@ -74,18 +60,3 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, speed)
 
 	move_and_slide()
-
-
-func _process(_delta: float) -> void:
-
-	DebugPanel.add_property(item_in_hand, "item_in_hand", 52)
-
-
-func _on_item_entered_rig(_item: Node3D) -> void:
-
-	SignalBus.item_entered_rig.emit()
-
-
-func _on_item_exited_rig(_item: Node3D) -> void:
-
-	SignalBus.item_exited_rig.emit()
