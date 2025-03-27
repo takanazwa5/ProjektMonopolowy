@@ -9,11 +9,10 @@ var speed : float = SPEED_WALKING
 var can_move_camera : bool = true
 var can_move : bool = true
 var item_in_hand : Node3D
-var item_in_preview : Node3D
 
 
 @onready var item_rig : Node3D = %ItemRig
-@onready var item_preview : Node3D = %ItemPreview
+@onready var item_preview : ItemPreview = %ItemPreview
 @onready var interaction_raycast : InteractionRaycast = %InteractionRaycast
 @onready var item_preview_prompt : Control = %ItemPreviewPrompt
 @onready var camera : Camera3D = %Camera
@@ -24,8 +23,6 @@ func _ready() -> void:
 
 	GameManager.player = self
 
-	item_preview.child_entered_tree.connect(_on_item_entered_preview)
-	item_preview.child_exiting_tree.connect(_on_item_exited_preview)
 	item_rig.child_entered_tree.connect(_on_item_entered_rig)
 	item_rig.child_exiting_tree.connect(_on_item_exited_rig)
 
@@ -33,11 +30,6 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-
-		if not item_in_preview == null:
-
-			item_preview.rotate_y(event.relative.x * 0.001)
-			item_preview.rotate_x(event.relative.y * 0.001)
 
 		if not can_move_camera:
 
@@ -50,25 +42,13 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _unhandled_key_input(event: InputEvent) -> void:
 
-	if event.is_action_pressed(&"interact"):
-
-		if not item_in_preview == null:
-
-			item_in_hand = item_in_preview
-			item_preview.rotation = Vector3.ZERO
-			item_in_preview.reparent(item_rig, false)
-
 	if event.is_action_pressed("drop_item"):
 
-		if not item_in_preview == null:
-
-			item_in_preview.queue_free()
-			item_preview.rotation = Vector3.ZERO
-
-		elif not item_in_hand == null:
+		if not item_in_hand == null:
 
 			item_in_hand.queue_free()
 			item_in_hand = null
+
 
 func _physics_process(delta: float) -> void:
 
@@ -98,29 +78,7 @@ func _physics_process(delta: float) -> void:
 
 func _process(_delta: float) -> void:
 
-	DebugPanel.add_property(can_move, "can_move", 50)
-	DebugPanel.add_property(can_move_camera, "can_move_camera", 51)
 	DebugPanel.add_property(item_in_hand, "item_in_hand", 52)
-	DebugPanel.add_property(item_in_preview, "item_in_preview", 53)
-
-
-func _on_item_entered_preview(item: Node3D) -> void:
-
-	SignalBus.item_entered_preview.emit()
-	item_in_preview = item
-	item_in_preview.transform = Transform3D()
-	can_move_camera = false
-	can_move = false
-	item_preview_prompt.show()
-
-
-func _on_item_exited_preview(_item: Node3D) -> void:
-
-	item_in_preview = null
-	can_move_camera = true
-	can_move = true
-	item_preview_prompt.hide()
-	SignalBus.item_exited_preview.emit()
 
 
 func _on_item_entered_rig(_item: Node3D) -> void:

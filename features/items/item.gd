@@ -1,9 +1,6 @@
 class_name Item extends Interactable
 
 
-const TARGET_COLLISION_LAYER : int = 0b1000
-
-
 func _ready() -> void:
 
 	SignalBus.item_entered_preview.connect(_on_item_entered_preview)
@@ -14,10 +11,9 @@ func _ready() -> void:
 
 func interact() -> void:
 
-	var copy : StaticBody3D = duplicate(0)
-	copy.collision_layer = 0
+	var copy : Item = duplicate()
 	GameManager.player.item_preview.add_child(copy)
-	get_viewport().set_input_as_handled()
+	# NOTE: Might need set_input_as_handled()
 
 
 func _on_item_entered_preview() -> void:
