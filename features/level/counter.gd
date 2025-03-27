@@ -12,11 +12,11 @@ func _ready() -> void:
 
 func interact() -> void:
 
-	GameManager.player.item_in_hand.reparent(self, false)
-	GameManager.player.item_in_hand.transform = next_item_pos.transform
-	GameManager.player.item_in_hand.collision_layer = 0
-	GameManager.player.item_in_hand.set_script(null)
-	GameManager.player.item_in_hand = null
+	var item : Item = GameManager.player.item_rig.current_item
+	item.reparent(self, false)
+	item.transform = next_item_pos.transform
+	item.collision_layer = 0
+	item.set_script(null)
 	next_item_pos.position.x += 0.1
 
 
