@@ -20,6 +20,12 @@ var type : Type:
 		queue_redraw()
 
 
+func _ready() -> void:
+
+	SignalBus.item_entered_preview.connect(_on_item_entered_preview)
+	SignalBus.item_exited_preview.connect(_on_item_exited_preview)
+
+
 func _draw() -> void:
 
 	if type == Type.INACTIVE:
@@ -41,3 +47,13 @@ func _process(_delta: float) -> void:
 	else:
 
 		type = Type.INACTIVE
+
+
+func _on_item_entered_preview() -> void:
+
+	hide()
+
+
+func _on_item_exited_preview() -> void:
+
+	show()
