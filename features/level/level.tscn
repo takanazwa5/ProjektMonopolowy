@@ -146,7 +146,7 @@ size = Vector3(0.1, 2.6, 7.8)
 
 [node name="Counter" type="StaticBody3D" parent="Prototype"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.15, 0.5, -4.95)
-collision_layer = 17
+collision_layer = 5
 script = ExtResource("5_3y4uf")
 can_interact = false
 

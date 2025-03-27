@@ -77,6 +77,7 @@ drop_item={
 
 3d_physics/layer_1="Level"
 3d_physics/layer_2="Player"
-3d_physics/layer_3="Trash"
-3d_physics/layer_4="Item"
-3d_physics/layer_5="Counter"
+3d_physics/layer_3="Interactable"
+3d_physics/layer_4="Layer 4"
+3d_physics/layer_5="Layer 5"
+3d_physics/layer_6="Layer 6"

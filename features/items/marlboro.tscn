@@ -7,7 +7,7 @@
 points = PackedVector3Array(-0.0125, -0.0431746, -0.0290023, 0.0122035, 0.0446599, 0.03, 0.0122035, 0.0446599, -0.03, 0.0122035, -0.0446599, 0.03, -0.0125, 0.0431746, 0.0290023, 0.0122035, -0.0446599, -0.03, -0.0125, 0.0431746, -0.0290023, -0.0125, -0.0431746, 0.0290023)
 
 [node name="Marlboro" type="StaticBody3D"]
-collision_layer = 8
+collision_layer = 4
 script = ExtResource("1_r3ob2")
 
 [node name="marlboro256" parent="." instance=ExtResource("2_hm80g")]
