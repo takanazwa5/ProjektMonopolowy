@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddaett3lh6xqw"
-path="res://.godot/imported/Monety.png-1925071ab3eac772f8225a474fdc8acd.ctex"
+uid="uid://cqc88xrcr7sph"
+path="res://.godot/imported/Monety_Base.png-9ef204bb32c2b3c5cf9d8362e52fe231.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/Cash Register/Monety/Monety.png"
-dest_files=["res://.godot/imported/Monety.png-1925071ab3eac772f8225a474fdc8acd.ctex"]
+source_file="res://assets/furniture/Cash Register/Monety/Monety_Base.png"
+dest_files=["res://.godot/imported/Monety_Base.png-9ef204bb32c2b3c5cf9d8362e52fe231.ctex"]
 
 [params]
 
