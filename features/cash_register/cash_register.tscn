@@ -13,12 +13,19 @@ data = PackedVector3Array(-0.1301, 0.0204, 0.0354, -0.1301, -0.0277, 0.1197, -0.
 [node name="aparat_kasowy" parent="." instance=ExtResource("1_un7mt")]
 
 [node name="szuflada" parent="." instance=ExtResource("2_46s2n")]
+unique_name_in_owner = true
+
+[node name="Szuflada2" type="StaticBody3D" parent="szuflada/Szuflada2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0648112, -0.12606)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_epr13")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="szuflada"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="szuflada/Szuflada2/Szuflada2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0648112, 0.12606)
 shape = SubResource("ConcavePolygonShape3D_46s2n")
 
 [node name="banknoty" parent="szuflada" instance=ExtResource("3_ef5dk")]
+
+[editable path="szuflada"]
+[editable path="szuflada/banknoty"]
