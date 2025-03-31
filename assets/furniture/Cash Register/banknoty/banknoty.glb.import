@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ibubogxw4lbd"
-path="res://.godot/imported/aparat_kasowy.glb-02707138f1387422b04e3ae3f0967d41.scn"
+uid="uid://b4xala5h3xim8"
+path="res://.godot/imported/banknoty.glb-4d13378d2a589de897ede270ebb5b2b7.scn"
 
 [deps]
 
-source_file="res://assets/furniture/Cash Register/aparat_kasowy.glb"
-dest_files=["res://.godot/imported/aparat_kasowy.glb-02707138f1387422b04e3ae3f0967d41.scn"]
+source_file="res://assets/furniture/Cash Register/banknoty/banknoty.glb"
+dest_files=["res://.godot/imported/banknoty.glb-4d13378d2a589de897ede270ebb5b2b7.scn"]
 
 [params]
 
@@ -32,13 +32,6 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:Szuflada": {
-"generate/physics": true,
-"physics/shape_type": 2
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

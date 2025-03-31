@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do133lwtoo7ox"
-path.s3tc="res://.godot/imported/aparat_kasowy_AparKasowy_Base.png-9f52c127c2935591e0ac73791a98a680.s3tc.ctex"
+uid="uid://bd71cd34pe38l"
+path.s3tc="res://.godot/imported/szuflada_Szuflada_Base.png-a90ad0c317140208c3a4b61e4629bc9d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "7c12e710264987fea119e8e2c316e537"
+"md5": "628dd22712e656f10a98347293dba5e8"
 }
 
 [deps]
 
-source_file="res://assets/furniture/Cash Register/aparat_kasowy_AparKasowy_Base.png"
-dest_files=["res://.godot/imported/aparat_kasowy_AparKasowy_Base.png-9f52c127c2935591e0ac73791a98a680.s3tc.ctex"]
+source_file="res://assets/furniture/Cash Register/szuflada/szuflada_Szuflada_Base.png"
+dest_files=["res://.godot/imported/szuflada_Szuflada_Base.png-a90ad0c317140208c3a4b61e4629bc9d.s3tc.ctex"]
 
 [params]
 

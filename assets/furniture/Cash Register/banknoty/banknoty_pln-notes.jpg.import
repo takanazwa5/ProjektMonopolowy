@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd71cd34pe38l"
-path.s3tc="res://.godot/imported/szuflada_Szuflada_Base.png-62088adafe27cc35d32c66eef29eadb0.s3tc.ctex"
+uid="uid://4p6chhlomnoq"
+path.s3tc="res://.godot/imported/banknoty_pln-notes.jpg-97834cfd46dc512a1a0018894b5cf142.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "628dd22712e656f10a98347293dba5e8"
+"md5": "4e5a15fa4944efd66c2b52db9552dce4"
 }
 
 [deps]
 
-source_file="res://assets/furniture/Cash Register/szuflada_Szuflada_Base.png"
-dest_files=["res://.godot/imported/szuflada_Szuflada_Base.png-62088adafe27cc35d32c66eef29eadb0.s3tc.ctex"]
+source_file="res://assets/furniture/Cash Register/banknoty/banknoty_pln-notes.jpg"
+dest_files=["res://.godot/imported/banknoty_pln-notes.jpg-97834cfd46dc512a1a0018894b5cf142.s3tc.ctex"]
 
 [params]
 

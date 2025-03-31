@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ro24xdwaq1t2"
-path="res://.godot/imported/szuflada.glb-9d5e6697fdbaccfb13870c5f43d60d6e.scn"
+uid="uid://ibubogxw4lbd"
+path="res://.godot/imported/aparat_kasowy.glb-798696a9e5cd5c3717df69a968197ff9.scn"
 
 [deps]
 
-source_file="res://assets/furniture/Cash Register/szuflada.glb"
-dest_files=["res://.godot/imported/szuflada.glb-9d5e6697fdbaccfb13870c5f43d60d6e.scn"]
+source_file="res://assets/furniture/Cash Register/aparat_kasowy/aparat_kasowy.glb"
+dest_files=["res://.godot/imported/aparat_kasowy.glb-798696a9e5cd5c3717df69a968197ff9.scn"]
 
 [params]
 
-nodes/root_type="StaticBody3D"
+nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
@@ -32,6 +32,13 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Szuflada": {
+"generate/physics": true,
+"physics/shape_type": 2
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
