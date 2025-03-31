@@ -7,7 +7,11 @@ var open : bool = false
 @onready var szuflada: Node3D = %szuflada
 
 
-func interact() -> void:
+func interact(event: InputEvent) -> void:
+
+	if not event.is_action_pressed(&"interact"):
+
+		return
 
 	if open:
 

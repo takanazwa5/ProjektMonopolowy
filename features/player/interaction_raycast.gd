@@ -4,13 +4,11 @@ class_name InteractionRaycast extends RayCast3D
 var collider : Object
 
 
-func _unhandled_key_input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 
-	if event.is_action_pressed(&"interact"):
+	if collider is Interactable and collider.can_interact:
 
-		if collider is Interactable and collider.can_interact:
-
-			collider.interact()
+		collider.interact(event)
 
 
 func _process(_delta: float) -> void:

@@ -7,7 +7,11 @@ func _ready() -> void:
 	SignalBus.item_exited_rig.connect(_on_item_exited_rig)
 
 
-func interact() -> void:
+func interact(event: InputEvent) -> void:
+
+	if not event.is_action_pressed(&"interact"):
+
+		return
 
 	queue_free()
 
