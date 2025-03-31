@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://blu7or8crdpxe"
-path="res://.godot/imported/Monety.glb-33c80bf33852351114d6e51e3fa0d546.scn"
+uid="uid://dvfwhju1aud0w"
+path="res://.godot/imported/SzufladaIPieniądze.glb-46ae319e68f651f844b5011510eb3751.scn"
 
 [deps]
 
-source_file="res://assets/furniture/Cash Register/Monety/Monety.glb"
-dest_files=["res://.godot/imported/Monety.glb-33c80bf33852351114d6e51e3fa0d546.scn"]
+source_file="res://assets/furniture/Cash Register/SzufladaIPieniądze/SzufladaIPieniądze.glb"
+dest_files=["res://.godot/imported/SzufladaIPieniądze.glb-46ae319e68f651f844b5011510eb3751.scn"]
 
 [params]
 
