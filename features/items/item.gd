@@ -17,6 +17,7 @@ func interact(event: InputEvent) -> void:
 
 	var copy : Item = duplicate()
 	GameManager.player.item_preview.add_child(copy)
+	copy.global_transform = global_transform
 	# NOTE: Might need set_input_as_handled()
 
 

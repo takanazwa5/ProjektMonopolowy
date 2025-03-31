@@ -34,8 +34,10 @@ func _unhandled_key_input(event: InputEvent) -> void:
 
 	if event.is_action_pressed(&"interact"):
 
-		current_item.rotation = Vector3.ZERO
-		current_item.reparent(item_rig, false)
+		#current_item.rotation = Vector3.ZERO
+		var tween : Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
+		tween.tween_property(current_item, ^"transform", Transform3D(), 0.25)
+		current_item.reparent(item_rig)
 
 	elif event.is_action_pressed(&"drop_item"):
 
@@ -50,7 +52,9 @@ func _on_child_entered_tree(node: Node) -> void:
 		return
 
 	current_item = node
-	current_item.transform = Transform3D()
+	#current_item.transform = Transform3D()
+	var tween : Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
+	tween.tween_property(current_item, ^"transform", Transform3D(), 0.25)
 	GameManager.player.can_move = false
 	GameManager.player.can_move_camera = false
 	item_preview_prompt.show()
