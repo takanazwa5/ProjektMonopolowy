@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do133lwtoo7ox"
-path.s3tc="res://.godot/imported/aparat_kasowy_AparKasowy_Base.png-a6a9c72812902fab698bcfb46efc5563.s3tc.ctex"
+uid="uid://41sac3k77iaw"
+path.s3tc="res://.godot/imported/AparatKasowy_Roughness.png-93d05771e5f4be843c81ae4b0e6c2955.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "7c12e710264987fea119e8e2c316e537"
-}
 
 [deps]
 
-source_file="res://assets/furniture/Cash Register/aparat_kasowy/aparat_kasowy_AparKasowy_Base.png"
-dest_files=["res://.godot/imported/aparat_kasowy_AparKasowy_Base.png-a6a9c72812902fab698bcfb46efc5563.s3tc.ctex"]
+source_file="res://features/cash_register/assets/textures/AparatKasowy_Roughness.png"
+dest_files=["res://.godot/imported/AparatKasowy_Roughness.png-93d05771e5f4be843c81ae4b0e6c2955.s3tc.ctex"]
 
 [params]
 

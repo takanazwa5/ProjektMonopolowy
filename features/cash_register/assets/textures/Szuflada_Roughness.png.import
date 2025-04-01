@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd71cd34pe38l"
-path.s3tc="res://.godot/imported/szuflada_Szuflada_Base.png-a90ad0c317140208c3a4b61e4629bc9d.s3tc.ctex"
+uid="uid://cnvfqwuug5vcy"
+path.s3tc="res://.godot/imported/Szuflada_Roughness.png-3142226dff3c300b6296d296864ea1e5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "628dd22712e656f10a98347293dba5e8"
-}
 
 [deps]
 
-source_file="res://assets/furniture/Cash Register/szuflada/szuflada_Szuflada_Base.png"
-dest_files=["res://.godot/imported/szuflada_Szuflada_Base.png-a90ad0c317140208c3a4b61e4629bc9d.s3tc.ctex"]
+source_file="res://features/cash_register/assets/textures/Szuflada_Roughness.png"
+dest_files=["res://.godot/imported/Szuflada_Roughness.png-3142226dff3c300b6296d296864ea1e5.s3tc.ctex"]
 
 [params]
 

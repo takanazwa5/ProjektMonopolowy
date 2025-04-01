@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4p6chhlomnoq"
-path.s3tc="res://.godot/imported/banknoty_pln-notes.jpg-97834cfd46dc512a1a0018894b5cf142.s3tc.ctex"
+uid="uid://7qwlrynrpwk8"
+path.s3tc="res://.godot/imported/AparKasowy_Base.png-5e471f36f01ca11bb0c553b8d869b0bc.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "4e5a15fa4944efd66c2b52db9552dce4"
-}
 
 [deps]
 
-source_file="res://assets/furniture/Cash Register/banknoty/banknoty_pln-notes.jpg"
-dest_files=["res://.godot/imported/banknoty_pln-notes.jpg-97834cfd46dc512a1a0018894b5cf142.s3tc.ctex"]
+source_file="res://features/cash_register/assets/textures/AparKasowy_Base.png"
+dest_files=["res://.godot/imported/AparKasowy_Base.png-5e471f36f01ca11bb0c553b8d869b0bc.s3tc.ctex"]
 
 [params]
 

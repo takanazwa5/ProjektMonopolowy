@@ -1,4 +1,4 @@
-class_name Baknote extends Interactable
+class_name Money extends Interactable
 
 
 func interact(event: InputEvent) -> void:

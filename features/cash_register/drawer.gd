@@ -4,7 +4,7 @@ class_name CashRegisterDrawer extends Interactable
 var open : bool = false
 
 
-@onready var szuflada: Node3D = %szuflada
+@export var drawer_mesh: Node3D
 
 
 func interact(event: InputEvent) -> void:
@@ -25,12 +25,12 @@ func interact(event: InputEvent) -> void:
 func _open_drawer() -> void:
 
 	var tween : Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(szuflada, ^"position:z", 0.25, 0.25)
+	tween.tween_property(drawer_mesh, ^"position:z", 0.376, 0.25)
 	open = true
 
 
 func _close_drawer() -> void:
 
 	var tween : Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(szuflada, ^"position:z", 0.0, 0.25)
+	tween.tween_property(drawer_mesh, ^"position:z", 0.126, 0.25)
 	open = false

@@ -18,8 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 SignalBus="*res://features/signal_bus/signal_bus.gd"
-GameManager="*res://features/game_manager/game_manager.gd"
 DebugPanel="*res://features/debug_panel/debug_panel.tscn"
+GameManager="*res://features/game_manager/game_manager.gd"
 
 [debug]
 

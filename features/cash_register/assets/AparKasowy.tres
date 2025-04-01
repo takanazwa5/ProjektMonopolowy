@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://btevyecnm06ny"]
+
+[ext_resource type="Texture2D" uid="uid://7qwlrynrpwk8" path="res://features/cash_register/assets/textures/AparKasowy_Base.png" id="1_djbkj"]
+[ext_resource type="Texture2D" uid="uid://41sac3k77iaw" path="res://features/cash_register/assets/textures/AparatKasowy_Roughness.png" id="2_0p2t5"]
+
+[resource]
+resource_name = "AparKasowy"
+albedo_texture = ExtResource("1_djbkj")
+roughness_texture = ExtResource("2_0p2t5")
+roughness_texture_channel = 1

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b4xala5h3xim8"
-path="res://.godot/imported/banknoty.glb-4d13378d2a589de897ede270ebb5b2b7.scn"
+uid="uid://bhbv5vgsccpuc"
+path="res://.godot/imported/5zl.glb-33300f9d3f35f66c15c4bf2e3c7b94a6.scn"
 
 [deps]
 
-source_file="res://assets/furniture/Cash Register/banknoty/banknoty.glb"
-dest_files=["res://.godot/imported/banknoty.glb-4d13378d2a589de897ede270ebb5b2b7.scn"]
+source_file="res://features/cash_register/assets/5zl.glb"
+dest_files=["res://.godot/imported/5zl.glb-33300f9d3f35f66c15c4bf2e3c7b94a6.scn"]
 
 [params]
 
@@ -32,6 +32,13 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"Monety": {
+"use_external/enabled": true,
+"use_external/path": "uid://bc5cfa0fqc1n"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
