@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "Banknoty": {
 "use_external/enabled": true,
-"use_external/path": "res://features/cash_register/assets/Banknoty.tres"
+"use_external/path": "uid://dh3chbnwu1n3t"
 }
 }
 }
