@@ -76,6 +76,7 @@ script = ExtResource("3_h0nij")
 [node name="cash_register_drawer" parent="cash_register/Drawer" instance=ExtResource("3_hfhvn")]
 
 [node name="1zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0234289, 0)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
@@ -89,6 +90,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.171317, 0.0331321, 0.20365
 shape = SubResource("ConcavePolygonShape3D_b2dl6")
 
 [node name="2zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0234289, 0)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
@@ -102,6 +104,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0844994, 0.0331321, 0.2036
 shape = SubResource("ConcavePolygonShape3D_hfhvn")
 
 [node name="5gr" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0234289, 0)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
@@ -115,6 +118,7 @@ transform = Transform3D(-1.19209e-07, 0, 1, 0, 1, 0, -1, 0, -1.19209e-07, 0.0845
 shape = SubResource("ConcavePolygonShape3D_h0nij")
 
 [node name="5zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0234289, 0)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
@@ -128,6 +132,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000184762, 0.0331321, 0.20
 shape = SubResource("ConcavePolygonShape3D_n3yyt")
 
 [node name="10gr" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0234289, 0)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
@@ -141,6 +146,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.171284, 0.0331321, 0.203652
 shape = SubResource("ConcavePolygonShape3D_ixp0a")
 
 [node name="10zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00213271, 0.0104478, -0.00995278)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
@@ -154,6 +160,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.172347, 0.0396636, 0.06776
 shape = SubResource("ConcavePolygonShape3D_4p68q")
 
 [node name="20gr" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0234289, 0)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
@@ -167,6 +174,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.170941, 0.0331321, 0.109584
 shape = SubResource("ConcavePolygonShape3D_joq7v")
 
 [node name="20zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00358986, 0)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
@@ -180,6 +188,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.084455, 0.0465214, 0.05843
 shape = SubResource("ConcavePolygonShape3D_m5nv5")
 
 [node name="50gr" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0234289, 0)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
@@ -193,6 +202,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.170941, 0.0331321, 0.009958
 shape = SubResource("ConcavePolygonShape3D_04g4t")
 
 [node name="50zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0125628, 0.00568733)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
@@ -206,6 +216,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000491013, 0.0375486, 0.054
 shape = SubResource("ConcavePolygonShape3D_in1v7")
 
 [node name="100zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0191934, 0)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
