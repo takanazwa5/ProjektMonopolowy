@@ -29,8 +29,9 @@ func _unhandled_key_input(_event: InputEvent) -> void:
 
 func _generate_random_order() -> void:
 
+	var total_rounding : float = [1.0, 0.5].pick_random()
 	total = randf_range(50.0, 200.0)
-	total = snappedf(total, 0.05)
+	total = snappedf(total, total_rounding)
 
 	var paid_rounding : float = [10.0, 20.0, 50.0].pick_random()
 	paid = snappedf(total, paid_rounding)
