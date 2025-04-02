@@ -1,4 +1,4 @@
-class_name CashRegister extends Node3D
+class_name CashRegister extends StaticBody3D
 
 
 var total : float = 0.0

@@ -1,36 +1,18 @@
-class_name CashRegisterDrawer extends Interactable
+class_name CashRegisterDrawer extends StaticBody3D
 
 
 var open : bool = false
 
 
-@export var drawer_mesh: Node3D
-
-
-func interact(event: InputEvent) -> void:
-
-	if not event.is_action_pressed(&"interact"):
-
-		return
-
-	if open:
-
-		_close_drawer()
-
-	else:
-
-		_open_drawer()
-
-
-func _open_drawer() -> void:
+func open_drawer() -> void:
 
 	var tween : Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(drawer_mesh, ^"position:z", 0.376, 0.25)
+	tween.tween_property(self, ^"position:z", 0.25, 0.25)
 	open = true
 
 
-func _close_drawer() -> void:
+func close_drawer() -> void:
 
 	var tween : Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(drawer_mesh, ^"position:z", 0.126, 0.25)
+	tween.tween_property(self, ^"position:z", 0.0, 0.25)
 	open = false
