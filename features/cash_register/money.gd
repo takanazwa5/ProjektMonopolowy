@@ -1,6 +1,12 @@
 class_name Money extends Interactable
 
 
+signal interaction(value: float)
+
+
+@export var value : float = 0.0
+
+
 func interact(event: InputEvent) -> void:
 
 	if not (event is InputEventMouseButton and event.is_pressed()):
@@ -9,8 +15,8 @@ func interact(event: InputEvent) -> void:
 
 	if event.button_index == MOUSE_BUTTON_LEFT:
 
-		print("lmb")
+		interaction.emit(value)
 
 	elif event.button_index == MOUSE_BUTTON_RIGHT:
 
-		print("rmb")
+		interaction.emit(-value)

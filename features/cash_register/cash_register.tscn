@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cnw60p50n4kaf"]
+[gd_scene load_steps=32 format=3 uid="uid://cnw60p50n4kaf"]
 
 [ext_resource type="Script" uid="uid://848gxho57b4e" path="res://features/cash_register/cash_register.gd" id="1_46s2n"]
 [ext_resource type="PackedScene" uid="uid://dimy4yrurj2b0" path="res://features/cash_register/assets/cash_register.glb" id="2_b2dl6"]
@@ -59,20 +59,28 @@ data = PackedVector3Array(-0.0361, 0.016, -0.0712, -0.0497, 0.037, -0.0999, -0.0
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hfn83"]
 data = PackedVector3Array(-0.2276, -0.0646, 0.2548, -0.2276, 0.0646, -0.2602, -0.2276, 0.0646, 0.2548, -0.2276, -0.0646, 0.2548, -0.2276, -0.0646, -0.2602, -0.2276, 0.0646, -0.2602, -0.2276, -0.0646, -0.2602, 0.2276, 0.0646, -0.2602, -0.2276, 0.0646, -0.2602, -0.2276, -0.0646, -0.2602, 0.2276, -0.0646, -0.2602, 0.2276, 0.0646, -0.2602, 0.2276, -0.0646, -0.2602, 0.2276, 0.0646, 0.2548, 0.2276, 0.0646, -0.2602, 0.2276, -0.0646, -0.2602, 0.2276, -0.0646, 0.2548, 0.2276, 0.0646, 0.2548, -0.2276, 0.0646, 0.2548, -0.2166, -0.0551, 0.2548, -0.2276, -0.0646, 0.2548, -0.2276, -0.0646, 0.2548, -0.2166, -0.0551, 0.2548, 0.2166, -0.0551, 0.2548, -0.2276, 0.0646, 0.2548, -0.2166, 0.0551, 0.2548, -0.2166, -0.0551, 0.2548, -0.2276, -0.0646, 0.2548, 0.2166, -0.0551, 0.2548, 0.2276, -0.0646, 0.2548, 0.2276, 0.0646, 0.2548, -0.2166, 0.0551, 0.2548, -0.2276, 0.0646, 0.2548, 0.2276, -0.0646, 0.2548, 0.2166, -0.0551, 0.2548, 0.2166, 0.0551, 0.2548, 0.2276, 0.0646, 0.2548, 0.2166, 0.0551, 0.2548, -0.2166, 0.0551, 0.2548, 0.2276, -0.0646, 0.2548, 0.2166, 0.0551, 0.2548, 0.2276, 0.0646, 0.2548, -0.2276, -0.0646, -0.2602, 0.2276, -0.0646, 0.2548, 0.2276, -0.0646, -0.2602, -0.2276, -0.0646, -0.2602, -0.2276, -0.0646, 0.2548, 0.2276, -0.0646, 0.2548, 0.2276, 0.0646, -0.2602, -0.2276, 0.0646, 0.2548, -0.2276, 0.0646, -0.2602, 0.2276, 0.0646, -0.2602, 0.2276, 0.0646, 0.2548, -0.2276, 0.0646, 0.2548, -0.2166, -0.0551, 0.2548, 0.2166, -0.0551, -0.2494, 0.2166, -0.0551, 0.2548, -0.2166, -0.0551, 0.2548, -0.2166, -0.0551, -0.2494, 0.2166, -0.0551, -0.2494, -0.2166, 0.0551, 0.2548, -0.2166, -0.0551, -0.2494, -0.2166, -0.0551, 0.2548, -0.2166, 0.0551, 0.2548, -0.2166, 0.0551, -0.2494, -0.2166, -0.0551, -0.2494, 0.2166, 0.0551, 0.2548, -0.2166, 0.0551, -0.2494, -0.2166, 0.0551, 0.2548, 0.2166, 0.0551, 0.2548, 0.2166, 0.0551, -0.2494, -0.2166, 0.0551, -0.2494, 0.2166, -0.0551, 0.2548, 0.2166, 0.0551, -0.2494, 0.2166, 0.0551, 0.2548, 0.2166, -0.0551, 0.2548, 0.2166, -0.0551, -0.2494, 0.2166, 0.0551, -0.2494)
 
+[sub_resource type="LabelSettings" id="LabelSettings_h0nij"]
+font_size = 20
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
 [node name="CashRegister" type="StaticBody3D"]
 script = ExtResource("1_46s2n")
 
 [node name="cash_register" parent="." instance=ExtResource("2_b2dl6")]
 
 [node name="Drawer" type="StaticBody3D" parent="cash_register"]
+unique_name_in_owner = true
 script = ExtResource("3_h0nij")
 
 [node name="cash_register_drawer" parent="cash_register/Drawer" instance=ExtResource("3_hfhvn")]
 
-[node name="1zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer"]
+[node name="1zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
+value = 1.0
+can_interact = false
 
 [node name="1zl" parent="cash_register/Drawer/cash_register_drawer/1zl" instance=ExtResource("4_h0nij")]
 
@@ -80,10 +88,12 @@ script = ExtResource("4_hfhvn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.171317, 0.0331321, 0.203652)
 shape = SubResource("ConcavePolygonShape3D_b2dl6")
 
-[node name="2zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer"]
+[node name="2zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
+value = 2.0
+can_interact = false
 
 [node name="2zl" parent="cash_register/Drawer/cash_register_drawer/2zl" instance=ExtResource("5_n3yyt")]
 
@@ -91,10 +101,12 @@ script = ExtResource("4_hfhvn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0844994, 0.0331321, 0.203652)
 shape = SubResource("ConcavePolygonShape3D_hfhvn")
 
-[node name="5gr" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer"]
+[node name="5gr" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
+value = 0.05
+can_interact = false
 
 [node name="5gr" parent="cash_register/Drawer/cash_register_drawer/5gr" instance=ExtResource("6_ixp0a")]
 
@@ -102,10 +114,12 @@ script = ExtResource("4_hfhvn")
 transform = Transform3D(-1.19209e-07, 0, 1, 0, 1, 0, -1, 0, -1.19209e-07, 0.0845827, 0.0331321, 0.203652)
 shape = SubResource("ConcavePolygonShape3D_h0nij")
 
-[node name="5zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer"]
+[node name="5zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
+value = 5.0
+can_interact = false
 
 [node name="5zl" parent="cash_register/Drawer/cash_register_drawer/5zl" instance=ExtResource("7_4p68q")]
 
@@ -113,10 +127,12 @@ script = ExtResource("4_hfhvn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000184762, 0.0331321, 0.203652)
 shape = SubResource("ConcavePolygonShape3D_n3yyt")
 
-[node name="10gr" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer"]
+[node name="10gr" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
+value = 0.1
+can_interact = false
 
 [node name="10gr" parent="cash_register/Drawer/cash_register_drawer/10gr" instance=ExtResource("8_joq7v")]
 
@@ -124,10 +140,12 @@ script = ExtResource("4_hfhvn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.171284, 0.0331321, 0.203652)
 shape = SubResource("ConcavePolygonShape3D_ixp0a")
 
-[node name="10zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer"]
+[node name="10zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
+value = 10.0
+can_interact = false
 
 [node name="10zl" parent="cash_register/Drawer/cash_register_drawer/10zl" instance=ExtResource("9_m5nv5")]
 
@@ -135,10 +153,12 @@ script = ExtResource("4_hfhvn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.172347, 0.0396636, 0.0677604)
 shape = SubResource("ConcavePolygonShape3D_4p68q")
 
-[node name="20gr" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer"]
+[node name="20gr" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
+value = 0.2
+can_interact = false
 
 [node name="20gr" parent="cash_register/Drawer/cash_register_drawer/20gr" instance=ExtResource("10_04g4t")]
 
@@ -146,10 +166,12 @@ script = ExtResource("4_hfhvn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.170941, 0.0331321, 0.109584)
 shape = SubResource("ConcavePolygonShape3D_joq7v")
 
-[node name="20zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer"]
+[node name="20zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
+value = 20.0
+can_interact = false
 
 [node name="20zl" parent="cash_register/Drawer/cash_register_drawer/20zl" instance=ExtResource("11_in1v7")]
 
@@ -157,10 +179,12 @@ script = ExtResource("4_hfhvn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.084455, 0.0465214, 0.0584311)
 shape = SubResource("ConcavePolygonShape3D_m5nv5")
 
-[node name="50gr" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer"]
+[node name="50gr" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
+value = 0.5
+can_interact = false
 
 [node name="50gr" parent="cash_register/Drawer/cash_register_drawer/50gr" instance=ExtResource("12_nhacm")]
 
@@ -168,10 +192,12 @@ script = ExtResource("4_hfhvn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.170941, 0.0331321, 0.00995814)
 shape = SubResource("ConcavePolygonShape3D_04g4t")
 
-[node name="50zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer"]
+[node name="50zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
+value = 50.0
+can_interact = false
 
 [node name="50zl" parent="cash_register/Drawer/cash_register_drawer/50zl" instance=ExtResource("13_b40uy")]
 
@@ -179,10 +205,12 @@ script = ExtResource("4_hfhvn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000491013, 0.0375486, 0.0540119)
 shape = SubResource("ConcavePolygonShape3D_in1v7")
 
-[node name="100zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer"]
+[node name="100zl" type="StaticBody3D" parent="cash_register/Drawer/cash_register_drawer" groups=["Cash"]]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
+value = 100.0
+can_interact = false
 
 [node name="100zl" parent="cash_register/Drawer/cash_register_drawer/100zl" instance=ExtResource("14_acc2v")]
 
@@ -201,3 +229,51 @@ shape = SubResource("ConcavePolygonShape3D_acc2v")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0648112, 0)
 shape = SubResource("ConcavePolygonShape3D_hfn83")
+
+[node name="LabelsContainer" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -20.0
+offset_right = -100.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="LabelsContainer"]
+layout_mode = 2
+text = "Total:"
+label_settings = SubResource("LabelSettings_h0nij")
+
+[node name="TotalLabel" type="Label" parent="LabelsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0.0"
+label_settings = SubResource("LabelSettings_h0nij")
+
+[node name="Label2" type="Label" parent="LabelsContainer"]
+layout_mode = 2
+text = "Paid:"
+label_settings = SubResource("LabelSettings_h0nij")
+
+[node name="PaidLabel" type="Label" parent="LabelsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0.0"
+label_settings = SubResource("LabelSettings_h0nij")
+
+[node name="Label3" type="Label" parent="LabelsContainer"]
+layout_mode = 2
+text = "Change:"
+label_settings = SubResource("LabelSettings_h0nij")
+
+[node name="ChangeLabel" type="Label" parent="LabelsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0.0"
+label_settings = SubResource("LabelSettings_h0nij")
