@@ -82,6 +82,7 @@ collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 1.0
 can_interact = false
+reticle_tooltip_text = "1 zł"
 
 [node name="1zl" parent="cash_register/Drawer/cash_register_drawer/1zl" instance=ExtResource("4_h0nij")]
 
@@ -96,6 +97,7 @@ collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 2.0
 can_interact = false
+reticle_tooltip_text = "2 zł"
 
 [node name="2zl" parent="cash_register/Drawer/cash_register_drawer/2zl" instance=ExtResource("5_n3yyt")]
 
@@ -110,6 +112,7 @@ collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 0.05
 can_interact = false
+reticle_tooltip_text = "5 gr"
 
 [node name="5gr" parent="cash_register/Drawer/cash_register_drawer/5gr" instance=ExtResource("6_ixp0a")]
 
@@ -124,6 +127,7 @@ collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 5.0
 can_interact = false
+reticle_tooltip_text = "5 zł"
 
 [node name="5zl" parent="cash_register/Drawer/cash_register_drawer/5zl" instance=ExtResource("7_4p68q")]
 
@@ -138,6 +142,7 @@ collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 0.1
 can_interact = false
+reticle_tooltip_text = "10 gr"
 
 [node name="10gr" parent="cash_register/Drawer/cash_register_drawer/10gr" instance=ExtResource("8_joq7v")]
 
@@ -152,6 +157,7 @@ collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 10.0
 can_interact = false
+reticle_tooltip_text = "10 zł"
 
 [node name="10zl" parent="cash_register/Drawer/cash_register_drawer/10zl" instance=ExtResource("9_m5nv5")]
 
@@ -166,6 +172,7 @@ collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 0.2
 can_interact = false
+reticle_tooltip_text = "20 gr"
 
 [node name="20gr" parent="cash_register/Drawer/cash_register_drawer/20gr" instance=ExtResource("10_04g4t")]
 
@@ -180,6 +187,7 @@ collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 20.0
 can_interact = false
+reticle_tooltip_text = "20 zł"
 
 [node name="20zl" parent="cash_register/Drawer/cash_register_drawer/20zl" instance=ExtResource("11_in1v7")]
 
@@ -194,6 +202,7 @@ collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 0.5
 can_interact = false
+reticle_tooltip_text = "50 gr"
 
 [node name="50gr" parent="cash_register/Drawer/cash_register_drawer/50gr" instance=ExtResource("12_nhacm")]
 
@@ -208,6 +217,7 @@ collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 50.0
 can_interact = false
+reticle_tooltip_text = "50 zł"
 
 [node name="50zl" parent="cash_register/Drawer/cash_register_drawer/50zl" instance=ExtResource("13_b40uy")]
 
@@ -222,6 +232,7 @@ collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 100.0
 can_interact = false
+reticle_tooltip_text = "100 zł"
 
 [node name="100zl" parent="cash_register/Drawer/cash_register_drawer/100zl" instance=ExtResource("14_acc2v")]
 

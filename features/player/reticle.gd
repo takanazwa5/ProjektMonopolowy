@@ -8,6 +8,9 @@ enum Type {INACTIVE, ACTIVE}
 @export var color : Color = Color.WHITE
 
 
+@onready var reticle_tooltip : Label = %ReticleTooltip
+
+
 var type : Type:
 
 	set(value):
@@ -44,9 +47,16 @@ func _process(_delta: float) -> void:
 
 		type = Type.ACTIVE
 
+		if not collider.reticle_tooltip_text.is_empty():
+
+			reticle_tooltip.show()
+			reticle_tooltip.text = collider.reticle_tooltip_text
+
 	else:
 
 		type = Type.INACTIVE
+		reticle_tooltip.hide()
+		reticle_tooltip.text = ""
 
 
 func _on_item_entered_preview() -> void:
