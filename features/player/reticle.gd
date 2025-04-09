@@ -25,8 +25,10 @@ var type : Type:
 
 func _ready() -> void:
 
-	SignalBus.item_entered_preview.connect(_on_item_entered_preview)
-	SignalBus.item_exited_preview.connect(_on_item_exited_preview)
+	SignalBus.item_entered_preview.connect(hide)
+	SignalBus.item_exited_preview.connect(show)
+	GameManager.pause_menu.paused.connect(hide)
+	GameManager.pause_menu.unpaused.connect(show)
 
 
 func _draw() -> void:
@@ -57,13 +59,3 @@ func _process(_delta: float) -> void:
 		type = Type.INACTIVE
 		reticle_tooltip.hide()
 		reticle_tooltip.text = ""
-
-
-func _on_item_entered_preview() -> void:
-
-	hide()
-
-
-func _on_item_exited_preview() -> void:
-
-	show()

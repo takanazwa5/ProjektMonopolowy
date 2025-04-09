@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://daih55gqatj4l"]
+[gd_scene load_steps=5 format=3 uid="uid://daih55gqatj4l"]
 
 [ext_resource type="Script" uid="uid://rdgopf70q038" path="res://main.gd" id="1_11aar"]
+[ext_resource type="PackedScene" uid="uid://cjhr0bs1pbymv" path="res://features/pause_menu/pause_menu.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bs2knhaaun6oi" path="res://features/level/level.tscn" id="2_ouhrm"]
 [ext_resource type="PackedScene" uid="uid://x8jwi5g1tqbc" path="res://features/player/player.tscn" id="3_txauv"]
 
@@ -12,23 +13,4 @@ script = ExtResource("1_11aar")
 [node name="Player" parent="." instance=ExtResource("3_txauv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -2.4)
 
-[node name="DebugInfo" type="CanvasLayer" parent="."]
-
-[node name="MarginContainer" type="MarginContainer" parent="DebugInfo"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 40.0
-grow_horizontal = 0
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="Label" type="Label" parent="DebugInfo/MarginContainer"]
-layout_mode = 2
-theme_override_constants/outline_size = 10
-text = "ESC - quit
-F1 - debug panel
-[ - window mode"
+[node name="PauseMenu" parent="." instance=ExtResource("2_1bvp3")]
