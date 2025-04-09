@@ -18,7 +18,7 @@ var can_move : bool = true
 @onready var reticle : Reticle = %Reticle
 
 
-func _ready() -> void:
+func _init() -> void:
 
 	GameManager.player = self
 
