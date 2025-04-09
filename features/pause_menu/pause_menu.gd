@@ -1,4 +1,4 @@
-class_name PauseMenu extends Control
+class_name PauseMenu extends CanvasLayer
 
 
 signal paused

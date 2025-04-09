@@ -7,21 +7,14 @@
 shader = ExtResource("2_0wavx")
 shader_parameter/lod = 1.5
 
-[node name="PauseMenu" type="Control"]
+[node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
+layer = 2
 visible = false
-z_index = 99
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("1_f4n72")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_ls6i4")
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -30,7 +23,6 @@ grow_vertical = 2
 color = Color(1, 1, 1, 0)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
