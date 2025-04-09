@@ -24,11 +24,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 
 func _on_child_entered_tree(node: Node) -> void:
 
-	if not node is Item:
-
-		push_error("Node entered item rig is not item")
-		return
-
+	assert(node is Item)
 	current_item = node
 	SignalBus.item_entered_rig.emit()
 
