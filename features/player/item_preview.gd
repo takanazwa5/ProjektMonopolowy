@@ -46,11 +46,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 
 func _on_child_entered_tree(node: Node) -> void:
 
-	if not node is Item:
-
-		push_error("Node entered item preview is not item")
-		return
-
+	assert(node is Item)
 	current_item = node
 	#current_item.transform = Transform3D()
 	var tween : Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
