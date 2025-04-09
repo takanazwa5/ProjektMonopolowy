@@ -19,12 +19,7 @@ func _ready() -> void:
 
 		node.interaction.connect(_on_cash_interaction)
 
-
-func _unhandled_key_input(_event: InputEvent) -> void:
-
-	if Input.is_physical_key_pressed(KEY_BRACKETRIGHT):
-
-		_generate_random_order()
+	GameManager.debug_menu.random_order_button.pressed.connect(_generate_random_order)
 
 
 func _generate_random_order() -> void:

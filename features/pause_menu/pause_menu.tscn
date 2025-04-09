@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjhr0bs1pbymv"]
+[gd_scene load_steps=5 format=3 uid="uid://cjhr0bs1pbymv"]
 
 [ext_resource type="Script" uid="uid://chxhp1fuwuyqr" path="res://features/pause_menu/pause_menu.gd" id="1_f4n72"]
 [ext_resource type="Shader" uid="uid://b65drn8157rrj" path="res://features/pause_menu/blur.gdshader" id="2_0wavx"]
+[ext_resource type="PackedScene" uid="uid://6q6gxagxmntn" path="res://features/debug_menu/debug_menu.tscn" id="3_ls6i4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ls6i4"]
 shader = ExtResource("2_0wavx")
@@ -22,25 +23,35 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MainPause" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -126.0
-offset_top = -33.0
-offset_right = 126.0
-offset_bottom = 33.0
+offset_left = -120.0
+offset_top = -50.0
+offset_right = 120.0
+offset_bottom = 51.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ResumeButton" type="Button" parent="VBoxContainer"]
+[node name="ResumeButton" type="Button" parent="MainPause"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Resume"
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
+[node name="DebugButton" type="Button" parent="MainPause"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Debug"
+
+[node name="QuitButton" type="Button" parent="MainPause"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Quit"
+
+[node name="DebugMenu" parent="." instance=ExtResource("3_ls6i4")]
+unique_name_in_owner = true
+visible = false
