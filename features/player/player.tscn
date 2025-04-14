@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://dxoac2p5n4etv" path="res://features/player/item_rig.gd" id="3_k34i2"]
 [ext_resource type="Script" uid="uid://rsm8sm80rels" path="res://features/player/item_preview.gd" id="3_kt1oa"]
 [ext_resource type="Script" uid="uid://d0gi7hdyudt7d" path="res://features/player/states/walking_state.gd" id="4_5h70g"]
-[ext_resource type="Script" uid="uid://cexdbtiwtwaqu" path="res://features/player/states/crouching_state.gd" id="5_uxnsi"]
+[ext_resource type="Script" uid="uid://er88pojphiqi" path="res://features/player/states/crouching_state.gd" id="5_uxnsi"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_u4ddl"]
 radius = 0.3
@@ -261,9 +261,9 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15)
 script = ExtResource("3_kt1oa")
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="Reticle" type="Control" parent="UI"]
+[node name="Reticle" type="Control" parent="HUD"]
 unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 8
@@ -275,7 +275,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_47jc2")
 
-[node name="ReticleTooltip" type="Label" parent="UI/Reticle"]
+[node name="ReticleTooltip" type="Label" parent="HUD/Reticle"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -292,8 +292,10 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Reticle Tooltip"
 label_settings = SubResource("LabelSettings_k34i2")
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="ItemPreviewPrompt" type="Control" parent="UI"]
+[node name="ItemPreviewPrompt" type="Control" parent="HUD"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 3
@@ -304,7 +306,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/ItemPreviewPrompt"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/ItemPreviewPrompt"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -318,16 +320,16 @@ offset_bottom = -207.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Label" type="Label" parent="UI/ItemPreviewPrompt/HBoxContainer"]
+[node name="Label" type="Label" parent="HUD/ItemPreviewPrompt/HBoxContainer"]
 layout_mode = 2
 text = "[E] Pick up"
 label_settings = SubResource("LabelSettings_set3t")
 
-[node name="Spacer" type="Control" parent="UI/ItemPreviewPrompt/HBoxContainer"]
+[node name="Spacer" type="Control" parent="HUD/ItemPreviewPrompt/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label2" type="Label" parent="UI/ItemPreviewPrompt/HBoxContainer"]
+[node name="Label2" type="Label" parent="HUD/ItemPreviewPrompt/HBoxContainer"]
 layout_mode = 2
 text = "[G] Cancel"
 label_settings = SubResource("LabelSettings_set3t")
