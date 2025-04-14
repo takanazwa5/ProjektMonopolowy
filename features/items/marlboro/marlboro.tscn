@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0s6fvw6piahv"]
 
-[ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_r3ob2"]
-[ext_resource type="PackedScene" uid="uid://cyy1htjmqcmy4" path="res://assets/fajki/marlboro/marlboro256.glb" id="2_hm80g"]
+[ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_1df7j"]
+[ext_resource type="PackedScene" uid="uid://cyy1htjmqcmy4" path="res://features/items/marlboro/assets/marlboro256.glb" id="2_iwyxi"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4eye6"]
 points = PackedVector3Array(-0.0125, -0.0431746, -0.0290023, 0.0122035, 0.0446599, 0.03, 0.0122035, 0.0446599, -0.03, 0.0122035, -0.0446599, 0.03, -0.0125, 0.0431746, 0.0290023, 0.0122035, -0.0446599, -0.03, -0.0125, 0.0431746, -0.0290023, -0.0125, -0.0431746, 0.0290023)
 
 [node name="Marlboro" type="StaticBody3D"]
 collision_layer = 4
-script = ExtResource("1_r3ob2")
+script = ExtResource("1_1df7j")
 
-[node name="marlboro256" parent="." instance=ExtResource("2_hm80g")]
+[node name="marlboro256" parent="." instance=ExtResource("2_iwyxi")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

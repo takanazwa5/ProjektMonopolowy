@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://da47vdaar8irg"
-path="res://.godot/imported/rubber_duck_toy_1k.gltf-f0f96d5c8b907175aa88d06559c2324f.scn"
+uid="uid://cyy1htjmqcmy4"
+path="res://.godot/imported/marlboro256.glb-db998024559119bca4e17d746a1283f6.scn"
 
 [deps]
 
-source_file="res://assets/trash/rubber_duck/rubber_duck_toy_1k.gltf"
-dest_files=["res://.godot/imported/rubber_duck_toy_1k.gltf-f0f96d5c8b907175aa88d06559c2324f.scn"]
+source_file="res://features/items/marlboro/assets/marlboro256.glb"
+dest_files=["res://.godot/imported/marlboro256.glb-db998024559119bca4e17d746a1283f6.scn"]
 
 [params]
 
@@ -34,9 +34,9 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "materials": {
-"rubber_duck_toy": {
+"marlboro": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/trash/rubber_duck/rubber_duck_toy.tres"
+"use_external/path": "res://assets/fajki/marlboro/marlboro.tres"
 }
 }
 }

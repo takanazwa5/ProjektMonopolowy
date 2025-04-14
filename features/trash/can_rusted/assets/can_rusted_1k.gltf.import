@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cyy1htjmqcmy4"
-path="res://.godot/imported/marlboro256.glb-616172f464c5e29212a721f8598f116e.scn"
+uid="uid://bll1mxi55dfjq"
+path="res://.godot/imported/can_rusted_1k.gltf-2b3c997cbec599523b43ea5c35afab10.scn"
 
 [deps]
 
-source_file="res://assets/fajki/marlboro/marlboro256.glb"
-dest_files=["res://.godot/imported/marlboro256.glb-616172f464c5e29212a721f8598f116e.scn"]
+source_file="res://features/trash/can_rusted/assets/can_rusted_1k.gltf"
+dest_files=["res://.godot/imported/can_rusted_1k.gltf-2b3c997cbec599523b43ea5c35afab10.scn"]
 
 [params]
 
@@ -34,9 +34,9 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "materials": {
-"marlboro": {
+"can_rusted": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/fajki/marlboro/marlboro.tres"
+"use_external/path": "uid://bjtswo8gr2dms"
 }
 }
 }

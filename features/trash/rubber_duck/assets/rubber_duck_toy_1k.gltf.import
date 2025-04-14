@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bll1mxi55dfjq"
-path="res://.godot/imported/can_rusted_1k.gltf-065d5dedf7db8bd2513ad21bb6e71045.scn"
+uid="uid://da47vdaar8irg"
+path="res://.godot/imported/rubber_duck_toy_1k.gltf-8b6796b636845ec488fd2a6ef4e8a1f8.scn"
 
 [deps]
 
-source_file="res://assets/trash/can_rusted/can_rusted_1k.gltf"
-dest_files=["res://.godot/imported/can_rusted_1k.gltf-065d5dedf7db8bd2513ad21bb6e71045.scn"]
+source_file="res://features/trash/rubber_duck/assets/rubber_duck_toy_1k.gltf"
+dest_files=["res://.godot/imported/rubber_duck_toy_1k.gltf-8b6796b636845ec488fd2a6ef4e8a1f8.scn"]
 
 [params]
 
@@ -34,9 +34,9 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "materials": {
-"can_rusted": {
+"rubber_duck_toy": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/trash/can_rusted/can_rusted.tres"
+"use_external/path": "uid://dv1nrpngwpjx8"
 }
 }
 }

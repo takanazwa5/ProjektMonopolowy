@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bln3unycc30dx"]
 
-[ext_resource type="PackedScene" uid="uid://da47vdaar8irg" path="res://assets/trash/rubber_duck/rubber_duck_toy_1k.gltf" id="1_evjru"]
+[ext_resource type="PackedScene" uid="uid://da47vdaar8irg" path="res://features/trash/rubber_duck/assets/rubber_duck_toy_1k.gltf" id="1_evjru"]
 [ext_resource type="Script" uid="uid://xlj84wivrmgf" path="res://features/trash/trash.gd" id="1_lm0ku"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_61ya6"]

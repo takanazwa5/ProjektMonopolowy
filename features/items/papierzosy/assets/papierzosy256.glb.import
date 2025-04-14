@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dfuavw6y3hk2o"
-path="res://.godot/imported/papierzosy256.glb-9df17ca14d58d90b63c3823bdf2fd0a9.scn"
+path="res://.godot/imported/papierzosy256.glb-a6ca2cbafa40cd425a69ad8835986209.scn"
 
 [deps]
 
-source_file="res://assets/fajki/papierzosy/papierzosy256.glb"
-dest_files=["res://.godot/imported/papierzosy256.glb-9df17ca14d58d90b63c3823bdf2fd0a9.scn"]
+source_file="res://features/items/papierzosy/assets/papierzosy256.glb"
+dest_files=["res://.godot/imported/papierzosy256.glb-a6ca2cbafa40cd425a69ad8835986209.scn"]
 
 [params]
 

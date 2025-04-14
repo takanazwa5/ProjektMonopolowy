@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b266hgopl41hh"
-path.s3tc="res://.godot/imported/can_rusted_diff_1k.jpg-dd14e2b309da007101825c147176d8c5.s3tc.ctex"
+uid="uid://db8p7ba4f5s34"
+path.s3tc="res://.godot/imported/marlboro256_marlboro256.jpg-a24cf788325b14c2f5dbb3644b4a4a08.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "f9b85695fab5d9a2d113fec32c8a4b94"
+}
 
 [deps]
 
-source_file="res://assets/trash/can_rusted/textures/can_rusted_diff_1k.jpg"
-dest_files=["res://.godot/imported/can_rusted_diff_1k.jpg-dd14e2b309da007101825c147176d8c5.s3tc.ctex"]
+source_file="res://features/items/marlboro/assets/marlboro256_marlboro256.jpg"
+dest_files=["res://.godot/imported/marlboro256_marlboro256.jpg-a24cf788325b14c2f5dbb3644b4a4a08.s3tc.ctex"]
 
 [params]
 

@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db8p7ba4f5s34"
-path.s3tc="res://.godot/imported/marlboro256_marlboro256.jpg-fb4dc27804bb058c12bf74a1bc0179aa.s3tc.ctex"
+uid="uid://dp8pyytl2qmpp"
+path.s3tc="res://.godot/imported/rubber_duck_toy_nor_gl_1k.jpg-8e577888661e366522fda818cab47df5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "f9b85695fab5d9a2d113fec32c8a4b94"
-}
 
 [deps]
 
-source_file="res://assets/fajki/marlboro/marlboro256_marlboro256.jpg"
-dest_files=["res://.godot/imported/marlboro256_marlboro256.jpg-fb4dc27804bb058c12bf74a1bc0179aa.s3tc.ctex"]
+source_file="res://features/trash/rubber_duck/assets/textures/rubber_duck_toy_nor_gl_1k.jpg"
+dest_files=["res://.godot/imported/rubber_duck_toy_nor_gl_1k.jpg-8e577888661e366522fda818cab47df5.s3tc.ctex"]
 
 [params]
 
@@ -23,12 +20,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://assets/trash/rubber_duck/textures/rubber_duck_toy_nor_gl_1k.jpg"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
