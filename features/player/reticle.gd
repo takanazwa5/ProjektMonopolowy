@@ -27,8 +27,6 @@ func _ready() -> void:
 
 	SignalBus.item_entered_preview.connect(hide)
 	SignalBus.item_exited_preview.connect(show)
-	GameManager.pause_menu.paused.connect(hide)
-	GameManager.pause_menu.unpaused.connect(show)
 
 
 func _draw() -> void:

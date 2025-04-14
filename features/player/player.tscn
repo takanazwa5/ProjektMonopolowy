@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://x8jwi5g1tqbc"]
+[gd_scene load_steps=22 format=3 uid="uid://x8jwi5g1tqbc"]
 
 [ext_resource type="Script" uid="uid://xwirk8k81n2g" path="res://features/player/player.gd" id="1_k7k3i"]
 [ext_resource type="Script" uid="uid://d0ueseef8eg8o" path="res://features/player/interaction_raycast.gd" id="2_7mbft"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dxoac2p5n4etv" path="res://features/player/item_rig.gd" id="3_k34i2"]
 [ext_resource type="Script" uid="uid://rsm8sm80rels" path="res://features/player/item_preview.gd" id="3_kt1oa"]
 [ext_resource type="Script" uid="uid://d0gi7hdyudt7d" path="res://features/player/states/walking_state.gd" id="4_5h70g"]
+[ext_resource type="Script" uid="uid://bk4tohdw0etl7" path="res://features/player/hud.gd" id="5_47rrt"]
 [ext_resource type="Script" uid="uid://er88pojphiqi" path="res://features/player/states/crouching_state.gd" id="5_uxnsi"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_u4ddl"]
@@ -262,6 +263,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15)
 script = ExtResource("3_kt1oa")
 
 [node name="HUD" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_47rrt")
 
 [node name="Reticle" type="Control" parent="HUD"]
 unique_name_in_owner = true

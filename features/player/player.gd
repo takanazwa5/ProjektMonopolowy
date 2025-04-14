@@ -16,6 +16,7 @@ var can_move : bool = true
 @onready var item_preview_prompt : Control = %ItemPreviewPrompt
 @onready var camera : Camera3D = %Camera
 @onready var reticle : Reticle = %Reticle
+@onready var hud : CanvasLayer = %HUD
 
 
 func _init() -> void:
