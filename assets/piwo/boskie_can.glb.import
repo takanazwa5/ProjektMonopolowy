@@ -14,7 +14,7 @@ dest_files=["res://.godot/imported/boskie_can.glb-64f3f535ef784ea74947f6505da8b5
 [params]
 
 nodes/root_type=""
-nodes/root_name=""
+nodes/root_name="BoskieCan"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false

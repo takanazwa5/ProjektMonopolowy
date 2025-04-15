@@ -14,7 +14,7 @@ dest_files=["res://.godot/imported/ovecky_bottle.glb-673c63aea06cedb6af2f0aba41f
 [params]
 
 nodes/root_type=""
-nodes/root_name=""
+nodes/root_name="OveckyBottle"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false

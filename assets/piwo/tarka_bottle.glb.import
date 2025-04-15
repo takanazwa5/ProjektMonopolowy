@@ -14,7 +14,7 @@ dest_files=["res://.godot/imported/tarka_bottle.glb-b93e842e69e82cede68f38b0eef3
 [params]
 
 nodes/root_type=""
-nodes/root_name=""
+nodes/root_name="TarkaBottle"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false

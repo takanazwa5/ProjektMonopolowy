@@ -14,7 +14,7 @@ dest_files=["res://.godot/imported/jp_can.glb-5440d830f0e88196fdebd57a8ff9fb13.s
 [params]
 
 nodes/root_type=""
-nodes/root_name=""
+nodes/root_name="JPCan"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false

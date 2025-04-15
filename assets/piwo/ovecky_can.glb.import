@@ -14,7 +14,7 @@ dest_files=["res://.godot/imported/ovecky_can.glb-e58d381911c7aacfe02ffdd9aa3d15
 [params]
 
 nodes/root_type=""
-nodes/root_name=""
+nodes/root_name="OveckyCan"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false

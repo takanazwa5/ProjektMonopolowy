@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bs2knhaaun6oi"]
+[gd_scene load_steps=34 format=3 uid="uid://bs2knhaaun6oi"]
 
 [ext_resource type="Texture2D" uid="uid://3ab7ffd0rw4f" path="res://icon.svg" id="1_tdkuc"]
 [ext_resource type="PackedScene" uid="uid://bln3unycc30dx" path="res://features/trash/rubber_duck/rubber_duck.tscn" id="2_cxhik"]
@@ -10,6 +10,18 @@
 [ext_resource type="PackedScene" uid="uid://pjcdy84i8lmn" path="res://assets/furniture/regal3/regal_3.tscn" id="6_v1stt"]
 [ext_resource type="PackedScene" uid="uid://0bcd4fv6wwk4" path="res://assets/furniture/regal2/regal_2.tscn" id="7_qqrg4"]
 [ext_resource type="PackedScene" uid="uid://cnw60p50n4kaf" path="res://features/cash_register/cash_register.tscn" id="10_3y4uf"]
+[ext_resource type="PackedScene" uid="uid://dmtrisyvy531c" path="res://assets/piwo/bobr_bottle.glb" id="10_uv5uh"]
+[ext_resource type="PackedScene" uid="uid://bskt7g4r1dx1o" path="res://assets/piwo/bobr_can.glb" id="11_3xcvs"]
+[ext_resource type="PackedScene" uid="uid://dhmgu1ne3d7jl" path="res://assets/piwo/boskie_bottle.glb" id="12_tlvo1"]
+[ext_resource type="PackedScene" uid="uid://g7taxpc5p3k1" path="res://assets/piwo/boskie_can.glb" id="13_dtcln"]
+[ext_resource type="PackedScene" uid="uid://clpknu2jm8h44" path="res://assets/piwo/jp_bottle.glb" id="14_87tqe"]
+[ext_resource type="PackedScene" uid="uid://cn0kid5awlouy" path="res://assets/piwo/jp_can.glb" id="15_6trxw"]
+[ext_resource type="PackedScene" uid="uid://7tyqtishxcbh" path="res://assets/piwo/mech_bottle.glb" id="16_lnedc"]
+[ext_resource type="PackedScene" uid="uid://b5bu4yq8urd1b" path="res://assets/piwo/mech_can.glb" id="17_u6jgp"]
+[ext_resource type="PackedScene" uid="uid://6pidgavolruj" path="res://assets/piwo/ovecky_bottle.glb" id="18_nbpy1"]
+[ext_resource type="PackedScene" uid="uid://bxjucsr360222" path="res://assets/piwo/ovecky_can.glb" id="19_lxegn"]
+[ext_resource type="PackedScene" uid="uid://ca7esyvakgb4f" path="res://assets/piwo/tarka_bottle.glb" id="20_wfuu4"]
+[ext_resource type="PackedScene" uid="uid://ddmy1pl53qi61" path="res://assets/piwo/tarka_can.glb" id="21_whwvd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_raucf"]
 
@@ -192,6 +204,42 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.8, 
 
 [node name="Regal2" parent="Prototype" instance=ExtResource("7_qqrg4")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -0.7, 0, -0.3)
+
+[node name="BobrBottle" parent="Prototype/Regal2" instance=ExtResource("10_uv5uh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.839509, 1.13132, 0.398443)
+
+[node name="BobrCan" parent="Prototype/Regal2" instance=ExtResource("11_3xcvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.681164, 1.13132, 0.398443)
+
+[node name="BoskieBottle" parent="Prototype/Regal2" instance=ExtResource("12_tlvo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.527829, 1.13132, 0.398443)
+
+[node name="BoskieCan" parent="Prototype/Regal2" instance=ExtResource("13_dtcln")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.365008, 1.13132, 0.398443)
+
+[node name="JPBottle" parent="Prototype/Regal2" instance=ExtResource("14_87tqe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.207362, 1.13132, 0.398443)
+
+[node name="JPCan" parent="Prototype/Regal2" instance=ExtResource("15_6trxw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0619387, 1.13132, 0.398443)
+
+[node name="MechBottle" parent="Prototype/Regal2" instance=ExtResource("16_lnedc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09688, 1.13132, 0.398443)
+
+[node name="MechCan" parent="Prototype/Regal2" instance=ExtResource("17_u6jgp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.251157, 1.13132, 0.398443)
+
+[node name="OveckyBottle" parent="Prototype/Regal2" instance=ExtResource("18_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.406389, 1.13132, 0.398443)
+
+[node name="OveckyCan" parent="Prototype/Regal2" instance=ExtResource("19_lxegn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.571638, 1.13132, 0.398443)
+
+[node name="TarkaBottle" parent="Prototype/Regal2" instance=ExtResource("20_wfuu4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.736115, 1.13132, 0.398443)
+
+[node name="TarkaCan" parent="Prototype/Regal2" instance=ExtResource("21_whwvd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.900151, 1.13132, 0.398442)
 
 [node name="Regal6" parent="Prototype" instance=ExtResource("6_v1stt")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 0, 1)

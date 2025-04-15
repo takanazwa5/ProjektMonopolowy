@@ -14,7 +14,7 @@ dest_files=["res://.godot/imported/tarka_can.glb-a4357b70816020c48a224e4c983057e
 [params]
 
 nodes/root_type=""
-nodes/root_name=""
+nodes/root_name="TarkaCan"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
