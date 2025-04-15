@@ -109,6 +109,14 @@ transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 1.1, 0, -2
 [node name="CanRusted" parent="Trash" instance=ExtResource("3_v2jmj")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 1.4, 0, -3.3)
 
+[node name="Items" type="Node" parent="."]
+
+[node name="Marlboro" parent="Items" instance=ExtResource("5_mfaqe")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.86727, 0.878494, -6.1)
+
+[node name="Papierzosy" parent="Items" instance=ExtResource("6_i578k")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.86727, 0.878494, -6)
+
 [node name="Prototype" type="Node3D" parent="."]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="Prototype"]
@@ -163,12 +171,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.559, 0)
 
 [node name="Regal1" parent="Prototype" instance=ExtResource("5_8yp3g")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.05, 0, -6.1)
-
-[node name="Marlboro" parent="Prototype/Regal1" instance=ExtResource("5_mfaqe")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -4.76837e-07, 0.878494, 0.182725)
-
-[node name="Papierzosy" parent="Prototype/Regal1" instance=ExtResource("6_i578k")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 0.0999999, 0.878494, 0.182725)
 
 [node name="Regal8" parent="Prototype" instance=ExtResource("6_v1stt")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.7, 0, 3.5)
