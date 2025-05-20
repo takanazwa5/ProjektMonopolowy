@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y4tdognbnvkl"
-path.s3tc="res://.godot/imported/MainRoom_Doors.png-74148a1f60b8db5beff2c77d3d134208.s3tc.ctex"
+uid="uid://c7168i5fqenmf"
+path.s3tc="res://.godot/imported/Doors.png-98873f6bf18726409d3a2d1e1c03ab81.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "2137f76653bea5023ce7ae09795381d3"
-}
 
 [deps]
 
-source_file="res://assets/MainRoom/Room/MainRoom_Doors.png"
-dest_files=["res://.godot/imported/MainRoom_Doors.png-74148a1f60b8db5beff2c77d3d134208.s3tc.ctex"]
+source_file="res://assets/MainRoom/Room/Textures_MainRoom/Doors.png"
+dest_files=["res://.godot/imported/Doors.png-98873f6bf18726409d3a2d1e1c03ab81.s3tc.ctex"]
 
 [params]
 
