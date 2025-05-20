@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpu0xbmvtq6gi"
-path="res://.godot/imported/Zamrazarka_Base.png-f6226bca4c5bc7d4901a54e24b44c766.ctex"
+uid="uid://c2qy5p11orna2"
+path="res://.godot/imported/LodowkaNaPiwo_Roughness.png-6979c386f56d6d95b6f0ebc5da7fb01d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/MainRoom/Zamrazarka/Zamrazarka_Base.png"
-dest_files=["res://.godot/imported/Zamrazarka_Base.png-f6226bca4c5bc7d4901a54e24b44c766.ctex"]
+source_file="res://assets/MainRoom/LodowkaNaPiwo/Textures_LodNaPiw/LodowkaNaPiwo_Roughness.png"
+dest_files=["res://.godot/imported/LodowkaNaPiwo_Roughness.png-6979c386f56d6d95b6f0ebc5da7fb01d.ctex"]
 
 [params]
 

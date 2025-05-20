@@ -3,13 +3,12 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://p3jespo8f2xq"
-path="res://.godot/imported/Zamrazarka.glb-8e2e5fba338366731cd99900e8114cd0.scn"
+uid="uid://cu3gntdvwsydx"
+valid=false
 
 [deps]
 
-source_file="res://assets/MainRoom/Zamrazarka/Zamrazarka.glb"
-dest_files=["res://.godot/imported/Zamrazarka.glb-8e2e5fba338366731cd99900e8114cd0.scn"]
+source_file="res://assets/MainRoom/SkrzynkiNaPiwo/SkrzynkiNaPiwo.gltf"
 
 [params]
 

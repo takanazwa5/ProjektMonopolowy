@@ -3,13 +3,12 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bbqhip6453cfl"
-path="res://.godot/imported/Szafa.glb-f9977964f9f6ab367d9351db4140a4c7.scn"
+uid="uid://6qkoom21itlg"
+valid=false
 
 [deps]
 
-source_file="res://assets/MainRoom/Szafa/Szafa.glb"
-dest_files=["res://.godot/imported/Szafa.glb-f9977964f9f6ab367d9351db4140a4c7.scn"]
+source_file="res://assets/MainRoom/Zamrazarka/Zamrazarka.gltf"
 
 [params]
 

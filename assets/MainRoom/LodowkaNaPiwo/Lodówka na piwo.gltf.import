@@ -3,13 +3,12 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cp5dfp8u8pmqf"
-path="res://.godot/imported/LodowkaNaPiwo.glb-bd7e940f6c161248f6d5dabeef6a6c5d.scn"
+uid="uid://rtj10jkb80f"
+valid=false
 
 [deps]
 
-source_file="res://assets/MainRoom/LodowkaNaPiwo/LodowkaNaPiwo.glb"
-dest_files=["res://.godot/imported/LodowkaNaPiwo.glb-bd7e940f6c161248f6d5dabeef6a6c5d.scn"]
+source_file="res://assets/MainRoom/LodowkaNaPiwo/Lodówka na piwo.gltf"
 
 [params]
 

@@ -3,13 +3,12 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cam3mvfd3p4tm"
-path="res://.godot/imported/SkrzynkiNaPiwo.glb-cc21eb3a75a0ac25b9221a45db844517.scn"
+uid="uid://bl4woh7bngw8t"
+valid=false
 
 [deps]
 
-source_file="res://assets/MainRoom/SkrzynkiNaPiwo/SkrzynkiNaPiwo.glb"
-dest_files=["res://.godot/imported/SkrzynkiNaPiwo.glb-cc21eb3a75a0ac25b9221a45db844517.scn"]
+source_file="res://assets/MainRoom/LodowkaNaPiwo/LodowkaNaPiwo.gltf"
 
 [params]
 

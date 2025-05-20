@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ckxu0pqdh5prg"
-path="res://.godot/imported/SzafaWielka.glb-8ccd562848229238f8f695493831d188.scn"
+uid="uid://c1ds1rqygl1lx"
+path="res://.godot/imported/SzafaWiełka.glb-e310346eeb61808848c37080807bcf3b.scn"
 
 [deps]
 
-source_file="res://assets/MainRoom/SzafaWielka/SzafaWielka.glb"
-dest_files=["res://.godot/imported/SzafaWielka.glb-8ccd562848229238f8f695493831d188.scn"]
+source_file="res://assets/MainRoom/SzafaWielka/SzafaWiełka.glb"
+dest_files=["res://.godot/imported/SzafaWiełka.glb-e310346eeb61808848c37080807bcf3b.scn"]
 
 [params]
 

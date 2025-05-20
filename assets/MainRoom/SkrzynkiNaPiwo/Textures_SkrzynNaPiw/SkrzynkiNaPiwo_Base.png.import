@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crr1let570xwf"
-path="res://.godot/imported/Zamrazarka_Roughness.png-93ff43616740ed9f904631b8c7bdd41d.ctex"
+uid="uid://cvd6vj81gemw0"
+path="res://.godot/imported/SkrzynkiNaPiwo_Base.png-077184ec174bf1b4ebaf9e1c99f5e508.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/MainRoom/Zamrazarka/Zamrazarka_Roughness.png"
-dest_files=["res://.godot/imported/Zamrazarka_Roughness.png-93ff43616740ed9f904631b8c7bdd41d.ctex"]
+source_file="res://assets/MainRoom/SkrzynkiNaPiwo/Textures_SkrzynNaPiw/SkrzynkiNaPiwo_Base.png"
+dest_files=["res://.godot/imported/SkrzynkiNaPiwo_Base.png-077184ec174bf1b4ebaf9e1c99f5e508.ctex"]
 
 [params]
 
