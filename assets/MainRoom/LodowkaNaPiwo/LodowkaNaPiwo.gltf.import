@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bl4woh7bngw8t"
-valid=false
+uid="uid://cf4d6xd68nues"
+path="res://.godot/imported/LodowkaNaPiwo.gltf-17b0bf270a06dcf764261060d53dcca0.scn"
 
 [deps]
 
 source_file="res://assets/MainRoom/LodowkaNaPiwo/LodowkaNaPiwo.gltf"
+dest_files=["res://.godot/imported/LodowkaNaPiwo.gltf-17b0bf270a06dcf764261060d53dcca0.scn"]
 
 [params]
 

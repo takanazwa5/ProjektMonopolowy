@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvd6vj81gemw0"
-path.s3tc="res://.godot/imported/SkrzynkiNaPiwo_Base.png-077184ec174bf1b4ebaf9e1c99f5e508.s3tc.ctex"
+uid="uid://dxl7c4dd21igf"
+path.s3tc="res://.godot/imported/Window_Base.png-ca75b1fc15e38f6faf717b3eef309210.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/MainRoom/SkrzynkiNaPiwo/Textures_SkrzynNaPiw/SkrzynkiNaPiwo_Base.png"
-dest_files=["res://.godot/imported/SkrzynkiNaPiwo_Base.png-077184ec174bf1b4ebaf9e1c99f5e508.s3tc.ctex"]
+source_file="res://assets/MainRoom/Room/Textures/Window_Base.png"
+dest_files=["res://.godot/imported/Window_Base.png-ca75b1fc15e38f6faf717b3eef309210.s3tc.ctex"]
 
 [params]
 

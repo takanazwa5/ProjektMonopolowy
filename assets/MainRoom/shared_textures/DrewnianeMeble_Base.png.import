@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bexs05nqni70d"
-path="res://.godot/imported/LodowkaNaPiwo_Base.png-3c5789b242f532bbb4dcaf4ff7d1589c.ctex"
+uid="uid://c2yriidobdtlu"
+path="res://.godot/imported/DrewnianeMeble_Base.png-d54962860cdf32eed0752f7ef95f6f06.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/MainRoom/LodowkaNaPiwo/Textures_LodNaPiw/LodowkaNaPiwo_Base.png"
-dest_files=["res://.godot/imported/LodowkaNaPiwo_Base.png-3c5789b242f532bbb4dcaf4ff7d1589c.ctex"]
+source_file="res://assets/MainRoom/shared_textures/DrewnianeMeble_Base.png"
+dest_files=["res://.godot/imported/DrewnianeMeble_Base.png-d54962860cdf32eed0752f7ef95f6f06.ctex"]
 
 [params]
 

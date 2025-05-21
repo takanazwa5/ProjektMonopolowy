@@ -48,7 +48,7 @@
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Mat_LodowkaNJaPiwo",
+			"name":"Mat_LodowkaNaPiwo",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"index":0
@@ -132,12 +132,12 @@
 		{
 			"mimeType":"image/png",
 			"name":"LodowkaNaPiwo_Base",
-			"uri":"Textures_LodNaPiw/LodowkaNaPiwo_Base.png"
+			"uri":"Textures/LodowkaNaPiwo_Base.png"
 		},
 		{
 			"mimeType":"image/png",
 			"name":"LodowkaNaPiwo_Roughness",
-			"uri":"Textures_LodNaPiw/LodowkaNaPiwo_Roughness.png"
+			"uri":"Textures/LodowkaNaPiwo_Roughness.png"
 		}
 	],
 	"accessors":[

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqeas5441sqf"
-path.s3tc="res://.godot/imported/Zamrazarka_Base.png-7e6c44ab95e7e0e7492190bebd508872.s3tc.ctex"
+path.s3tc="res://.godot/imported/Zamrazarka_Base.png-f008c9fb68e39f2507aaa04d388f7693.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/MainRoom/Zamrazarka/Textures_Zamraz/Zamrazarka_Base.png"
-dest_files=["res://.godot/imported/Zamrazarka_Base.png-7e6c44ab95e7e0e7492190bebd508872.s3tc.ctex"]
+source_file="res://assets/MainRoom/Zamrazarka/Textures/Zamrazarka_Base.png"
+dest_files=["res://.godot/imported/Zamrazarka_Base.png-f008c9fb68e39f2507aaa04d388f7693.s3tc.ctex"]
 
 [params]
 

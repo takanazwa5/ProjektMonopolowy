@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxl7c4dd21igf"
-path.s3tc="res://.godot/imported/Window_Base.png-b664341e2302844c7d9511a3f730b80f.s3tc.ctex"
+uid="uid://dt3db48ks4o7j"
+path.s3tc="res://.godot/imported/MainRoom_Roughness.png-7941fb256a6532759f35ff1f81a50af7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/MainRoom/Room/Textures_MainRoom/Window_Base.png"
-dest_files=["res://.godot/imported/Window_Base.png-b664341e2302844c7d9511a3f730b80f.s3tc.ctex"]
+source_file="res://assets/MainRoom/Room/Textures/MainRoom_Roughness.png"
+dest_files=["res://.godot/imported/MainRoom_Roughness.png-7941fb256a6532759f35ff1f81a50af7.s3tc.ctex"]
 
 [params]
 
