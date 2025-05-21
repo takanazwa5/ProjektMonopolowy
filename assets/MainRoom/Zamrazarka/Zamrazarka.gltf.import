@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://6qkoom21itlg"
-valid=false
+path="res://.godot/imported/Zamrazarka.gltf-1676a02b2d3019e586784c00a9f1b68f.scn"
 
 [deps]
 
 source_file="res://assets/MainRoom/Zamrazarka/Zamrazarka.gltf"
+dest_files=["res://.godot/imported/Zamrazarka.gltf-1676a02b2d3019e586784c00a9f1b68f.scn"]
 
 [params]
 

@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cu3gntdvwsydx"
-valid=false
+path="res://.godot/imported/SkrzynkiNaPiwo.gltf-f08d77d03cf9889f49bbb1113b5a64b3.scn"
 
 [deps]
 
 source_file="res://assets/MainRoom/SkrzynkiNaPiwo/SkrzynkiNaPiwo.gltf"
+dest_files=["res://.godot/imported/SkrzynkiNaPiwo.gltf-f08d77d03cf9889f49bbb1113b5a64b3.scn"]
 
 [params]
 
