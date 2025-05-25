@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cnw60p50n4kaf" path="res://features/cash_register/cash_register.tscn" id="10_3y4uf"]
 [ext_resource type="PackedScene" uid="uid://bfbhalgst4tvt" path="res://features/level/assets/main_room/MainRoom.gltf" id="11_2e8v1"]
 [ext_resource type="PackedScene" uid="uid://dh54hyerfrh" path="res://features/level/assets/lodowka_na_piwo/LodowkaNaPiwo.gltf" id="11_n722u"]
-[ext_resource type="PackedScene" uid="uid://q6efdp1gcixe" path="res://features/level/assets/zamrazarka/Zamrazarka.gltf" id="11_vj8ca"]
+[ext_resource type="PackedScene" uid="uid://q6efdp1gcixe" path="res://features/level/assets/zamrazarka/zamrazarka.gltf" id="11_vj8ca"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_raucf"]
 
