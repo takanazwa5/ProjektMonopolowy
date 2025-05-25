@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c3kwweey3tj1k"
-path="res://.godot/imported/regal3.glb-01454780123d714bfe7265718b8ca587.scn"
+uid="uid://dc0lnblefw7m"
+path="res://.godot/imported/szafa_wielka.glb-577b096d62d75c9f8c9b042a94cd1d71.scn"
 
 [deps]
 
-source_file="res://assets/furniture/regal3/regal3.glb"
-dest_files=["res://.godot/imported/regal3.glb-01454780123d714bfe7265718b8ca587.scn"]
+source_file="res://features/level/assets/szafa_wielka/szafa_wielka.glb"
+dest_files=["res://.godot/imported/szafa_wielka.glb-577b096d62d75c9f8c9b042a94cd1d71.scn"]
 
 [params]
 
@@ -32,6 +32,13 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"Mat_DrewnianeMeble": {
+"use_external/enabled": true,
+"use_external/path": "uid://c0vrjke0wmrci"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

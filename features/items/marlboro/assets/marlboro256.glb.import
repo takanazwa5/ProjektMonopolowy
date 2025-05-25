@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "marlboro": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/fajki/marlboro/marlboro.tres"
+"use_external/path": "uid://buc1b4tcfb1pu"
 }
 }
 }

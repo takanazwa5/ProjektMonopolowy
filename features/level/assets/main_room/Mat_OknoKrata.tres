@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c3n5nw28l6q05"]
+
+[ext_resource type="Texture2D" uid="uid://b1wtik58cvaq1" path="res://features/level/assets/main_room/textures/Window_Base.png" id="1_ei2xe"]
+[ext_resource type="Texture2D" uid="uid://b8w56vol7g2nh" path="res://features/level/assets/main_room/textures/Window_Roughness.png" id="2_alypv"]
+
+[resource]
+resource_name = "Mat_OknoKrata"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_ei2xe")
+metallic_texture = ExtResource("2_alypv")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_alypv")
+roughness_texture_channel = 1

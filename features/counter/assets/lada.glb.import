@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cl3s31alslmw8"
-path="res://.godot/imported/regal1.glb-4856620f6159d203c67b47db2e08ab3d.scn"
+uid="uid://n4vc6uyh7qq7"
+path="res://.godot/imported/lada.glb-9c1d5d6d4757bc28d400b61e4ddd2c8d.scn"
 
 [deps]
 
-source_file="res://assets/furniture/regal1/regal1.glb"
-dest_files=["res://.godot/imported/regal1.glb-4856620f6159d203c67b47db2e08ab3d.scn"]
+source_file="res://features/counter/assets/lada.glb"
+dest_files=["res://.godot/imported/lada.glb-9c1d5d6d4757bc28d400b61e4ddd2c8d.scn"]
 
 [params]
 
@@ -32,6 +32,13 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"Mat_DrewnianeMeble": {
+"use_external/enabled": true,
+"use_external/path": "uid://c0vrjke0wmrci"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

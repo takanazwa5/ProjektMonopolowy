@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dfuavw6y3hk2o"
-path="res://.godot/imported/papierzosy256.glb-a6ca2cbafa40cd425a69ad8835986209.scn"
+uid="uid://dwuwo0xfsojko"
+path="res://.godot/imported/skrzynka_na_piwo.gltf-e36e8afcc1decfb81501a12d81ca5b1a.scn"
 
 [deps]
 
-source_file="res://features/items/papierzosy/assets/papierzosy256.glb"
-dest_files=["res://.godot/imported/papierzosy256.glb-a6ca2cbafa40cd425a69ad8835986209.scn"]
+source_file="res://features/level/assets/skrzynka_na_piwo/skrzynka_na_piwo.gltf"
+dest_files=["res://.godot/imported/skrzynka_na_piwo.gltf-e36e8afcc1decfb81501a12d81ca5b1a.scn"]
 
 [params]
 
@@ -34,9 +34,9 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "materials": {
-"papierzosy": {
+"Material": {
 "use_external/enabled": true,
-"use_external/path": "uid://dy5kofmapia6m"
+"use_external/path": "uid://wbef2w15uaon"
 }
 }
 }

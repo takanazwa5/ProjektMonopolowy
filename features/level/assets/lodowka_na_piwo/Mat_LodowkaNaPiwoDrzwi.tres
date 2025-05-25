@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cecnqanj5he3i"]
+
+[ext_resource type="Texture2D" uid="uid://ccdf1kqibi7mg" path="res://features/level/assets/lodowka_na_piwo/textures/LodowkaNaPiwo_Base.png" id="1_86t4r"]
+[ext_resource type="Texture2D" uid="uid://cqyw8p7em8ule" path="res://features/level/assets/lodowka_na_piwo/textures/LodowkaNaPiwo_Roughness.png" id="2_33vdd"]
+
+[resource]
+resource_name = "Mat_LodowkaNaPiwoDrzwi"
+transparency = 1
+albedo_texture = ExtResource("1_86t4r")
+metallic_texture = ExtResource("2_33vdd")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_33vdd")
+roughness_texture_channel = 1

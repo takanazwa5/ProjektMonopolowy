@@ -22,7 +22,7 @@ func interact(event: InputEvent) -> void:
 	item.reparent(self)
 	item.collision_layer = 0
 	item.set_script(null)
-	next_item_pos.position.x += 0.1
+	next_item_pos.position.x -= 0.1
 
 
 func _on_item_entered_rig() -> void:
