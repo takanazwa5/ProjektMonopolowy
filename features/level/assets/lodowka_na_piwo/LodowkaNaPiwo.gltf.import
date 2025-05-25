@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cxusodydr5ovw"
-path="res://.godot/imported/main_room.gltf-1344391a5e9ede9c6b846749f451cce8.scn"
+uid="uid://dh54hyerfrh"
+path="res://.godot/imported/LodowkaNaPiwo.gltf-9d4361870d434240e8d6563a47006a44.scn"
 
 [deps]
 
-source_file="res://features/level/assets/main_room/main_room.gltf"
-dest_files=["res://.godot/imported/main_room.gltf-1344391a5e9ede9c6b846749f451cce8.scn"]
+source_file="res://features/level/assets/lodowka_na_piwo/LodowkaNaPiwo.gltf"
+dest_files=["res://.godot/imported/LodowkaNaPiwo.gltf-9d4361870d434240e8d6563a47006a44.scn"]
 
 [params]
 
@@ -34,17 +34,17 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "materials": {
-"Mat_Drzwi": {
+"Mat_LodowkaNaPiwo": {
 "use_external/enabled": true,
-"use_external/path": "uid://bxvisxc5c4276"
+"use_external/path": "res://features/level/assets/lodowka_na_piwo/Mat_LodowkaNaPiwo.tres"
 },
-"Mat_MainRoom": {
+"Mat_LodowkaNaPiwoDrzwi": {
 "use_external/enabled": true,
-"use_external/path": "uid://cpedusi0b5tix"
+"use_external/path": "res://features/level/assets/lodowka_na_piwo/Mat_LodowkaNaPiwoDrzwi.tres"
 },
-"Mat_Okno": {
+"Mat_LodowkaNaPiwoKrata": {
 "use_external/enabled": true,
-"use_external/path": "uid://dy2q24djactxd"
+"use_external/path": "res://features/level/assets/lodowka_na_piwo/Mat_LodowkaNaPiwoKrata.tres"
 }
 }
 }

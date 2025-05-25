@@ -1,12 +1,13 @@
-[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dy2q24djactxd"]
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dp8wb25is0as8"]
 
-[ext_resource type="Texture2D" uid="uid://wynukti2tg3w" path="res://features/level/assets/main_room/textures/Window_Base.png" id="1_bph7n"]
-[ext_resource type="Texture2D" uid="uid://df423lfru46hh" path="res://features/level/assets/main_room/textures/Window_Roughness.png" id="2_0gitl"]
+[ext_resource type="Texture2D" uid="uid://b1wtik58cvaq1" path="res://features/level/assets/main_room/textures/Window_Base.png" id="1_sj0yo"]
+[ext_resource type="Texture2D" uid="uid://b8w56vol7g2nh" path="res://features/level/assets/main_room/textures/Window_Roughness.png" id="2_tr7fx"]
 
 [resource]
 resource_name = "Mat_Okno"
-albedo_texture = ExtResource("1_bph7n")
-metallic_texture = ExtResource("2_0gitl")
+transparency = 1
+albedo_texture = ExtResource("1_sj0yo")
+metallic_texture = ExtResource("2_tr7fx")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("2_0gitl")
+roughness_texture = ExtResource("2_tr7fx")
 roughness_texture_channel = 1

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwvbk2wfqws5"
-path.s3tc="res://.godot/imported/MainRoom_Roughness.png-4460aa6ee826aabf393c9429ffb043cd.s3tc.ctex"
+uid="uid://ds88yp2w3bpfc"
+path.s3tc="res://.godot/imported/Doors_Roughness.png-c4e4fc10a65d5e839e9ab3ffc6d857a4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Transparent/MainRoom/Textures/MainRoom_Roughness.png"
-dest_files=["res://.godot/imported/MainRoom_Roughness.png-4460aa6ee826aabf393c9429ffb043cd.s3tc.ctex"]
+source_file="res://features/level/assets/main_room/textures/Doors_Roughness.png"
+dest_files=["res://.godot/imported/Doors_Roughness.png-c4e4fc10a65d5e839e9ab3ffc6d857a4.s3tc.ctex"]
 
 [params]
 

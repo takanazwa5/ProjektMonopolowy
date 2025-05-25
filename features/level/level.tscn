@@ -1,16 +1,16 @@
 [gd_scene load_steps=21 format=3 uid="uid://bs2knhaaun6oi"]
 
 [ext_resource type="Texture2D" uid="uid://3ab7ffd0rw4f" path="res://icon.svg" id="1_tdkuc"]
-[ext_resource type="PackedScene" uid="uid://cxusodydr5ovw" path="res://features/level/assets/main_room/main_room.gltf" id="2_n722u"]
 [ext_resource type="PackedScene" uid="uid://dc0lnblefw7m" path="res://features/level/assets/szafa_wielka/szafa_wielka.glb" id="3_v1stt"]
-[ext_resource type="PackedScene" uid="uid://b0ilrxskcab4f" path="res://features/level/assets/lodowka_na_piwo/lodowka_na_piwo.gltf" id="5_3y4uf"]
 [ext_resource type="PackedScene" uid="uid://c0s6fvw6piahv" path="res://features/items/marlboro/marlboro.tscn" id="5_mfaqe"]
 [ext_resource type="PackedScene" uid="uid://daaf5b4tnvg2g" path="res://features/items/papierzosy/papierzosy.tscn" id="6_i578k"]
-[ext_resource type="PackedScene" uid="uid://bjgyhrqtkt17r" path="res://features/level/assets/zamrazarka/zamrazarka.gltf" id="6_n722u"]
 [ext_resource type="PackedScene" uid="uid://dum24x4vjs36k" path="res://features/level/assets/szafa/szafa.glb" id="7_2e8v1"]
 [ext_resource type="PackedScene" uid="uid://dwuwo0xfsojko" path="res://features/level/assets/skrzynka_na_piwo/skrzynka_na_piwo.gltf" id="8_v1stt"]
 [ext_resource type="PackedScene" uid="uid://c2klqufu8iang" path="res://features/counter/counter.tscn" id="9_qqrg4"]
 [ext_resource type="PackedScene" uid="uid://cnw60p50n4kaf" path="res://features/cash_register/cash_register.tscn" id="10_3y4uf"]
+[ext_resource type="PackedScene" uid="uid://bfbhalgst4tvt" path="res://features/level/assets/main_room/MainRoom.gltf" id="11_2e8v1"]
+[ext_resource type="PackedScene" uid="uid://dh54hyerfrh" path="res://features/level/assets/lodowka_na_piwo/LodowkaNaPiwo.gltf" id="11_n722u"]
+[ext_resource type="PackedScene" uid="uid://cpj12l02m8ejj" path="res://features/level/assets/zamrazarka/Zamrazarka.gltf" id="11_vj8ca"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_raucf"]
 
@@ -96,9 +96,6 @@ size = Vector3(1, 0.5, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02, 0.51)
 text = "2.01m"
 
-[node name="MainRoom" parent="." instance=ExtResource("2_n722u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77862, 0, -3.96313)
-
 [node name="Lights" type="Node" parent="."]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
@@ -129,12 +126,6 @@ shadow_enabled = true
 
 [node name="SzafaWielka" parent="Furniture" instance=ExtResource("3_v1stt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7239, 0.125929, -3.84327)
-
-[node name="LodowkaNaPiwo" parent="Furniture" instance=ExtResource("5_3y4uf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.74853, 0.136088, -0.339444)
-
-[node name="Zamrazarka" parent="Furniture" instance=ExtResource("6_n722u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71416, 0.152616, 0.54676)
 
 [node name="Szafa" parent="Furniture" instance=ExtResource("7_2e8v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.73258, 0.132334, 2.51625)
@@ -186,3 +177,12 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.258,
 
 [node name="Papierzosy" parent="." instance=ExtResource("6_i578k")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.25551, 1.53215, -2.78527)
+
+[node name="LodowkaNaPiwo" parent="." instance=ExtResource("11_n722u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.73279, 0.124289, -0.259204)
+
+[node name="MainRoom" parent="." instance=ExtResource("11_2e8v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77862, 0, -3.96313)
+
+[node name="Zamrazarka" parent="." instance=ExtResource("11_vj8ca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71416, 0.152616, 0.54676)

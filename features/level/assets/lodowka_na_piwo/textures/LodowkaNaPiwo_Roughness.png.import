@@ -2,12 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yjpv2msm65d4"
+uid="uid://cqyw8p7em8ule"
 path.s3tc="res://.godot/imported/LodowkaNaPiwo_Roughness.png-d986ec941fd64480d583c2a79d629590.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 

@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqyw8p7em8ule"
-path.s3tc="res://.godot/imported/LodowkaNaPiwo_Roughness.png-0bf4ba14ef1eba59de910b978285786f.s3tc.ctex"
+uid="uid://bd12tphgp75li"
+path.s3tc="res://.godot/imported/Doors_Base.png-82858cd3c235d44412d599899d68e42e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
-source_file="res://assets/Transparent/LodNaPiw/Textures/LodowkaNaPiwo_Roughness.png"
-dest_files=["res://.godot/imported/LodowkaNaPiwo_Roughness.png-0bf4ba14ef1eba59de910b978285786f.s3tc.ctex"]
+source_file="res://features/level/assets/main_room/textures/Doors_Base.png"
+dest_files=["res://.godot/imported/Doors_Base.png-82858cd3c235d44412d599899d68e42e.s3tc.ctex"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bjgyhrqtkt17r"
-path="res://.godot/imported/zamrazarka.gltf-7d6dabad3d5664c900e2802d74f030c6.scn"
+uid="uid://cpj12l02m8ejj"
+path="res://.godot/imported/Zamrazarka.gltf-7a308db1195e14178638815a4e2c7dd1.scn"
 
 [deps]
 
-source_file="res://features/level/assets/zamrazarka/zamrazarka.gltf"
-dest_files=["res://.godot/imported/zamrazarka.gltf-7d6dabad3d5664c900e2802d74f030c6.scn"]
+source_file="res://features/level/assets/zamrazarka/Zamrazarka.gltf"
+dest_files=["res://.godot/imported/Zamrazarka.gltf-7a308db1195e14178638815a4e2c7dd1.scn"]
 
 [params]
 
@@ -36,7 +36,11 @@ _subresources={
 "materials": {
 "Mat_Zamrazarka": {
 "use_external/enabled": true,
-"use_external/path": "uid://bpv4s0e4njob1"
+"use_external/path": "res://features/level/assets/zamrazarka/Mat_Zamrazarka.tres"
+},
+"Mat_ZamrazarkaDrzwi": {
+"use_external/enabled": true,
+"use_external/path": "res://features/level/assets/zamrazarka/Mat_ZamrazarkaDrzwi.tres"
 }
 }
 }
