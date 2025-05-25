@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dy2q24djactxd"]
+
+[ext_resource type="Texture2D" uid="uid://wynukti2tg3w" path="res://features/level/assets/main_room/textures/Window_Base.png" id="1_bph7n"]
+[ext_resource type="Texture2D" uid="uid://df423lfru46hh" path="res://features/level/assets/main_room/textures/Window_Roughness.png" id="2_0gitl"]
+
+[resource]
+resource_name = "Mat_Okno"
+albedo_texture = ExtResource("1_bph7n")
+metallic_texture = ExtResource("2_0gitl")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_0gitl")
+roughness_texture_channel = 1

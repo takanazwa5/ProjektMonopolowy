@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cpedusi0b5tix"]
+
+[ext_resource type="Texture2D" uid="uid://bk3it5rs3qghd" path="res://features/level/assets/main_room/textures/MainRoom_Base.png" id="1_811bs"]
+[ext_resource type="Texture2D" uid="uid://cg1yebh0jf266" path="res://features/level/assets/main_room/textures/MainRoom_Roughness.png" id="2_x1rwj"]
+
+[resource]
+resource_name = "Mat_MainRoom"
+albedo_texture = ExtResource("1_811bs")
+metallic_texture = ExtResource("2_x1rwj")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_x1rwj")
+roughness_texture_channel = 1

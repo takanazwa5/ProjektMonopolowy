@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bxvisxc5c4276"]
+
+[ext_resource type="Texture2D" uid="uid://3aogffxdkp5e" path="res://features/level/assets/main_room/textures/Doors.png" id="1_4osi6"]
+
+[resource]
+resource_name = "Mat_Drzwi"
+albedo_texture = ExtResource("1_4osi6")
+roughness = 0.5

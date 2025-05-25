@@ -13,4 +13,4 @@ script = ExtResource("1_11aar")
 [node name="Level" parent="." instance=ExtResource("2_ouhrm")]
 
 [node name="Player" parent="." instance=ExtResource("3_txauv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -2.4)
+transform = Transform3D(-0.97183, 0, -0.235685, 0, 1, 0, 0.235685, 0, -0.97183, -1.56016, 1, -2.03091)

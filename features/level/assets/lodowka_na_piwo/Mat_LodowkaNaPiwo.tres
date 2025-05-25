@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bimqpn3m3cfos"]
+
+[ext_resource type="Texture2D" uid="uid://g34gfm8epksr" path="res://features/level/assets/lodowka_na_piwo/textures/LodowkaNaPiwo_Base.png" id="1_q6ekr"]
+[ext_resource type="Texture2D" uid="uid://yjpv2msm65d4" path="res://features/level/assets/lodowka_na_piwo/textures/LodowkaNaPiwo_Roughness.png" id="2_krt6o"]
+
+[resource]
+resource_name = "Mat_LodowkaNaPiwo"
+albedo_texture = ExtResource("1_q6ekr")
+metallic_texture = ExtResource("2_krt6o")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_krt6o")
+roughness_texture_channel = 1
