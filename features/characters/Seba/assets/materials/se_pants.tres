@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://duus758lu8qkv"]
+
+[ext_resource type="Texture2D" uid="uid://c7dqtrnyn7wdi" path="res://features/characters/Seba/assets/textures/se_pants_Base_color.png" id="1_r7e6s"]
+[ext_resource type="Texture2D" uid="uid://capb1qwotbj7s" path="res://features/characters/Seba/assets/textures/se_pants_Roughness.png" id="2_4gle1"]
+
+[resource]
+resource_name = "se_pants"
+albedo_texture = ExtResource("1_r7e6s")
+roughness_texture = ExtResource("2_4gle1")
+roughness_texture_channel = 4
+texture_filter = 2

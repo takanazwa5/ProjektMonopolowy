@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkpahe38uo1de"]
+
+[ext_resource type="PackedScene" uid="uid://cj7dyxceh7v5m" path="res://features/characters/Szef/assets/character_szef.gltf" id="1_7lt5d"]
+[ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/characters/shared/assets/Rig.glb" id="2_slk2g"]
+
+[node name="Szef" type="Node3D"]
+
+[node name="character_szef" parent="." instance=ExtResource("1_7lt5d")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="character_szef"]
+libraries = {
+&"Rig": ExtResource("2_slk2g")
+}

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://jncewv6iyxj6"]
+
+[ext_resource type="Texture2D" uid="uid://bnnnu0cqjy1s2" path="res://features/characters/Madzia/assets/textures/ma_body_Base_color.png" id="1_1jhar"]
+[ext_resource type="Texture2D" uid="uid://um64jnbsniai" path="res://features/characters/Madzia/assets/textures/ma_body_Roughness.png" id="2_wds3k"]
+
+[resource]
+resource_name = "ma_body"
+albedo_texture = ExtResource("1_1jhar")
+roughness_texture = ExtResource("2_wds3k")
+roughness_texture_channel = 4
+texture_filter = 2

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://r0hcx26d30u4"]
+
+[ext_resource type="Texture2D" uid="uid://jrhny24aj78h" path="res://features/characters/Zdzisiu/assets/textures/zd_body_Base_color.png" id="1_w3s4r"]
+[ext_resource type="Texture2D" uid="uid://dg8ekegtrth1r" path="res://features/characters/Zdzisiu/assets/textures/zd_body_Roughness.png" id="2_ikjyi"]
+
+[resource]
+resource_name = "zd_body"
+albedo_texture = ExtResource("1_w3s4r")
+roughness_texture = ExtResource("2_ikjyi")
+roughness_texture_channel = 4
+texture_filter = 2

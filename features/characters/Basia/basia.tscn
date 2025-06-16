@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://civlo6dh6d0kf"]
+
+[ext_resource type="PackedScene" uid="uid://baj8gdl46jg1o" path="res://features/characters/Basia/assets/character_basia.gltf" id="1_al82x"]
+[ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/characters/shared/assets/Rig.glb" id="2_0suly"]
+
+[node name="Basia" type="Node3D"]
+
+[node name="character_basia" parent="." instance=ExtResource("1_al82x")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="character_basia"]
+libraries = {
+&"Rig": ExtResource("2_0suly")
+}

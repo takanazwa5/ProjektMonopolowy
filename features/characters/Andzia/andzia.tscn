@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn5ki7bmpmogv"]
+
+[ext_resource type="PackedScene" uid="uid://cv1wak8x2oeel" path="res://features/characters/Andzia/assets/character_andzia.gltf" id="1_1idtl"]
+[ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/characters/shared/assets/Rig.glb" id="2_553w5"]
+
+[node name="Andzia" type="Node3D"]
+
+[node name="character_andzia" parent="." instance=ExtResource("1_1idtl")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="character_andzia"]
+libraries = {
+&"Rig": ExtResource("2_553w5")
+}

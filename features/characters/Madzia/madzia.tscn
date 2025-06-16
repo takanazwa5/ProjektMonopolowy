@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://lfcsx50no5t8"]
+
+[ext_resource type="PackedScene" uid="uid://bawgp6jenqtxv" path="res://features/characters/Madzia/assets/character_madzia.gltf" id="1_3at1c"]
+[ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/characters/shared/assets/Rig.glb" id="2_4vgvr"]
+
+[node name="Madzia" type="Node3D"]
+
+[node name="character_madzia" parent="." instance=ExtResource("1_3at1c")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="character_madzia"]
+libraries = {
+&"Rig": ExtResource("2_4vgvr")
+}
