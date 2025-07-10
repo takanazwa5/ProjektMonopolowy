@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ckjeibbabw2pn"]
+
+[ext_resource type="Texture2D" uid="uid://b0cxd2tvohdfa" path="res://features/level/assets/beer_crates/textures/crates/SkrzynkaNaBobra.png" id="1_bgddy"]
+[ext_resource type="Texture2D" uid="uid://61me718qnixc" path="res://features/level/assets/beer_crates/textures/crates/SkrzynkaNaPiwa_Roughness.png" id="2_tpt4w"]
+
+[resource]
+resource_name = "Material"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_bgddy")
+roughness_texture = ExtResource("2_tpt4w")
+roughness_texture_channel = 4

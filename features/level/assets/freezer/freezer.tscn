@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c35ghy3nh7v8p"]
+
+[ext_resource type="PackedScene" uid="uid://c5fge1xypho3j" path="res://features/level/assets/freezer/meshes/freezer.gltf" id="1_7rqh8"]
+[ext_resource type="PackedScene" uid="uid://dm6sc0ag2fd82" path="res://features/level/assets/freezer/meshes/freezer_door_L.gltf" id="2_ip5be"]
+[ext_resource type="PackedScene" uid="uid://coe3e3gp4c47l" path="res://features/level/assets/freezer/meshes/freezer_door_R.gltf" id="3_v0trq"]
+
+[node name="Freezer" type="Node3D"]
+
+[node name="freezer2" parent="." instance=ExtResource("1_7rqh8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.863307)
+
+[node name="freezer_door_L" parent="." instance=ExtResource("2_ip5be")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.863307)
+
+[node name="freezer_door_R" parent="." instance=ExtResource("3_v0trq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.863307)
