@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cxefjx68bwv0o"]
+
+[ext_resource type="Texture2D" uid="uid://cv3r1qa3cyika" path="res://features/cash_register/textures/Szuflada_Base.png" id="1_lnarr"]
+[ext_resource type="Texture2D" uid="uid://cnvfqwuug5vcy" path="res://features/cash_register/textures/Szuflada_Roughness.png" id="2_x4aqc"]
+
+[resource]
+resource_name = "Szuflada"
+albedo_texture = ExtResource("1_lnarr")
+roughness_texture = ExtResource("2_x4aqc")
+roughness_texture_channel = 1

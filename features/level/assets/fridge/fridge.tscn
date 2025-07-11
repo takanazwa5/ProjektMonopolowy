@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://qo1sj118adj7"]
+
+[ext_resource type="PackedScene" uid="uid://cg2h8fh2kesbj" path="res://features/level/assets/fridge/meshes/fridge_base.gltf" id="1_pjmi2"]
+[ext_resource type="PackedScene" uid="uid://4m5bq1n3g56h" path="res://features/level/assets/fridge/meshes/fridge_door_L.gltf" id="2_y2ar5"]
+[ext_resource type="PackedScene" uid="uid://c3qwlefyh2j5r" path="res://features/level/assets/fridge/meshes/fridge_door_R.gltf" id="3_uuqg1"]
+
+[node name="Fridge" type="Node3D"]
+
+[node name="fridge_base" parent="." instance=ExtResource("1_pjmi2")]
+
+[node name="fridge_door_L" parent="." instance=ExtResource("2_y2ar5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.283923, 0.413925, 0.6)
+
+[node name="fridge_door_R" parent="." instance=ExtResource("3_uuqg1")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.283923, 0.413925, -0.6)

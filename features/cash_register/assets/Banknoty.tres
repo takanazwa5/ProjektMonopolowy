@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dh3chbnwu1n3t"]
-
-[ext_resource type="Texture2D" uid="uid://bovk0u33d844p" path="res://features/cash_register/assets/textures/pln-notes.jpg" id="1_itx4d"]
-
-[resource]
-resource_name = "Banknoty"
-albedo_texture = ExtResource("1_itx4d")
