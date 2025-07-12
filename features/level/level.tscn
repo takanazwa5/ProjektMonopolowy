@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://bs2knhaaun6oi"]
+[gd_scene load_steps=63 format=3 uid="uid://bs2knhaaun6oi"]
 
 [ext_resource type="Texture2D" uid="uid://3ab7ffd0rw4f" path="res://icon.svg" id="1_tdkuc"]
 [ext_resource type="PackedScene" uid="uid://dc0lnblefw7m" path="res://features/level/assets/furniture/meshes/szafa_wielka.glb" id="3_v1stt"]
@@ -33,14 +33,26 @@
 [ext_resource type="PackedScene" uid="uid://dhmgu1ne3d7jl" path="res://features/interactable/items/beer/meshes/boskie_bottle.glb" id="27_d4cch"]
 [ext_resource type="PackedScene" uid="uid://bskt7g4r1dx1o" path="res://features/interactable/items/beer/meshes/bobr_can.glb" id="28_0aatt"]
 [ext_resource type="PackedScene" uid="uid://dmtrisyvy531c" path="res://features/interactable/items/beer/meshes/bobr_bottle.glb" id="29_go7u1"]
+[ext_resource type="PackedScene" uid="uid://br5d6d1c4fjbr" path="res://features/interactable/items/beer/beer_ovecky_can.tscn" id="30_t80p8"]
 [ext_resource type="PackedScene" uid="uid://bhabrte0atjfl" path="res://features/interactable/items/cigarettes/meshes/fajki_01.gltf" id="30_wlhjx"]
 [ext_resource type="PackedScene" uid="uid://rwxraqe1im77" path="res://features/interactable/items/cigarettes/meshes/fajki_02.gltf" id="31_73ji2"]
+[ext_resource type="PackedScene" uid="uid://o3uvc53yiig" path="res://features/interactable/items/beer/beer_boskie_can.tscn" id="32_627bp"]
+[ext_resource type="PackedScene" uid="uid://bgi3sn72fpicy" path="res://features/interactable/items/beer/beer_ovecky_bottle.tscn" id="32_gb2y8"]
 [ext_resource type="PackedScene" uid="uid://k58bns261dml" path="res://features/interactable/items/cigarettes/meshes/fajki_03.gltf" id="32_gy3pj"]
 [ext_resource type="PackedScene" uid="uid://c2a2asi2lh4im" path="res://features/interactable/items/cigarettes/meshes/fajki_04.gltf" id="33_d4cch"]
 [ext_resource type="PackedScene" uid="uid://b73pyd8yanm3n" path="res://features/interactable/items/cigarettes/meshes/fajki_05.gltf" id="34_0aatt"]
+[ext_resource type="PackedScene" uid="uid://37ile3adfut7" path="res://features/interactable/items/beer/beer_boskie_bottle.tscn" id="34_f2wry"]
 [ext_resource type="PackedScene" uid="uid://dux72a2lllv80" path="res://features/interactable/items/cigarettes/meshes/fajki_06.gltf" id="35_go7u1"]
+[ext_resource type="PackedScene" uid="uid://btib7p5g7httd" path="res://features/interactable/items/beer/beer_bobr_can.tscn" id="36_aknh5"]
 [ext_resource type="PackedScene" uid="uid://qo1sj118adj7" path="res://features/level/assets/fridge/fridge.tscn" id="41_bqyah"]
 [ext_resource type="PackedScene" uid="uid://c35ghy3nh7v8p" path="res://features/level/assets/freezer/freezer.tscn" id="41_tg0fj"]
+[ext_resource type="PackedScene" uid="uid://mb35j338gfy4" path="res://features/interactable/items/beer/beer_bobr_bottle.tscn" id="42_bqyah"]
+[ext_resource type="PackedScene" uid="uid://mn8ukej62qoi" path="res://features/interactable/items/beer/beer_tarka_can.tscn" id="42_ksyp5"]
+[ext_resource type="PackedScene" uid="uid://b0m3anq2rdsy1" path="res://features/interactable/items/beer/beer_tarka_bottle.tscn" id="44_5cegx"]
+[ext_resource type="PackedScene" uid="uid://df3dtr61w0e3k" path="res://features/interactable/items/beer/beer_JP_can.tscn" id="44_aknh5"]
+[ext_resource type="PackedScene" uid="uid://vk4ygcsxweuu" path="res://features/interactable/items/beer/beer_mech_can.tscn" id="44_alhth"]
+[ext_resource type="PackedScene" uid="uid://dkgly1aj712f6" path="res://features/interactable/items/beer/beer_JP_bottle.tscn" id="46_1bd8k"]
+[ext_resource type="PackedScene" uid="uid://b7wqysvqquowd" path="res://features/interactable/items/beer/beer_mech_bottle.tscn" id="46_pr3tj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_raucf"]
 
@@ -402,9 +414,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47983, 0.927546, 0)
 
 [node name="OveckyCans" type="Node3D" parent="Beers"]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.848, 1.01852, 0.476)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, 1.01852, 0.476)
+
+[node name="BeerOveckyCan_1" parent="Beers/OveckyCans" instance=ExtResource("30_t80p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0.0940616)
+
+[node name="BeerOveckyCan_2" parent="Beers/OveckyCans" instance=ExtResource("30_t80p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.1, 0.0940616)
+
+[node name="BeerOveckyCan_3" parent="Beers/OveckyCans" instance=ExtResource("30_t80p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.1, 0.0940616)
+
+[node name="BeerOveckyCan_4" parent="Beers/OveckyCans" instance=ExtResource("30_t80p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.1, 0.0940616)
+
+[node name="BeerOveckyCan_5" parent="Beers/OveckyCans" instance=ExtResource("30_t80p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.1, 0.0940616)
 
 [node name="visuals" type="Node3D" parent="Beers/OveckyCans"]
+visible = false
 
 [node name="OveckyCan_1" parent="Beers/OveckyCans/visuals" instance=ExtResource("20_lxegn")]
 
@@ -466,9 +494,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.3)
 
 [node name="OveckyBottles" type="Node3D" parent="Beers"]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.848, 1.01658, 0.28)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, 1.01658, 0.28)
+
+[node name="BeerOveckyBottle_1" parent="Beers/OveckyBottles" instance=ExtResource("32_gb2y8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.148057, 0.0999999)
+
+[node name="BeerOveckyBottle_2" parent="Beers/OveckyBottles" instance=ExtResource("32_gb2y8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.148057, 0.0999999)
+
+[node name="BeerOveckyBottle_3" parent="Beers/OveckyBottles" instance=ExtResource("32_gb2y8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.148057, 0.0999999)
+
+[node name="BeerOveckyBottle_4" parent="Beers/OveckyBottles" instance=ExtResource("32_gb2y8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.148057, 0.0999999)
+
+[node name="BeerOveckyBottle_5" parent="Beers/OveckyBottles" instance=ExtResource("32_gb2y8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.148057, 0.0999999)
 
 [node name="visuals" type="Node3D" parent="Beers/OveckyBottles"]
+visible = false
 
 [node name="OveckyBottle_1" parent="Beers/OveckyBottles/visuals" instance=ExtResource("21_wfuu4")]
 
@@ -530,9 +574,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.3)
 
 [node name="BoskieCans" type="Node3D" parent="Beers"]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.848, 0.716136, 0.474537)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, 0.716136, 0.474537)
+
+[node name="BeerBoskieCan_1" parent="Beers/BoskieCans" instance=ExtResource("32_627bp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0991153, 0.0953155)
+
+[node name="BeerBoskieCan_2" parent="Beers/BoskieCans" instance=ExtResource("32_627bp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.0991153, 0.0953155)
+
+[node name="BeerBoskieCan_3" parent="Beers/BoskieCans" instance=ExtResource("32_627bp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.0991153, 0.0953155)
+
+[node name="BeerBoskieCan_4" parent="Beers/BoskieCans" instance=ExtResource("32_627bp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.0991153, 0.0953155)
+
+[node name="BeerBoskieCan_5" parent="Beers/BoskieCans" instance=ExtResource("32_627bp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.0991153, 0.0953155)
 
 [node name="visuals" type="Node3D" parent="Beers/BoskieCans"]
+visible = false
 
 [node name="BoskieCan_1" parent="Beers/BoskieCans/visuals" instance=ExtResource("26_gy3pj")]
 
@@ -594,9 +654,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399861, 0, -0.2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399861, 0, -0.3)
 
 [node name="BoskieBottles" type="Node3D" parent="Beers"]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.848, 0.715031, 0.28)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, 0.715031, 0.28)
+
+[node name="BeerBoskieBottle_1" parent="Beers/BoskieBottles" instance=ExtResource("34_f2wry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.149042, 0.0999999)
+
+[node name="BeerBoskieBottle_2" parent="Beers/BoskieBottles" instance=ExtResource("34_f2wry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.149042, 0.0999999)
+
+[node name="BeerBoskieBottle_3" parent="Beers/BoskieBottles" instance=ExtResource("34_f2wry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.149042, 0.0999999)
+
+[node name="BeerBoskieBottle_4" parent="Beers/BoskieBottles" instance=ExtResource("34_f2wry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.149042, 0.0999999)
+
+[node name="BeerBoskieBottle_5" parent="Beers/BoskieBottles" instance=ExtResource("34_f2wry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.149042, 0.0999999)
 
 [node name="visuals" type="Node3D" parent="Beers/BoskieBottles"]
+visible = false
 
 [node name="BoskieBottle_1" parent="Beers/BoskieBottles/visuals" instance=ExtResource("27_d4cch")]
 
@@ -658,9 +734,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.3)
 
 [node name="BobrCans" type="Node3D" parent="Beers"]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.852045, 0.412348, 0.475894)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.855032, 0.412348, 0.475894)
+
+[node name="BeerBobrCan_1" parent="Beers/BobrCans" instance=ExtResource("36_aknh5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.101159, 0.0999999)
+
+[node name="BeerBobrCan_2" parent="Beers/BobrCans" instance=ExtResource("36_aknh5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.101159, 0.0999999)
+
+[node name="BeerBobrCan_3" parent="Beers/BobrCans" instance=ExtResource("36_aknh5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.101159, 0.0999999)
+
+[node name="BeerBobrCan_4" parent="Beers/BobrCans" instance=ExtResource("36_aknh5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.101159, 0.0999999)
+
+[node name="BeerBobrCan_5" parent="Beers/BobrCans" instance=ExtResource("36_aknh5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.101159, 0.0999999)
 
 [node name="visuals" type="Node3D" parent="Beers/BobrCans"]
+visible = false
 
 [node name="BobrCan_1" parent="Beers/BobrCans/visuals" instance=ExtResource("28_0aatt")]
 
@@ -722,9 +814,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.3)
 
 [node name="BobrBottles" type="Node3D" parent="Beers"]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.848063, 0.41378, 0.280048)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.85105, 0.41378, 0.280048)
+
+[node name="BeerBobrBottle_1" parent="Beers/BobrBottles" instance=ExtResource("42_bqyah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.145, 0.0999999)
+
+[node name="BeerBobrBottle_2" parent="Beers/BobrBottles" instance=ExtResource("42_bqyah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.145, 0.0999999)
+
+[node name="BeerBobrBottle_3" parent="Beers/BobrBottles" instance=ExtResource("42_bqyah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.145, 0.0999999)
+
+[node name="BeerBobrBottle_4" parent="Beers/BobrBottles" instance=ExtResource("42_bqyah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.145, 0.0999999)
+
+[node name="BeerBobrBottle_5" parent="Beers/BobrBottles" instance=ExtResource("42_bqyah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.145, 0.0999999)
 
 [node name="visuals" type="Node3D" parent="Beers/BobrBottles"]
+visible = false
 
 [node name="BobrBottle_1" parent="Beers/BobrBottles/visuals" instance=ExtResource("29_go7u1")]
 
@@ -785,74 +893,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.2)
 [node name="BobrBottle_20" parent="Beers/BobrBottles/visuals" instance=ExtResource("29_go7u1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.3)
 
-[node name="TarkaBottles" type="Node3D" parent="Beers"]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.848, 0.113, 0.28)
-
-[node name="visuals" type="Node3D" parent="Beers/TarkaBottles"]
-
-[node name="TarkaBottle_1" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-
-[node name="TarkaBottle_2" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
-
-[node name="TarkaBottle_3" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
-
-[node name="TarkaBottle_4" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
-
-[node name="TarkaBottle_5" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
-
-[node name="TarkaBottle_6" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.0999999)
-
-[node name="TarkaBottle_7" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.2)
-
-[node name="TarkaBottle_8" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.3)
-
-[node name="TarkaBottle_9" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
-
-[node name="TarkaBottle_10" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.0999999)
-
-[node name="TarkaBottle_11" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.2)
-
-[node name="TarkaBottle_12" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.3)
-
-[node name="TarkaBottle_13" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0)
-
-[node name="TarkaBottle_14" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.0999999)
-
-[node name="TarkaBottle_15" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.2)
-
-[node name="TarkaBottle_16" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.3)
-
-[node name="TarkaBottle_17" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
-
-[node name="TarkaBottle_18" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.0999999)
-
-[node name="TarkaBottle_19" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.2)
-
-[node name="TarkaBottle_20" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.3)
-
 [node name="TarkaCans" type="Node3D" parent="Beers"]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.848, 0.113, 0.476)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, 0.113, 0.476)
+
+[node name="BeerTarkaCan_1" parent="Beers/TarkaCans" instance=ExtResource("42_ksyp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0.0999999)
+
+[node name="BeerTarkaCan_2" parent="Beers/TarkaCans" instance=ExtResource("42_ksyp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.1, 0.0999999)
+
+[node name="BeerTarkaCan_3" parent="Beers/TarkaCans" instance=ExtResource("42_ksyp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.1, 0.0999999)
+
+[node name="BeerTarkaCan_4" parent="Beers/TarkaCans" instance=ExtResource("42_ksyp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.1, 0.0999999)
+
+[node name="BeerTarkaCan_5" parent="Beers/TarkaCans" instance=ExtResource("42_ksyp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.1, 0.0999999)
 
 [node name="visuals" type="Node3D" parent="Beers/TarkaCans"]
+visible = false
 
 [node name="TarkaCan_1" parent="Beers/TarkaCans/visuals" instance=ExtResource("18_u6jgp")]
 
@@ -913,10 +973,106 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.2)
 [node name="TarkaCan_20" parent="Beers/TarkaCans/visuals" instance=ExtResource("18_u6jgp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.3)
 
+[node name="TarkaBottles" type="Node3D" parent="Beers"]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, 0.113, 0.28)
+
+[node name="BeerTarkaBottle_1" parent="Beers/TarkaBottles" instance=ExtResource("44_5cegx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.146, 0.1)
+
+[node name="BeerTarkaBottle_2" parent="Beers/TarkaBottles" instance=ExtResource("44_5cegx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.146, 0.0999999)
+
+[node name="BeerTarkaBottle_3" parent="Beers/TarkaBottles" instance=ExtResource("44_5cegx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.146, 0.0999999)
+
+[node name="BeerTarkaBottle_4" parent="Beers/TarkaBottles" instance=ExtResource("44_5cegx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.146, 0.0999999)
+
+[node name="BeerTarkaBottle_5" parent="Beers/TarkaBottles" instance=ExtResource("44_5cegx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.146, 0.0999999)
+
+[node name="visuals" type="Node3D" parent="Beers/TarkaBottles"]
+visible = false
+
+[node name="TarkaBottle_1" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+
+[node name="TarkaBottle_2" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
+
+[node name="TarkaBottle_3" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+
+[node name="TarkaBottle_4" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="TarkaBottle_5" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
+
+[node name="TarkaBottle_6" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.0999999)
+
+[node name="TarkaBottle_7" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.2)
+
+[node name="TarkaBottle_8" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.3)
+
+[node name="TarkaBottle_9" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
+
+[node name="TarkaBottle_10" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.0999999)
+
+[node name="TarkaBottle_11" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.2)
+
+[node name="TarkaBottle_12" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.3)
+
+[node name="TarkaBottle_13" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0)
+
+[node name="TarkaBottle_14" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.0999999)
+
+[node name="TarkaBottle_15" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.2)
+
+[node name="TarkaBottle_16" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.3)
+
+[node name="TarkaBottle_17" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+
+[node name="TarkaBottle_18" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.0999999)
+
+[node name="TarkaBottle_19" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.2)
+
+[node name="TarkaBottle_20" parent="Beers/TarkaBottles/visuals" instance=ExtResource("19_nbpy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.3)
+
 [node name="MechCans" type="Node3D" parent="Beers"]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.848, -0.191369, 0.476)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, -0.191369, 0.476)
+
+[node name="BeerMechCan_1" parent="Beers/MechCans" instance=ExtResource("44_alhth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0.0937853)
+
+[node name="BeerMechCan_2" parent="Beers/MechCans" instance=ExtResource("44_alhth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.1, 0.0937853)
+
+[node name="BeerMechCan_3" parent="Beers/MechCans" instance=ExtResource("44_alhth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.1, 0.0937853)
+
+[node name="BeerMechCan_4" parent="Beers/MechCans" instance=ExtResource("44_alhth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.1, 0.0937853)
+
+[node name="BeerMechCan_5" parent="Beers/MechCans" instance=ExtResource("44_alhth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.1, 0.0937853)
 
 [node name="visuals" type="Node3D" parent="Beers/MechCans"]
+visible = false
 
 [node name="MechCan_1" parent="Beers/MechCans/visuals" instance=ExtResource("22_whwvd")]
 
@@ -978,9 +1134,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.3)
 
 [node name="MechBottles" type="Node3D" parent="Beers"]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.848, -0.191832, 0.28)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, -0.191832, 0.28)
+
+[node name="BeerMechBottle_1" parent="Beers/MechBottles" instance=ExtResource("46_pr3tj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.150645, 0.0999999)
+
+[node name="BeerMechBottle_2" parent="Beers/MechBottles" instance=ExtResource("46_pr3tj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.150645, 0.0999999)
+
+[node name="BeerMechBottle_3" parent="Beers/MechBottles" instance=ExtResource("46_pr3tj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.150645, 0.0999999)
+
+[node name="BeerMechBottle_4" parent="Beers/MechBottles" instance=ExtResource("46_pr3tj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.151, 0.1)
+
+[node name="BeerMechBottle_5" parent="Beers/MechBottles" instance=ExtResource("46_pr3tj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.151, 0.1)
 
 [node name="visuals" type="Node3D" parent="Beers/MechBottles"]
+visible = false
 
 [node name="MechBottle_1" parent="Beers/MechBottles/visuals" instance=ExtResource("23_ynovt")]
 
@@ -1042,9 +1214,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.3)
 
 [node name="JPCans" type="Node3D" parent="Beers"]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.848, -0.487, 0.476)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, -0.487, 0.476)
+
+[node name="BeerJPCan_1" parent="Beers/JPCans" instance=ExtResource("44_aknh5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0.0956385)
+
+[node name="BeerJPCan_2" parent="Beers/JPCans" instance=ExtResource("44_aknh5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.1, 0.0956385)
+
+[node name="BeerJPCan_3" parent="Beers/JPCans" instance=ExtResource("44_aknh5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.1, 0.0956385)
+
+[node name="BeerJPCan_4" parent="Beers/JPCans" instance=ExtResource("44_aknh5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.1, 0.0956385)
+
+[node name="BeerJPCan_5" parent="Beers/JPCans" instance=ExtResource("44_aknh5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.1, 0.0956385)
 
 [node name="visuals" type="Node3D" parent="Beers/JPCans"]
+visible = false
 
 [node name="JPCan_1" parent="Beers/JPCans/visuals" instance=ExtResource("24_wlhjx")]
 
@@ -1106,9 +1294,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.3)
 
 [node name="JPBottles" type="Node3D" parent="Beers"]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.848, -0.487, 0.28)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, -0.487, 0.28)
+
+[node name="BeerJPBottle_1" parent="Beers/JPBottles" instance=ExtResource("46_1bd8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.140599, 0.0999999)
+
+[node name="BeerJPBottle_2" parent="Beers/JPBottles" instance=ExtResource("46_1bd8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.140599, 0.0999999)
+
+[node name="BeerJPBottle_3" parent="Beers/JPBottles" instance=ExtResource("46_1bd8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.140599, 0.0999999)
+
+[node name="BeerJPBottle_4" parent="Beers/JPBottles" instance=ExtResource("46_1bd8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.140599, 0.0999999)
+
+[node name="BeerJPBottle_5" parent="Beers/JPBottles" instance=ExtResource("46_1bd8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.140599, 0.0999999)
 
 [node name="visuals" type="Node3D" parent="Beers/JPBottles"]
+visible = false
 
 [node name="JPBottle_1" parent="Beers/JPBottles/visuals" instance=ExtResource("25_73ji2")]
 

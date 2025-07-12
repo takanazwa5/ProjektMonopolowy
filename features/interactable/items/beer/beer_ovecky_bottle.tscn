@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgi3sn72fpicy"]
+
+[ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/interactable/items/item.gd" id="1_3dde6"]
+[ext_resource type="PackedScene" uid="uid://6pidgavolruj" path="res://features/interactable/items/beer/meshes/ovecky_bottle.glb" id="2_3dde6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ek8a4"]
+size = Vector3(0.079834, 0.296997, 0.0839844)
+
+[node name="BeerOveckyBottle" type="StaticBody3D"]
+collision_layer = 4
+script = ExtResource("1_3dde6")
+
+[node name="OveckyBottle" parent="." instance=ExtResource("2_3dde6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.148823, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.000568816, 0)
+shape = SubResource("BoxShape3D_ek8a4")

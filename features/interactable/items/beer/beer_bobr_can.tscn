@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://btib7p5g7httd"]
+
+[ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/interactable/items/item.gd" id="1_54s4n"]
+[ext_resource type="PackedScene" uid="uid://bskt7g4r1dx1o" path="res://features/interactable/items/beer/meshes/bobr_can.glb" id="2_54s4n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ek8a4"]
+size = Vector3(0.0888672, 0.199623, 0.0878906)
+
+[node name="BeerBobrCan" type="StaticBody3D"]
+collision_layer = 4
+script = ExtResource("1_54s4n")
+
+[node name="BobrCan" parent="." instance=ExtResource("2_54s4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.100091, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00132464, 0)
+shape = SubResource("BoxShape3D_ek8a4")
