@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://v47henjka0i5"]
+
+[ext_resource type="Texture2D" uid="uid://bbgotmgk1eihy" path="res://features/characters/Basia/textures/ba_body_Base_color.png" id="1_3jfpm"]
+[ext_resource type="Texture2D" uid="uid://bamsxx2ck6gh" path="res://features/characters/Basia/textures/ba_body_Roughness.png" id="2_vbepv"]
+
+[resource]
+resource_name = "ba_body"
+albedo_texture = ExtResource("1_3jfpm")
+roughness_texture = ExtResource("2_vbepv")
+roughness_texture_channel = 4
+texture_filter = 2

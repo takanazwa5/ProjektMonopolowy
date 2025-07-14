@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cw4algxm54e6f"]
+
+[ext_resource type="Texture2D" uid="uid://cdwox0gjpgn1l" path="res://features/characters/Zdzisiu/textures/zd_jacket_hair_Base_color.png" id="1_eqrge"]
+[ext_resource type="Texture2D" uid="uid://rhppc5g5pc3q" path="res://features/characters/Zdzisiu/textures/zd_jacket_hair_Roughness.png" id="2_ojxxk"]
+
+[resource]
+resource_name = "zd_jacket_hair"
+albedo_texture = ExtResource("1_eqrge")
+roughness_texture = ExtResource("2_ojxxk")
+roughness_texture_channel = 4
+texture_filter = 2

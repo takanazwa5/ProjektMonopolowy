@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ba2wnk0lwrqph"]
+
+[ext_resource type="Texture2D" uid="uid://b82pst4emgjvn" path="res://features/characters/Helena/textures/he_hair_skirt_boots_Base_color.jpg" id="1_qq0c7"]
+[ext_resource type="Texture2D" uid="uid://db86kmopfqasc" path="res://features/characters/Helena/textures/he_hair_skirt_boots_Roughness.jpg" id="2_i86ky"]
+
+[resource]
+resource_name = "he_hair_skirt_boots"
+albedo_texture = ExtResource("1_qq0c7")
+roughness_texture = ExtResource("2_i86ky")
+roughness_texture_channel = 4
+texture_filter = 2

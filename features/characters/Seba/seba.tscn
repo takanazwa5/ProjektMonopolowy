@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://xkkgr37q3e7y"]
 
-[ext_resource type="PackedScene" uid="uid://cn6k1ph45a4yf" path="res://features/characters/Seba/assets/character_seba.gltf" id="1_catqw"]
-[ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/characters/shared/assets/Rig.glb" id="2_wbiwd"]
+[ext_resource type="PackedScene" uid="uid://pn8uiyifo5tg" path="res://features/characters/Seba/meshes/character_seba.glb" id="1_catqw"]
+[ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/characters/shared/Rig.glb" id="2_wbiwd"]
 
 [node name="Seba" type="Node3D"]
 

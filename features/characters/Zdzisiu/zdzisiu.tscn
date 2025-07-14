@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://dw7wuiqjffcwt"]
 
-[ext_resource type="PackedScene" uid="uid://dujpcl8ob7gre" path="res://features/characters/Zdzisiu/assets/character_zdzisiu.gltf" id="1_fbbyk"]
-[ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/characters/shared/assets/Rig.glb" id="2_aqpgx"]
+[ext_resource type="PackedScene" uid="uid://bcwnkrdj0yjlc" path="res://features/characters/Zdzisiu/meshes/character_zdzisiu.glb" id="1_bsudl"]
+[ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/characters/shared/Rig.glb" id="2_aqpgx"]
 
 [node name="Zdzisiu" type="Node3D"]
 
-[node name="character_zdzisiu" parent="." instance=ExtResource("1_fbbyk")]
+[node name="character_zdzisiu" parent="." instance=ExtResource("1_bsudl")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="character_zdzisiu"]
 libraries = {
