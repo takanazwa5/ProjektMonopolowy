@@ -6,6 +6,10 @@ var collider : Object
 
 func _unhandled_input(event: InputEvent) -> void:
 
+	if not is_instance_valid(collider):
+
+		return
+
 	if collider is Interactable and collider.can_interact:
 
 		collider.interact(event)
