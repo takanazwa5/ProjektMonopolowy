@@ -43,14 +43,10 @@ func _physics_process(delta: float) -> void:
 
 		velocity += get_gravity() * delta
 
-	if not can_move:
-
-		return
-
 	var input_dir : Vector2 = Input.get_vector("walk_left", "walk_right", "walk_forward", "walk_backward")
 	var direction : Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
-	if direction:
+	if direction and can_move:
 
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
