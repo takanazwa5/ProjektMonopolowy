@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://daih55gqatj4l"]
+
+[ext_resource type="Script" uid="uid://rdgopf70q038" path="res://scenes/game/game.gd" id="1_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://cjhr0bs1pbymv" path="res://features/pause_menu/pause_menu.tscn" id="2_7jktm"]
+[ext_resource type="PackedScene" uid="uid://bs2knhaaun6oi" path="res://features/level/level.tscn" id="3_ryrav"]
+[ext_resource type="PackedScene" uid="uid://x8jwi5g1tqbc" path="res://features/player/player.tscn" id="4_eow3j"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_fc0e3")
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_7jktm")]
+
+[node name="Level" parent="." instance=ExtResource("3_ryrav")]
+
+[node name="Player" parent="." instance=ExtResource("4_eow3j")]
+transform = Transform3D(-0.97183, 0, -0.235685, 0, 1, 0, 0.235685, 0, -0.97183, -1.56016, 1, -2.03091)

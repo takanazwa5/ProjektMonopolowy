@@ -1,9 +1,9 @@
-class_name Main extends Node
+class_name Game extends Node
 
 
 func _ready() -> void:
 
-	print("Main scene ready.")
+	print("Game scene ready.")
 
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
