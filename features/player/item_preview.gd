@@ -4,7 +4,6 @@ class_name ItemPreview extends Node3D
 var current_item : Item
 
 
-@onready var item_preview_prompt : Control = %ItemPreviewPrompt
 @onready var item_rig : Node3D = %ItemRig
 
 
@@ -53,7 +52,6 @@ func _on_child_entered_tree(node: Node) -> void:
 	tween.tween_property(current_item, ^"transform", Transform3D(), 0.25)
 	GameManager.player.can_move = false
 	GameManager.player.can_move_camera = false
-	item_preview_prompt.show()
 	SignalBus.item_entered_preview.emit()
 
 
@@ -62,6 +60,5 @@ func _on_child_exited_tree(_node: Node) -> void:
 	current_item = null
 	GameManager.player.can_move = true
 	GameManager.player.can_move_camera = true
-	item_preview_prompt.hide()
 	rotation = Vector3.ZERO
 	SignalBus.item_exited_preview.emit()

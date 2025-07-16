@@ -1,14 +1,13 @@
-[gd_scene load_steps=22 format=3 uid="uid://x8jwi5g1tqbc"]
+[gd_scene load_steps=19 format=3 uid="uid://x8jwi5g1tqbc"]
 
 [ext_resource type="Script" uid="uid://xwirk8k81n2g" path="res://features/player/player.gd" id="1_k7k3i"]
 [ext_resource type="Script" uid="uid://d0ueseef8eg8o" path="res://features/player/interaction_raycast.gd" id="2_7mbft"]
 [ext_resource type="Script" uid="uid://de1lalif7l760" path="res://features/state_machine/state_machine.gd" id="2_abh15"]
 [ext_resource type="Script" uid="uid://bsraa8mh7ca5a" path="res://features/player/states/idle_state.gd" id="3_16d0v"]
-[ext_resource type="Script" uid="uid://bgq22t0u4tykr" path="res://features/player/reticle.gd" id="3_47jc2"]
 [ext_resource type="Script" uid="uid://dxoac2p5n4etv" path="res://features/player/item_rig.gd" id="3_k34i2"]
 [ext_resource type="Script" uid="uid://rsm8sm80rels" path="res://features/player/item_preview.gd" id="3_kt1oa"]
 [ext_resource type="Script" uid="uid://d0gi7hdyudt7d" path="res://features/player/states/walking_state.gd" id="4_5h70g"]
-[ext_resource type="Script" uid="uid://bk4tohdw0etl7" path="res://features/player/hud.gd" id="5_47rrt"]
+[ext_resource type="PackedScene" uid="uid://b3bhkqiwa24yi" path="res://features/hud/hud.tscn" id="5_k34i2"]
 [ext_resource type="Script" uid="uid://er88pojphiqi" path="res://features/player/states/crouching_state.gd" id="5_uxnsi"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_u4ddl"]
@@ -21,14 +20,6 @@ radius = 0.3
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1j0sm"]
 radius = 0.3
-
-[sub_resource type="LabelSettings" id="LabelSettings_k34i2"]
-outline_size = 8
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_set3t"]
-outline_size = 10
-outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_xnuge"]
 resource_name = "Headbob"
@@ -262,80 +253,8 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15)
 script = ExtResource("3_kt1oa")
 
-[node name="HUD" type="CanvasLayer" parent="."]
+[node name="HUD" parent="." instance=ExtResource("5_k34i2")]
 unique_name_in_owner = true
-script = ExtResource("5_47rrt")
-
-[node name="Reticle" type="Control" parent="HUD"]
-unique_name_in_owner = true
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("3_47jc2")
-
-[node name="ReticleTooltip" type="Label" parent="HUD/Reticle"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = 38.5
-offset_right = 20.0
-offset_bottom = 61.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Reticle Tooltip"
-label_settings = SubResource("LabelSettings_k34i2")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ItemPreviewPrompt" type="Control" parent="HUD"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="HUD/ItemPreviewPrompt"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -385.0
-offset_top = -247.0
-offset_right = 385.0
-offset_bottom = -207.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="Label" type="Label" parent="HUD/ItemPreviewPrompt/HBoxContainer"]
-layout_mode = 2
-text = "[E] Pick up"
-label_settings = SubResource("LabelSettings_set3t")
-
-[node name="Spacer" type="Control" parent="HUD/ItemPreviewPrompt/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Label2" type="Label" parent="HUD/ItemPreviewPrompt/HBoxContainer"]
-layout_mode = 2
-text = "[G] Cancel"
-label_settings = SubResource("LabelSettings_set3t")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 unique_name_in_owner = true

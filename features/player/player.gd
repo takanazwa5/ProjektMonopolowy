@@ -13,10 +13,8 @@ var can_move : bool = true
 @onready var item_rig : ItemRig = %ItemRig
 @onready var item_preview : ItemPreview = %ItemPreview
 @onready var interaction_raycast : InteractionRaycast = %InteractionRaycast
-@onready var item_preview_prompt : Control = %ItemPreviewPrompt
 @onready var camera : Camera3D = %Camera
-@onready var reticle : Reticle = %Reticle
-@onready var hud : CanvasLayer = %HUD
+@onready var hud : HUD = %HUD
 
 
 func _init() -> void:
