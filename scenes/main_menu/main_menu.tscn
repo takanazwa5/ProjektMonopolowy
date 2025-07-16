@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://byqugljogsx07"]
 
-[ext_resource type="Script" uid="uid://df18ypuxawk2o" path="res://features/main_menu/main_menu.gd" id="1_xtl3e"]
-[ext_resource type="AudioStream" uid="uid://dhtqahbcgq3xl" path="res://features/main_menu/61392__gleepglop__beercanopening.wav" id="2_4gv6e"]
+[ext_resource type="Script" uid="uid://df18ypuxawk2o" path="res://scenes/main_menu/main_menu.gd" id="1_xtl3e"]
+[ext_resource type="AudioStream" uid="uid://dhtqahbcgq3xl" path="res://scenes/main_menu/assets/61392__gleepglop__beercanopening.wav" id="2_4gv6e"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
