@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://3hfka66dqomt"]
+[gd_scene load_steps=5 format=3 uid="uid://3hfka66dqomt"]
 
 [ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/npc.gd" id="1_wmxm7"]
+[ext_resource type="PackedScene" uid="uid://cn5ki7bmpmogv" path="res://features/characters/Andzia/andzia.tscn" id="2_kfocc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_utwnr"]
 radius = 0.3
@@ -9,18 +10,28 @@ rings = 4
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wmxm7"]
 radius = 0.3
+height = 1.8
 
 [node name="NPC" type="CharacterBody3D"]
+collision_layer = 8
+axis_lock_angular_x = true
+axis_lock_angular_z = true
 script = ExtResource("1_wmxm7")
 
+[node name="Andzia" parent="." instance=ExtResource("2_kfocc")]
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("CapsuleMesh_utwnr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CapsuleShape3D_wmxm7")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 unique_name_in_owner = true
+path_desired_distance = 0.25
+target_desired_distance = 0.1
 height = 2.0
 radius = 0.3
 debug_enabled = true
