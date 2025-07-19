@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dwuwo0xfsojko"
-path="res://.godot/imported/beer_crate_empty.gltf-4b40b4f76b57de5349cd51a012adea71.scn"
+uid="uid://d3h2fjf6suckp"
+path="res://.godot/imported/beer_crate_empty.glb-c26509005e97385b7a967b651a3c84f4.scn"
 
 [deps]
 
-source_file="res://features/level/assets/beer_crates/meshes/beer_crates/beer_crate_empty.gltf"
-dest_files=["res://.godot/imported/beer_crate_empty.gltf-4b40b4f76b57de5349cd51a012adea71.scn"]
+source_file="res://features/level/assets/beer_crates/meshes/beer_crates/beer_crate_empty.glb"
+dest_files=["res://.godot/imported/beer_crate_empty.glb-c26509005e97385b7a967b651a3c84f4.scn"]
 
 [params]
 
@@ -34,7 +34,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "materials": {
-"Material": {
+"BeerCrate": {
 "use_external/enabled": true,
 "use_external/path": "uid://wbef2w15uaon"
 }
