@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "Monety": {
 "use_external/enabled": true,
-"use_external/path": "res://features/cash_register/assets/Monety.tres"
+"use_external/path": "uid://bc5cfa0fqc1n"
 }
 }
 }
