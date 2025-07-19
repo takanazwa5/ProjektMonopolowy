@@ -9,12 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://cam8fx48wcwee" path="res://features/level/assets/beer_crates/meshes/beer_crates/jp_crate.gltf" id="6_msrsj"]
 [ext_resource type="PackedScene" uid="uid://dm37ts7fiuxnu" path="res://features/level/assets/beer_crates/meshes/beer_crates/mech_crate.gltf" id="7_0uke6"]
 [ext_resource type="PackedScene" uid="uid://dum24x4vjs36k" path="res://features/level/assets/furniture/meshes/szafa.glb" id="7_2e8v1"]
+[ext_resource type="PackedScene" uid="uid://b0bjxvenw1ucd" path="res://features/level/assets/main_room/meshes/MainRoom.glb" id="7_ksyp5"]
 [ext_resource type="PackedScene" uid="uid://8m2a6mm6ah1l" path="res://features/level/assets/beer_crates/meshes/beer_crates/ovecky_crate.gltf" id="8_qlrdg"]
 [ext_resource type="PackedScene" uid="uid://dwuwo0xfsojko" path="res://features/level/assets/beer_crates/meshes/beer_crates/beer_crate_empty.gltf" id="8_v1stt"]
 [ext_resource type="PackedScene" uid="uid://c2klqufu8iang" path="res://features/counter/counter.tscn" id="9_qqrg4"]
 [ext_resource type="PackedScene" uid="uid://dm325ggpwb4ik" path="res://features/level/assets/beer_crates/meshes/beer_crates/tarka_crate.gltf" id="9_uv5uh"]
 [ext_resource type="PackedScene" uid="uid://cnw60p50n4kaf" path="res://features/cash_register/cash_register.tscn" id="10_3y4uf"]
-[ext_resource type="PackedScene" uid="uid://bfbhalgst4tvt" path="res://features/level/assets/main_room/meshes/MainRoom.gltf" id="11_2e8v1"]
 [ext_resource type="PackedScene" uid="uid://4y0ner578dpr" path="res://features/interactable/items/cigarettes/cigarettes_silne.tscn" id="18_nbpy1"]
 [ext_resource type="PackedScene" uid="uid://ddmy1pl53qi61" path="res://features/interactable/items/beer/meshes/tarka_can.glb" id="18_u6jgp"]
 [ext_resource type="PackedScene" uid="uid://ca7esyvakgb4f" path="res://features/interactable/items/beer/meshes/tarka_bottle.glb" id="19_nbpy1"]
@@ -135,7 +135,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7239, 0.125929, -3.84327)
 [node name="Fridge" parent="NavigationRegion3D" instance=ExtResource("41_bqyah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43781, 0, 0.375733)
 
-[node name="MainRoom" parent="NavigationRegion3D" instance=ExtResource("11_2e8v1")]
+[node name="MainRoom" parent="NavigationRegion3D" instance=ExtResource("7_ksyp5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77862, 0, -3.96313)
 
 [node name="Furniture" type="Node" parent="NavigationRegion3D"]

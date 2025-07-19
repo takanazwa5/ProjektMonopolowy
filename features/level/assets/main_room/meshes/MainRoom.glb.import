@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bfbhalgst4tvt"
-path="res://.godot/imported/MainRoom.gltf-4ad0c99a57f7e74ed55d8fd9f9c0bdba.scn"
+uid="uid://b0bjxvenw1ucd"
+path="res://.godot/imported/MainRoom.glb-725dfe7b0200a2f7d51a0c4cf0c039a6.scn"
 
 [deps]
 
-source_file="res://features/level/assets/main_room/meshes/MainRoom.gltf"
-dest_files=["res://.godot/imported/MainRoom.gltf-4ad0c99a57f7e74ed55d8fd9f9c0bdba.scn"]
+source_file="res://features/level/assets/main_room/meshes/MainRoom.glb"
+dest_files=["res://.godot/imported/MainRoom.glb-725dfe7b0200a2f7d51a0c4cf0c039a6.scn"]
 
 [params]
 
