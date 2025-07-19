@@ -17,7 +17,7 @@ func _init() -> void:
 func _ready() -> void:
 
 	window_mode_button.pressed.connect(_on_window_mode_button_pressed)
-	back_button.pressed.connect(_close)
+	back_button.pressed.connect(_on_back_button_pressed)
 
 
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -32,6 +32,12 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		accept_event()
 
 
+func _close() -> void:
+
+	hide()
+	closed.emit()
+
+
 func _on_window_mode_button_pressed() -> void:
 
 	var window : Window = get_window()
@@ -44,7 +50,6 @@ func _on_window_mode_button_pressed() -> void:
 		window.mode = Window.MODE_WINDOWED
 
 
-func _close() -> void:
+func _on_back_button_pressed() -> void:
 
-	hide()
-	closed.emit()
+	_close()
