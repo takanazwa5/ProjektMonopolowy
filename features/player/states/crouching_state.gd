@@ -16,14 +16,16 @@ func update(_delta: float) -> void:
 
 		if not Input.is_action_pressed("crouch") and not %CrouchCast.is_colliding():
 
-			transition.emit(%IdleState)
+			if player.can_move:
+
+				transition.emit(%IdleState)
 
 		%HeadbobAnimationPlayer.stop(true)
 		%Camera.create_tween().tween_property(%Camera, "position", Vector3.ZERO, 0.1).from_current()
 
-	else:
+	elif not Input.is_action_pressed("crouch") and not %CrouchCast.is_colliding():
 
-		if not Input.is_action_pressed("crouch") and not %CrouchCast.is_colliding():
+		if player.can_move:
 
 			transition.emit(%WalkingState)
 
