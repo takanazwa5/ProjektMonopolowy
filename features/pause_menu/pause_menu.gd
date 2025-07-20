@@ -27,6 +27,10 @@ func _ready() -> void:
 	debug_button.pressed.connect(_on_debug_button_pressed)
 	debug_menu.closed.connect(_on_submenu_closed)
 
+	if not OS.is_debug_build():
+
+		debug_button.hide()
+
 
 func _unhandled_key_input(event: InputEvent) -> void:
 

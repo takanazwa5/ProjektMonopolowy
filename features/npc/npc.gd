@@ -15,13 +15,15 @@ func _ready() -> void:
 
 func _unhandled_input(_event: InputEvent) -> void:
 
-	if Input.is_physical_key_pressed(KEY_K):
+	if OS.is_debug_build():
 
-		navigation_agent_3d.target_position = GameManager.level.counter.global_position
+		if Input.is_physical_key_pressed(KEY_K):
 
-	elif Input.is_physical_key_pressed(KEY_L):
+			navigation_agent_3d.target_position = GameManager.level.counter.global_position
 
-		navigation_agent_3d.target_position = GameManager.level.fridge.global_position
+		elif Input.is_physical_key_pressed(KEY_L):
+
+			navigation_agent_3d.target_position = GameManager.level.fridge.global_position
 
 
 func _physics_process(delta: float) -> void:
@@ -46,10 +48,12 @@ func _physics_process(delta: float) -> void:
 
 func _on_target_reached() -> void:
 
-	print("target reached")
+	pass
+	#print("target reached")
 
 
 func _on_navigation_finished() -> void:
 
-	print("navigation finished")
-	print("distance to target: %s" % navigation_agent_3d.distance_to_target())
+	pass
+	#print("navigation finished")
+	#print("distance to target: %s" % navigation_agent_3d.distance_to_target())
