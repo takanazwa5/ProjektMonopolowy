@@ -15,6 +15,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_sup5l")
 
 [node name="Tooltip" type="Label" parent="."]
