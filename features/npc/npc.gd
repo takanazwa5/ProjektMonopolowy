@@ -15,19 +15,6 @@ func _ready() -> void:
 	navigation_agent_3d.navigation_finished.connect(_on_navigation_finished)
 
 
-func _unhandled_input(_event: InputEvent) -> void:
-
-	if OS.is_debug_build():
-
-		if Input.is_physical_key_pressed(KEY_K):
-
-			navigation_agent_3d.target_position = GameManager.level.counter.global_position
-
-		elif Input.is_physical_key_pressed(KEY_L):
-
-			navigation_agent_3d.target_position = GameManager.level.fridge.global_position
-
-
 func _physics_process(delta: float) -> void:
 
 	if navigation_agent_3d.is_navigation_finished():
