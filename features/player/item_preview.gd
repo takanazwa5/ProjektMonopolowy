@@ -2,6 +2,7 @@ class_name ItemPreview extends Node3D
 
 
 var current_item : Item
+var can_rotate: bool = false
 
 
 @onready var item_rig : Node3D = %ItemRig
@@ -19,7 +20,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 		return
 
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and can_rotate:
 
 		rotate_y(event.relative.x * 0.001)
 		rotate_x(event.relative.y * 0.001)
@@ -53,6 +54,8 @@ func _on_child_entered_tree(node: Node) -> void:
 	GameManager.player.can_move = false
 	GameManager.player.can_move_camera = false
 	SignalBus.item_entered_preview.emit()
+	if tween.is_running(): await tween.finished
+	can_rotate = true
 
 
 func _on_child_exited_tree(_node: Node) -> void:
@@ -60,5 +63,6 @@ func _on_child_exited_tree(_node: Node) -> void:
 	current_item = null
 	GameManager.player.can_move = true
 	GameManager.player.can_move_camera = true
+	can_rotate = false
 	rotation = Vector3.ZERO
 	SignalBus.item_exited_preview.emit()
