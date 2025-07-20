@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://xkkgr37q3e7y"]
+[gd_scene load_steps=8 format=3 uid="uid://xkkgr37q3e7y"]
 
 [ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/npc.gd" id="1_wbiwd"]
 [ext_resource type="PackedScene" uid="uid://pn8uiyifo5tg" path="res://features/npc/Seba/meshes/character_seba.glb" id="2_ysi34"]
@@ -7,6 +7,18 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wmxm7"]
 radius = 0.3
 height = 1.8
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6tbjb"]
+animation = &"Rig/Idle_Base"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tbcmd"]
+animation = &"Rig/Walk_Base"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_j6gsq"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_6tbjb")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_tbcmd")
+blend_point_1/pos = 1.0
 
 [node name="Seba" type="CharacterBody3D"]
 collision_layer = 8
@@ -33,3 +45,9 @@ root_node = NodePath("../character_seba")
 libraries = {
 &"Rig": ExtResource("3_563n0")
 }
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+root_node = NodePath("../character_seba")
+tree_root = SubResource("AnimationNodeBlendSpace1D_j6gsq")
+anim_player = NodePath("../AnimationPlayer")
+parameters/blend_position = 0.0014925

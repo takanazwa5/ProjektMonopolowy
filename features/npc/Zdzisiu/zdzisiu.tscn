@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dw7wuiqjffcwt"]
+[gd_scene load_steps=8 format=3 uid="uid://dw7wuiqjffcwt"]
 
 [ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/npc.gd" id="1_aqpgx"]
 [ext_resource type="PackedScene" uid="uid://bcwnkrdj0yjlc" path="res://features/npc/Zdzisiu/meshes/character_zdzisiu.glb" id="2_2yuuh"]
@@ -7,6 +7,18 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wmxm7"]
 radius = 0.3
 height = 1.8
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fyrvs"]
+animation = &"Rig/Idle_Base"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nxrri"]
+animation = &"Rig/Walk_Base"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_6cyig"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_fyrvs")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_nxrri")
+blend_point_1/pos = 1.0
 
 [node name="Zdzisiu" type="CharacterBody3D"]
 collision_layer = 8
@@ -33,3 +45,9 @@ root_node = NodePath("../character_zdzisiu")
 libraries = {
 &"Rig": ExtResource("3_kstgy")
 }
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+root_node = NodePath("../character_zdzisiu")
+tree_root = SubResource("AnimationNodeBlendSpace1D_6cyig")
+anim_player = NodePath("../AnimationPlayer")
+parameters/blend_position = 0.0014925

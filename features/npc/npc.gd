@@ -2,9 +2,11 @@ class_name NPC extends CharacterBody3D
 
 
 const ROTATION_SPEED: float = 10.0
+const WALKING_SPEED: float = 1.5
 
 
 @onready var navigation_agent_3d: NavigationAgent3D = %NavigationAgent3D
+@onready var animation_tree: AnimationTree = $AnimationTree
 
 
 func _ready() -> void:
@@ -30,8 +32,8 @@ func _physics_process(delta: float) -> void:
 
 	if navigation_agent_3d.is_navigation_finished():
 
-		velocity.x = move_toward(velocity.x, 0, Player.SPEED_WALKING)
-		velocity.z = move_toward(velocity.z, 0, Player.SPEED_WALKING)
+		velocity.x = move_toward(velocity.x, 0, WALKING_SPEED)
+		velocity.z = move_toward(velocity.z, 0, WALKING_SPEED)
 
 	else:
 
@@ -41,10 +43,16 @@ func _physics_process(delta: float) -> void:
 		var rotation_basis : Quaternion = Basis(left_axis, Vector3.UP, direction).get_rotation_quaternion()
 		var model_scale : Vector3 = transform.basis.get_scale()
 		transform.basis = Basis(transform.basis.get_rotation_quaternion().slerp(rotation_basis, delta * ROTATION_SPEED)).scaled(model_scale)
-		velocity.x = direction.x * Player.SPEED_WALKING
-		velocity.z = direction.z * Player.SPEED_WALKING
+		velocity.x = direction.x * WALKING_SPEED
+		velocity.z = direction.z * WALKING_SPEED
 
 	move_and_slide()
+
+
+func _process(_delta: float) -> void:
+
+	var blend_pos: float = remap(velocity.length(), 0.0, WALKING_SPEED, 0.0, 1.0)
+	animation_tree.set(&"parameters/blend_position", blend_pos)
 
 
 func _on_target_reached() -> void:

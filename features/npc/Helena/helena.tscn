@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cg7011735pcw1"]
+[gd_scene load_steps=8 format=3 uid="uid://cg7011735pcw1"]
 
 [ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/npc.gd" id="1_bei7i"]
 [ext_resource type="PackedScene" uid="uid://ckmclyi4ds1f0" path="res://features/npc/Helena/meshes/character_helena.glb" id="2_g2htq"]
@@ -7,6 +7,18 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wmxm7"]
 radius = 0.3
 height = 1.8
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7fl6x"]
+animation = &"Rig/Idle_Base"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1hqpf"]
+animation = &"Rig/Walk_Base"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_r1mlf"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_7fl6x")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_1hqpf")
+blend_point_1/pos = 1.0
 
 [node name="Helena" type="CharacterBody3D"]
 collision_layer = 8
@@ -33,3 +45,9 @@ root_node = NodePath("../character_helena")
 libraries = {
 &"Rig": ExtResource("3_bji0j")
 }
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+root_node = NodePath("../character_helena")
+tree_root = SubResource("AnimationNodeBlendSpace1D_r1mlf")
+anim_player = NodePath("../AnimationPlayer")
+parameters/blend_position = 0.0014925

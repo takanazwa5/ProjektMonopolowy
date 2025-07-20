@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://civlo6dh6d0kf"]
+[gd_scene load_steps=8 format=3 uid="uid://civlo6dh6d0kf"]
 
 [ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/npc.gd" id="1_0suly"]
 [ext_resource type="PackedScene" uid="uid://b6mt6074im8pm" path="res://features/npc/Basia/meshes/character_basia.glb" id="1_al82x"]
@@ -7,6 +7,18 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wmxm7"]
 radius = 0.3
 height = 1.8
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nb0pl"]
+animation = &"Rig/Idle_Base"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cpjtm"]
+animation = &"Rig/Walk_Base"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_atgwo"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_nb0pl")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_cpjtm")
+blend_point_1/pos = 1.0
 
 [node name="Basia" type="CharacterBody3D"]
 collision_layer = 8
@@ -33,3 +45,9 @@ root_node = NodePath("../character_basia")
 libraries = {
 &"Rig": ExtResource("2_0suly")
 }
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+root_node = NodePath("../character_basia")
+tree_root = SubResource("AnimationNodeBlendSpace1D_atgwo")
+anim_player = NodePath("../AnimationPlayer")
+parameters/blend_position = 0.0014925
