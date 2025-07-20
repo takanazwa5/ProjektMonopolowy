@@ -35,6 +35,7 @@ func _physics_process(delta: float) -> void:
 
 	else:
 
+		# Rotation based on movement direction magic
 		var direction: Vector3 = (navigation_agent_3d.get_next_path_position() - position).normalized()
 		var left_axis : Vector3 = Vector3.UP.cross(direction)
 		var rotation_basis : Quaternion = Basis(left_axis, Vector3.UP, direction).get_rotation_quaternion()
@@ -54,6 +55,10 @@ func _on_target_reached() -> void:
 
 func _on_navigation_finished() -> void:
 
-	pass
+	var target_pos: Vector3 = navigation_agent_3d.target_position
+	target_pos.y = global_position.y
+	var target_transform: Transform3D = transform.looking_at(target_pos, Vector3.UP, true)
+	var tween: Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
+	tween.tween_property(self, ^"transform", target_transform, 0.25)
 	#print("navigation finished")
 	#print("distance to target: %s" % navigation_agent_3d.distance_to_target())
