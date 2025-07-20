@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://bs2knhaaun6oi"]
+[gd_scene load_steps=58 format=3 uid="uid://bs2knhaaun6oi"]
 
 [ext_resource type="Script" uid="uid://nllfvbeeh8hn" path="res://features/level/level.gd" id="1_5cegx"]
 [ext_resource type="PackedScene" uid="uid://dc0lnblefw7m" path="res://features/level/assets/furniture/meshes/szafa_wielka.glb" id="3_v1stt"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cam8fx48wcwee" path="res://features/level/assets/beer_crates/meshes/beer_crates/jp_crate.gltf" id="6_msrsj"]
 [ext_resource type="PackedScene" uid="uid://dm37ts7fiuxnu" path="res://features/level/assets/beer_crates/meshes/beer_crates/mech_crate.gltf" id="7_0uke6"]
 [ext_resource type="PackedScene" uid="uid://dum24x4vjs36k" path="res://features/level/assets/furniture/meshes/szafa.glb" id="7_2e8v1"]
-[ext_resource type="PackedScene" uid="uid://b0bjxvenw1ucd" path="res://features/level/assets/main_room/meshes/MainRoom.glb" id="7_ksyp5"]
+[ext_resource type="PackedScene" uid="uid://btc2kupth45cq" path="res://features/level/assets/main_room/main_room.tscn" id="7_ksyp5"]
 [ext_resource type="PackedScene" uid="uid://8m2a6mm6ah1l" path="res://features/level/assets/beer_crates/meshes/beer_crates/ovecky_crate.gltf" id="8_qlrdg"]
 [ext_resource type="PackedScene" uid="uid://c2klqufu8iang" path="res://features/counter/counter.tscn" id="9_qqrg4"]
 [ext_resource type="PackedScene" uid="uid://dm325ggpwb4ik" path="res://features/level/assets/beer_crates/meshes/beer_crates/tarka_crate.gltf" id="9_uv5uh"]
@@ -79,8 +79,6 @@ agent_height = 2.0
 agent_radius = 0.3
 agent_max_climb = 0.1
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ksyp5"]
-
 [node name="Level" type="Node3D"]
 script = ExtResource("1_5cegx")
 
@@ -114,15 +112,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7239, 0.125929, -3.84327)
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43781, 0, 0.375733)
 
-[node name="MainRoom" type="StaticBody3D" parent="NavigationRegion3D"]
+[node name="MainRoom" parent="NavigationRegion3D" instance=ExtResource("7_ksyp5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77862, 0, -3.96313)
-
-[node name="MainRoom" parent="NavigationRegion3D/MainRoom" instance=ExtResource("7_ksyp5")]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MainRoom"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
-shape = SubResource("WorldBoundaryShape3D_ksyp5")
-debug_color = Color(0.7, 0, 0.603281, 1)
 
 [node name="Furniture" type="Node" parent="NavigationRegion3D"]
 
