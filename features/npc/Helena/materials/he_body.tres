@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dsva7vqrql0pe"]
+
+[ext_resource type="Texture2D" uid="uid://nf7apmudph74" path="res://features/npc/Helena/textures/he_body_BaseColor.jpg" id="1_nroyk"]
+[ext_resource type="Texture2D" uid="uid://dgerfy6vm1m7p" path="res://features/npc/Helena/textures/he_body_Roughness.jpg" id="2_o8y5y"]
+
+[resource]
+resource_name = "he_body"
+albedo_texture = ExtResource("1_nroyk")
+roughness_texture = ExtResource("2_o8y5y")
+roughness_texture_channel = 4
+texture_filter = 2

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b40vkdnj0vwk2"]
+
+[ext_resource type="Texture2D" uid="uid://cmb51vifiuypf" path="res://features/npc/Andzia/textures/an_hair_skirt_boots_BaseColor.jpg" id="1_0e2dg"]
+[ext_resource type="Texture2D" uid="uid://b4vxahdd823n8" path="res://features/npc/Andzia/textures/an_hair_skirt_boots_Roughness.jpg" id="2_hr7rh"]
+
+[resource]
+resource_name = "an_hair_skirt_boots"
+albedo_texture = ExtResource("1_0e2dg")
+roughness_texture = ExtResource("2_hr7rh")
+roughness_texture_channel = 4
+texture_filter = 2

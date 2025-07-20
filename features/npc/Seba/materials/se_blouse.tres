@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://4p8sd8rn0j5h"]
+
+[ext_resource type="Texture2D" uid="uid://bcr2g53hqcj8v" path="res://features/npc/Seba/textures/se_blouse_Base_color.png" id="1_1lxvy"]
+[ext_resource type="Texture2D" uid="uid://dwm6unh2k0u24" path="res://features/npc/Seba/textures/se_blouse_Roughness.png" id="2_ptf85"]
+
+[resource]
+resource_name = "se_blouse"
+albedo_texture = ExtResource("1_1lxvy")
+roughness_texture = ExtResource("2_ptf85")
+roughness_texture_channel = 4
+texture_filter = 2
