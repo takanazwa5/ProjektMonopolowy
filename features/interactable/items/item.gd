@@ -1,6 +1,9 @@
 class_name Item extends Interactable
 
 
+@export_range(-1.0, -0.15, 0.01) var preview_zoom: float = -0.15
+
+
 func _ready() -> void:
 
 	SignalBus.item_entered_preview.connect(_on_item_entered_preview)

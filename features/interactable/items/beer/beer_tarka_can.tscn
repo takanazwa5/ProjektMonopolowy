@@ -9,6 +9,7 @@ size = Vector3(0.0888672, 0.199623, 0.0878906)
 [node name="BeerTarkaCan" type="StaticBody3D"]
 collision_layer = 4
 script = ExtResource("1_duf7j")
+preview_zoom = -0.25
 
 [node name="TarkaCan" parent="." instance=ExtResource("2_duf7j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)

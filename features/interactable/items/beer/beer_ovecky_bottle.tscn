@@ -9,6 +9,7 @@ size = Vector3(0.079834, 0.296997, 0.0839844)
 [node name="BeerOveckyBottle" type="StaticBody3D"]
 collision_layer = 4
 script = ExtResource("1_3dde6")
+preview_zoom = -0.28
 
 [node name="OveckyBottle" parent="." instance=ExtResource("2_3dde6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.148823, 0)

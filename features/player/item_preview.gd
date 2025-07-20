@@ -47,6 +47,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 func _on_child_entered_tree(node: Node) -> void:
 
 	assert(node is Item)
+	position.z = clampf(node.preview_zoom, -1.0, -0.15)
 	current_item = node
 	#current_item.transform = Transform3D()
 	var tween : Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
