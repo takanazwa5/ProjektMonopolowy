@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://qo1sj118adj7"]
+[gd_scene load_steps=8 format=3 uid="uid://qo1sj118adj7"]
 
 [ext_resource type="PackedScene" uid="uid://cg2h8fh2kesbj" path="res://features/level/assets/fridge/meshes/fridge_base.gltf" id="1_pjmi2"]
+[ext_resource type="Script" uid="uid://bsslkrnhlmere" path="res://shared/door.gd" id="2_uuqg1"]
 [ext_resource type="PackedScene" uid="uid://4m5bq1n3g56h" path="res://features/level/assets/fridge/meshes/fridge_door_L.gltf" id="2_y2ar5"]
 [ext_resource type="PackedScene" uid="uid://c3qwlefyh2j5r" path="res://features/level/assets/fridge/meshes/fridge_door_R.gltf" id="3_uuqg1"]
 
@@ -22,6 +23,9 @@ shape = SubResource("ConcavePolygonShape3D_pjmi2")
 
 [node name="FridgeDoorL" type="AnimatableBody3D" parent="."]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0.283923, 0.413925, 0.6)
+collision_layer = 5
+script = ExtResource("2_uuqg1")
+target_rotation = -90.0
 
 [node name="fridge_door_L" parent="FridgeDoorL" instance=ExtResource("2_y2ar5")]
 
@@ -29,11 +33,12 @@ transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0.283923
 shape = SubResource("ConcavePolygonShape3D_y2ar5")
 
 [node name="FridgeDoorR" type="AnimatableBody3D" parent="."]
-transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0.283923, 0.413925, 0.6)
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 0.283923, 0.413925, -0.6)
+collision_layer = 5
+script = ExtResource("2_uuqg1")
+target_rotation = 90.0
 
 [node name="fridge_door_R" parent="FridgeDoorR" instance=ExtResource("3_uuqg1")]
-transform = Transform3D(1, 0, 2.13162e-14, 0, 1, 0, -2.13162e-14, 0, 1, 0, 0, -1.2)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FridgeDoorR"]
-transform = Transform3D(1, 0, 2.13162e-14, 0, 1, 0, -2.13162e-14, 0, 1, 0, 0, -1.2)
 shape = SubResource("ConcavePolygonShape3D_uuqg1")
