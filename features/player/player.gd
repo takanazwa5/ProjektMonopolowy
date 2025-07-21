@@ -26,25 +26,30 @@ func _init() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 
-	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and can_move_camera:
 
-		if not can_move_camera:
+		if event is InputEventMouseMotion:
 
-			return
-
-		rotate_y(-event.relative.x * 0.001)
-		camera.rotate_x(-event.relative.y * 0.001)
-		camera.rotation.x = clampf(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+			rotate_y(deg_to_rad(-event.relative.x) * 0.05)
+			camera.rotate_x(deg_to_rad(-event.relative.y) * 0.05)
+			camera.rotation.x = clampf(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
 
 func _physics_process(delta: float) -> void:
+
+	# NOTE: Has to be done here because InputEventJoypadMotion is not registered when value stays still.
+	var joy_x_axis_value: float = Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)
+	var joy_y_axis_value: float = Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y)
+	rotate_y(deg_to_rad(-joy_x_axis_value * 100.0) * delta)
+	camera.rotate_x(deg_to_rad(-joy_y_axis_value * 100.0) * delta)
+	camera.rotation.x = clampf(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
 	if not is_on_floor():
 
 		velocity += get_gravity() * delta
 
 	var input_dir : Vector2 = Input.get_vector("walk_left", "walk_right", "walk_forward", "walk_backward")
-	var direction : Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var direction : Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).limit_length()
 
 	if direction and can_move:
 
