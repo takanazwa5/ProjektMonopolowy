@@ -1,6 +1,8 @@
 class_name Player extends CharacterBody3D
 
 
+const ACCELERATION: float = 1.0
+const DECELERATION: float = 1.0
 const SPEED_WALKING : float = 2.5
 const SPEED_CROUCHING : float = 1.5
 
@@ -46,12 +48,12 @@ func _physics_process(delta: float) -> void:
 
 	if direction and can_move:
 
-		velocity.x = direction.x * speed
-		velocity.z = direction.z * speed
+		velocity.x = move_toward(velocity.x, direction.x * speed, ACCELERATION)
+		velocity.z = move_toward(velocity.z, direction.z * speed, ACCELERATION)
 
 	else:
 
-		velocity.x = move_toward(velocity.x, 0, speed)
-		velocity.z = move_toward(velocity.z, 0, speed)
+		velocity.x = move_toward(velocity.x, 0.0, DECELERATION)
+		velocity.z = move_toward(velocity.z, 0.0, DECELERATION)
 
 	move_and_slide()
