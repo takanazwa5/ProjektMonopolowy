@@ -261,6 +261,7 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 script = ExtResource("2_abh15")
 initial_state = NodePath("IdleState")
+metadata/_custom_type_script = "uid://de1lalif7l760"
 
 [node name="IdleState" type="Node" parent="StateMachine"]
 unique_name_in_owner = true
