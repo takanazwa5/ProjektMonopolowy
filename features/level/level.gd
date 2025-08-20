@@ -1,10 +1,11 @@
 class_name Level extends Node3D
 
 
-@onready var counter: Counter = %Counter
-@onready var fridge: Node3D = %Fridge
+static var counter: Counter
+static var fridge: Node3D
 
 
-func _init() -> void:
+func _ready() -> void:
 
-	GameManager.level = self
+	counter = %Counter
+	fridge = %Fridge
