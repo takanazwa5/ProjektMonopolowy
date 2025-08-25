@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://lfcsx50no5t8"]
 
-[ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/npc.gd" id="1_4vgvr"]
+[ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/shared/npc.gd" id="1_4vgvr"]
 [ext_resource type="PackedScene" uid="uid://bi5uojmesdduw" path="res://features/npc/Madzia/meshes/character_madzia.glb" id="2_kydms"]
 [ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/npc/shared/Rig.glb" id="3_7s2ej"]
 

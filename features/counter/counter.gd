@@ -1,6 +1,9 @@
 class_name Counter extends Interactable
 
 
+signal item_placed(item: Item)
+
+
 @onready var next_item_pos : Marker3D = %NextItemPos
 
 
@@ -21,8 +24,9 @@ func interact(event: InputEvent) -> void:
 	tween.tween_property(item, ^"transform", next_item_pos.transform, 0.25)
 	item.reparent(self)
 	item.collision_layer = 0
-	item.set_script(null)
+	item.can_interact = false
 	next_item_pos.position.x -= 0.1
+	item_placed.emit(item)
 
 
 func _on_item_entered_rig() -> void:

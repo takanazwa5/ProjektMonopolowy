@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dw7wuiqjffcwt"]
 
-[ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/npc.gd" id="1_aqpgx"]
+[ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/shared/npc.gd" id="1_aqpgx"]
 [ext_resource type="PackedScene" uid="uid://bcwnkrdj0yjlc" path="res://features/npc/Zdzisiu/meshes/character_zdzisiu.glb" id="2_2yuuh"]
 [ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/npc/shared/Rig.glb" id="3_kstgy"]
 

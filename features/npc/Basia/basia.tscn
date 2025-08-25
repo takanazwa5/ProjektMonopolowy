@@ -1,24 +1,54 @@
-[gd_scene load_steps=8 format=3 uid="uid://civlo6dh6d0kf"]
+[gd_scene load_steps=18 format=3 uid="uid://civlo6dh6d0kf"]
 
 [ext_resource type="PackedScene" uid="uid://b6mt6074im8pm" path="res://features/npc/Basia/meshes/character_basia.glb" id="1_al82x"]
 [ext_resource type="Script" uid="uid://c5kk2k4hhiecr" path="res://features/npc/Basia/basia.gd" id="1_nb0pl"]
 [ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/npc/shared/Rig.glb" id="2_0suly"]
+[ext_resource type="Script" uid="uid://de1lalif7l760" path="res://features/state_machine/state_machine.gd" id="4_atgwo"]
+[ext_resource type="Script" uid="uid://dwi10emqduq6r" path="res://features/npc/shared/states/coming_to_store_state.gd" id="5_fyrb5"]
+[ext_resource type="Script" uid="uid://bgodwf3y0m1ey" path="res://features/npc/shared/states/waiting_for_product_state.gd" id="6_a8t5c"]
+[ext_resource type="Script" uid="uid://uuvn1btdq2f4" path="res://features/npc/shared/states/getting_product_state.gd" id="7_mi72n"]
+[ext_resource type="Script" uid="uid://cxwj4xkryi0sb" path="res://features/npc/shared/states/paying_state.gd" id="8_a8t5c"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wmxm7"]
 radius = 0.3
 height = 1.8
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nb0pl"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mi72n"]
+animation = &"Rig/PickUp_Base"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a8t5c"]
+animation = &"Rig/PutDown_Base"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_qlnrj"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_mi72n"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qlnrj"]
 animation = &"Rig/Idle_Base"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cpjtm"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xcwia"]
 animation = &"Rig/Walk_Base"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_atgwo"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_nb0pl")
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_xgun3"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_qlnrj")
 blend_point_0/pos = 0.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_cpjtm")
+blend_point_1/node = SubResource("AnimationNodeAnimation_xcwia")
 blend_point_1/pos = 1.0
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vssg2"]
+graph_offset = Vector2(-334.674, 32.3195)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_a8t5c")
+nodes/Animation/position = Vector2(-140, 240)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_mi72n")
+"nodes/Animation 2/position" = Vector2(80, 400)
+nodes/output/position = Vector2(540, 140)
+nodes/pick_up/node = SubResource("AnimationNodeOneShot_qlnrj")
+nodes/pick_up/position = Vector2(320, 80)
+nodes/put_down/node = SubResource("AnimationNodeOneShot_mi72n")
+nodes/put_down/position = Vector2(100, 80)
+nodes/walk_blend/node = SubResource("AnimationNodeBlendSpace1D_xgun3")
+nodes/walk_blend/position = Vector2(-120, 40)
+node_connections = [&"output", 0, &"pick_up", &"pick_up", 0, &"put_down", &"pick_up", 1, &"Animation 2", &"put_down", 0, &"walk_blend", &"put_down", 1, &"Animation"]
 
 [node name="Basia" type="CharacterBody3D"]
 collision_layer = 8
@@ -41,13 +71,45 @@ radius = 0.3
 debug_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 root_node = NodePath("../character_basia")
 libraries = {
 &"Rig": ExtResource("2_0suly")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-root_node = NodePath("../character_basia")
-tree_root = SubResource("AnimationNodeBlendSpace1D_atgwo")
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/../character_basia")
+tree_root = SubResource("AnimationNodeBlendTree_vssg2")
 anim_player = NodePath("../AnimationPlayer")
-parameters/blend_position = 0.0014925
+parameters/pick_up/active = false
+parameters/pick_up/internal_active = false
+parameters/pick_up/request = 0
+parameters/put_down/active = false
+parameters/put_down/internal_active = false
+parameters/put_down/request = 0
+parameters/walk_blend/blend_position = 0
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("4_atgwo")
+initial_state = NodePath("ComingToStoreState")
+metadata/_custom_type_script = "uid://de1lalif7l760"
+
+[node name="ComingToStoreState" type="Node" parent="StateMachine"]
+script = ExtResource("5_fyrb5")
+metadata/_custom_type_script = "uid://dcedhanl8gfas"
+
+[node name="WaitingForProductState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("6_a8t5c")
+metadata/_custom_type_script = "uid://dcedhanl8gfas"
+
+[node name="GettingProductState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("7_mi72n")
+metadata/_custom_type_script = "uid://dcedhanl8gfas"
+
+[node name="PayingState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("8_a8t5c")
+metadata/_custom_type_script = "uid://q0lk35d56y2e"

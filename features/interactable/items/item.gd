@@ -2,6 +2,18 @@ class_name Item extends Interactable
 
 
 @export_range(-1.0, -0.15, 0.01) var preview_zoom: float = -0.15
+@export var item_name: String = ""
+
+
+static var _names: PackedStringArray = []
+
+
+func _init() -> void:
+
+	if not item_name.is_empty():
+
+		assert(item_name not in _names, "Duplicate item names: %s" % item_name)
+		_names.append(item_name)
 
 
 func _ready() -> void:

@@ -9,7 +9,7 @@ var target_node: Node3D
 
 
 @onready var navigation_agent_3d: NavigationAgent3D = %NavigationAgent3D
-@onready var animation_tree: AnimationTree = $AnimationTree
+@onready var animation_tree: AnimationTree = %AnimationTree
 
 
 func _ready() -> void:
@@ -42,14 +42,14 @@ func _physics_process(delta: float) -> void:
 func _process(_delta: float) -> void:
 
 	var blend_pos: float = remap(velocity.length(), 0.0, WALKING_SPEED, 0.0, 1.0)
-	animation_tree.set(&"parameters/blend_position", blend_pos)
+	animation_tree.set(&"parameters/walk_blend/blend_position", blend_pos)
 
 
 func navigate_to_node(node: Node3D) -> void:
 
 	if target_node == node: return
 	target_node = node
-	print("target changed to: %s" % node)
+	#print("target changed to: %s" % node)
 	navigation_agent_3d.target_position = node.global_position
 
 
@@ -68,7 +68,7 @@ func _on_navigation_finished() -> void:
 	tween.tween_property(self, ^"transform", target_transform, 0.25)
 	if target_node is Node3D:
 
-		print("navigation finished - target: %s" % target_node)
+		#print("navigation finished - target: %s" % target_node)
 		target_node = null
 
 	#print("navigation finished")

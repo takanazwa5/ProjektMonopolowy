@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://xkkgr37q3e7y"]
 
-[ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/npc.gd" id="1_wbiwd"]
+[ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/shared/npc.gd" id="1_wbiwd"]
 [ext_resource type="PackedScene" uid="uid://pn8uiyifo5tg" path="res://features/npc/Seba/meshes/character_seba.glb" id="2_ysi34"]
 [ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/npc/shared/Rig.glb" id="3_563n0"]
 

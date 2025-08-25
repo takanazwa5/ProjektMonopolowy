@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cn5ki7bmpmogv"]
 
 [ext_resource type="PackedScene" uid="uid://lkvlpdnb56nk" path="res://features/npc/Andzia/meshes/character_andzia.glb" id="1_1idtl"]
-[ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/npc.gd" id="1_cq4nq"]
+[ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/shared/npc.gd" id="1_cq4nq"]
 [ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/npc/shared/Rig.glb" id="2_553w5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wmxm7"]
