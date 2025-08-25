@@ -200,6 +200,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.65579, 2.13073)
 shadow_enabled = true
 
 [node name="CashRegister" parent="." instance=ExtResource("10_3y4uf")]
+unique_name_in_owner = true
 transform = Transform3D(-0.992185, 0, -0.124779, 0, 1, 0, 0.124779, 0, -0.992185, 1.74809, 1.12412, -1.67112)
 
 [node name="Marlboro" parent="." instance=ExtResource("5_mfaqe")]

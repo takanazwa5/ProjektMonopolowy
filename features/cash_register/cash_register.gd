@@ -1,6 +1,9 @@
 class_name CashRegister extends StaticBody3D
 
 
+signal transaction_ended
+
+
 var total : float = 0.0
 var paid : float = 0.0
 var change : float = 0.0
@@ -19,10 +22,10 @@ func _ready() -> void:
 
 		node.interaction.connect(_on_cash_interaction)
 
-	GameManager.debug_menu.random_order_button.pressed.connect(_generate_random_order)
+	GameManager.debug_menu.random_order_button.pressed.connect(generate_random_order)
 
 
-func _generate_random_order() -> void:
+func generate_random_order() -> void:
 
 	var total_rounding : float = [1.0, 0.5].pick_random()
 	total = randf_range(50.0, 200.0)
@@ -53,6 +56,7 @@ func _change_value_changed(value: float) -> void:
 		total = 0.0
 		paid = 0.0
 		change = 0.0
+		transaction_ended.emit()
 
 
 func _on_cash_interaction(value: float) -> void:
