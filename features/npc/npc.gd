@@ -5,7 +5,7 @@ const ROTATION_SPEED: float = 10.0
 const WALKING_SPEED: float = 1.5
 
 
-var _target_node: Node3D
+var target_node: Node3D
 
 
 @onready var navigation_agent_3d: NavigationAgent3D = %NavigationAgent3D
@@ -45,10 +45,10 @@ func _process(_delta: float) -> void:
 	animation_tree.set(&"parameters/blend_position", blend_pos)
 
 
-func _navigate_to_node(node: Node3D) -> void:
+func navigate_to_node(node: Node3D) -> void:
 
-	if _target_node == node: return
-	_target_node = node
+	if target_node == node: return
+	target_node = node
 	print("target changed to: %s" % node)
 	navigation_agent_3d.target_position = node.global_position
 
@@ -66,10 +66,10 @@ func _on_navigation_finished() -> void:
 	var target_transform: Transform3D = transform.looking_at(target_pos, Vector3.UP, true)
 	var tween: Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(self, ^"transform", target_transform, 0.25)
-	if _target_node is Node3D:
+	if target_node is Node3D:
 
-		print("navigation finished - target: %s" % _target_node)
-		_target_node = null
+		print("navigation finished - target: %s" % target_node)
+		target_node = null
 
 	#print("navigation finished")
 	#print("distance to target: %s" % navigation_agent_3d.distance_to_target())
