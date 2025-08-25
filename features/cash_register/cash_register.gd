@@ -1,7 +1,7 @@
 class_name CashRegister extends StaticBody3D
 
 
-signal transaction_ended
+signal transaction_finished
 
 
 var total : float = 0.0
@@ -56,7 +56,7 @@ func _change_value_changed(value: float) -> void:
 		total = 0.0
 		paid = 0.0
 		change = 0.0
-		transaction_ended.emit()
+		transaction_finished.emit()
 
 
 func _on_cash_interaction(value: float) -> void:

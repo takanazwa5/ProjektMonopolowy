@@ -1,4 +1,4 @@
-class_name NPCComingToStoreState extends NPCState
+class_name NPCEnteringStoreState extends NPCState
 
 
 @onready var waiting_for_product_state: NPCWaitingForProductState = %WaitingForProductState

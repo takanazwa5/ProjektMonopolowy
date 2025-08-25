@@ -1,13 +1,15 @@
-[gd_scene load_steps=18 format=3 uid="uid://civlo6dh6d0kf"]
+[gd_scene load_steps=20 format=3 uid="uid://civlo6dh6d0kf"]
 
 [ext_resource type="PackedScene" uid="uid://b6mt6074im8pm" path="res://features/npc/Basia/meshes/character_basia.glb" id="1_al82x"]
 [ext_resource type="Script" uid="uid://c5kk2k4hhiecr" path="res://features/npc/Basia/basia.gd" id="1_nb0pl"]
 [ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/npc/shared/Rig.glb" id="2_0suly"]
 [ext_resource type="Script" uid="uid://de1lalif7l760" path="res://features/state_machine/state_machine.gd" id="4_atgwo"]
-[ext_resource type="Script" uid="uid://dwi10emqduq6r" path="res://features/npc/shared/states/coming_to_store_state.gd" id="5_fyrb5"]
+[ext_resource type="Script" uid="uid://dwi10emqduq6r" path="res://features/npc/shared/states/entering_store_state.gd" id="5_fyrb5"]
 [ext_resource type="Script" uid="uid://bgodwf3y0m1ey" path="res://features/npc/shared/states/waiting_for_product_state.gd" id="6_a8t5c"]
 [ext_resource type="Script" uid="uid://uuvn1btdq2f4" path="res://features/npc/shared/states/getting_product_state.gd" id="7_mi72n"]
 [ext_resource type="Script" uid="uid://cxwj4xkryi0sb" path="res://features/npc/shared/states/paying_state.gd" id="8_a8t5c"]
+[ext_resource type="Script" uid="uid://y8uymo1mwu2j" path="res://features/npc/shared/states/packing_state.gd" id="9_mi72n"]
+[ext_resource type="Script" uid="uid://j2c8p210clnr" path="res://features/npc/shared/states/exiting_store_state.gd" id="10_qlnrj"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wmxm7"]
 radius = 0.3
@@ -92,10 +94,10 @@ parameters/walk_blend/blend_position = 0
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("4_atgwo")
-initial_state = NodePath("ComingToStoreState")
+initial_state = NodePath("EnteringStoreState")
 metadata/_custom_type_script = "uid://de1lalif7l760"
 
-[node name="ComingToStoreState" type="Node" parent="StateMachine"]
+[node name="EnteringStoreState" type="Node" parent="StateMachine"]
 script = ExtResource("5_fyrb5")
 metadata/_custom_type_script = "uid://dcedhanl8gfas"
 
@@ -112,4 +114,14 @@ metadata/_custom_type_script = "uid://dcedhanl8gfas"
 [node name="PayingState" type="Node" parent="StateMachine"]
 unique_name_in_owner = true
 script = ExtResource("8_a8t5c")
+metadata/_custom_type_script = "uid://q0lk35d56y2e"
+
+[node name="PackingState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("9_mi72n")
+metadata/_custom_type_script = "uid://q0lk35d56y2e"
+
+[node name="ExitingStoreState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("10_qlnrj")
 metadata/_custom_type_script = "uid://q0lk35d56y2e"
