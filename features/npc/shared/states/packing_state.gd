@@ -13,7 +13,10 @@ func enter() -> void:
 
 func _on_animation_finished(anim_name: StringName) -> void:
 
-	if anim_name == &"Rig/PickUp_Base": transition.emit(exiting_store_state)
+	if anim_name == &"Rig/PickUp_Base":
+
+		Level.counter.clear()
+		transition.emit(exiting_store_state)
 
 
 func exit() -> void:

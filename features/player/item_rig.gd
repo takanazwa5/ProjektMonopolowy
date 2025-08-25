@@ -31,4 +31,5 @@ func _on_child_entered_tree(node: Node) -> void:
 
 func _on_child_exited_tree(_node: Node) -> void:
 
+	current_item = null
 	SignalBus.item_exited_rig.emit()

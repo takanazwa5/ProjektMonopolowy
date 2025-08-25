@@ -18,3 +18,6 @@ shape = SubResource("ConcavePolygonShape3D_n5wx4")
 [node name="NextItemPos" type="Marker3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.163185, 1.03583, 0)
+
+[node name="Items" type="Node" parent="."]
+unique_name_in_owner = true
