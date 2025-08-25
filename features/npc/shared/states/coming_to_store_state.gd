@@ -12,7 +12,6 @@ func enter() -> void:
 	await get_tree().create_timer(5.0).timeout
 	print("Basiula skonczyla wchodzic do sklepu.")
 	var wants_help: bool = [true, false].pick_random()
-	wants_help = false
 	print("Tu bedzie losowanie produktow, jakie chce Basiula. Na razie chce browara.")
 	if wants_help:
 
