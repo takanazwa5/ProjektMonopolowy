@@ -43,7 +43,6 @@ func _process(delta: float) -> void:
 
 	if Engine.is_editor_hint(): return
 	current_state.update(delta)
-	DebugPanel.add_property(current_state.name, "State", 100)
 
 
 func _physics_process(delta: float) -> void:
