@@ -30,6 +30,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _on_child_entered_tree(node: Node) -> void:
 
+	get_tree().set_group(&"items", "can_interact", false)
 	var item: Item = node
 	position.z = clampf(item.preview_zoom, -1.0, -0.15)
 	current_item = item
@@ -37,7 +38,6 @@ func _on_child_entered_tree(node: Node) -> void:
 	tween.tween_property(current_item, ^"transform", Transform3D(), 0.25)
 	if tween.is_running(): await tween.finished
 	can_rotate = true
-	get_tree().set_group(&"items", "can_interact", false)
 
 
 func _on_child_exited_tree(_node: Node) -> void:
