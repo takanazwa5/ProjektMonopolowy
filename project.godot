@@ -17,7 +17,6 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SignalBus="*res://autoload/signal_bus.gd"
 DebugPanel="*res://autoload/debug_panel/debug_panel.tscn"
 GameManager="*res://autoload/game_manager.gd"
 
@@ -44,6 +43,10 @@ folder_colors={
 "res://scenes/": "yellow",
 "res://shared/": "pink"
 }
+
+[global_group]
+
+items=""
 
 [input]
 

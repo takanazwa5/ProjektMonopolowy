@@ -15,12 +15,6 @@ var _misc_counter: int = 0
 @onready var items: Node = %Items
 
 
-func _ready() -> void:
-
-	SignalBus.item_entered_rig.connect(_on_item_entered_rig)
-	SignalBus.item_exited_rig.connect(_on_item_exited_rig)
-
-
 func interact(event: InputEvent) -> void:
 
 	if not event.is_action_pressed(&"interact"): return
@@ -65,13 +59,3 @@ func clear() -> void:
 	_szlugi_counter = 0
 	_piwo_counter = 0
 	_misc_counter = 0
-
-
-func _on_item_entered_rig() -> void:
-
-	can_interact = true
-
-
-func _on_item_exited_rig() -> void:
-
-	can_interact = false

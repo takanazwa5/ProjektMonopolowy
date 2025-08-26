@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_ek8a4"]
 size = Vector3(0.079834, 0.296997, 0.0839844)
 
-[node name="BeerBobrBottle" type="StaticBody3D"]
+[node name="BeerBobrBottle" type="StaticBody3D" groups=["items"]]
 collision_layer = 4
 script = ExtResource("1_ek8a4")
 preview_zoom = -0.28

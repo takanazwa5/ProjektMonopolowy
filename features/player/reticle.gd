@@ -8,7 +8,8 @@ enum Type {INACTIVE, ACTIVE}
 @export var color : Color = Color.WHITE
 
 
-@onready var tooltip : Label = %Tooltip
+@onready var item_preview: ItemPreview = %ItemPreview
+@onready var reticle_tooltip : Label = %ReticleTooltip
 
 
 var type : Type:
@@ -25,8 +26,8 @@ var type : Type:
 
 func _ready() -> void:
 
-	SignalBus.item_entered_preview.connect(hide)
-	SignalBus.item_exited_preview.connect(show)
+	item_preview.child_entered_tree.connect(_on_item_entered_preview)
+	item_preview.child_exiting_tree.connect(_on_item_exited_preview)
 
 
 func _draw() -> void:
@@ -49,11 +50,21 @@ func _process(_delta: float) -> void:
 
 		if not collider.reticle_tooltip_text.is_empty():
 
-			tooltip.show()
-			tooltip.text = collider.reticle_tooltip_text
+			reticle_tooltip.show()
+			reticle_tooltip.text = collider.reticle_tooltip_text
 
 	else:
 
 		type = Type.INACTIVE
-		tooltip.hide()
-		tooltip.text = ""
+		reticle_tooltip.hide()
+		reticle_tooltip.text = ""
+
+
+func _on_item_entered_preview(_node: Node) -> void:
+
+	hide()
+
+
+func _on_item_exited_preview(_node: Node) -> void:
+
+	show()

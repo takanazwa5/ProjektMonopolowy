@@ -35,9 +35,9 @@ func _on_child_entered_tree(node: Node) -> void:
 	current_item = item
 	var tween: Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(current_item, ^"transform", Transform3D(), 0.25)
-	SignalBus.item_entered_preview.emit()
 	if tween.is_running(): await tween.finished
 	can_rotate = true
+	get_tree().set_group(&"items", "can_interact", false)
 
 
 func _on_child_exited_tree(_node: Node) -> void:
@@ -45,4 +45,4 @@ func _on_child_exited_tree(_node: Node) -> void:
 	current_item = null
 	can_rotate = false
 	rotation = Vector3.ZERO
-	SignalBus.item_exited_preview.emit()
+	get_tree().set_group(&"items", "can_interact", true)
