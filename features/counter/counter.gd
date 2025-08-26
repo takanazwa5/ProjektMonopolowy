@@ -24,7 +24,6 @@ func interact(event: InputEvent) -> void:
 	var tween: Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(item, ^"global_transform", next_item_pos.global_transform, 0.25)
 	item.reparent(items)
-	item.collision_layer = 0 # NOTE: To be deleted probably
 	item.can_interact = false
 	next_item_pos.position.x -= 0.1
 	item_placed.emit(item)
