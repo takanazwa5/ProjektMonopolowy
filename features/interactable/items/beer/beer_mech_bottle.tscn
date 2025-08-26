@@ -6,10 +6,12 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_ek8a4"]
 size = Vector3(0.079834, 0.296997, 0.0839844)
 
-[node name="BeerMechBottle" type="StaticBody3D"]
+[node name="BeerMechBottle" type="StaticBody3D" groups=["items"]]
 collision_layer = 4
 script = ExtResource("1_6d7fp")
 preview_zoom = -0.28
+item_name = "MechButla"
+type = 1
 
 [node name="MechBottle" parent="." instance=ExtResource("2_6d7fp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.148823, 0)

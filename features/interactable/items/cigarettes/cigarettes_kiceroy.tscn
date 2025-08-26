@@ -6,9 +6,11 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_76loa"]
 size = Vector3(0.0458984, 0.149181, 0.110352)
 
-[node name="CigarettesKiceroy" type="StaticBody3D"]
+[node name="CigarettesKiceroy" type="StaticBody3D" groups=["items"]]
 collision_layer = 4
 script = ExtResource("1_k865c")
+item_name = "Kiceroy"
+type = 0
 
 [node name="fajki_04" parent="." instance=ExtResource("2_k865c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0737434, 0)

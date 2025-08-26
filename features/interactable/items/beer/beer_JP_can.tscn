@@ -6,10 +6,12 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_ek8a4"]
 size = Vector3(0.0888672, 0.199623, 0.0878906)
 
-[node name="BeerJPCan" type="StaticBody3D"]
+[node name="BeerJPCan" type="StaticBody3D" groups=["items"]]
 collision_layer = 4
 script = ExtResource("1_emse2")
 preview_zoom = -0.25
+item_name = "JPPucha"
+type = 1
 
 [node name="JPCan" parent="." instance=ExtResource("2_emse2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
