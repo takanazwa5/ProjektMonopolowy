@@ -8,8 +8,6 @@ class_name HUD extends CanvasLayer
 
 func _ready() -> void:
 
-	GameManager.pause_menu.paused.connect(hide)
-	GameManager.pause_menu.unpaused.connect(show)
 	item_preview.child_entered_tree.connect(_on_item_entered_preview)
 	item_preview.child_exiting_tree.connect(_on_item_exited_preview)
 

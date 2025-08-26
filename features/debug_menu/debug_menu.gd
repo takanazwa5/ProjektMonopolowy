@@ -9,11 +9,6 @@ signal closed
 @onready var back_button : Button = %BackButton
 
 
-func _init() -> void:
-
-	GameManager.debug_menu = self
-
-
 func _ready() -> void:
 
 	window_mode_button.pressed.connect(_on_window_mode_button_pressed)

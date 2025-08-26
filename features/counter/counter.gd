@@ -2,6 +2,7 @@ class_name Counter extends Interactable
 
 
 signal item_placed(item: Item)
+signal interaction
 
 
 var _szlugi_counter: int = 0
@@ -18,7 +19,11 @@ var _misc_counter: int = 0
 func interact(event: InputEvent) -> void:
 
 	if not event.is_action_pressed(&"interact"): return
-	var item: Item = GameManager.player.item_rig.current_item
+	interaction.emit()
+
+
+func place_item_on_counter(item: Item) -> void:
+
 	var target: Marker3D
 	if item.type == Item.Type.SZLUGI:
 

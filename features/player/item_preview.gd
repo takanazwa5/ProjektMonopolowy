@@ -12,6 +12,9 @@ func _ready() -> void:
 
 	child_entered_tree.connect(_on_child_entered_tree)
 	child_exiting_tree.connect(_on_child_exited_tree)
+	for item: Item in get_tree().get_nodes_in_group(&"items"):
+
+		item.interaction.connect(_on_item_interaction)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -46,3 +49,8 @@ func _on_child_exited_tree(_node: Node) -> void:
 	can_rotate = false
 	rotation = Vector3.ZERO
 	get_tree().set_group(&"items", "can_interact", true)
+
+
+func _on_item_interaction(item: Item) -> void:
+
+	add_child(item)

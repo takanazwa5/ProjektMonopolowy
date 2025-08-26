@@ -2,6 +2,9 @@
 class_name Item extends Interactable
 
 
+signal interaction(item: Item)
+
+
 enum Type {SZLUGI, PIWO, MISC}
 
 
@@ -32,7 +35,7 @@ func interact(event: InputEvent) -> void:
 		return
 
 	var copy : Item = duplicate()
-	GameManager.player.item_preview.add_child(copy)
+	interaction.emit(copy)
 	copy.global_transform = global_transform
 	# NOTE: Might need set_input_as_handled()
 

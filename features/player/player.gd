@@ -3,25 +3,20 @@ class_name Player extends CharacterBody3D
 
 const ACCELERATION: float = 1.0
 const DECELERATION: float = 1.0
-const SPEED_WALKING : float = 2.5
-const SPEED_CROUCHING : float = 1.5
+const SPEED_WALKING: float = 2.5
+const SPEED_CROUCHING: float = 1.5
 
 
-var speed : float = SPEED_WALKING
-var can_move_camera : bool = true
-var can_move : bool = true
+var speed: float = SPEED_WALKING
+var can_move_camera: bool = true
+var can_move: bool = true
 
 
-@onready var item_rig : ItemRig = %ItemRig
-@onready var item_preview : ItemPreview = %ItemPreview
-@onready var interaction_raycast : InteractionRaycast = %InteractionRaycast
-@onready var camera : Camera3D = %Camera
-@onready var hud : HUD = %HUD
-
-
-func _init() -> void:
-
-	GameManager.player = self
+@onready var item_rig: ItemRig = %ItemRig
+@onready var item_preview: ItemPreview = %ItemPreview
+@onready var interaction_raycast: InteractionRaycast = %InteractionRaycast
+@onready var camera: Camera3D = %Camera
+@onready var hud: HUD = %HUD
 
 
 func _ready() -> void:
@@ -38,7 +33,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 			rotate_y(deg_to_rad(-event.relative.x) * 0.05)
 			camera.rotate_x(deg_to_rad(-event.relative.y) * 0.05)
-			camera.rotation.x = clampf(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+			camera.rotation.x = clampf(camera.rotation.x, deg_to_rad(-80.0), deg_to_rad(80.0))
 
 
 func _physics_process(delta: float) -> void:
@@ -48,14 +43,14 @@ func _physics_process(delta: float) -> void:
 	var joy_y_axis_value: float = Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y)
 	rotate_y(deg_to_rad(-joy_x_axis_value * 100.0) * delta)
 	camera.rotate_x(deg_to_rad(-joy_y_axis_value * 100.0) * delta)
-	camera.rotation.x = clampf(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+	camera.rotation.x = clampf(camera.rotation.x, deg_to_rad(-80.0), deg_to_rad(80.0))
 
 	if not is_on_floor():
 
 		velocity += get_gravity() * delta
 
-	var input_dir : Vector2 = Input.get_vector("walk_left", "walk_right", "walk_forward", "walk_backward")
-	var direction : Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).limit_length()
+	var input_dir: Vector2 = Input.get_vector("walk_left", "walk_right", "walk_forward", "walk_backward")
+	var direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).limit_length()
 
 	if direction and can_move:
 

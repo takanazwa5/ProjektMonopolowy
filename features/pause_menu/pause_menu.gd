@@ -15,11 +15,6 @@ var _previous_mouse_mode : Input.MouseMode
 @onready var debug_menu : DebugMenu = %DebugMenu
 
 
-func _init() -> void:
-
-	GameManager.pause_menu = self
-
-
 func _ready() -> void:
 
 	resume_button.pressed.connect(_on_resume_button_pressed)

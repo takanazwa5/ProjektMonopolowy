@@ -22,8 +22,6 @@ func _ready() -> void:
 
 		node.interaction.connect(_on_cash_interaction)
 
-	GameManager.debug_menu.random_order_button.pressed.connect(generate_random_order)
-
 
 func generate_random_order() -> void:
 

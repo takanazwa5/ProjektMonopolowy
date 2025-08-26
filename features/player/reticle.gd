@@ -10,6 +10,7 @@ enum Type {INACTIVE, ACTIVE}
 
 @onready var item_preview: ItemPreview = %ItemPreview
 @onready var reticle_tooltip : Label = %ReticleTooltip
+@onready var interaction_raycast: InteractionRaycast = %InteractionRaycast
 
 
 var type : Type:
@@ -43,7 +44,7 @@ func _draw() -> void:
 
 func _process(_delta: float) -> void:
 
-	var collider : Object = GameManager.player.interaction_raycast.collider
+	var collider : Object = interaction_raycast.collider
 	if collider is Interactable and collider.can_interact:
 
 		type = Type.ACTIVE

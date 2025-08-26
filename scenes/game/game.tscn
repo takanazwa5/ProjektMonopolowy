@@ -10,6 +10,7 @@
 script = ExtResource("1_fc0e3")
 
 [node name="PauseMenu" parent="." instance=ExtResource("2_7jktm")]
+unique_name_in_owner = true
 
 [node name="Level" parent="." instance=ExtResource("3_ryrav")]
 unique_name_in_owner = true
