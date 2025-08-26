@@ -1,8 +1,12 @@
 class_name Item extends Interactable
 
 
+enum Type {SZLUGI, PIWO, MISC}
+
+
 @export_range(-1.0, -0.15, 0.01) var preview_zoom: float = -0.15
 @export var item_name: String = ""
+@export var type: Type = Type.MISC
 
 
 static var _names: PackedStringArray = []

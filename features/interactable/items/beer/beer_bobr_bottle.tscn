@@ -11,6 +11,7 @@ collision_layer = 4
 script = ExtResource("1_ek8a4")
 preview_zoom = -0.28
 item_name = "BobrButla"
+type = 1
 
 [node name="BobrBottle" parent="." instance=ExtResource("1_qbuq5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.148823, 0)
