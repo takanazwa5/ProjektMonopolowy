@@ -23,15 +23,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		rotate_y(event.relative.x * 0.001)
 		rotate_x(event.relative.y * 0.001)
 
-	if event.is_action_pressed(&"interact"):
+	if event.is_action_pressed(&"interact"): current_item.reparent(item_rig)
 
-		var tween : Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
-		tween.tween_property(current_item, ^"transform", Transform3D(), 0.25)
-		current_item.reparent(item_rig)
-
-	elif event.is_action_pressed(&"drop_item"):
-
-		current_item.queue_free()
+	elif event.is_action_pressed(&"drop_item"): current_item.queue_free()
 
 
 func _on_child_entered_tree(node: Node) -> void:
