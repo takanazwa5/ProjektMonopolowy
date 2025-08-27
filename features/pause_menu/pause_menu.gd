@@ -12,7 +12,6 @@ var _previous_mouse_mode : Input.MouseMode
 @onready var resume_button : Button = %ResumeButton
 @onready var debug_button : Button = %DebugButton
 @onready var quit_button : Button = %QuitButton
-@onready var debug_menu : DebugMenu = %DebugMenu
 
 
 func _ready() -> void:
@@ -20,7 +19,7 @@ func _ready() -> void:
 	resume_button.pressed.connect(_on_resume_button_pressed)
 	quit_button.pressed.connect(_on_quit_button_pressed)
 	debug_button.pressed.connect(_on_debug_button_pressed)
-	debug_menu.closed.connect(_on_submenu_closed)
+	DebugMenu.closed.connect(_on_submenu_closed)
 
 	if not OS.is_debug_build():
 
@@ -70,7 +69,7 @@ func _on_quit_button_pressed() -> void:
 func _on_debug_button_pressed() -> void:
 
 	main_pause.hide()
-	debug_menu.show()
+	DebugMenu.show()
 
 
 func _on_submenu_closed() -> void:

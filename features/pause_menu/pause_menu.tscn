@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjhr0bs1pbymv"]
+[gd_scene load_steps=4 format=3 uid="uid://cjhr0bs1pbymv"]
 
 [ext_resource type="Script" uid="uid://chxhp1fuwuyqr" path="res://features/pause_menu/pause_menu.gd" id="1_f4n72"]
 [ext_resource type="Shader" uid="uid://b65drn8157rrj" path="res://features/pause_menu/blur.gdshader" id="2_0wavx"]
-[ext_resource type="PackedScene" uid="uid://6q6gxagxmntn" path="res://features/debug_menu/debug_menu.tscn" id="3_ls6i4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ls6i4"]
 shader = ExtResource("2_0wavx")
@@ -51,7 +50,3 @@ text = "Debug"
 unique_name_in_owner = true
 layout_mode = 2
 text = "Quit"
-
-[node name="DebugMenu" parent="." instance=ExtResource("3_ls6i4")]
-unique_name_in_owner = true
-visible = false
