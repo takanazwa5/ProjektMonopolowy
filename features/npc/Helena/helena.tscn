@@ -1,8 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://cg7011735pcw1"]
+[gd_scene load_steps=15 format=3 uid="uid://cg7011735pcw1"]
 
 [ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/shared/npc.gd" id="1_bei7i"]
 [ext_resource type="PackedScene" uid="uid://ckmclyi4ds1f0" path="res://features/npc/Helena/meshes/character_helena.glb" id="2_g2htq"]
 [ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/npc/shared/Rig.glb" id="3_bji0j"]
+[ext_resource type="Script" uid="uid://de1lalif7l760" path="res://features/state_machine/state_machine.gd" id="4_54vkb"]
+[ext_resource type="Script" uid="uid://dwi10emqduq6r" path="res://features/npc/shared/states/entering_store_state.gd" id="5_ppvus"]
+[ext_resource type="Script" uid="uid://bgodwf3y0m1ey" path="res://features/npc/shared/states/waiting_for_product_state.gd" id="6_nhwyv"]
+[ext_resource type="Script" uid="uid://uuvn1btdq2f4" path="res://features/npc/shared/states/getting_product_state.gd" id="7_20110"]
+[ext_resource type="Script" uid="uid://cxwj4xkryi0sb" path="res://features/npc/shared/states/paying_state.gd" id="8_kiaox"]
+[ext_resource type="Script" uid="uid://y8uymo1mwu2j" path="res://features/npc/shared/states/packing_state.gd" id="9_facba"]
+[ext_resource type="Script" uid="uid://j2c8p210clnr" path="res://features/npc/shared/states/exiting_store_state.gd" id="10_j7m6v"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wmxm7"]
 radius = 0.3
@@ -51,3 +58,37 @@ root_node = NodePath("../character_helena")
 tree_root = SubResource("AnimationNodeBlendSpace1D_r1mlf")
 anim_player = NodePath("../AnimationPlayer")
 parameters/blend_position = 0.0014925
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("4_54vkb")
+initial_state = NodePath("EnteringStoreState")
+metadata/_custom_type_script = "uid://de1lalif7l760"
+
+[node name="EnteringStoreState" type="Node" parent="StateMachine"]
+script = ExtResource("5_ppvus")
+metadata/_custom_type_script = "uid://dcedhanl8gfas"
+
+[node name="WaitingForProductState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("6_nhwyv")
+metadata/_custom_type_script = "uid://dcedhanl8gfas"
+
+[node name="GettingProductState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("7_20110")
+metadata/_custom_type_script = "uid://dcedhanl8gfas"
+
+[node name="PayingState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("8_kiaox")
+metadata/_custom_type_script = "uid://q0lk35d56y2e"
+
+[node name="PackingState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("9_facba")
+metadata/_custom_type_script = "uid://q0lk35d56y2e"
+
+[node name="ExitingStoreState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("10_j7m6v")
+metadata/_custom_type_script = "uid://q0lk35d56y2e"
