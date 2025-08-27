@@ -14,6 +14,8 @@ func _ready() -> void:
 	pause_menu.paused.connect(_on_game_paused)
 	pause_menu.unpaused.connect(_on_game_unpaused)
 
+	DebugMenu.add_button(spawn_basia)
+
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 	print("Game scene ready.")
@@ -22,6 +24,15 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 
 	DebugPanel.add_property(Engine.get_frames_per_second(), "FPS", 1000)
+
+
+func spawn_basia() -> void:
+
+	var basia_scene: PackedScene = load("uid://civlo6dh6d0kf")
+	var basia: NPC = basia_scene.instantiate()
+	add_child(basia)
+	basia.position = Vector3(-1.48, 0.125, 3.42)
+	basia.rotation_degrees = Vector3(0.0, -180.0, 0.0)
 
 
 func _on_item_entered_rig(_node: Node) -> void:
