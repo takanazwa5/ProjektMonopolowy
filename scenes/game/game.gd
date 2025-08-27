@@ -15,6 +15,7 @@ func _ready() -> void:
 	pause_menu.unpaused.connect(_on_game_unpaused)
 
 	DebugMenu.add_button(spawn_basia)
+	DebugMenu.add_button(change_window_mode)
 
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -33,6 +34,13 @@ func spawn_basia() -> void:
 	add_child(basia)
 	basia.position = Vector3(-1.48, 0.125, 3.42)
 	basia.rotation_degrees = Vector3(0.0, -180.0, 0.0)
+
+
+func change_window_mode() -> void:
+
+	var window: Window = get_window()
+	if window.mode == Window.MODE_WINDOWED: window.mode = Window.MODE_EXCLUSIVE_FULLSCREEN
+	else: window.mode = Window.MODE_WINDOWED
 
 
 func _on_item_entered_rig(_node: Node) -> void:
