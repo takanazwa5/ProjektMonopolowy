@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://civlo6dh6d0kf"]
 
 [ext_resource type="PackedScene" uid="uid://b6mt6074im8pm" path="res://features/npc/Basia/meshes/character_basia.glb" id="1_al82x"]
-[ext_resource type="Script" uid="uid://c5kk2k4hhiecr" path="res://features/npc/Basia/basia.gd" id="1_nb0pl"]
+[ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/shared/npc.gd" id="1_qlnrj"]
 [ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/npc/shared/Rig.glb" id="2_0suly"]
 [ext_resource type="Script" uid="uid://de1lalif7l760" path="res://features/state_machine/state_machine.gd" id="4_atgwo"]
 [ext_resource type="Script" uid="uid://dwi10emqduq6r" path="res://features/npc/shared/states/entering_store_state.gd" id="5_fyrb5"]
@@ -56,7 +56,7 @@ node_connections = [&"output", 0, &"pick_up", &"pick_up", 0, &"put_down", &"pick
 collision_layer = 8
 axis_lock_angular_x = true
 axis_lock_angular_z = true
-script = ExtResource("1_nb0pl")
+script = ExtResource("1_qlnrj")
 
 [node name="character_basia" parent="." instance=ExtResource("1_al82x")]
 
