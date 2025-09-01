@@ -2,6 +2,9 @@
 class_name StateMachine extends Node
 
 
+signal state_changed(new_state: State)
+
+
 @export var initial_state : State:
 
 	set(value):
@@ -56,6 +59,7 @@ func _on_state_transition(new_state: State) -> void:
 	if Engine.is_editor_hint(): return
 	current_state.exit()
 	current_state = new_state
+	state_changed.emit(new_state)
 	new_state.enter()
 
 

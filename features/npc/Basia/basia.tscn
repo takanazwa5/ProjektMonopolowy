@@ -93,6 +93,7 @@ parameters/put_down/request = 0
 parameters/walk_blend/blend_position = 0
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+unique_name_in_owner = true
 script = ExtResource("4_atgwo")
 initial_state = NodePath("EnteringStoreState")
 metadata/_custom_type_script = "uid://de1lalif7l760"
@@ -125,3 +126,10 @@ metadata/_custom_type_script = "uid://q0lk35d56y2e"
 unique_name_in_owner = true
 script = ExtResource("10_qlnrj")
 metadata/_custom_type_script = "uid://q0lk35d56y2e"
+
+[node name="StateLabel" type="Label3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86561, 0)
+billboard = 2
+font_size = 16
+outline_size = 6

@@ -10,12 +10,17 @@ var target_node: Node3D
 
 @onready var navigation_agent_3d: NavigationAgent3D = %NavigationAgent3D
 @onready var animation_tree: AnimationTree = %AnimationTree
+@onready var state_machine: StateMachine = %StateMachine
+@onready var state_label: Label3D = %StateLabel
 
 
 func _ready() -> void:
 
 	navigation_agent_3d.target_reached.connect(_on_target_reached)
 	navigation_agent_3d.navigation_finished.connect(_on_navigation_finished)
+	state_machine.state_changed.connect(_on_state_transition)
+
+	state_label.text = state_machine.initial_state.name
 
 
 func _physics_process(delta: float) -> void:
@@ -73,3 +78,8 @@ func _on_navigation_finished() -> void:
 
 	#print("navigation finished")
 	#print("distance to target: %s" % navigation_agent_3d.distance_to_target())
+
+
+func _on_state_transition(new_state: State) -> void:
+
+	state_label.text = new_state.name
