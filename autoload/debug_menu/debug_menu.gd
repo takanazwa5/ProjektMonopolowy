@@ -32,7 +32,9 @@ func _close() -> void:
 func add_button(callable: Callable) -> void:
 
 	var button: Button = Button.new()
-	button.text = "%s.%s" % [callable.get_object().get_class(), callable.get_method()]
+	var script_name: StringName = callable.get_object().get_script().get_global_name()
+	if script_name.is_empty(): script_name = callable.get_object().get_class()
+	button.text = "%s.%s" % [script_name, callable.get_method()]
 	button.pressed.connect(callable)
 	buttons_container.add_child(button)
 	buttons_container.move_child(button, 0)
