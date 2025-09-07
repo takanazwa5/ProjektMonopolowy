@@ -115,6 +115,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43781, 0, 0.375733)
 [node name="MainRoom" parent="NavigationRegion3D" instance=ExtResource("7_ksyp5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77862, 0, -3.96313)
 
+[node name="MainDoor" type="Marker3D" parent="NavigationRegion3D"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54038, 0.369053, 3.56369)
+
 [node name="Furniture" type="Node" parent="NavigationRegion3D"]
 
 [node name="Szafa3" parent="NavigationRegion3D/Furniture" instance=ExtResource("7_2e8v1")]
