@@ -12,6 +12,7 @@ script = ExtResource("1_3dde6")
 preview_zoom = -0.28
 item_name = "OveckyButla"
 type = 1
+reticle_tooltip_text = "Ovecky w butelce"
 
 [node name="OveckyBottle" parent="." instance=ExtResource("2_3dde6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.148823, 0)
@@ -19,3 +20,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.148823, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.000568816, 0)
 shape = SubResource("BoxShape3D_ek8a4")
+
+[node name="BottomMarker" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.149465, 0)

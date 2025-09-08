@@ -16,6 +16,9 @@ enum Type {SZLUGI, PIWO, MISC}
 static var _names: PackedStringArray = []
 
 
+@onready var bottom_marker: Marker3D = %BottomMarker
+
+
 func _init() -> void:
 
 	if Engine.is_editor_hint(): return

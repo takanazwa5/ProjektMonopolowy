@@ -43,9 +43,11 @@ func place_item_on_counter(item: Item) -> void:
 		target = misc_targets[_misc_counter]
 		_misc_counter += 1
 
+	target.position.y += absf(item.bottom_marker.position.y)
 	var tween: Tween = create_tween().set_trans(Tween.TRANS_CUBIC).set_parallel()
 	tween.tween_property(item, ^"global_transform", target.global_transform, 0.25)
 	tween.tween_property(item, ^"rotation_degrees:y", randf_range(-180.0, 180.0), 0.25)
+
 	if item.type == Item.Type.SZLUGI:
 
 		tween.tween_property(item, ^"rotation_degrees:x", item.rotation_degrees.x + 90.0, 0.25)
@@ -53,6 +55,9 @@ func place_item_on_counter(item: Item) -> void:
 	item.reparent(items)
 	item.can_interact = false
 	item_placed.emit(item)
+
+	if tween.is_running(): await tween.finished
+	target.position.y -= absf(item.bottom_marker.position.y)
 
 
 func clear() -> void:

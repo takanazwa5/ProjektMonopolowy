@@ -12,6 +12,7 @@ script = ExtResource("1_54s4n")
 preview_zoom = -0.25
 item_name = "BobrPucha"
 type = 1
+reticle_tooltip_text = "Bubr w puszce"
 
 [node name="BobrCan" parent="." instance=ExtResource("2_54s4n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.100091, 0)
@@ -19,3 +20,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.100091, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00132464, 0)
 shape = SubResource("BoxShape3D_ek8a4")
+
+[node name="BottomMarker" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.101041, 0)
+
+[node name="BottomMarker2" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.100236, 0)
