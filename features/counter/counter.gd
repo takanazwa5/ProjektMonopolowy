@@ -52,6 +52,7 @@ func place_item_on_counter(item: Item) -> void:
 
 		tween.tween_property(item, ^"rotation_degrees:x", item.rotation_degrees.x + 90.0, 0.25)
 
+	item.remove_from_group(&"items")
 	item.reparent(items)
 	item.can_interact = false
 	item_placed.emit(item)
