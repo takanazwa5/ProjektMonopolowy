@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbgnm2qr4pi5e"
-path.s3tc="res://.godot/imported/nineWorm_Roughness.png-71ffbe165320bb45b2bd0825c144afdc.s3tc.ctex"
+uid="uid://cusf48eg158mj"
+path.s3tc="res://.godot/imported/oj_body_Base_color.png-963e87318d779c8f9f972dfd5649e4a6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://features/npc/NineWorm/textures/nineWorm_Roughness.png"
-dest_files=["res://.godot/imported/nineWorm_Roughness.png-71ffbe165320bb45b2bd0825c144afdc.s3tc.ctex"]
+source_file="res://features/npc/Ojciec/textures/oj_body_Base_color.png"
+dest_files=["res://.godot/imported/oj_body_Base_color.png-963e87318d779c8f9f972dfd5649e4a6.s3tc.ctex"]
 
 [params]
 

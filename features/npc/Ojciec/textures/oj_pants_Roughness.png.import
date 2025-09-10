@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqe7f521ae72e"
-path.s3tc="res://.godot/imported/nineWorm_Base_color.png-97b326ad7cab72796f1926ea9079b631.s3tc.ctex"
+uid="uid://dm572ta77pbls"
+path.s3tc="res://.godot/imported/oj_pants_Roughness.png-316539127aef3e7301d79fd54ee615e2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://features/npc/NineWorm/textures/nineWorm_Base_color.png"
-dest_files=["res://.godot/imported/nineWorm_Base_color.png-97b326ad7cab72796f1926ea9079b631.s3tc.ctex"]
+source_file="res://features/npc/Ojciec/textures/oj_pants_Roughness.png"
+dest_files=["res://.godot/imported/oj_pants_Roughness.png-316539127aef3e7301d79fd54ee615e2.s3tc.ctex"]
 
 [params]
 

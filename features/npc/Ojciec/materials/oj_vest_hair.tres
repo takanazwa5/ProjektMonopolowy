@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dkvqv5pgf21jo"]
+
+[ext_resource type="Texture2D" uid="uid://6s0sp8ecdfop" path="res://features/npc/Ojciec/textures/oj_vest_hair_Base_color.png" id="1_r4uq1"]
+[ext_resource type="Texture2D" uid="uid://yubqcd8f6npw" path="res://features/npc/Ojciec/textures/oj_vest_hair_Roughness.png" id="2_n3dq4"]
+
+[resource]
+resource_name = "oj_vest_hair"
+albedo_texture = ExtResource("1_r4uq1")
+roughness_texture = ExtResource("2_n3dq4")
+roughness_texture_channel = 4

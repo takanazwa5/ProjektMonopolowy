@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bmecryvolyage"]
+
+[ext_resource type="Texture2D" uid="uid://dd7dl7gfkys4p" path="res://features/npc/Olek/textures/ol_jacket_Base_color.png" id="1_in0uj"]
+[ext_resource type="Texture2D" uid="uid://brccwh2bkv74s" path="res://features/npc/Olek/textures/ol_jacket_Roughness.png" id="2_gu177"]
+
+[resource]
+resource_name = "ol_jacket"
+albedo_texture = ExtResource("1_in0uj")
+roughness_texture = ExtResource("2_gu177")
+roughness_texture_channel = 3

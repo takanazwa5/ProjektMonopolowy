@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dabo6ycsqay52"]
+
+[ext_resource type="Texture2D" uid="uid://ckd36c08v3wyd" path="res://features/npc/Olek/textures/ol_pants_acc_Base_color.png" id="1_7q0im"]
+[ext_resource type="Texture2D" uid="uid://byeg8x6ipmnta" path="res://features/npc/Olek/textures/ol_pants_acc_Roughness.png" id="2_2drk8"]
+
+[resource]
+resource_name = "ol_pants"
+albedo_texture = ExtResource("1_7q0im")
+roughness_texture = ExtResource("2_2drk8")
+roughness_texture_channel = 3

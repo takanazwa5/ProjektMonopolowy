@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://bhvq64gsa43c8"]
+
+[ext_resource type="Texture2D" uid="uid://bxglbsuqymhnw" path="res://features/npc/Monster/textures/A_eye_monster_BaseColor.jpg" id="1_2wdev"]
+[ext_resource type="Texture2D" uid="uid://b2manliijrrxx" path="res://features/npc/Monster/textures/A_eye_monster_Emmisive.jpg" id="2_dynlp"]
+[ext_resource type="Texture2D" uid="uid://bhvcgb6jusbbq" path="res://features/npc/shared/textures/A_eye_Roughness.jpg" id="3_c1yso"]
+
+[resource]
+resource_name = "monster_eye"
+albedo_texture = ExtResource("1_2wdev")
+roughness_texture = ExtResource("3_c1yso")
+emission_enabled = true
+emission = Color(1, 0.95, 0.85, 1)
+emission_energy_multiplier = 0.5
+emission_operator = 1
+emission_texture = ExtResource("2_dynlp")

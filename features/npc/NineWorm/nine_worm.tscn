@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://sksqcfpdgdgf"]
+
+[ext_resource type="PackedScene" uid="uid://17axafivwlpk" path="res://features/npc/NineWorm/meshes/nine_worm.glb" id="1_f638g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f638g"]
+size = Vector3(0.107666, 0.0279846, 0.177399)
+
+[node name="NineWorm" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0138092, 0.0085907)
+shape = SubResource("BoxShape3D_f638g")
+
+[node name="nine_worm" parent="." instance=ExtResource("1_f638g")]

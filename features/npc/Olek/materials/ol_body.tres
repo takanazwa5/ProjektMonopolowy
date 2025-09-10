@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cqu1xj3ro31at"]
+
+[ext_resource type="Texture2D" uid="uid://bd74piq4juuix" path="res://features/npc/Olek/textures/ol_body_Base_color.png" id="1_4kniq"]
+[ext_resource type="Texture2D" uid="uid://c2wjo2uga1k5h" path="res://features/npc/Olek/textures/ol_body_Roughness.png" id="2_h77eh"]
+
+[resource]
+resource_name = "ol_body"
+albedo_texture = ExtResource("1_4kniq")
+roughness_texture = ExtResource("2_h77eh")
+roughness_texture_channel = 3
