@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://eusb2p3gq37u"]
 
-[ext_resource type="Script" uid="uid://rfypjk406hn7" path="res://features/items/item_data/item_data.gd" id="1_7lg3h"]
+[ext_resource type="Script" uid="uid://rfypjk406hn7" path="res://features/items/item_data/item_data.gd" id="1_btby1"]
 
 [resource]
-script = ExtResource("1_7lg3h")
+script = ExtResource("1_btby1")
 name = &"jp_can"
 type = 1
-preview_zoom = -0.15
+preview_zoom = -0.25
 metadata/_custom_type_script = "uid://rfypjk406hn7"

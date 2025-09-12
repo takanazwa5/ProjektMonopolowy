@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://vsunu5jhtik"]
 
-[ext_resource type="Script" uid="uid://rfypjk406hn7" path="res://features/items/item_data/item_data.gd" id="1_nmqxy"]
+[ext_resource type="Script" uid="uid://rfypjk406hn7" path="res://features/items/item_data/item_data.gd" id="1_oc6p4"]
 
 [resource]
-script = ExtResource("1_nmqxy")
+script = ExtResource("1_oc6p4")
 name = &"jp_bottle"
 type = 1
-preview_zoom = -0.15
+preview_zoom = -0.28
 metadata/_custom_type_script = "uid://rfypjk406hn7"
