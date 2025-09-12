@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://d3yqe5yr5yh78"]
+
+[ext_resource type="Script" uid="uid://rfypjk406hn7" path="res://features/items/item_data/item_data.gd" id="1_dc2ji"]
+
+[resource]
+script = ExtResource("1_dc2ji")
+name = &"mamboro"
+type = 0
+preview_zoom = -0.15
+metadata/_custom_type_script = "uid://rfypjk406hn7"

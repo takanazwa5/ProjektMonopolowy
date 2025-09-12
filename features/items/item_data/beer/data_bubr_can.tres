@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://dcenargdwox6w"]
+
+[ext_resource type="Script" uid="uid://rfypjk406hn7" path="res://features/items/item_data/item_data.gd" id="1_lcu2k"]
+
+[resource]
+script = ExtResource("1_lcu2k")
+name = &"bubr_can"
+type = 1
+preview_zoom = -0.15
+metadata/_custom_type_script = "uid://rfypjk406hn7"

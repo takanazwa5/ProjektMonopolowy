@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://cnkor7p7gm7pd"]
+
+[ext_resource type="Script" uid="uid://rfypjk406hn7" path="res://features/items/item_data/item_data.gd" id="1_nj6b7"]
+
+[resource]
+script = ExtResource("1_nj6b7")
+name = &"platinum"
+type = 0
+preview_zoom = -0.15
+metadata/_custom_type_script = "uid://rfypjk406hn7"
