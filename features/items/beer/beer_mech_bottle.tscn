@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7wqysvqquowd"]
+[gd_scene load_steps=5 format=3 uid="uid://b7wqysvqquowd"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_6d7fp"]
+[ext_resource type="Resource" uid="uid://bu7l60yv00wc" path="res://features/items/item_data/beer/data_mech_bottle.tres" id="2_0do3j"]
 [ext_resource type="PackedScene" uid="uid://7tyqtishxcbh" path="res://features/items/beer/meshes/mech_bottle.glb" id="2_6d7fp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ek8a4"]
@@ -9,9 +10,7 @@ size = Vector3(0.079834, 0.296997, 0.0839844)
 [node name="BeerMechBottle" type="StaticBody3D" groups=["items"]]
 collision_layer = 4
 script = ExtResource("1_6d7fp")
-preview_zoom = -0.28
-item_name = "MechButla"
-type = 1
+data = ExtResource("2_0do3j")
 reticle_tooltip_text = "Mech w butelce"
 
 [node name="MechBottle" parent="." instance=ExtResource("2_6d7fp")]

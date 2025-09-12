@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://df3dtr61w0e3k"]
+[gd_scene load_steps=5 format=3 uid="uid://df3dtr61w0e3k"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_emse2"]
+[ext_resource type="Resource" uid="uid://eusb2p3gq37u" path="res://features/items/item_data/beer/data_jp_can.tres" id="2_ccf5c"]
 [ext_resource type="PackedScene" uid="uid://cn0kid5awlouy" path="res://features/items/beer/meshes/jp_can.glb" id="2_emse2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ek8a4"]
@@ -9,9 +10,7 @@ size = Vector3(0.0888672, 0.199623, 0.0878906)
 [node name="BeerJPCan" type="StaticBody3D" groups=["items"]]
 collision_layer = 4
 script = ExtResource("1_emse2")
-preview_zoom = -0.25
-item_name = "JPPucha"
-type = 1
+data = ExtResource("2_ccf5c")
 reticle_tooltip_text = "JP w puszce"
 
 [node name="JPCan" parent="." instance=ExtResource("2_emse2")]

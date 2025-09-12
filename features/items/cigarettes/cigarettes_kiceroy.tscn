@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://lcbivolyicax"]
+[gd_scene load_steps=5 format=3 uid="uid://lcbivolyicax"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_k865c"]
 [ext_resource type="PackedScene" uid="uid://c2a2asi2lh4im" path="res://features/items/cigarettes/meshes/fajki_04.gltf" id="2_k865c"]
+[ext_resource type="Resource" uid="uid://dpk0onncordnk" path="res://features/items/item_data/cigarettes/data_kiceroy.tres" id="2_tojgw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_76loa"]
 size = Vector3(0.0458984, 0.149181, 0.110352)
@@ -9,8 +10,7 @@ size = Vector3(0.0458984, 0.149181, 0.110352)
 [node name="CigarettesKiceroy" type="StaticBody3D" groups=["items"]]
 collision_layer = 4
 script = ExtResource("1_k865c")
-item_name = "Kiceroy"
-type = 0
+data = ExtResource("2_tojgw")
 reticle_tooltip_text = "Kiceroy"
 
 [node name="fajki_04" parent="." instance=ExtResource("2_k865c")]

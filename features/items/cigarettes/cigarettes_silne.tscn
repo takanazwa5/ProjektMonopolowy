@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://4y0ner578dpr"]
+[gd_scene load_steps=5 format=3 uid="uid://4y0ner578dpr"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_0yr5g"]
 [ext_resource type="PackedScene" uid="uid://bhabrte0atjfl" path="res://features/items/cigarettes/meshes/fajki_01.gltf" id="2_n7i4s"]
+[ext_resource type="Resource" uid="uid://ck73t0cglgxr6" path="res://features/items/item_data/cigarettes/data_silne.tres" id="2_y84qk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y84qk"]
 size = Vector3(0.0458984, 0.149731, 0.110352)
@@ -9,8 +10,7 @@ size = Vector3(0.0458984, 0.149731, 0.110352)
 [node name="CigarettesSilne" type="StaticBody3D" groups=["items"]]
 collision_layer = 4
 script = ExtResource("1_0yr5g")
-item_name = "Silne"
-type = 0
+data = ExtResource("2_y84qk")
 reticle_tooltip_text = "Silne"
 
 [node name="fajki_01" parent="." instance=ExtResource("2_n7i4s")]

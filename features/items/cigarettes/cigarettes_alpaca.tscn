@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bgqkchyu8eo7y"]
+[gd_scene load_steps=5 format=3 uid="uid://bgqkchyu8eo7y"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_76loa"]
 [ext_resource type="PackedScene" uid="uid://rwxraqe1im77" path="res://features/items/cigarettes/meshes/fajki_02.gltf" id="1_v176i"]
+[ext_resource type="Resource" uid="uid://ywdht0o3owu3" path="res://features/items/item_data/cigarettes/data_alpaca.tres" id="2_pagsc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_76loa"]
 size = Vector3(0.0458984, 0.148327, 0.110352)
@@ -9,8 +10,7 @@ size = Vector3(0.0458984, 0.148327, 0.110352)
 [node name="CigarettesAlpaca" type="StaticBody3D" groups=["items"]]
 collision_layer = 4
 script = ExtResource("1_76loa")
-item_name = "Alpaca"
-type = 0
+data = ExtResource("2_pagsc")
 reticle_tooltip_text = "Alpaca"
 
 [node name="fajki_02" parent="." instance=ExtResource("1_v176i")]

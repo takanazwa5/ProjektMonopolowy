@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://o3uvc53yiig"]
+[gd_scene load_steps=5 format=3 uid="uid://o3uvc53yiig"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_87wsq"]
 [ext_resource type="PackedScene" uid="uid://g7taxpc5p3k1" path="res://features/items/beer/meshes/boskie_can.glb" id="2_87wsq"]
+[ext_resource type="Resource" uid="uid://lee4tlfiqb66" path="res://features/items/item_data/beer/data_boskie_can.tres" id="2_tj823"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ek8a4"]
 size = Vector3(0.0888672, 0.199623, 0.0878906)
@@ -9,9 +10,7 @@ size = Vector3(0.0888672, 0.199623, 0.0878906)
 [node name="BeerBoskieCan" type="StaticBody3D" groups=["items"]]
 collision_layer = 4
 script = ExtResource("1_87wsq")
-preview_zoom = -0.25
-item_name = "BoskiePucha"
-type = 1
+data = ExtResource("2_tj823")
 reticle_tooltip_text = "Boskie w puszce"
 
 [node name="BoskieCan" parent="." instance=ExtResource("2_87wsq")]

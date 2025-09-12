@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://vk4ygcsxweuu"]
+[gd_scene load_steps=5 format=3 uid="uid://vk4ygcsxweuu"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_37n52"]
 [ext_resource type="PackedScene" uid="uid://b5bu4yq8urd1b" path="res://features/items/beer/meshes/mech_can.glb" id="2_37n52"]
+[ext_resource type="Resource" uid="uid://dpwim8fys7nwl" path="res://features/items/item_data/beer/data_mech_can.tres" id="2_l4rdr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ek8a4"]
 size = Vector3(0.0888672, 0.199623, 0.0878906)
@@ -9,9 +10,7 @@ size = Vector3(0.0888672, 0.199623, 0.0878906)
 [node name="BeerMechCan" type="StaticBody3D" groups=["items"]]
 collision_layer = 4
 script = ExtResource("1_37n52")
-preview_zoom = -0.25
-item_name = "MechPucha"
-type = 1
+data = ExtResource("2_l4rdr")
 reticle_tooltip_text = "Mech w puszce"
 
 [node name="MechCan" parent="." instance=ExtResource("2_37n52")]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://btib7p5g7httd"]
+[gd_scene load_steps=5 format=3 uid="uid://btib7p5g7httd"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_54s4n"]
+[ext_resource type="Resource" uid="uid://dcenargdwox6w" path="res://features/items/item_data/beer/data_bubr_can.tres" id="2_1djsa"]
 [ext_resource type="PackedScene" uid="uid://bskt7g4r1dx1o" path="res://features/items/beer/meshes/bobr_can.glb" id="2_54s4n"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ek8a4"]
@@ -9,9 +10,7 @@ size = Vector3(0.0888672, 0.199623, 0.0878906)
 [node name="BeerBobrCan" type="StaticBody3D" groups=["items"]]
 collision_layer = 4
 script = ExtResource("1_54s4n")
-preview_zoom = -0.25
-item_name = "BobrPucha"
-type = 1
+data = ExtResource("2_1djsa")
 reticle_tooltip_text = "Bubr w puszce"
 
 [node name="BobrCan" parent="." instance=ExtResource("2_54s4n")]

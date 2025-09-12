@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0m3anq2rdsy1"]
+[gd_scene load_steps=5 format=3 uid="uid://b0m3anq2rdsy1"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_682jn"]
 [ext_resource type="PackedScene" uid="uid://ca7esyvakgb4f" path="res://features/items/beer/meshes/tarka_bottle.glb" id="2_682jn"]
+[ext_resource type="Resource" uid="uid://nwm8c1ppi3ad" path="res://features/items/item_data/beer/data_tarka_bottle.tres" id="2_j8oq7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ek8a4"]
 size = Vector3(0.079834, 0.296997, 0.0839844)
@@ -9,9 +10,8 @@ size = Vector3(0.079834, 0.296997, 0.0839844)
 [node name="BeerTarkaBottle" type="StaticBody3D" groups=["items"]]
 collision_layer = 4
 script = ExtResource("1_682jn")
-preview_zoom = -0.28
-item_name = "TarkaButla"
-type = 1
+data = ExtResource("2_j8oq7")
+reticle_tooltip_text = "Tarka w butelce"
 
 [node name="TarkaBottle" parent="." instance=ExtResource("2_682jn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.149, 0)

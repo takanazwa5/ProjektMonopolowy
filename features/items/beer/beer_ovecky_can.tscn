@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://br5d6d1c4fjbr"]
+[gd_scene load_steps=5 format=3 uid="uid://br5d6d1c4fjbr"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_bsjst"]
 [ext_resource type="PackedScene" uid="uid://bxjucsr360222" path="res://features/items/beer/meshes/ovecky_can.glb" id="2_bsjst"]
+[ext_resource type="Resource" uid="uid://bi5pxvyhoybwr" path="res://features/items/item_data/beer/data_ovecky_can.tres" id="2_nnach"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ek8a4"]
 size = Vector3(0.0888672, 0.199623, 0.0878906)
@@ -9,9 +10,7 @@ size = Vector3(0.0888672, 0.199623, 0.0878906)
 [node name="BeerOveckyCan" type="StaticBody3D" groups=["items"]]
 collision_layer = 4
 script = ExtResource("1_bsjst")
-preview_zoom = -0.25
-item_name = "OveckyPucha"
-type = 1
+data = ExtResource("2_nnach")
 reticle_tooltip_text = "Ovecky w puszce"
 
 [node name="OveckyCan" parent="." instance=ExtResource("2_bsjst")]
