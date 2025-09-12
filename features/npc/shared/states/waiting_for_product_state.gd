@@ -10,9 +10,9 @@ func enter() -> void:
 	print("Basiula podeszla do lady. Tu bedzie okienko dialogowe. Na razie czeka na bobra w butelce.")
 
 
-func _on_counter_item_placed(item: Item) -> void:
+func _on_counter_item_placed(item_data: ItemData) -> void:
 
-	if not item.item_name == "BobrButla": return
+	if not item_data.name == "bubr_bottle": return
 	transition.emit(paying_state)
 
 

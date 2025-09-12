@@ -35,7 +35,7 @@ func _on_child_entered_tree(node: Node) -> void:
 
 	get_tree().set_group(&"items", "can_interact", false)
 	var item: Item = node
-	position.z = clampf(item.preview_zoom, -1.0, -0.15)
+	position.z = clampf(item.data.preview_zoom, -1.0, -0.15)
 	current_item = item
 	var tween: Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(current_item, ^"transform", Transform3D(), 0.25)

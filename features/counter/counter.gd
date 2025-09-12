@@ -25,13 +25,13 @@ func interact(event: InputEvent) -> void:
 func place_item_on_counter(item: Item) -> void:
 
 	var target: Marker3D
-	if item.type == Item.Type.SZLUGI:
+	if item.data.type == ItemData.Type.SZLUGI:
 
 		if _szlugi_counter >= 5: return
 		target = szlugi_targets[_szlugi_counter]
 		_szlugi_counter += 1
 
-	elif item.type == Item.Type.PIWO:
+	elif item.data.type == ItemData.Type.PIWO:
 
 		if _piwo_counter >= 5: return
 		target = piwo_targets[_piwo_counter]
@@ -48,17 +48,17 @@ func place_item_on_counter(item: Item) -> void:
 	tween.tween_property(item, ^"global_transform", target.global_transform, 0.25)
 	tween.tween_property(item, ^"rotation_degrees:y", randf_range(-180.0, 180.0), 0.25)
 
-	if item.type == Item.Type.SZLUGI:
+	if item.data.type == ItemData.Type.SZLUGI:
 
 		tween.tween_property(item, ^"rotation_degrees:x", item.rotation_degrees.x + 90.0, 0.25)
 
-	item.remove_from_group(&"items")
+	item_placed.emit(item.data)
 	item.reparent(items)
-	item.can_interact = false
-	item_placed.emit(item)
 
 	if tween.is_running(): await tween.finished
 	target.position.y -= absf(item.bottom_marker.position.y)
+
+	item.set_script(null)
 
 
 func clear() -> void:
