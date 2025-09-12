@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://mb35j338gfy4"]
+
+[ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_ek8a4"]
+[ext_resource type="PackedScene" uid="uid://dmtrisyvy531c" path="res://features/items/beer/meshes/bobr_bottle.glb" id="1_qbuq5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ek8a4"]
+size = Vector3(0.079834, 0.296997, 0.0839844)
+
+[node name="BeerBobrBottle" type="StaticBody3D" groups=["items"]]
+collision_layer = 4
+script = ExtResource("1_ek8a4")
+preview_zoom = -0.28
+item_name = "BobrButla"
+type = 1
+reticle_tooltip_text = "Bubr w butelce"
+
+[node name="BobrBottle" parent="." instance=ExtResource("1_qbuq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.148823, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.000568816, 0)
+shape = SubResource("BoxShape3D_ek8a4")
+
+[node name="BottomMarker" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.149465, 0)

@@ -1,6 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bqyn2v410bl1h"]
-
-[ext_resource type="Texture2D" uid="uid://chc1dtc733xwt" path="res://features/interactable/items/cigarettes/textures/tex_fajki.png" id="1_aaod5"]
-
-[resource]
-albedo_texture = ExtResource("1_aaod5")

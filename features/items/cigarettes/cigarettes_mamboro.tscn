@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://6coqkgfn1tvj"]
+
+[ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_uxab6"]
+[ext_resource type="PackedScene" uid="uid://dux72a2lllv80" path="res://features/items/cigarettes/meshes/fajki_06.gltf" id="2_uxab6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_76loa"]
+size = Vector3(0.0458984, 0.148449, 0.110352)
+
+[node name="CigarettesMamboro" type="StaticBody3D" groups=["items"]]
+collision_layer = 4
+script = ExtResource("1_uxab6")
+item_name = "Mamboro"
+type = 0
+reticle_tooltip_text = "Mamboro"
+
+[node name="fajki_06" parent="." instance=ExtResource("2_uxab6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.074, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.18068e-16, -0.000362299, 0)
+shape = SubResource("BoxShape3D_76loa")
+
+[node name="BottomMarker" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0224482)
