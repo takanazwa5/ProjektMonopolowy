@@ -16,7 +16,8 @@ func enter() -> void:
 	if wants_help:
 
 		print("Basiula jest leniwa i chce miec produkt przyniesiony na lade.")
-		npc.navigate_to_node(Level.counter)
+		var counter: Counter = get_tree().get_first_node_in_group(&"counter")
+		npc.navigate_to_node(counter)
 		await npc.navigation_agent_3d.navigation_finished
 		transition.emit(waiting_for_product_state)
 

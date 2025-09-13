@@ -15,7 +15,8 @@ func _on_animation_finished(anim_name: StringName) -> void:
 
 	if anim_name == &"Rig/PickUp_Base":
 
-		Level.counter.clear()
+		var counter: Counter = get_tree().get_first_node_in_group(&"counter")
+		counter.clear()
 		transition.emit(exiting_store_state)
 
 

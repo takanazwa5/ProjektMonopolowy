@@ -47,6 +47,8 @@ folder_colors={
 [global_group]
 
 items=""
+counter=""
+player=""
 
 [input]
 

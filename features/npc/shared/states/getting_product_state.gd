@@ -16,7 +16,11 @@ func enter() -> void:
 
 func _on_animation_finished(anim_name: StringName) -> void:
 
-	if anim_name == &"Rig/PickUp_Base": npc.navigate_to_node(Level.counter)
+	if anim_name == &"Rig/PickUp_Base":
+
+		var counter: Counter = get_tree().get_first_node_in_group(&"counter")
+		npc.navigate_to_node(counter)
+
 	await npc.navigation_agent_3d.navigation_finished
 	transition.emit(paying_state)
 

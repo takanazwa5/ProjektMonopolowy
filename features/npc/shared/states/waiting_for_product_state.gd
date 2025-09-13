@@ -6,7 +6,8 @@ class_name NPCWaitingForProductState extends NPCState
 
 func enter() -> void:
 
-	Level.counter.item_placed.connect(_on_counter_item_placed)
+	var counter: Counter = get_tree().get_first_node_in_group(&"counter")
+	counter.item_placed.connect(_on_counter_item_placed)
 	print("Basiula podeszla do lady. Tu bedzie okienko dialogowe. Na razie czeka na bobra w butelce.")
 
 
@@ -18,4 +19,5 @@ func _on_counter_item_placed(item_data: ItemData) -> void:
 
 func exit() -> void:
 
-	Level.counter.item_placed.disconnect(_on_counter_item_placed)
+	var counter: Counter = get_tree().get_first_node_in_group(&"counter")
+	counter.item_placed.disconnect(_on_counter_item_placed)
