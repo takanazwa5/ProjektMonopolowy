@@ -8,13 +8,17 @@ class_name NPCPayingState extends NPCState
 func enter() -> void:
 
 	animation_tree.animation_finished.connect(_on_animation_finished)
-	Level.cash_register.transaction_finished.connect(_on_transaction_finished)
+	var cash_register: CashRegister = get_tree().get_first_node_in_group(&"cash_register")
+	cash_register.transaction_finished.connect(_on_transaction_finished)
 	animation_tree.set(&"parameters/put_down/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
 
 func _on_animation_finished(anim_name: StringName) -> void:
 
-	if anim_name == &"Rig/PutDown_Base": Level.cash_register.generate_random_order()
+	if anim_name == &"Rig/PutDown_Base":
+
+		var cash_register: CashRegister = get_tree().get_first_node_in_group(&"cash_register")
+		cash_register.generate_random_order()
 
 
 func _on_transaction_finished() -> void:
@@ -25,4 +29,5 @@ func _on_transaction_finished() -> void:
 func exit() -> void:
 
 	animation_tree.animation_finished.disconnect(_on_animation_finished)
-	Level.cash_register.transaction_finished.disconnect(_on_transaction_finished)
+	var cash_register: CashRegister = get_tree().get_first_node_in_group(&"cash_register")
+	cash_register.transaction_finished.disconnect(_on_transaction_finished)

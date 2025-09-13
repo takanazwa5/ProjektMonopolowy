@@ -64,7 +64,7 @@ font_size = 20
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
-[node name="CashRegister" type="StaticBody3D"]
+[node name="CashRegister" type="StaticBody3D" groups=["cash_register"]]
 script = ExtResource("1_46s2n")
 
 [node name="cash_register" parent="." instance=ExtResource("2_b2dl6")]

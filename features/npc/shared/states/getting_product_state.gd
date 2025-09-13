@@ -9,7 +9,8 @@ class_name NPCGettingProductState extends NPCState
 func enter() -> void:
 
 	animation_tree.animation_finished.connect(_on_animation_finished)
-	npc.navigate_to_node(Level.fridge)
+	var fridge: Node3D = get_tree().get_first_node_in_group(&"fridge")
+	npc.navigate_to_node(fridge)
 	await npc.navigation_agent_3d.navigation_finished
 	animation_tree.set(&"parameters/pick_up/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 

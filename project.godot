@@ -49,6 +49,9 @@ folder_colors={
 items=""
 counter=""
 player=""
+fridge=""
+main_door=""
+cash_register=""
 
 [input]
 
