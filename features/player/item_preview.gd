@@ -55,6 +55,7 @@ func _on_child_entered_tree(node: Node) -> void:
 
 func _on_child_exited_tree(_node: Node) -> void:
 
+	_current_item = null
 	_can_rotate = false
 	rotation = Vector3.ZERO
 	item_exited.emit()
