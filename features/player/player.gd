@@ -21,8 +21,8 @@ var can_move: bool = true
 
 func _ready() -> void:
 
-	item_preview.child_entered_tree.connect(_on_item_entered_preview)
-	item_preview.child_exiting_tree.connect(_on_item_exited_preview)
+	item_preview.item_entered.connect(_on_item_entered_preview)
+	item_preview.item_exited.connect(_on_item_exited_preview)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -65,13 +65,13 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-func _on_item_entered_preview(_node: Node) -> void:
+func _on_item_entered_preview(_item: Item) -> void:
 
 	can_move = false
 	can_move_camera = false
 
 
-func _on_item_exited_preview(_node: Node) -> void:
+func _on_item_exited_preview() -> void:
 
 	can_move = true
 	can_move_camera = true

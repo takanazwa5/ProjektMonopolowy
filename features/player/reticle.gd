@@ -27,8 +27,8 @@ var type : Type:
 
 func _ready() -> void:
 
-	item_preview.child_entered_tree.connect(_on_item_entered_preview)
-	item_preview.child_exiting_tree.connect(_on_item_exited_preview)
+	item_preview.item_entered.connect(_on_item_entered_preview)
+	item_preview.item_exited.connect(_on_item_exited_preview)
 
 
 func _draw() -> void:
@@ -61,11 +61,11 @@ func _process(_delta: float) -> void:
 		reticle_tooltip.text = ""
 
 
-func _on_item_entered_preview(_node: Node) -> void:
+func _on_item_entered_preview(_item: Item) -> void:
 
 	hide()
 
 
-func _on_item_exited_preview(_node: Node) -> void:
+func _on_item_exited_preview() -> void:
 
 	show()

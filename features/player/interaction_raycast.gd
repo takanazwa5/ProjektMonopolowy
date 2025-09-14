@@ -10,8 +10,8 @@ var collider: Object
 
 func _ready() -> void:
 
-	item_preview.child_entered_tree.connect(_on_item_entered_preview)
-	item_preview.child_exiting_tree.connect(_on_item_exited_preview)
+	item_preview.item_entered.connect(_on_item_entered_preview)
+	item_preview.item_exited.connect(_on_item_exited_preview)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -29,11 +29,11 @@ func _process(_delta: float) -> void:
 	DebugPanel.add_property(collider, "collider", 50)
 
 
-func _on_item_entered_preview(_node: Node) -> void:
+func _on_item_entered_preview(_item: Item) -> void:
 
 	enabled = false
 
 
-func _on_item_exited_preview(_node: Node) -> void:
+func _on_item_exited_preview() -> void:
 
 	enabled = true

@@ -47,18 +47,18 @@ func _move_item_to_preview(item: Item) -> void:
 func _on_child_entered_tree(node: Node) -> void:
 
 	_current_item = node
+	item_entered.emit(_current_item)
 	position.z = clampf(_current_item.data.preview_zoom, -1.0, -0.15)
 	await _move_item_to_preview(_current_item)
 	_can_rotate = true
-	item_entered.emit(_current_item)
 
 
 func _on_child_exited_tree(_node: Node) -> void:
 
+	item_exited.emit()
 	_current_item = null
 	_can_rotate = false
 	rotation = Vector3.ZERO
-	item_exited.emit()
 
 
 func _on_item_interaction(item: Item) -> void:

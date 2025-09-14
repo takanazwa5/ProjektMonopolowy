@@ -33,13 +33,13 @@ func _move_item_to_rig(item: Item) -> void:
 func _on_child_entered_tree(node: Node) -> void:
 
 	current_item = node
+	item_entered.emit(current_item)
 	_move_item_to_rig(current_item)
 	get_tree().set_group(&"items", "can_interact", false)
-	item_entered.emit(current_item)
 
 
 func _on_child_exited_tree(_node: Node) -> void:
 
+	item_exited.emit()
 	current_item = null
 	get_tree().set_group(&"items", "can_interact", true)
-	item_exited.emit()
