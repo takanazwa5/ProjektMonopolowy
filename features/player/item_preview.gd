@@ -23,7 +23,7 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 
-	if not _current_item is Item: return
+	if not is_instance_valid(_current_item): return
 
 	if event is InputEventMouseMotion and _can_rotate:
 
@@ -47,7 +47,6 @@ func _on_child_entered_tree(node: Node) -> void:
 
 func _on_child_exited_tree(_node: Node) -> void:
 
-	_current_item = null
 	_can_rotate = false
 	rotation = Vector3.ZERO
 	item_exited.emit()
