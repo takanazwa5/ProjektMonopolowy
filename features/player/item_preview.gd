@@ -9,7 +9,7 @@ const TWEEN_DURATION: float = 0.25
 
 
 var _current_item: Item
-var _original_global_transform: Transform3D
+var _original_transform: Transform3D
 var _can_rotate: bool = false
 
 
@@ -44,17 +44,17 @@ func _unhandled_input(event: InputEvent) -> void:
 
 		if _current_item.loose:
 
-			_current_item.global_transform = _original_global_transform
 			_current_item.freeze = false
+			_current_item.transform = _original_transform
 			var game: Game = get_tree().current_scene
-			_current_item.reparent(game.loose_items)
+			_current_item.reparent(game.loose_items, false)
 
 		else: _current_item.queue_free()
 
 
 func _move_item_to_preview(item: Item) -> void:
 
-	_original_global_transform = item.global_transform
+	_original_transform = item.transform
 	var tween: Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(item, ^"transform", Transform3D(), TWEEN_DURATION)
 	if tween.is_running(): await tween.finished
