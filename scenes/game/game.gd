@@ -4,6 +4,7 @@ class_name Game extends Node
 @onready var pause_menu: PauseMenu = %PauseMenu
 @onready var level: Level = %Level
 @onready var player: Player = %Player
+@onready var loose_items: Node = %LooseItems
 
 
 func _ready() -> void:

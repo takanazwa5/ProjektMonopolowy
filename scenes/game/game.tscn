@@ -17,3 +17,6 @@ unique_name_in_owner = true
 [node name="Player" parent="." instance=ExtResource("4_eow3j")]
 unique_name_in_owner = true
 transform = Transform3D(-0.97183, 0, -0.235685, 0, 1, 0, 0.235685, 0, -0.97183, -1.56016, 1.125, -2.03091)
+
+[node name="LooseItems" type="Node3D" parent="."]
+unique_name_in_owner = true

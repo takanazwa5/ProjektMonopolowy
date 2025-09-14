@@ -8,6 +8,9 @@ signal interaction(item: Item)
 @export var data: ItemData
 
 
+var loose: bool = false
+
+
 @onready var bottom_marker: Marker3D = %BottomMarker
 
 
@@ -17,10 +20,13 @@ func interact(event: InputEvent, _item_in_hand: Item) -> void:
 
 	if not event.is_action_pressed(&"interact"): return
 
-	var copy: Item = duplicate()
-	interaction.emit(copy)
-	copy.global_transform = global_transform
-	# NOTE: Might need set_input_as_handled()
+	if loose: interaction.emit(self)
+	else:
+
+		var copy: Item = duplicate()
+		interaction.emit(copy)
+		copy.global_transform = global_transform
+		# NOTE: Might need set_input_as_handled()
 
 
 func _get_configuration_warnings() -> PackedStringArray:

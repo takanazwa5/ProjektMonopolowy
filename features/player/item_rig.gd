@@ -21,7 +21,11 @@ func _unhandled_key_input(event: InputEvent) -> void:
 
 	if not is_instance_valid(current_item): return
 
-	if event.is_action_pressed(&"drop_item"): current_item.queue_free()
+	if event.is_action_pressed(&"drop_item"):
+
+		var game: Game = get_tree().current_scene
+		current_item.freeze = false
+		current_item.reparent(game.loose_items)
 
 
 func _move_item_to_rig(item: Item) -> void:
@@ -33,13 +37,16 @@ func _move_item_to_rig(item: Item) -> void:
 func _on_child_entered_tree(node: Node) -> void:
 
 	current_item = node
+	#print("item entering rig: %s" % current_item)
 	item_entered.emit(current_item)
+	current_item.loose = true
 	_move_item_to_rig(current_item)
 	get_tree().set_group(&"items", "can_interact", false)
 
 
 func _on_child_exited_tree(_node: Node) -> void:
 
+	#print("item exiting rig: %s" % current_item)
 	item_exited.emit()
 	current_item = null
 	get_tree().set_group(&"items", "can_interact", true)
