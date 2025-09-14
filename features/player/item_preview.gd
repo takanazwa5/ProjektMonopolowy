@@ -34,13 +34,18 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed(&"drop_item"): _current_item.queue_free()
 
 
+func _move_item_to_preview(item: Item) -> void:
+
+	var tween: Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
+	tween.tween_property(item, ^"transform", Transform3D(), 0.25)
+	if tween.is_running(): await tween.finished
+
+
 func _on_child_entered_tree(node: Node) -> void:
 
 	_current_item = node
 	position.z = clampf(_current_item.data.preview_zoom, -1.0, -0.15)
-	var tween: Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(_current_item, ^"transform", Transform3D(), 0.25)
-	if tween.is_running(): await tween.finished
+	await _move_item_to_preview(_current_item)
 	_can_rotate = true
 	item_entered.emit(_current_item)
 
