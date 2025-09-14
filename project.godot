@@ -122,3 +122,7 @@ drop_item={
 [navigation]
 
 3d/merge_rasterizer_cell_scale=0.1
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
