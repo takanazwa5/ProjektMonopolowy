@@ -6,6 +6,7 @@ signal item_exited()
 
 
 const TWEEN_DURATION: float = 0.25
+const YEET_FORCE: float = 5.0
 
 
 var current_item: Item
@@ -17,7 +18,7 @@ func _ready() -> void:
 	child_exiting_tree.connect(_on_child_exited_tree)
 
 
-func _unhandled_key_input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 
 	if not is_instance_valid(current_item): return
 
@@ -25,6 +26,14 @@ func _unhandled_key_input(event: InputEvent) -> void:
 
 		var game: Game = get_tree().current_scene
 		current_item.freeze = false
+		current_item.apply_impulse(-get_viewport().get_camera_3d().global_basis.z)
+		current_item.reparent(game.loose_items)
+
+	elif event.is_action_pressed(&"yeet_item"):
+
+		var game: Game = get_tree().current_scene
+		current_item.freeze = false
+		current_item.apply_impulse(-get_viewport().get_camera_3d().global_basis.z * YEET_FORCE)
 		current_item.reparent(game.loose_items)
 
 
