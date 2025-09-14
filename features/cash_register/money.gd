@@ -7,7 +7,7 @@ signal interaction(value: float)
 @export var value : float = 0.0
 
 
-func interact(event: InputEvent) -> void:
+func interact(event: InputEvent, _item_in_hand: Item) -> void:
 
 	if not (event is InputEventMouseButton and event.is_pressed()):
 

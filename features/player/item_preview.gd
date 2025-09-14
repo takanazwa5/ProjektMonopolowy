@@ -1,8 +1,12 @@
 class_name ItemPreview extends Node3D
 
 
-var current_item: Item
-var can_rotate: bool = false
+signal item_entered(item: Item)
+signal item_exited()
+
+
+var _current_item: Item
+var _can_rotate: bool = false
 
 
 @onready var item_rig: Node3D = %ItemRig
@@ -19,36 +23,34 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 
-	if not current_item is Item: return
+	if not _current_item is Item: return
 
-	if event is InputEventMouseMotion and can_rotate:
+	if event is InputEventMouseMotion and _can_rotate:
 
 		rotate_y(event.relative.x * 0.001)
 		rotate_x(event.relative.y * 0.001)
 
-	if event.is_action_pressed(&"interact"): current_item.reparent(item_rig)
-
-	elif event.is_action_pressed(&"drop_item"): current_item.queue_free()
+	if event.is_action_pressed(&"interact"): _current_item.reparent(item_rig)
+	elif event.is_action_pressed(&"drop_item"): _current_item.queue_free()
 
 
 func _on_child_entered_tree(node: Node) -> void:
 
-	get_tree().set_group(&"items", "can_interact", false)
-	var item: Item = node
-	position.z = clampf(item.data.preview_zoom, -1.0, -0.15)
-	current_item = item
+	_current_item = node
+	position.z = clampf(_current_item.data.preview_zoom, -1.0, -0.15)
 	var tween: Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(current_item, ^"transform", Transform3D(), 0.25)
+	tween.tween_property(_current_item, ^"transform", Transform3D(), 0.25)
 	if tween.is_running(): await tween.finished
-	can_rotate = true
+	_can_rotate = true
+	item_entered.emit(_current_item)
 
 
 func _on_child_exited_tree(_node: Node) -> void:
 
-	current_item = null
-	can_rotate = false
+	_current_item = null
+	_can_rotate = false
 	rotation = Vector3.ZERO
-	get_tree().set_group(&"items", "can_interact", true)
+	item_exited.emit()
 
 
 func _on_item_interaction(item: Item) -> void:

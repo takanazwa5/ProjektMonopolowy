@@ -8,7 +8,7 @@ var tweening: bool = false
 var opened: bool = false
 
 
-func interact(event: InputEvent) -> void:
+func interact(event: InputEvent, _item_in_hand: Item) -> void:
 
 	if event.is_action_pressed(&"interact") and not tweening:
 

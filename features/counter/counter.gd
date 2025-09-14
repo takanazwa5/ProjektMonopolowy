@@ -18,7 +18,7 @@ var _misc_counter: int = 0
 @onready var _items: Node = %Items
 
 
-func interact(event: InputEvent) -> void:
+func interact(event: InputEvent, _item_in_hand: Item) -> void:
 
 	if not event.is_action_pressed(&"interact"): return
 	var player: Player = get_tree().get_first_node_in_group(&"player")
