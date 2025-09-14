@@ -8,10 +8,10 @@ class_name Game extends Node
 
 func _ready() -> void:
 
-	player.item_rig.child_entered_tree.connect(_on_item_entered_rig)
-	player.item_rig.child_exiting_tree.connect(_on_item_exited_rig)
-	pause_menu.paused.connect(_on_game_paused)
-	pause_menu.unpaused.connect(_on_game_unpaused)
+	player.item_rig.item_entered.connect(level.counter.on_item_entered_rig)
+	player.item_rig.item_exited.connect(level.counter.on_item_exited_rig)
+	pause_menu.paused.connect(player.hud.on_game_paused)
+	pause_menu.unpaused.connect(player.hud.on_game_unpaused)
 
 	DebugMenu.add_button(spawn_basia)
 	DebugMenu.add_button(change_window_mode)
@@ -40,16 +40,6 @@ func change_window_mode() -> void:
 	var window: Window = get_window()
 	if window.mode == Window.MODE_WINDOWED: window.mode = Window.MODE_EXCLUSIVE_FULLSCREEN
 	else: window.mode = Window.MODE_WINDOWED
-
-
-func _on_item_entered_rig(_node: Node) -> void:
-
-	level.counter.can_interact = true
-
-
-func _on_item_exited_rig(_node: Node) -> void:
-
-	level.counter.can_interact = false
 
 
 func _on_game_paused() -> void:

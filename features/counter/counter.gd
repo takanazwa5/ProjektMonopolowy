@@ -18,11 +18,14 @@ var _misc_counter: int = 0
 @onready var _items: Node = %Items
 
 
-func interact(event: InputEvent, _item_in_hand: Item) -> void:
+func interact(event: InputEvent, item_in_hand: Item) -> void:
 
 	if not event.is_action_pressed(&"interact"): return
-	var player: Player = get_tree().get_first_node_in_group(&"player")
-	_place_item_on_counter(player.item_rig.current_item)
+
+	if is_instance_valid(item_in_hand):
+
+		_place_item_on_counter(item_in_hand)
+		can_interact = false
 
 
 func clear() -> void:
@@ -32,6 +35,16 @@ func clear() -> void:
 	_cigs_counter = 0
 	_beer_counter = 0
 	_misc_counter = 0
+
+
+func on_item_entered_rig(_item: Item) -> void:
+
+	can_interact = true
+
+
+func on_item_exited_rig() -> void:
+
+	can_interact = false
 
 
 func _move_item_to_target(item: Item, target: Marker3D) -> void:

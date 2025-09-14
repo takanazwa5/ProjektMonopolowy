@@ -12,6 +12,16 @@ func _ready() -> void:
 	item_preview.child_exiting_tree.connect(_on_item_exited_preview)
 
 
+func on_game_paused() -> void:
+
+	hide()
+
+
+func on_game_unpaused() -> void:
+
+	show()
+
+
 func _on_item_entered_preview(_node: Node) -> void:
 
 	item_preview_prompt.show()
