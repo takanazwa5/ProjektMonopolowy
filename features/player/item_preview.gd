@@ -5,6 +5,9 @@ signal item_entered(item: Item)
 signal item_exited()
 
 
+const TWEEN_DURATION: float = 0.25
+
+
 var _current_item: Item
 var _can_rotate: bool = false
 
@@ -37,7 +40,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _move_item_to_preview(item: Item) -> void:
 
 	var tween: Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(item, ^"transform", Transform3D(), 0.25)
+	tween.tween_property(item, ^"transform", Transform3D(), TWEEN_DURATION)
 	if tween.is_running(): await tween.finished
 
 
