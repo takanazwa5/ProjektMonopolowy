@@ -40,13 +40,3 @@ func change_window_mode() -> void:
 	var window: Window = get_window()
 	if window.mode == Window.MODE_WINDOWED: window.mode = Window.MODE_EXCLUSIVE_FULLSCREEN
 	else: window.mode = Window.MODE_WINDOWED
-
-
-func _on_game_paused() -> void:
-
-	player.hud.hide()
-
-
-func _on_game_unpaused() -> void:
-
-	player.hud.show()
