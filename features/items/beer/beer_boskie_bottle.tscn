@@ -7,8 +7,9 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_ek8a4"]
 size = Vector3(0.079834, 0.296997, 0.0839844)
 
-[node name="BeerBoskieBottle" type="StaticBody3D" groups=["items"]]
+[node name="BeerBoskieBottle" type="RigidBody3D" groups=["items"]]
 collision_layer = 4
+freeze = true
 script = ExtResource("1_8x5fs")
 data = ExtResource("2_1lh8q")
 reticle_tooltip_text = "Boskie w butelce"

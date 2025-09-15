@@ -10,6 +10,7 @@ const YEET_FORCE: float = 5.0
 
 
 var current_item: Item
+var _original_position: Vector3 = position
 
 
 func _ready() -> void:
@@ -48,6 +49,7 @@ func _on_child_entered_tree(node: Node) -> void:
 	current_item = node
 	#print("item entering rig: %s" % current_item)
 	item_entered.emit(current_item)
+	position += current_item.data.rig_position
 	current_item.loose = true
 	_move_item_to_rig(current_item)
 	get_tree().set_group(&"items", "can_interact", false)
@@ -57,5 +59,6 @@ func _on_child_exited_tree(_node: Node) -> void:
 
 	#print("item exiting rig: %s" % current_item)
 	item_exited.emit()
+	position = _original_position
 	current_item = null
 	get_tree().set_group(&"items", "can_interact", true)

@@ -7,8 +7,9 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_76loa"]
 size = Vector3(0.0458984, 0.14912, 0.110352)
 
-[node name="CigarettesPlatinum" type="StaticBody3D" groups=["items"]]
+[node name="CigarettesPlatinum" type="RigidBody3D" groups=["items"]]
 collision_layer = 4
+freeze = true
 script = ExtResource("1_1f6ej")
 data = ExtResource("2_ystr6")
 reticle_tooltip_text = "Platinum"

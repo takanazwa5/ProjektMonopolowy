@@ -7,8 +7,9 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_76loa"]
 size = Vector3(0.0458984, 0.148449, 0.110352)
 
-[node name="CigarettesMamboro" type="StaticBody3D" groups=["items"]]
+[node name="CigarettesMamboro" type="RigidBody3D" groups=["items"]]
 collision_layer = 4
+freeze = true
 script = ExtResource("1_uxab6")
 data = ExtResource("2_u4lnc")
 reticle_tooltip_text = "Mamboro"

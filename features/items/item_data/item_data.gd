@@ -7,6 +7,7 @@ enum Type {SZLUGI, PIWO, MISC}
 @export var name: StringName
 @export var type: Type
 @export_range(-1.0, -0.15, 0.01) var preview_zoom: float = -0.15
+@export var rig_position: Vector3 = Vector3(0.1, -0.075, -0.2)
 
 
 static var _names: PackedStringArray = []

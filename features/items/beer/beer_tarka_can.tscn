@@ -7,8 +7,9 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_ek8a4"]
 size = Vector3(0.0888672, 0.199623, 0.0878906)
 
-[node name="BeerTarkaCan" type="StaticBody3D" groups=["items"]]
+[node name="BeerTarkaCan" type="RigidBody3D" groups=["items"]]
 collision_layer = 4
+freeze = true
 script = ExtResource("1_duf7j")
 data = ExtResource("2_a3iut")
 reticle_tooltip_text = "Tarka w puszce"
