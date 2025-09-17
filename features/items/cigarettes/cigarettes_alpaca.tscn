@@ -9,6 +9,7 @@ size = Vector3(0.0458984, 0.148327, 0.110352)
 
 [node name="CigarettesAlpaca" type="RigidBody3D" groups=["items"]]
 collision_layer = 4
+collision_mask = 5
 freeze = true
 script = ExtResource("1_76loa")
 data = ExtResource("2_pagsc")

@@ -9,6 +9,7 @@ size = Vector3(0.0888672, 0.199623, 0.0878906)
 
 [node name="BeerJPCan" type="StaticBody3D" groups=["items"]]
 collision_layer = 4
+collision_mask = 5
 script = ExtResource("1_emse2")
 data = ExtResource("2_ccf5c")
 reticle_tooltip_text = "JP w puszce"

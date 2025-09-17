@@ -9,6 +9,7 @@ size = Vector3(0.0458984, 0.153366, 0.110352)
 
 [node name="CigarettesMasterfield" type="RigidBody3D" groups=["items"]]
 collision_layer = 4
+collision_mask = 5
 freeze = true
 script = ExtResource("1_rbtvs")
 data = ExtResource("2_xsy43")
