@@ -10,6 +10,11 @@ func enter() -> void:
 	player.speed = Player.SPEED_CROUCHING
 
 
+func input_event(_event: InputEvent) -> void:
+
+	pass
+
+
 func update(_delta: float) -> void:
 
 	if is_zero_approx(player.velocity.length()):
@@ -32,6 +37,11 @@ func update(_delta: float) -> void:
 		if not %HeadbobAnimationPlayer.is_playing():
 
 			%HeadbobAnimationPlayer.play("Headbob")
+
+
+func physics_update(_delta: float) -> void:
+
+	pass
 
 
 func exit() -> void:

@@ -22,3 +22,13 @@ func update(_delta: float) -> void:
 	if not is_zero_approx(player.velocity.length()):
 
 		transition.emit(%WalkingState)
+
+
+func physics_update(_delta: float) -> void:
+
+	pass
+
+
+func exit() -> void:
+
+	pass

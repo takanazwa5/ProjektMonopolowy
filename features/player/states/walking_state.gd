@@ -25,6 +25,11 @@ func update(_delta: float) -> void:
 		transition.emit(%IdleState)
 
 
+func physics_update(_delta: float) -> void:
+
+	pass
+
+
 func exit() -> void:
 
 	%HeadbobAnimationPlayer.speed_scale = 1.0
