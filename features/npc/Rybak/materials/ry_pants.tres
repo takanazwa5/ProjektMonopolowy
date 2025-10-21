@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ctelo7jslntgk"]
+
+[ext_resource type="Texture2D" uid="uid://cn764bfhhebca" path="res://features/npc/Rybak/textures/ry_pants_Base_color.png" id="1_37iq4"]
+[ext_resource type="Texture2D" uid="uid://c323egyvnm5xr" path="res://features/npc/Rybak/textures/ry_pants_Roughness.png" id="2_2qm28"]
+
+[resource]
+resource_name = "ry_pants"
+albedo_texture = ExtResource("1_37iq4")
+roughness_texture = ExtResource("2_2qm28")

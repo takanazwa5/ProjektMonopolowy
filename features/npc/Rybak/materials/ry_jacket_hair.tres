@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dtyyhf2goeflo"]
+
+[ext_resource type="Texture2D" uid="uid://cwdy2nj7n6hef" path="res://features/npc/Rybak/textures/ry_jacket_hair_Base_color.png" id="1_g8trb"]
+[ext_resource type="Texture2D" uid="uid://b7dfxv5n0akme" path="res://features/npc/Rybak/textures/ry_jacket_hair_Roughness.png" id="2_47bup"]
+
+[resource]
+resource_name = "ry_jacket_hair"
+albedo_texture = ExtResource("1_g8trb")
+roughness_texture = ExtResource("2_47bup")
+roughness_texture_channel = 4

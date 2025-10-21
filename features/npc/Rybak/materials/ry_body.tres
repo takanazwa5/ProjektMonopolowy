@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://d1jaf7gf1px1e"]
+
+[ext_resource type="Texture2D" uid="uid://bshlm4agjkplt" path="res://features/npc/Rybak/textures/ry_body_Base_color.png" id="1_vdvt0"]
+[ext_resource type="Texture2D" uid="uid://c4qpg6e04fj1i" path="res://features/npc/Rybak/textures/ry_body_Roughness.png" id="2_vdvt0"]
+
+[resource]
+resource_name = "ry_body"
+albedo_texture = ExtResource("1_vdvt0")
+roughness_texture = ExtResource("2_vdvt0")
+roughness_texture_channel = 4
