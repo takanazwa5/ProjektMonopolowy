@@ -15,9 +15,11 @@ dest_files=["res://.godot/imported/character_ojciec.glb-24629614da74720a85026ee1
 
 nodes/root_type=""
 nodes/root_name=""
+nodes/root_script=null
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -32,23 +34,30 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
 _subresources={
 "materials": {
 "brown_eye": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/shared/materials/mat_eye_brown.tres",
 "use_external/path": "uid://cw1bliuramuqs"
 },
 "oj_body": {
 "use_external/enabled": true,
-"use_external/path": "res://features/npc/Ojciec/materials/oj_body.tres"
+"use_external/fallback_path": "res://features/npc/Ojciec/materials/oj_body.tres",
+"use_external/path": "uid://ixuwynoyn8ai"
 },
 "oj_pants": {
 "use_external/enabled": true,
-"use_external/path": "res://features/npc/Ojciec/materials/oj_pants.tres"
+"use_external/fallback_path": "res://features/npc/Ojciec/materials/oj_pants.tres",
+"use_external/path": "uid://cq62cvhcwu75c"
 },
 "oj_vest_hair": {
 "use_external/enabled": true,
-"use_external/path": "res://features/npc/Ojciec/materials/oj_vest_hair.tres"
+"use_external/fallback_path": "res://features/npc/Ojciec/materials/oj_vest_hair.tres",
+"use_external/path": "uid://dkvqv5pgf21jo"
 }
 }
 }

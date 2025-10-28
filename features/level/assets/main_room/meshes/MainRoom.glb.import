@@ -15,9 +15,11 @@ dest_files=["res://.godot/imported/MainRoom.glb-725dfe7b0200a2f7d51a0c4cf0c039a6
 
 nodes/root_type=""
 nodes/root_name=""
+nodes/root_script=null
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -32,30 +34,39 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
 _subresources={
 "materials": {
 "Mat_Drzwi": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/level/assets/main_room/materials/Mat_Drzwi.tres",
 "use_external/path": "uid://bn14l0bvm5fkl"
 },
 "Mat_DrzwiOkno": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/level/assets/main_room/materials/Mat_DrzwiOkno.tres",
 "use_external/path": "uid://c5w05t5uvpaay"
 },
 "Mat_MainRoom": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/level/assets/main_room/materials/Mat_MainRoom.tres",
 "use_external/path": "uid://bp8nmdj82uk53"
 },
 "Mat_Okno": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/level/assets/main_room/materials/Mat_Okno.tres",
 "use_external/path": "uid://dp8wb25is0as8"
 },
 "Mat_OknoKrata": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/level/assets/main_room/materials/Mat_OknoKrata.tres",
 "use_external/path": "uid://c3n5nw28l6q05"
 },
 "Mat_OknoRama": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/level/assets/main_room/materials/Mat_OknoRama.tres",
 "use_external/path": "uid://dfa6tlsfajf04"
 }
 }

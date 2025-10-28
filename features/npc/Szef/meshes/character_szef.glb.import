@@ -15,9 +15,11 @@ dest_files=["res://.godot/imported/character_szef.glb-68dd240d606bf87fd62bc19263
 
 nodes/root_type=""
 nodes/root_name=""
+nodes/root_script=null
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -32,22 +34,29 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
 _subresources={
 "materials": {
 "green_eye": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/shared/materials/mat_eye_green.tres",
 "use_external/path": "uid://c1bx85e6wx1ye"
 },
 "sz_body": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Szef/materials/sz_body.tres",
 "use_external/path": "uid://bhnymnbqpmx0t"
 },
 "sz_jacket_hair": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Szef/materials/sz_jacket_hair.tres",
 "use_external/path": "uid://judhkaa131md"
 },
 "sz_pants": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Szef/materials/sz_pants.tres",
 "use_external/path": "uid://bo3llfepq2bq1"
 }
 }

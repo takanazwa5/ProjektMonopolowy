@@ -15,9 +15,11 @@ dest_files=["res://.godot/imported/character_andzia.glb-97203bcec42730ba64f24166
 
 nodes/root_type=""
 nodes/root_name=""
+nodes/root_script=null
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -32,22 +34,29 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
 _subresources={
 "materials": {
 "an_body": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Andzia/materials/an_body.tres",
 "use_external/path": "uid://bma12jej7q0ym"
 },
 "an_hair_skirt_boots": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Andzia/materials/an_hair_skirt_boots.tres",
 "use_external/path": "uid://b40vkdnj0vwk2"
 },
 "an_jacket": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Andzia/materials/an_jacket.tres",
 "use_external/path": "uid://doni8g6b44ujs"
 },
 "blue_eye": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/shared/materials/mat_eye_blue.tres",
 "use_external/path": "uid://bs3lbd4bg2dhd"
 }
 }

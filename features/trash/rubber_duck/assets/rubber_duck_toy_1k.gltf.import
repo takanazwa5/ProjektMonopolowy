@@ -15,9 +15,11 @@ dest_files=["res://.godot/imported/rubber_duck_toy_1k.gltf-8b6796b636845ec488fd2
 
 nodes/root_type=""
 nodes/root_name=""
+nodes/root_script=null
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -32,10 +34,14 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
 _subresources={
 "materials": {
 "rubber_duck_toy": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://features/trash/rubber_duck/assets/rubber_duck_toy.tres",
 "use_external/path": "uid://dv1nrpngwpjx8"
 }
 }
