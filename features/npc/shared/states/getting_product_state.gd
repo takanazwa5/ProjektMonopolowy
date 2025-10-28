@@ -15,6 +15,21 @@ func enter() -> void:
 	animation_tree.set(&"parameters/pick_up/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
 
+func input_event(_event: InputEvent) -> void:
+
+	pass
+
+
+func update(_delta: float) -> void:
+
+	pass
+
+
+func physics_update(_delta: float) -> void:
+
+	pass
+
+
 func _on_animation_finished(anim_name: StringName) -> void:
 
 	if anim_name == &"Rig/PickUp_Base":

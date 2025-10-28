@@ -25,3 +25,23 @@ func enter() -> void:
 
 		print("Basiula sama sobie znajdzie produkt.")
 		transition.emit(getting_product_state)
+
+
+func input_event(_event: InputEvent) -> void:
+
+	pass
+
+
+func update(_delta: float) -> void:
+
+	pass
+
+
+func physics_update(_delta: float) -> void:
+
+	pass
+
+
+func exit() -> void:
+
+	pass

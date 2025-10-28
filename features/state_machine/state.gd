@@ -9,10 +9,8 @@ signal transition(new_state: State)
 
 @abstract func input_event(_event: InputEvent) -> void
 
-
 @abstract func update(_delta: float) -> void
 
 @abstract func physics_update(_delta: float) -> void
-
 
 @abstract func exit() -> void
