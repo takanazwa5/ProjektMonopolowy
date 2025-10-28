@@ -124,10 +124,6 @@ yeet_item={
 3d_physics/layer_5="Layer 5"
 3d_physics/layer_6="Layer 6"
 
-[navigation]
-
-3d/merge_rasterizer_cell_scale=0.1
-
 [physics]
 
 3d/physics_engine="Jolt Physics"
