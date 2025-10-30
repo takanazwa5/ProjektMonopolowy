@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://2c0cmi7vjbqb"]
+
+[ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_bmim7"]
+[ext_resource type="PackedScene" uid="uid://cev7woqjismhk" path="res://features/items/wine/meshes/wino_s_sierzant.glb" id="2_bmim7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
+size = Vector3(0.10644531, 0.3695612, 0.12207031)
+
+[node name="WinoSierzant" type="RigidBody3D"]
+freeze = true
+script = ExtResource("1_bmim7")
+
+[node name="wino_s_sierzant" parent="." instance=ExtResource("2_bmim7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.045084834, 0)
+shape = SubResource("BoxShape3D_af87y")
+
+[node name="BottomMarker" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)

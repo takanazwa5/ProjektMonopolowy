@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1qxruckkksun"]
+
+[ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_5c4bw"]
+[ext_resource type="PackedScene" uid="uid://d0io54q32g3k1" path="res://features/items/wine/meshes/wino_s_tastas.glb" id="2_5c4bw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
+size = Vector3(0.10644531, 0.3695612, 0.12207031)
+
+[node name="WinoTasTas" type="RigidBody3D"]
+freeze = true
+script = ExtResource("1_5c4bw")
+
+[node name="wino_s_tastas" parent="." instance=ExtResource("2_5c4bw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.045084834, 0)
+shape = SubResource("BoxShape3D_af87y")
+
+[node name="BottomMarker" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)

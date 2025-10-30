@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://g8ue6s35ctl6"]
+
+[ext_resource type="Texture2D" uid="uid://btomuxiewgsbb" path="res://features/items/wine/textures/wina_Base_color.png" id="1_7832e"]
+[ext_resource type="Texture2D" uid="uid://ch8rcim0vfaq0" path="res://features/items/wine/textures/wina_Roughness.png" id="2_e85u4"]
+
+[resource]
+resource_name = "mat_wine"
+albedo_texture = ExtResource("1_7832e")
+roughness_texture = ExtResource("2_e85u4")
+roughness_texture_channel = 4

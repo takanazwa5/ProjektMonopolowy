@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bamiv2fbdo4tf"]
+
+[ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_pa7md"]
+[ext_resource type="PackedScene" uid="uid://k1dhehuemgjd" path="res://features/items/wine/meshes/wino_p_krolewskie.glb" id="2_pa7md"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
+size = Vector3(0.10644531, 0.3695612, 0.12207031)
+
+[node name="WinoKrolewskie" type="RigidBody3D"]
+freeze = true
+script = ExtResource("1_pa7md")
+
+[node name="wino_p_krolewskie" parent="." instance=ExtResource("2_pa7md")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.045084834, 0)
+shape = SubResource("BoxShape3D_af87y")
+
+[node name="BottomMarker" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)
