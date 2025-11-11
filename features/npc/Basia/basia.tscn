@@ -39,11 +39,11 @@ blend_point_1/pos = 1.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vssg2"]
 graph_offset = Vector2(-334.674, 32.3195)
+nodes/output/position = Vector2(540, 140)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_a8t5c")
 nodes/Animation/position = Vector2(-140, 240)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_mi72n")
 "nodes/Animation 2/position" = Vector2(80, 400)
-nodes/output/position = Vector2(540, 140)
 nodes/pick_up/node = SubResource("AnimationNodeOneShot_qlnrj")
 nodes/pick_up/position = Vector2(320, 80)
 nodes/put_down/node = SubResource("AnimationNodeOneShot_mi72n")
@@ -90,7 +90,7 @@ parameters/pick_up/request = 0
 parameters/put_down/active = false
 parameters/put_down/internal_active = false
 parameters/put_down/request = 0
-parameters/walk_blend/blend_position = 0
+parameters/walk_blend/blend_position = 0.0
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 unique_name_in_owner = true

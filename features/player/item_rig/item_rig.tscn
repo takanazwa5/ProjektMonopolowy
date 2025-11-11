@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdjkyc7nsbsgs"]
+
+[ext_resource type="Script" uid="uid://dxoac2p5n4etv" path="res://features/player/item_rig/item_rig.gd" id="1_sk2xk"]
+
+[node name="ItemRig" type="Node3D"]
+script = ExtResource("1_sk2xk")

@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnnmp1lwiwrw8"]
+
+[ext_resource type="Script" uid="uid://bk4tohdw0etl7" path="res://features/player/hud/hud.gd" id="1_k23sk"]
+[ext_resource type="PackedScene" uid="uid://c6xb1wy7x522w" path="res://features/player/hud/reticle/reticle.tscn" id="2_o6r3x"]
+[ext_resource type="PackedScene" uid="uid://wxlg7byvgxeh" path="res://features/dialog/dialog.tscn" id="3_6xb40"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_set3t"]
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_k23sk")
+
+[node name="Reticle" parent="." instance=ExtResource("2_o6r3x")]
+unique_name_in_owner = true
+
+[node name="ItemPreviewPrompt" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ItemPreviewPrompt"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -385.0
+offset_top = -247.0
+offset_right = 385.0
+offset_bottom = -207.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PickUpLabel" type="Label" parent="ItemPreviewPrompt/HBoxContainer"]
+layout_mode = 2
+text = "[E] Pick up"
+label_settings = SubResource("LabelSettings_set3t")
+
+[node name="Spacer" type="Control" parent="ItemPreviewPrompt/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="CancelLabel" type="Label" parent="ItemPreviewPrompt/HBoxContainer"]
+layout_mode = 2
+text = "[G] Cancel"
+label_settings = SubResource("LabelSettings_set3t")
+
+[node name="Dialog" parent="." instance=ExtResource("3_6xb40")]
+unique_name_in_owner = true

@@ -50,6 +50,15 @@ func _process(_delta: float) -> void:
 	animation_tree.set(&"parameters/walk_blend/blend_position", blend_pos)
 
 
+func interact(event: InputEvent) -> void:
+
+	if not event.is_action_pressed(&"interact"): return
+
+	var player: Player = get_tree().get_first_node_in_group(&"player")
+	var dialog: Dialog = player.dialog
+	dialog.show()
+
+
 func navigate_to_node(node: Node3D) -> void:
 
 	if target_node == node: return

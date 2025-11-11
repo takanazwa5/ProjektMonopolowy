@@ -1,15 +1,17 @@
 class_name HUD extends CanvasLayer
 
 
+@export var _item_preview: ItemPreview
+
+
 @onready var reticle: Reticle = %Reticle
-@onready var item_preview: ItemPreview = %ItemPreview
 @onready var item_preview_prompt: Control = %ItemPreviewPrompt
 
 
 func _ready() -> void:
 
-	item_preview.item_entered.connect(_on_item_entered_preview)
-	item_preview.item_exited.connect(_on_item_exited_preview)
+	_item_preview.item_entered.connect(_on_item_entered_preview)
+	_item_preview.item_exited.connect(_on_item_exited_preview)
 
 
 func on_game_paused() -> void:

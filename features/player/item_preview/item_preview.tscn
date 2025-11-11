@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://p1w84y1skf87"]
+
+[ext_resource type="Script" uid="uid://rsm8sm80rels" path="res://features/player/item_preview/item_preview.gd" id="1_4n0xo"]
+
+[node name="ItemPreview" type="Node3D"]
+script = ExtResource("1_4n0xo")

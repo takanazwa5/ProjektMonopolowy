@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpi5btw8trdr"]
+
+[ext_resource type="Script" uid="uid://d0ueseef8eg8o" path="res://features/player/interaction_raycast/interaction_raycast.gd" id="1_orcwc"]
+
+[node name="InteractionRaycast" type="RayCast3D"]
+target_position = Vector3(0, 0, -1.5)
+collision_mask = 13
+collide_with_areas = true
+script = ExtResource("1_orcwc")
