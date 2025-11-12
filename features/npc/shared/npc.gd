@@ -16,6 +16,8 @@ var target_node: Node3D
 
 func _ready() -> void:
 
+	if not OS.is_debug_build(): state_label.hide()
+
 	navigation_agent_3d.target_reached.connect(_on_target_reached)
 	navigation_agent_3d.navigation_finished.connect(_on_navigation_finished)
 	state_machine.state_changed.connect(_on_state_transition)
@@ -55,8 +57,8 @@ func interact(event: InputEvent) -> void:
 	if not event.is_action_pressed(&"interact"): return
 
 	var player: Player = get_tree().get_first_node_in_group(&"player")
-	var dialog: Dialog = player.dialog
-	dialog.show()
+	var dialog: Dialog = player.hud.dialog
+	dialog.open(name, "Yeet")
 
 
 func navigate_to_node(node: Node3D) -> void:

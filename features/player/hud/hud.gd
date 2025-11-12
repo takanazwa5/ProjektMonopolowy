@@ -6,6 +6,7 @@ class_name HUD extends CanvasLayer
 
 @onready var reticle: Reticle = %Reticle
 @onready var item_preview_prompt: Control = %ItemPreviewPrompt
+@onready var dialog: Dialog = %Dialog
 
 
 func _ready() -> void:
