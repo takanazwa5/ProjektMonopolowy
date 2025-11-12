@@ -32,6 +32,13 @@ var _active: bool = false:
 @onready var reticle_tooltip: Label = %ReticleTooltip
 
 
+func _ready() -> void:
+
+	var counter: Counter = get_tree().get_first_node_in_group(&"counter")
+	counter.item_placed.connect(_on_counter_item_placed)
+	# Don't really like this approach but have to live with it for now.
+
+
 func _draw() -> void:
 
 	if not _active:
@@ -41,3 +48,8 @@ func _draw() -> void:
 	else:
 
 		draw_circle(size / 2, RADIUS * 2, COLOR, false, 2.0, true)
+
+
+func _on_counter_item_placed(_item_data: ItemData) -> void:
+
+	_active = false

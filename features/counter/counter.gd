@@ -64,6 +64,9 @@ func _move_item_to_target(item: Item, target: Marker3D) -> void:
 
 func _place_item_on_counter(item: Item) -> void:
 
+	item.remove_meta(&"can_interact")
+	item.remove_meta(&"reticle_tooltip")
+
 	var target: Marker3D
 	if item.data.type == ItemData.Type.SZLUGI:
 
@@ -86,4 +89,3 @@ func _place_item_on_counter(item: Item) -> void:
 	await _move_item_to_target(item, target)
 	item_placed.emit(item.data)
 	item.reparent(_items)
-	item.set_script(null)
