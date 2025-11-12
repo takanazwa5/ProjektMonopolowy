@@ -9,6 +9,8 @@ size = Vector3(0.10644531, 0.3695612, 0.12207031)
 [node name="WinoZofia" type="RigidBody3D"]
 freeze = true
 script = ExtResource("1_5tpc2")
+metadata/can_interact = true
+metadata/reticle_tooltip = "Zofia"
 
 [node name="wino_p_zofia" parent="." instance=ExtResource("2_oi141")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)

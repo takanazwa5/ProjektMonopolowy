@@ -9,6 +9,8 @@ size = Vector3(0.10644531, 0.3695612, 0.12207031)
 [node name="WinoJabluszkoPomorskie" type="RigidBody3D"]
 freeze = true
 script = ExtResource("1_4gt0v")
+metadata/can_interact = true
+metadata/reticle_tooltip = "Jabłuszko Pomorskie"
 
 [node name="wino_p_jabluszko_pomorskie" parent="." instance=ExtResource("2_4gt0v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)

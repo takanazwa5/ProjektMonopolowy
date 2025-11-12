@@ -13,7 +13,8 @@ collision_mask = 5
 freeze = true
 script = ExtResource("1_k865c")
 data = ExtResource("2_tojgw")
-reticle_tooltip_text = "Kiceroy"
+metadata/can_interact = true
+metadata/reticle_tooltip = "Kiceroy"
 
 [node name="fajki_04" parent="." instance=ExtResource("2_k865c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0737434, 0)

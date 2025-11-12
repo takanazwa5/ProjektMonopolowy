@@ -9,6 +9,8 @@ size = Vector3(0.10644531, 0.3695612, 0.12207031)
 [node name="WinoPippolo" type="RigidBody3D"]
 freeze = true
 script = ExtResource("1_31vny")
+metadata/can_interact = true
+metadata/reticle_tooltip = "Pippolo"
 
 [node name="wino_m_pippolo" parent="." instance=ExtResource("2_31vny")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)

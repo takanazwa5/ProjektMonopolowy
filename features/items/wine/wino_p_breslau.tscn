@@ -9,6 +9,8 @@ size = Vector3(0.10644531, 0.3695612, 0.12207031)
 [node name="WinoBreslau" type="RigidBody3D"]
 freeze = true
 script = ExtResource("1_or3wt")
+metadata/can_interact = true
+metadata/reticle_tooltip = ""
 
 [node name="wino_p_breslau" parent="." instance=ExtResource("2_or3wt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)
