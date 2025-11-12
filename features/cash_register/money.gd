@@ -1,4 +1,4 @@
-class_name Money extends Interactable
+class_name Money extends StaticBody3D
 
 
 signal interaction(value: float)

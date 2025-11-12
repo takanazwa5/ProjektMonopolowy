@@ -13,7 +13,8 @@ collision_mask = 5
 freeze = true
 script = ExtResource("1_ek8a4")
 data = ExtResource("2_pirts")
-reticle_tooltip_text = "Bubr w butelce"
+metadata/can_interact = true
+metadata/reticle_tooltip = "Bubr w butelce"
 
 [node name="BobrBottle" parent="." instance=ExtResource("1_qbuq5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.148823, 0)

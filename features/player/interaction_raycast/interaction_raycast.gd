@@ -21,14 +21,12 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 
 	if not is_instance_valid(_collider): return
+	if not _collider.get_meta(&"can_interact", false): return
+	if not _collider.has_method(&"interact"): return
 
-	if _collider is Interactable and _collider.can_interact:
-
-		_collider.interact(event, item_rig.current_item)
-
-	elif _collider is NPC:
-
-		if _collider.has_method("interact"): _collider.interact(event)
+	var arg_count: int = _collider.get_method_argument_count(&"interact")
+	if arg_count == 1: _collider.call(&"interact", event)
+	elif  arg_count == 2: _collider.call(&"interact", event, item_rig.current_item)
 
 
 func _process(_delta: float) -> void:

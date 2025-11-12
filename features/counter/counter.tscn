@@ -8,7 +8,8 @@ data = PackedVector3Array(-1.3496, 0.3727, 0.3693, -0.4811, 0.4173, 0.3693, -0.4
 
 [node name="Counter" type="StaticBody3D" groups=["counter"]]
 script = ExtResource("1_n5wx4")
-can_interact = false
+metadata/can_interact = false
+metadata/reticle_tooltip = ""
 
 [node name="lada" parent="." instance=ExtResource("1_1s8yq")]
 

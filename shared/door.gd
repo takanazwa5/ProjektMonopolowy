@@ -1,4 +1,4 @@
-class_name Door extends Interactable
+class_name Door extends AnimatableBody3D
 
 
 @export_range(-180.0, 180.0) var target_rotation: float = 0.0
@@ -8,7 +8,12 @@ var tweening: bool = false
 var opened: bool = false
 
 
-func interact(event: InputEvent, _item_in_hand: Item) -> void:
+func _ready() -> void:
+
+	set_meta(&"reticle_tooltip", "close" if opened else "open")
+
+
+func interact(event: InputEvent) -> void:
 
 	if event.is_action_pressed(&"interact") and not tweening:
 
@@ -18,3 +23,4 @@ func interact(event: InputEvent, _item_in_hand: Item) -> void:
 		if tween.is_running(): await tween.finished
 		tweening = false
 		opened = not opened
+		set_meta(&"reticle_tooltip", "close" if opened else "open")

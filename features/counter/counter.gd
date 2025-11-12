@@ -1,4 +1,4 @@
-class_name Counter extends Interactable
+class_name Counter extends StaticBody3D
 
 
 signal item_placed(item_data: ItemData)
@@ -25,7 +25,7 @@ func interact(event: InputEvent, item_in_hand: Item) -> void:
 	if is_instance_valid(item_in_hand):
 
 		_place_item_on_counter(item_in_hand)
-		can_interact = false
+		set_meta(&"can_interact", false)
 
 
 func clear() -> void:
@@ -39,12 +39,12 @@ func clear() -> void:
 
 func on_item_entered_rig(_item: Item) -> void:
 
-	can_interact = true
+	set_meta(&"can_interact", true)
 
 
 func on_item_exited_rig() -> void:
 
-	can_interact = false
+	set_meta(&"can_interact", false)
 
 
 func _move_item_to_target(item: Item, target: Marker3D) -> void:

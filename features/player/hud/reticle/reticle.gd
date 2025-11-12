@@ -11,20 +11,19 @@ var collider: Object:
 
 		if collider == value: return
 		collider = value
-		_active = collider is Interactable and collider.can_interact
+		_active = is_instance_valid(collider) and collider.get_meta(&"can_interact", false)
 
 
 var _active: bool = false:
 
 	set(value):
 
-		if _active == value: return
 		_active = value
 		queue_redraw()
 
 		if _active:
 
-			reticle_tooltip.text = collider.reticle_tooltip_text
+			reticle_tooltip.text = collider.get_meta(&"reticle_tooltip", "")
 			reticle_tooltip.show()
 
 		else: reticle_tooltip.hide()
@@ -42,8 +41,3 @@ func _draw() -> void:
 	else:
 
 		draw_circle(size / 2, RADIUS * 2, COLOR, false, 2.0, true)
-
-
-func set_active(active: bool) -> void:
-
-	_active = active

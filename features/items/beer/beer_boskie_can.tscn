@@ -13,7 +13,8 @@ collision_mask = 5
 freeze = true
 script = ExtResource("1_87wsq")
 data = ExtResource("2_tj823")
-reticle_tooltip_text = "Boskie w puszce"
+metadata/can_interact = true
+metadata/reticle_tooltip = "Boskie w puszce"
 
 [node name="BoskieCan" parent="." instance=ExtResource("2_87wsq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.100091, 0)

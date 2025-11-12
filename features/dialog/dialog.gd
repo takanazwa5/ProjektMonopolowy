@@ -24,7 +24,7 @@ func open(who: String, what: String) -> void:
 func _input(_event: InputEvent) -> void:
 
 	if not visible: return
-	print("XD")
+
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 
 		if dialog_label.visible_ratio < 1.0: dialog_label.visible_ratio = 1.0

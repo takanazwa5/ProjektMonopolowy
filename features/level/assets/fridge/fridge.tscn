@@ -26,6 +26,8 @@ transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0.283923
 collision_layer = 5
 script = ExtResource("2_uuqg1")
 target_rotation = -90.0
+metadata/can_interact = true
+metadata/reticle_tooltip = ""
 
 [node name="fridge_door_L" parent="FridgeDoorL" instance=ExtResource("2_y2ar5")]
 
@@ -37,6 +39,8 @@ transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 0.283923
 collision_layer = 5
 script = ExtResource("2_uuqg1")
 target_rotation = 90.0
+metadata/can_interact = true
+metadata/reticle_tooltip = ""
 
 [node name="fridge_door_R" parent="FridgeDoorR" instance=ExtResource("3_uuqg1")]
 

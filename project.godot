@@ -39,6 +39,7 @@ window/stretch/aspect="expand"
 folder_colors={
 "res://assets/": "red",
 "res://autoload/": "green",
+"res://editor_scripts/": "teal",
 "res://features/": "blue",
 "res://scenes/": "yellow",
 "res://shared/": "pink"
