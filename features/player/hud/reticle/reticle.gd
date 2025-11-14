@@ -5,13 +5,7 @@ const RADIUS: float = 2.0
 const COLOR: Color = Color.WHITE
 
 
-var collider: Object:
-
-	set(value):
-
-		if collider == value: return
-		collider = value
-		_active = is_instance_valid(collider) and collider.get_meta(&"can_interact", false)
+var collider: Object
 
 
 var _active: bool = false:
@@ -32,13 +26,6 @@ var _active: bool = false:
 @onready var reticle_tooltip: Label = %ReticleTooltip
 
 
-func _ready() -> void:
-
-	var counter: Counter = get_tree().get_first_node_in_group(&"counter")
-	counter.item_placed.connect(_on_counter_item_placed)
-	# Don't really like this approach but have to live with it for now.
-
-
 func _draw() -> void:
 
 	if not _active:
@@ -50,6 +37,6 @@ func _draw() -> void:
 		draw_circle(size / 2, RADIUS * 2, COLOR, false, 2.0, true)
 
 
-func _on_counter_item_placed(_item_data: ItemData) -> void:
+func _process(_delta: float) -> void:
 
-	_active = false
+	_active = is_instance_valid(collider) and collider.get_meta(&"can_interact", false)

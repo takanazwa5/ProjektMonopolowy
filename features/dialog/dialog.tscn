@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://wxlg7byvgxeh"]
+[gd_scene load_steps=3 format=3 uid="uid://wxlg7byvgxeh"]
 
 [ext_resource type="Script" uid="uid://dcajhertautgu" path="res://features/dialog/dialog.gd" id="1_6t6af"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6t6af"]
+font_size = 26
 
 [node name="Dialog" type="Control"]
 visible = false
@@ -45,3 +48,4 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
 text = "[NPCNAME]: [Dialog]"
+label_settings = SubResource("LabelSettings_6t6af")

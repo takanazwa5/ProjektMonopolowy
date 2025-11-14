@@ -13,6 +13,8 @@ func _ready() -> void:
 
 	_item_preview.item_entered.connect(_on_item_entered_preview)
 	_item_preview.item_exited.connect(_on_item_exited_preview)
+	dialog.opened.connect(reticle.hide)
+	dialog.closed.connect(reticle.show)
 
 
 func on_game_paused() -> void:
