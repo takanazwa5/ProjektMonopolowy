@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctondefrj34dv"]
+
+[ext_resource type="PackedScene" uid="uid://dum24x4vjs36k" path="res://features/level/assets/furniture/meshes/szafa.glb" id="1_pigyu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j6h3j"]
+size = Vector3(0.6, 2, 1)
+
+[node name="Szafka" type="StaticBody3D"]
+
+[node name="szafa" parent="." instance=ExtResource("1_pigyu")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 1, 0)
+shape = SubResource("BoxShape3D_j6h3j")
