@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://h4nn4lnkqys6"]
+[gd_scene load_steps=5 format=3 uid="uid://h4nn4lnkqys6"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_or3wt"]
+[ext_resource type="Resource" uid="uid://bxoky8lw2yola" path="res://features/items/item_data/wines/data_breslau.tres" id="2_2tulp"]
 [ext_resource type="PackedScene" uid="uid://ceucmhxuhfcf4" path="res://features/items/wine/meshes/wino_p_breslau.glb" id="2_or3wt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
 size = Vector3(0.10644531, 0.3695612, 0.12207031)
 
 [node name="WinoBreslau" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 5
 freeze = true
 script = ExtResource("1_or3wt")
+data = ExtResource("2_2tulp")
 metadata/can_interact = true
 metadata/reticle_tooltip = ""
 

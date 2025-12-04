@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1xojbafxnjo0"]
+[gd_scene load_steps=5 format=3 uid="uid://b1xojbafxnjo0"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_pxnl7"]
 [ext_resource type="PackedScene" uid="uid://dst8oe522ulnt" path="res://features/items/wine/meshes/wino_m_kwiat.glb" id="2_3s1k6"]
+[ext_resource type="Resource" uid="uid://bn120kxh7rpyj" path="res://features/items/item_data/wines/data_kwiat.tres" id="2_f2v0s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
 size = Vector3(0.10644531, 0.3695612, 0.12207031)
 
 [node name="WinoKwiat" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 5
 freeze = true
 script = ExtResource("1_pxnl7")
+data = ExtResource("2_f2v0s")
 metadata/can_interact = true
 metadata/reticle_tooltip = "Kwiat"
 

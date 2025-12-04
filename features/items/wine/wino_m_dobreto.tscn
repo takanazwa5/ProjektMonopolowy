@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://csyrprtxqvao2"]
+[gd_scene load_steps=5 format=3 uid="uid://csyrprtxqvao2"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_71vde"]
 [ext_resource type="PackedScene" uid="uid://q8s70djq3jd6" path="res://features/items/wine/meshes/wino_m_dobreto.glb" id="2_3q270"]
+[ext_resource type="Resource" uid="uid://dm48vl6n3re8n" path="res://features/items/item_data/wines/data_dobreto.tres" id="2_ow0w2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
 size = Vector3(0.10644531, 0.37017155, 0.12207031)
 
 [node name="WinoDobreto" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 5
 freeze = true
 script = ExtResource("1_71vde")
+data = ExtResource("2_ow0w2")
 metadata/can_interact = true
 metadata/reticle_tooltip = "Dobreto"
 

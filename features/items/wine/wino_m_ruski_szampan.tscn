@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://t0pcv51vktr4"]
+[gd_scene load_steps=5 format=3 uid="uid://t0pcv51vktr4"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_o7xml"]
+[ext_resource type="Resource" uid="uid://cu6npyyw4hdw6" path="res://features/items/item_data/wines/data_ruski_szampan.tres" id="2_clyal"]
 [ext_resource type="PackedScene" uid="uid://db6uyy1bo6s2n" path="res://features/items/wine/meshes/wino_m_ruski_szampan.glb" id="2_l7gl0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
 size = Vector3(0.10644531, 0.3695612, 0.12207031)
 
 [node name="WinoRuskiSzampan" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 5
 freeze = true
 script = ExtResource("1_o7xml")
+data = ExtResource("2_clyal")
 metadata/can_interact = true
 metadata/reticle_tooltip = "Ruski Szampan"
 

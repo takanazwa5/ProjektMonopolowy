@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://bs2knhaaun6oi"]
+[gd_scene load_steps=68 format=3 uid="uid://bs2knhaaun6oi"]
 
 [ext_resource type="Script" uid="uid://nllfvbeeh8hn" path="res://features/level/level.gd" id="1_5cegx"]
 [ext_resource type="PackedScene" uid="uid://bfrkhd5j505xi" path="res://features/level/assets/beer_crates/meshes/beer_crates/bobr_crate.gltf" id="4_3vdyf"]
@@ -63,18 +63,6 @@
 [ext_resource type="PackedScene" uid="uid://dkgly1aj712f6" path="res://features/items/beer/beer_JP_bottle.tscn" id="46_1bd8k"]
 [ext_resource type="PackedScene" uid="uid://b7wqysvqquowd" path="res://features/items/beer/beer_mech_bottle.tscn" id="46_pr3tj"]
 [ext_resource type="PackedScene" uid="uid://ctondefrj34dv" path="res://features/level/assets/furniture/szafka.tscn" id="50_g4do5"]
-[ext_resource type="Resource" uid="uid://dm48vl6n3re8n" path="res://features/items/item_data/wines/data_dobreto.tres" id="53_rswm6"]
-[ext_resource type="Resource" uid="uid://bn120kxh7rpyj" path="res://features/items/item_data/wines/data_kwiat.tres" id="54_664iq"]
-[ext_resource type="Resource" uid="uid://dnjm7yivuuf5m" path="res://features/items/item_data/wines/data_pippolo.tres" id="55_6atqv"]
-[ext_resource type="Resource" uid="uid://cu6npyyw4hdw6" path="res://features/items/item_data/wines/data_ruski_szampan.tres" id="56_srmgw"]
-[ext_resource type="Resource" uid="uid://bxoky8lw2yola" path="res://features/items/item_data/wines/data_breslau.tres" id="57_828v1"]
-[ext_resource type="Resource" uid="uid://bvjynkjt64j78" path="res://features/items/item_data/wines/data_jabluszko_pomorskie.tres" id="58_plltk"]
-[ext_resource type="Resource" uid="uid://bivetmp0xkw1r" path="res://features/items/item_data/wines/data_krolewskie.tres" id="59_s5b4y"]
-[ext_resource type="Resource" uid="uid://cg8m208ctt4sg" path="res://features/items/item_data/wines/data_zofia.tres" id="60_pukx6"]
-[ext_resource type="Resource" uid="uid://hx04otlco6x8" path="res://features/items/item_data/wines/data_arena.tres" id="61_dwqpw"]
-[ext_resource type="Resource" uid="uid://b7x6lgg8fa43q" path="res://features/items/item_data/wines/data_sierzant.tres" id="62_vk6of"]
-[ext_resource type="Resource" uid="uid://bultpbaukmflj" path="res://features/items/item_data/wines/data_tas_tas.tres" id="63_klck8"]
-[ext_resource type="Resource" uid="uid://b3pbesma7i5hh" path="res://features/items/item_data/wines/data_wino.tres" id="64_rr5fb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_raucf"]
 
@@ -1359,90 +1347,42 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24256623, 0.84291315, 0)
 
 [node name="WinoDobreto_1" parent="Wines/Musujace" groups=["items"] instance=ExtResource("28_2xqc7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
-collision_layer = 4
-collision_mask = 5
-data = ExtResource("53_rswm6")
-reticle_tooltip_text = "Butelka Dobreto"
 
 [node name="WinoKwiat_1" parent="Wines/Musujace" groups=["items"] instance=ExtResource("29_rr5fb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
-collision_layer = 4
-collision_mask = 5
-data = ExtResource("54_664iq")
-reticle_tooltip_text = "Butelka Kwiatu"
 
 [node name="WinoPippolo_1" parent="Wines/Musujace" groups=["items"] instance=ExtResource("30_klck8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
-collision_layer = 4
-collision_mask = 5
-data = ExtResource("55_6atqv")
-reticle_tooltip_text = "Butelka Pippolo"
 
 [node name="WinoRuskiSzampan_1" parent="Wines/Musujace" groups=["items"] instance=ExtResource("31_vk6of")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
-collision_layer = 4
-collision_mask = 5
-data = ExtResource("56_srmgw")
-reticle_tooltip_text = "Butelka Ruskiego Szampana"
 
 [node name="Premium" type="Node3D" parent="Wines"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24256623, 0.4215163, 0)
 
 [node name="WinoBreslau_1" parent="Wines/Premium" groups=["items"] instance=ExtResource("32_2xqc7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
-collision_layer = 4
-collision_mask = 5
-data = ExtResource("57_828v1")
-reticle_tooltip_text = "Butelka Breslau"
 
 [node name="WinoJabluszkoPomorskie_1" parent="Wines/Premium" groups=["items"] instance=ExtResource("33_rr5fb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
-collision_layer = 4
-collision_mask = 5
-data = ExtResource("58_plltk")
-reticle_tooltip_text = "Butelka Jabłuszka Pomorskiego"
 
 [node name="WinoKrolewskie_1" parent="Wines/Premium" groups=["items"] instance=ExtResource("34_klck8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
-collision_layer = 4
-collision_mask = 5
-data = ExtResource("59_s5b4y")
-reticle_tooltip_text = "Butelka Królewskiego"
 
 [node name="WinoZofia_1" parent="Wines/Premium" groups=["items"] instance=ExtResource("35_vk6of")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
-collision_layer = 4
-collision_mask = 5
-data = ExtResource("60_pukx6")
-reticle_tooltip_text = "Butelka Zofii"
 
 [node name="Jabole" type="Node3D" parent="Wines"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24256623, 0.0016889572, 0)
 
 [node name="WinoArena_1" parent="Wines/Jabole" groups=["items"] instance=ExtResource("28_tksdx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.002, 0)
-collision_layer = 4
-collision_mask = 5
-data = ExtResource("61_dwqpw")
-reticle_tooltip_text = "Butelka Areny"
 
 [node name="WinoSierzant_1" parent="Wines/Jabole" groups=["items"] instance=ExtResource("29_nca55")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, -0.002, 0)
-collision_layer = 4
-collision_mask = 5
-data = ExtResource("62_vk6of")
-reticle_tooltip_text = "Butelka Sierżanta"
 
 [node name="WinoTasTas_1" parent="Wines/Jabole" groups=["items"] instance=ExtResource("30_wo7fh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.002, 0)
-collision_layer = 4
-collision_mask = 5
-data = ExtResource("63_klck8")
-reticle_tooltip_text = "Butelka Tas Tas"
 
 [node name="WinoWino_1" parent="Wines/Jabole" groups=["items"] instance=ExtResource("31_0muuh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -0.002, 0)
-collision_layer = 4
-collision_mask = 5
-data = ExtResource("64_rr5fb")
-reticle_tooltip_text = "Butelka Wino"

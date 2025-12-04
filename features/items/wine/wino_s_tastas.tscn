@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1qxruckkksun"]
+[gd_scene load_steps=5 format=3 uid="uid://b1qxruckkksun"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_5c4bw"]
 [ext_resource type="PackedScene" uid="uid://d0io54q32g3k1" path="res://features/items/wine/meshes/wino_s_tastas.glb" id="2_5c4bw"]
+[ext_resource type="Resource" uid="uid://bultpbaukmflj" path="res://features/items/item_data/wines/data_tas_tas.tres" id="2_yvjsn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
 size = Vector3(0.10644531, 0.3695612, 0.12207031)
 
 [node name="WinoTasTas" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 5
 freeze = true
 script = ExtResource("1_5c4bw")
+data = ExtResource("2_yvjsn")
 metadata/can_interact = true
 metadata/reticle_tooltip = "TaśTaś"
 

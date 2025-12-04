@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://brlv4vr5lvuuu"]
+[gd_scene load_steps=5 format=3 uid="uid://brlv4vr5lvuuu"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_2f1pp"]
+[ext_resource type="Resource" uid="uid://hx04otlco6x8" path="res://features/items/item_data/wines/data_arena.tres" id="2_87viv"]
 [ext_resource type="PackedScene" uid="uid://dhgc0fppx434m" path="res://features/items/wine/meshes/wino_s_arena.glb" id="2_ed0pj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
 size = Vector3(0.10644531, 0.3695612, 0.12207031)
 
 [node name="WinoArena" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 5
 freeze = true
 script = ExtResource("1_2f1pp")
+data = ExtResource("2_87viv")
 metadata/can_interact = true
 metadata/reticle_tooltip = "Arena"
 

@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bamiv2fbdo4tf"]
+[gd_scene load_steps=5 format=3 uid="uid://bamiv2fbdo4tf"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_pa7md"]
+[ext_resource type="Resource" uid="uid://bivetmp0xkw1r" path="res://features/items/item_data/wines/data_krolewskie.tres" id="2_8tk48"]
 [ext_resource type="PackedScene" uid="uid://k1dhehuemgjd" path="res://features/items/wine/meshes/wino_p_krolewskie.glb" id="2_pa7md"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
 size = Vector3(0.10644531, 0.3695612, 0.12207031)
 
 [node name="WinoKrolewskie" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 5
 freeze = true
 script = ExtResource("1_pa7md")
+data = ExtResource("2_8tk48")
 metadata/can_interact = true
 metadata/reticle_tooltip = "Królewskie"
 
