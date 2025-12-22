@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://wxlg7byvgxeh"]
 
-[ext_resource type="Script" uid="uid://dcajhertautgu" path="res://features/dialog/dialog.gd" id="1_6t6af"]
+[ext_resource type="Script" uid="uid://dcajhertautgu" path="res://features/dialogue/dialogue.gd" id="1_htxws"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6t6af"]
 font_size = 26
 
-[node name="Dialog" type="Control"]
+[node name="Dialogue" type="Control"]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_6t6af")
+script = ExtResource("1_htxws")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

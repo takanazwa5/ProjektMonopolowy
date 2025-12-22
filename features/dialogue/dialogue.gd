@@ -1,4 +1,4 @@
-class_name Dialog extends Control
+class_name Dialogue extends Control
 
 
 signal opened
