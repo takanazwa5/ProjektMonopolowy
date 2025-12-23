@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cv3k0q3nee3q6"]
+
+[ext_resource type="Texture2D" uid="uid://cutj80dtntwbl" path="res://features/npc/Mirek/textures/mi_body_Base_color.png" id="1_seswq"]
+[ext_resource type="Texture2D" uid="uid://dpjw62mmg8vxa" path="res://features/npc/Mirek/textures/mi_body_Roughness.png" id="2_uyol7"]
+
+[resource]
+resource_name = "mi_body"
+albedo_texture = ExtResource("1_seswq")
+roughness_texture = ExtResource("2_uyol7")
+roughness_texture_channel = 4
+texture_filter = 2

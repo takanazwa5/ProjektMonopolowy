@@ -49,7 +49,7 @@ _subresources={
 "use_external/fallback_path": "res://features/npc/Szef/materials/sz_body.tres",
 "use_external/path": "uid://bhnymnbqpmx0t"
 },
-"sz_jacket_hair": {
+"sz_jacket": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://features/npc/Szef/materials/sz_jacket_hair.tres",
 "use_external/path": "uid://judhkaa131md"

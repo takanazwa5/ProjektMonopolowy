@@ -1,0 +1,65 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://ki0mwtqga7cp"
+path="res://.godot/imported/character_mirek.glb-cd5397ac04e2699a9390d1d1ea0bba29.scn"
+
+[deps]
+
+source_file="res://features/npc/Mirek/meshes/character_mirek.glb"
+dest_files=["res://.godot/imported/character_mirek.glb-cd5397ac04e2699a9390d1d1ea0bba29.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"blue_eye": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/shared/materials/mat_eye_blue.tres",
+"use_external/path": "uid://bs3lbd4bg2dhd"
+},
+"mi_blouse": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Mirek/materials/mi_blouse.tres",
+"use_external/path": "uid://qpsi2riya01u"
+},
+"mi_body": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Mirek/materials/mi_body.tres",
+"use_external/path": "uid://cv3k0q3nee3q6"
+},
+"mi_pants": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Mirek/materials/mi_pants.tres",
+"use_external/path": "uid://b8r3j54xcc4ox"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

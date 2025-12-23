@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://d2ossbio5v6e2"]
+
+[ext_resource type="Texture2D" uid="uid://dgxif4qqnevjn" path="res://features/npc/Jarek/textures/ja_jacket_hair_Base_color.png" id="1_xmyjp"]
+[ext_resource type="Texture2D" uid="uid://ckne2cik7ep8s" path="res://features/npc/Jarek/textures/ja_jacket_hair_Roughness.png" id="2_isos7"]
+
+[resource]
+resource_name = "ja_jacket"
+albedo_texture = ExtResource("1_xmyjp")
+roughness_texture = ExtResource("2_isos7")
+roughness_texture_channel = 4
+texture_filter = 2

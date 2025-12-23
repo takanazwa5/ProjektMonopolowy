@@ -1,0 +1,104 @@
+[gd_scene load_steps=15 format=3 uid="uid://dn8bhvmnhhjr0"]
+
+[ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/shared/npc.gd" id="1_mcd0y"]
+[ext_resource type="PackedScene" uid="uid://ki0mwtqga7cp" path="res://features/npc/Mirek/meshes/character_mirek.glb" id="2_hqcc5"]
+[ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/npc/shared/Rig.glb" id="3_i14qs"]
+[ext_resource type="Script" uid="uid://de1lalif7l760" path="res://features/state_machine/state_machine.gd" id="4_vdak0"]
+[ext_resource type="Script" uid="uid://dwi10emqduq6r" path="res://features/npc/shared/states/entering_store_state.gd" id="5_y6x81"]
+[ext_resource type="Script" uid="uid://bgodwf3y0m1ey" path="res://features/npc/shared/states/waiting_for_product_state.gd" id="6_y0eju"]
+[ext_resource type="Script" uid="uid://uuvn1btdq2f4" path="res://features/npc/shared/states/getting_product_state.gd" id="7_slyst"]
+[ext_resource type="Script" uid="uid://cxwj4xkryi0sb" path="res://features/npc/shared/states/paying_state.gd" id="8_cd7cc"]
+[ext_resource type="Script" uid="uid://y8uymo1mwu2j" path="res://features/npc/shared/states/packing_state.gd" id="9_lqv60"]
+[ext_resource type="Script" uid="uid://j2c8p210clnr" path="res://features/npc/shared/states/exiting_store_state.gd" id="10_mh7rs"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wmxm7"]
+radius = 0.3
+height = 1.8
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fyrvs"]
+animation = &"Rig/Idle_Base"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nxrri"]
+animation = &"Rig/Walk_Base"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_6cyig"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_fyrvs")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_nxrri")
+blend_point_1/pos = 1.0
+
+[node name="Mirek" type="CharacterBody3D"]
+collision_layer = 8
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+script = ExtResource("1_mcd0y")
+
+[node name="character_mirek" parent="." instance=ExtResource("2_hqcc5")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_wmxm7")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+unique_name_in_owner = true
+path_desired_distance = 0.25
+target_desired_distance = 0.1
+height = 2.0
+radius = 0.3
+debug_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("../character_mirek")
+libraries = {
+&"Rig": ExtResource("3_i14qs")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/../character_mirek")
+tree_root = SubResource("AnimationNodeBlendSpace1D_6cyig")
+anim_player = NodePath("../AnimationPlayer")
+parameters/blend_position = 0.0014925
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+unique_name_in_owner = true
+script = ExtResource("4_vdak0")
+initial_state = NodePath("EnteringStoreState")
+metadata/_custom_type_script = "uid://de1lalif7l760"
+
+[node name="EnteringStoreState" type="Node" parent="StateMachine"]
+script = ExtResource("5_y6x81")
+metadata/_custom_type_script = "uid://dcedhanl8gfas"
+
+[node name="WaitingForProductState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("6_y0eju")
+metadata/_custom_type_script = "uid://dcedhanl8gfas"
+
+[node name="GettingProductState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("7_slyst")
+metadata/_custom_type_script = "uid://dcedhanl8gfas"
+
+[node name="PayingState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("8_cd7cc")
+metadata/_custom_type_script = "uid://q0lk35d56y2e"
+
+[node name="PackingState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("9_lqv60")
+metadata/_custom_type_script = "uid://q0lk35d56y2e"
+
+[node name="ExitingStoreState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("10_mh7rs")
+metadata/_custom_type_script = "uid://q0lk35d56y2e"
+
+[node name="StateLabel" type="Label3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86561, 0)
+billboard = 2
+font_size = 16
+outline_size = 6

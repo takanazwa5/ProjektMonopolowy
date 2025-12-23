@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c34thsbri8ng5"]
+
+[ext_resource type="Texture2D" uid="uid://badr1fiwe7tfs" path="res://features/npc/Dziadek2/textures/D2_jacket_hair_Base_color.png" id="1_1moaj"]
+[ext_resource type="Texture2D" uid="uid://p6ny7paqu2cr" path="res://features/npc/Dziadek1/textures/D_jacket_hair_Roughness.png" id="2_y4kqa"]
+
+[resource]
+resource_name = "D1_jacket"
+albedo_texture = ExtResource("1_1moaj")
+roughness_texture = ExtResource("2_y4kqa")
+roughness_texture_channel = 4
+texture_filter = 2

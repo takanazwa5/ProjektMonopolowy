@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b8r3j54xcc4ox"]
+
+[ext_resource type="Texture2D" uid="uid://dstwhlk7q5bu3" path="res://features/npc/Mirek/textures/mi_pants_Base_color.png" id="1_1c63m"]
+[ext_resource type="Texture2D" uid="uid://oh4wlnr3bqwo" path="res://features/npc/Mirek/textures/mi_pants_Roughness.png" id="2_2efvv"]
+
+[resource]
+resource_name = "mi_pants"
+albedo_texture = ExtResource("1_1c63m")
+roughness_texture = ExtResource("2_2efvv")
+roughness_texture_channel = 4
+texture_filter = 2

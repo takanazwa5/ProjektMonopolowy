@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c5e7yowh1kel1"]
+
+[ext_resource type="Texture2D" uid="uid://c0tfwvlim4aes" path="res://features/npc/Kobieta2/textures/K2_skirt_Base_color.png" id="1_uds1h"]
+[ext_resource type="Texture2D" uid="uid://jtdci2eahqf6" path="res://features/npc/Kobieta1/textures/K_skirt_Roughness.png" id="2_esc24"]
+
+[resource]
+resource_name = "K1_skirt"
+albedo_texture = ExtResource("1_uds1h")
+roughness_texture = ExtResource("2_esc24")
+roughness_texture_channel = 4
+texture_filter = 2

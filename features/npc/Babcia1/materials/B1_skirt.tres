@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://vvqtlw4lji4"]
+
+[ext_resource type="Texture2D" uid="uid://dx5df5xo1ih01" path="res://features/npc/Babcia1/textures/B1_skirt_Base_color.png" id="1_op6f6"]
+[ext_resource type="Texture2D" uid="uid://rg0j05515jef" path="res://features/npc/Babcia1/textures/B_skirt_Roughness.png" id="2_s1nxr"]
+
+[resource]
+resource_local_to_scene = true
+resource_name = "B1_skirt"
+albedo_texture = ExtResource("1_op6f6")
+roughness_texture = ExtResource("2_s1nxr")
+roughness_texture_channel = 4
+texture_filter = 2

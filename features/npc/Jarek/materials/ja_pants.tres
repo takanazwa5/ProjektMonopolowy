@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://uwei6oovu136"]
+
+[ext_resource type="Texture2D" uid="uid://delpjoucpwixb" path="res://features/npc/Jarek/textures/ja_pants_Base_color.png" id="1_5hsxn"]
+[ext_resource type="Texture2D" uid="uid://b31vb53n4uh5x" path="res://features/npc/Jarek/textures/ja_pants_Roughness.png" id="2_luvro"]
+
+[resource]
+resource_name = "ja_pants"
+albedo_texture = ExtResource("1_5hsxn")
+roughness_texture = ExtResource("2_luvro")
+roughness_texture_channel = 4
+texture_filter = 2

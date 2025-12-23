@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dlulrt73nd8wy"]
+
+[ext_resource type="Texture2D" uid="uid://b8eg3wrjnwih" path="res://features/npc/Babcia3/textures/B3_body_Base_color.png" id="1_sfhh7"]
+[ext_resource type="Texture2D" uid="uid://bpjd7u2sa4cfu" path="res://features/npc/Babcia1/textures/B_body_Roughness.png" id="2_erfsb"]
+
+[resource]
+resource_name = "B1_body"
+albedo_texture = ExtResource("1_sfhh7")
+roughness_texture = ExtResource("2_erfsb")
+roughness_texture_channel = 4
+texture_filter = 2

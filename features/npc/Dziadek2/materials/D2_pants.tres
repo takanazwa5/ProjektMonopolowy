@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://6yhe5yjlca6r"]
+
+[ext_resource type="Texture2D" uid="uid://db73t43gqih2w" path="res://features/npc/Dziadek2/textures/D2_pants_Base_color.png" id="1_g51mc"]
+[ext_resource type="Texture2D" uid="uid://cnyp6t658xong" path="res://features/npc/Dziadek1/textures/D_pants_Roughness.png" id="2_tbti0"]
+
+[resource]
+resource_name = "D1_pants"
+albedo_texture = ExtResource("1_g51mc")
+roughness_texture = ExtResource("2_tbti0")
+roughness_texture_channel = 4
+texture_filter = 2
