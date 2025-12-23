@@ -5,51 +5,47 @@ const ROTATION_SPEED: float = 10.0
 const WALKING_SPEED: float = 1.5
 
 
-var target_node: Node3D
+var _target_node: Node3D
 
 
-@onready var navigation_agent_3d: NavigationAgent3D = %NavigationAgent3D
+@onready var nav_agent: NavigationAgent3D = %NavigationAgent3D
 @onready var animation_tree: AnimationTree = %AnimationTree
 @onready var state_machine: StateMachine = %StateMachine
-@onready var state_label: Label3D = %StateLabel
+@onready var info_label: Label3D = %StateLabel
 
 
 func _ready() -> void:
 
-	if not OS.is_debug_build(): state_label.hide()
-
-	navigation_agent_3d.target_reached.connect(_on_target_reached)
-	navigation_agent_3d.navigation_finished.connect(_on_navigation_finished)
-	state_machine.state_changed.connect(_on_state_transition)
-
-	state_label.text = state_machine.initial_state.name
+	info_label.visible = OS.is_debug_build()
+	nav_agent.navigation_finished.connect(_on_navigation_finished)
 
 
 func _physics_process(delta: float) -> void:
 
-	if navigation_agent_3d.is_navigation_finished():
+	if not is_on_floor(): velocity += get_gravity() * delta
 
-		velocity.x = move_toward(velocity.x, 0, WALKING_SPEED)
-		velocity.z = move_toward(velocity.z, 0, WALKING_SPEED)
+	if is_instance_valid(_target_node):
 
-	else:
+		var next_path_pos: Vector3 = nav_agent.get_next_path_position()
+		var direction: Vector3 = global_position.direction_to(next_path_pos)
+		velocity = direction * WALKING_SPEED
 
-		# Rotation based on movement direction magic
-		var direction: Vector3 = (navigation_agent_3d.get_next_path_position() - position).normalized()
-		var left_axis : Vector3 = Vector3.UP.cross(direction)
-		var rotation_basis : Quaternion = Basis(left_axis, Vector3.UP, direction).get_rotation_quaternion()
-		var model_scale : Vector3 = transform.basis.get_scale()
-		transform.basis = Basis(transform.basis.get_rotation_quaternion().slerp(rotation_basis, delta * ROTATION_SPEED)).scaled(model_scale)
-		velocity.x = direction.x * WALKING_SPEED
-		velocity.z = direction.z * WALKING_SPEED
+		# Rotate model towards direction
+		var target_rotation: float = direction.signed_angle_to(Vector3.MODEL_FRONT, Vector3.DOWN)
+		rotation.y = move_toward(rotation.y, target_rotation, delta * ROTATION_SPEED)
+
+	else: velocity = Vector3.ZERO
 
 	move_and_slide()
 
 
 func _process(_delta: float) -> void:
 
+	# Adjust animation speed based on speed
 	var blend_pos: float = remap(velocity.length(), 0.0, WALKING_SPEED, 0.0, 1.0)
 	animation_tree.set(&"parameters/walk_blend/blend_position", blend_pos)
+
+	info_label.text = "vel: %.2f\n%s" % [velocity.length(), state_machine.current_state.name]
 
 
 func interact(event: InputEvent) -> void:
@@ -60,34 +56,15 @@ func interact(event: InputEvent) -> void:
 
 func navigate_to_node(node: Node3D) -> void:
 
-	if target_node == node: return
-	target_node = node
-	#print("target changed to: %s" % node)
-	navigation_agent_3d.target_position = node.global_position
-
-
-func _on_target_reached() -> void:
-
-	pass
-	#print("target reached")
+	_target_node = node
+	nav_agent.target_position = _target_node.global_position
 
 
 func _on_navigation_finished() -> void:
 
-	var target_pos: Vector3 = navigation_agent_3d.target_position
+	var target_pos: Vector3 = nav_agent.target_position
 	target_pos.y = global_position.y
 	var target_transform: Transform3D = transform.looking_at(target_pos, Vector3.UP, true)
 	var tween: Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(self, ^"transform", target_transform, 0.25)
-	if target_node is Node3D:
-
-		#print("navigation finished - target: %s" % target_node)
-		target_node = null
-
-	#print("navigation finished")
-	#print("distance to target: %s" % navigation_agent_3d.distance_to_target())
-
-
-func _on_state_transition(new_state: State) -> void:
-
-	state_label.text = new_state.name
+	_target_node = null
