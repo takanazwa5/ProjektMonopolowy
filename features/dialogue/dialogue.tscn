@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dcajhertautgu" path="res://features/dialogue/dialogue.gd" id="1_htxws"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_6t6af"]
-font_size = 26
+[sub_resource type="LabelSettings" id="LabelSettings_htxws"]
+font_size = 22
 
 [node name="Dialogue" type="Control"]
 visible = false
@@ -31,21 +31,34 @@ theme_override_constants/margin_bottom = 50
 [node name="Panel" type="Panel" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="DialogLabel" type="Label" parent="MarginContainer/Panel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/ScrollContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Text" type="Label" parent="MarginContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
-text = "[NPCNAME]: [Dialog]"
-label_settings = SubResource("LabelSettings_6t6af")
+label_settings = SubResource("LabelSettings_htxws")
+
+[node name="AnswersContainer" type="VBoxContainer" parent="MarginContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 10

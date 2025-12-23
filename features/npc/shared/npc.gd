@@ -56,9 +56,6 @@ func interact(event: InputEvent) -> void:
 
 	if not event.is_action_pressed(&"interact"): return
 
-	var player: Player = get_tree().get_first_node_in_group(&"player")
-	var dialog: Dialog = player.hud.dialog
-	dialog.open(name, "Przynieś mi bubra w butelce.")
 
 
 func navigate_to_node(node: Node3D) -> void:

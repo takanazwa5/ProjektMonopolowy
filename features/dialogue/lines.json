@@ -1,0 +1,22 @@
+{
+	"npc_basia_001": {
+		"speaker": "Basia",
+		"text": "Bubr kurwa.",
+		"choices": [
+			{
+				"text": "yeet",
+				"next": "npc_basia_002"
+			},
+			{
+				"text": "ja pierdole jakie bydle XD",
+				"next": null
+			}
+		]
+	},
+	"npc_basia_002": {
+		"speaker": "Basia",
+		"text": "what's a yeet?",
+		"next": null,
+		"choices": null
+	}
+}

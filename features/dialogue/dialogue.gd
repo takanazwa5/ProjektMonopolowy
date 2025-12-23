@@ -1,41 +1,62 @@
 class_name Dialogue extends Control
 
 
-signal opened
-signal closed
+signal dialogue_started
+signal dialogue_ended
 
 
-const ANIMATION_SPEED: float = 1.0
+const LINES: JSON = preload("res://features/dialogue/lines.json")
 
 
-var tween: Tween
+@onready var text: Label = %Text
+@onready var answers_container: VBoxContainer = %AnswersContainer
 
 
-@onready var dialog_label: Label = %DialogLabel
+func _init() -> void:
+
+	Global.dialogue = self
 
 
-func open(who: String, what: String) -> void:
+func _ready() -> void:
 
-	opened.emit()
-	dialog_label.text = "%s: %s" % [who, what]
-	dialog_label.visible_characters = who.length()
+	print(LINES.data["npc_basia_001"]["text"])
+
+
+func start_dialogue(line_id: String) -> void:
+
+	if not visible: dialogue_started.emit()
+	var line_data: Dictionary = LINES.data[line_id]
+	text.text = "%s: %s" % [line_data["speaker"], line_data["text"]]
+	if line_data["choices"] == null:
+
+		var answer_button: Button = Button.new()
+		answer_button.text = "[END CONVERSATION]"
+		answer_button.pressed.connect(_on_answer_button_pressed.bind(null))
+		answers_container.add_child(answer_button)
+
+	else:
+
+		for choice: Dictionary in line_data["choices"]:
+
+			var answer_button: Button = Button.new()
+			answer_button.text = choice["text"]
+			answer_button.pressed.connect(_on_answer_button_pressed.bind(choice["next"]))
+			answers_container.add_child(answer_button)
+
 	show()
-	tween = create_tween()
-	tween.tween_property(dialog_label, ^"visible_ratio", 1.0, ANIMATION_SPEED)
 
 
-func _input(event: InputEvent) -> void:
+func _end_dialogue() -> void:
 
-	if not visible: return
+	dialogue_ended.emit()
+	hide()
+	text.text = ""
+	for child: Label in answers_container.get_children():
 
-	if event.is_action_pressed(&"LMB"):
+		child.queue_free()
 
-		if dialog_label.visible_ratio < 1.0:
 
-			tween.kill()
-			dialog_label.visible_ratio = 1.0
+func _on_answer_button_pressed(next: String) -> void:
 
-		else:
-
-			closed.emit()
-			hide()
+	if next == null: _end_dialogue()
+	else: start_dialogue(next)
