@@ -11,7 +11,7 @@ func enter() -> void:
 	animation_tree.animation_finished.connect(_on_animation_finished)
 	var fridge: Node3D = get_tree().get_first_node_in_group(&"fridge")
 	npc.navigate_to_node(fridge)
-	await npc.navigation_agent_3d.navigation_finished
+	await npc.nav_agent.navigation_finished
 	animation_tree.set(&"parameters/pick_up/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
 
@@ -37,7 +37,7 @@ func _on_animation_finished(anim_name: StringName) -> void:
 		var counter: Counter = get_tree().get_first_node_in_group(&"counter")
 		npc.navigate_to_node(counter)
 
-	await npc.navigation_agent_3d.navigation_finished
+	await npc.nav_agent.navigation_finished
 	transition.emit(paying_state)
 
 

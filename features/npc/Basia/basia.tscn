@@ -70,6 +70,7 @@ shape = SubResource("CapsuleShape3D_wmxm7")
 unique_name_in_owner = true
 path_desired_distance = 0.25
 target_desired_distance = 0.1
+path_height_offset = 0.2
 height = 2.0
 radius = 0.3
 debug_enabled = true
