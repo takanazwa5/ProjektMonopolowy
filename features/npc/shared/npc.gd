@@ -22,8 +22,6 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 
-	if not is_on_floor(): velocity += get_gravity() * delta
-
 	if is_instance_valid(_target_node):
 
 		var next_path_pos: Vector3 = nav_agent.get_next_path_position()
