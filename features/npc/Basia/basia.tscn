@@ -57,7 +57,7 @@ collision_layer = 8
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 script = ExtResource("1_qlnrj")
-metadata/can_interact = false
+metadata/can_interact = true
 metadata/reticle_tooltip = "Basia"
 
 [node name="character_basia" parent="." instance=ExtResource("1_al82x")]

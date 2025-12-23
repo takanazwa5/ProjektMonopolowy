@@ -18,7 +18,8 @@ func _init() -> void:
 
 
 func start_dialogue(line_id: String) -> void:
-
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	_clear_answers()
 	if not visible: dialogue_started.emit()
 	var line_data: Dictionary = LINES.data[line_id]
 	text.text = "%s: %s" % [line_data["speaker"], line_data["text"]]
@@ -26,7 +27,7 @@ func start_dialogue(line_id: String) -> void:
 
 		var answer_button: Button = Button.new()
 		answer_button.text = "[END CONVERSATION]"
-		answer_button.pressed.connect(_on_answer_button_pressed.bind(null))
+		answer_button.pressed.connect(_on_answer_button_pressed)
 		answers_container.add_child(answer_button)
 
 	else:
@@ -35,7 +36,14 @@ func start_dialogue(line_id: String) -> void:
 
 			var answer_button: Button = Button.new()
 			answer_button.text = choice["text"]
-			answer_button.pressed.connect(_on_answer_button_pressed.bind(choice["next"]))
+			if choice["next"] == null:
+
+				answer_button.pressed.connect(_on_answer_button_pressed)
+
+			else:
+
+				answer_button.pressed.connect(_on_answer_button_pressed.bind(choice["next"]))
+
 			answers_container.add_child(answer_button)
 
 	show()
@@ -43,15 +51,21 @@ func start_dialogue(line_id: String) -> void:
 
 func _end_dialogue() -> void:
 
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	dialogue_ended.emit()
 	hide()
 	text.text = ""
-	for child: Label in answers_container.get_children():
+	_clear_answers()
+
+
+func _clear_answers() -> void:
+
+	for child: Button in answers_container.get_children():
 
 		child.queue_free()
 
 
-func _on_answer_button_pressed(next: String) -> void:
+func _on_answer_button_pressed(next: String = "") -> void:
 
-	if next == null: _end_dialogue()
+	if next.is_empty(): _end_dialogue()
 	else: start_dialogue(next)

@@ -6,6 +6,7 @@ const WALKING_SPEED: float = 1.5
 
 
 var _target_node: Node3D
+var _navigation_interrupted: bool = false
 
 
 @onready var nav_agent: NavigationAgent3D = %NavigationAgent3D
@@ -18,11 +19,13 @@ func _ready() -> void:
 
 	info_label.visible = OS.is_debug_build()
 	nav_agent.navigation_finished.connect(_on_navigation_finished)
+	Global.dialogue.dialogue_started.connect(_on_dialogue_started)
+	Global.dialogue.dialogue_ended.connect(_on_dialogue_ended)
 
 
 func _physics_process(delta: float) -> void:
 
-	if is_instance_valid(_target_node):
+	if is_instance_valid(_target_node) and not _navigation_interrupted:
 
 		var next_path_pos: Vector3 = nav_agent.get_next_path_position()
 		var direction: Vector3 = global_position.direction_to(next_path_pos)
@@ -49,7 +52,8 @@ func _process(_delta: float) -> void:
 func interact(event: InputEvent) -> void:
 
 	if not event.is_action_pressed(&"interact"): return
-
+	_navigation_interrupted = true
+	Global.dialogue.start_dialogue("npc_basia_001") # CRITICAL: DO WYJEBANIA ASAP
 
 
 func navigate_to_node(node: Node3D) -> void:
@@ -66,3 +70,13 @@ func _on_navigation_finished() -> void:
 	var tween: Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(self, ^"transform", target_transform, 0.25)
 	_target_node = null
+
+
+func _on_dialogue_started() -> void:
+
+	_navigation_interrupted = true
+
+
+func _on_dialogue_ended() -> void:
+
+	_navigation_interrupted = false
