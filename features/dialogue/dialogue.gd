@@ -17,11 +17,6 @@ func _init() -> void:
 	Global.dialogue = self
 
 
-func _ready() -> void:
-
-	print(LINES.data["npc_basia_001"]["text"])
-
-
 func start_dialogue(line_id: String) -> void:
 
 	if not visible: dialogue_started.emit()
