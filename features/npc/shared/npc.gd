@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 
 		# Rotate model towards direction
 		var target_rotation: float = direction.signed_angle_to(Vector3.MODEL_FRONT, Vector3.DOWN)
-		rotation.y = move_toward(rotation.y, target_rotation, delta * ROTATION_SPEED)
+		rotation.y = lerp_angle(rotation.y, target_rotation, delta * ROTATION_SPEED)
 
 	else: velocity = Vector3.ZERO
 
@@ -52,7 +52,6 @@ func _process(_delta: float) -> void:
 func interact(event: InputEvent) -> void:
 
 	if not event.is_action_pressed(&"interact"): return
-	_navigation_interrupted = true
 	Global.dialogue.start_dialogue("npc_basia_001") # CRITICAL: DO WYJEBANIA ASAP
 
 
