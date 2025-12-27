@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnnmp1lwiwrw8"]
+[gd_scene load_steps=4 format=3 uid="uid://cnnmp1lwiwrw8"]
 
 [ext_resource type="Script" uid="uid://bk4tohdw0etl7" path="res://features/player/hud/hud.gd" id="1_k23sk"]
 [ext_resource type="PackedScene" uid="uid://c6xb1wy7x522w" path="res://features/player/hud/reticle/reticle.tscn" id="2_o6r3x"]
-[ext_resource type="PackedScene" uid="uid://wxlg7byvgxeh" path="res://features/dialog/dialog.tscn" id="3_6xb40"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_set3t"]
 outline_size = 10
@@ -53,6 +52,3 @@ mouse_filter = 2
 layout_mode = 2
 text = "[G] Cancel"
 label_settings = SubResource("LabelSettings_set3t")
-
-[node name="Dialog" parent="." instance=ExtResource("3_6xb40")]
-unique_name_in_owner = true
