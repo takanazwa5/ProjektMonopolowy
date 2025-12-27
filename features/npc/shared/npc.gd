@@ -1,6 +1,9 @@
 class_name NPC extends CharacterBody3D
 
 
+signal interaction
+
+
 const ROTATION_SPEED: float = 10.0
 const WALKING_SPEED: float = 1.5
 
@@ -52,7 +55,7 @@ func _process(_delta: float) -> void:
 func interact(event: InputEvent) -> void:
 
 	if not event.is_action_pressed(&"interact"): return
-	Global.dialogue.start_dialogue("npc_basia_001") # CRITICAL: DO WYJEBANIA ASAP
+	interaction.emit()
 
 
 func navigate_to_node(node: Node3D) -> void:

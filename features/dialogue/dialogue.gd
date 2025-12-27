@@ -10,11 +10,18 @@ const LINES: JSON = preload("res://features/dialogue/lines.json")
 
 @onready var text: Label = %Text
 @onready var answers_container: VBoxContainer = %AnswersContainer
+@onready var npcs: Node = %NPCs
 
 
 func _init() -> void:
 
 	Global.dialogue = self
+
+
+func _ready() -> void:
+
+	npcs.child_entered_tree.connect(_on_npc_entered_tree)
+	npcs.child_exiting_tree.connect(_on_npc_exiting_tree)
 
 
 func start_dialogue(line_id: String) -> void:
@@ -69,3 +76,18 @@ func _on_answer_button_pressed(next: String = "") -> void:
 
 	if next.is_empty(): _end_dialogue()
 	else: start_dialogue(next)
+
+
+func _on_npc_entered_tree(npc: NPC) -> void:
+
+	npc.interaction.connect(_on_npc_interaction)
+
+
+func _on_npc_exiting_tree(npc: NPC) -> void:
+
+	npc.interaction.disconnect(_on_npc_interaction)
+
+
+func _on_npc_interaction() -> void:
+
+	start_dialogue("npc_basia_001") # TODO: For now.

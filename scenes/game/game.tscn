@@ -23,3 +23,6 @@ transform = Transform3D(-0.97183, 0, -0.235685, 0, 1, 0, 0.235685, 0, -0.97183, 
 unique_name_in_owner = true
 
 [node name="Dialogue" parent="." instance=ExtResource("5_lfrn8")]
+
+[node name="NPCs" type="Node" parent="."]
+unique_name_in_owner = true
