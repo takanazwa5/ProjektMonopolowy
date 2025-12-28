@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpwtxey58juae"]
+
+[ext_resource type="Script" uid="uid://bqyhc6yq5nb5r" path="res://features/level/assets/trash_can/trash_can.gd" id="1_lt27o"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jf7c8"]
+top_radius = 0.2
+bottom_radius = 0.2
+height = 0.5
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lt27o"]
+height = 0.5
+radius = 0.2
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1t7ib"]
+height = 0.05
+radius = 0.2
+
+[node name="TrashCan" type="StaticBody3D"]
+collision_mask = 5
+script = ExtResource("1_lt27o")
+metadata/can_interact = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+mesh = SubResource("CylinderMesh_jf7c8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+shape = SubResource("CylinderShape3D_lt27o")
+
+[node name="BinInsides" type="Area3D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BinInsides"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CylinderShape3D_1t7ib")
