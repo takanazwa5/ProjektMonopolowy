@@ -1398,6 +1398,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.511217, 0.132, -2.2046173)
 unique_name_in_owner = true
 script = ExtResource("64_rr5fb")
 spawn_height_offset = 0.15
+ROOM_X_THRESHOLDS = Vector2(-3, 3)
+ROOM_Z_THRESHOLDS = Vector2(-4, 4)
 
 [node name="Mop" parent="." instance=ExtResource("66_vk6of")]
 unique_name_in_owner = true
