@@ -25,12 +25,17 @@ func _ready() -> void:
 
 
 func start_dialogue(line_id: String) -> void:
+	if not LINES.data.has(line_id):
+
+		push_error("Invalid line_id \"%s\"" % line_id)
+		return
+
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	_clear_answers()
 	if not visible: dialogue_started.emit()
-	var line_data: Dictionary = LINES.data[line_id]
-	text.text = "%s: %s" % [line_data["speaker"], line_data["text"]]
-	if line_data["choices"] == null:
+	var line_data: Dictionary = LINES.data.get(line_id)
+	text.text = "%s: %s" % [line_data.get("speaker"), line_data.get("text")]
+	if line_data.get("choices") == null:
 
 		var answer_button: Button = Button.new()
 		answer_button.text = "[END CONVERSATION]"
@@ -39,17 +44,17 @@ func start_dialogue(line_id: String) -> void:
 
 	else:
 
-		for choice: Dictionary in line_data["choices"]:
+		for choice: Dictionary in line_data.get("choices"):
 
 			var answer_button: Button = Button.new()
 			answer_button.text = choice["text"]
-			if choice["next"] == null:
+			if choice.get("next") == null:
 
 				answer_button.pressed.connect(_on_answer_button_pressed)
 
 			else:
 
-				answer_button.pressed.connect(_on_answer_button_pressed.bind(choice["next"]))
+				answer_button.pressed.connect(_on_answer_button_pressed.bind(choice.get("next")))
 
 			answers_container.add_child(answer_button)
 
