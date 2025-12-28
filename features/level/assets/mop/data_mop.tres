@@ -7,4 +7,5 @@ script = ExtResource("1_s3ton")
 name = &"Mop"
 type = 3
 preview_zoom = -0.8
+is_disposable = false
 metadata/_custom_type_script = "uid://rfypjk406hn7"

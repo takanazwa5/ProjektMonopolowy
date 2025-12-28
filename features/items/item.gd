@@ -9,7 +9,6 @@ signal interaction(item: Item)
 
 
 var loose: bool = false
-var is_disposable: bool = true
 
 
 @onready var bottom_marker: Marker3D = %BottomMarker

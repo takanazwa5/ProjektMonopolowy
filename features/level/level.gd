@@ -9,4 +9,3 @@ class_name Level extends Node3D
 
 func _ready() -> void:
   mop.loose = true
-  mop.is_disposable = false

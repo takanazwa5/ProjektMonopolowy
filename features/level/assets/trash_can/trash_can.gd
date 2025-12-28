@@ -10,5 +10,5 @@ func interact(event: InputEvent) -> void:
   emit_signal("interacted")
 
 func _on_item_entered_bin(item: Node) -> void:
-  if item is Item and item.is_disposable:
+  if item is Item and item.data.is_disposable:
     item.queue_free()
