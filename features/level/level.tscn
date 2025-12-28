@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://bs2knhaaun6oi"]
+[gd_scene load_steps=71 format=3 uid="uid://bs2knhaaun6oi"]
 
 [ext_resource type="Script" uid="uid://nllfvbeeh8hn" path="res://features/level/level.gd" id="1_5cegx"]
 [ext_resource type="PackedScene" uid="uid://bfrkhd5j505xi" path="res://features/level/assets/beer_crates/meshes/beer_crates/bobr_crate.gltf" id="4_3vdyf"]
@@ -63,6 +63,9 @@
 [ext_resource type="PackedScene" uid="uid://dkgly1aj712f6" path="res://features/items/beer/beer_JP_bottle.tscn" id="46_1bd8k"]
 [ext_resource type="PackedScene" uid="uid://b7wqysvqquowd" path="res://features/items/beer/beer_mech_bottle.tscn" id="46_pr3tj"]
 [ext_resource type="PackedScene" uid="uid://ctondefrj34dv" path="res://features/level/assets/furniture/szafka.tscn" id="50_g4do5"]
+[ext_resource type="PackedScene" uid="uid://cpwtxey58juae" path="res://features/level/assets/trash_can/trash_can.tscn" id="64_klck8"]
+[ext_resource type="Script" uid="uid://cs1g3amumal8s" path="res://features/trash/trash_container.gd" id="64_rr5fb"]
+[ext_resource type="PackedScene" uid="uid://c7w2lm7caac5r" path="res://features/level/assets/mop/mop.tscn" id="66_vk6of"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_raucf"]
 
@@ -1386,3 +1389,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.002, 0)
 
 [node name="WinoWino_1" parent="Wines/Jabole" groups=["items"] instance=ExtResource("31_0muuh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -0.002, 0)
+
+[node name="TrashCan" parent="." instance=ExtResource("64_klck8")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.511217, 0.132, -2.2046173)
+
+[node name="TrashContainer" type="Node3D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("64_rr5fb")
+spawn_height_offset = 0.15
+
+[node name="Mop" parent="." instance=ExtResource("66_vk6of")]
+unique_name_in_owner = true
+transform = Transform3D(-4.371139e-08, -0.42261827, 0.90630776, 0, 0.90630776, 0.42261827, -1, 1.8473232e-08, -3.961597e-08, -2.4268317, 0.6911658, -1.5418394)

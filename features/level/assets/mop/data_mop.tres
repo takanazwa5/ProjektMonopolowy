@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://bj6xuwcf5mxt7"]
+
+[ext_resource type="Script" uid="uid://rfypjk406hn7" path="res://features/items/item_data/item_data.gd" id="1_s3ton"]
+
+[resource]
+script = ExtResource("1_s3ton")
+name = &"Mop"
+type = 3
+preview_zoom = -0.8
+metadata/_custom_type_script = "uid://rfypjk406hn7"
