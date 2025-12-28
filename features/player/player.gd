@@ -24,10 +24,10 @@ func _ready() -> void:
 	item_preview.item_entered.connect(_on_item_entered_preview)
 	item_preview.item_exited.connect(_on_item_exited_preview)
 	interaction_raycast.collider_changed.connect(_on_interaction_raycast_collider_changed)
-	hud.dialog.opened.connect(_on_dialog_opened)
-	hud.dialog.closed.connect(_on_dialog_closed)
 	item_preview.item_entered.connect(hud.reticle.hide.unbind(1))
 	item_preview.item_exited.connect(hud.reticle.show)
+	Global.dialogue.dialogue_started.connect(_on_dialogue_started)
+	Global.dialogue.dialogue_ended.connect(_on_dialogue_ended)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -87,13 +87,13 @@ func _on_interaction_raycast_collider_changed(collider: Object) -> void:
 	hud.reticle.collider = collider
 
 
-func _on_dialog_opened() -> void:
+func _on_dialogue_started() -> void:
 
 	can_move = false
 	can_move_camera = false
 
 
-func _on_dialog_closed() -> void:
+func _on_dialogue_ended() -> void:
 
 	can_move = true
 	can_move_camera = true

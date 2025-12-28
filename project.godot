@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Global="*res://autoload/global.gd"
 DebugPanel="*res://autoload/debug_panel/debug_panel.tscn"
 DebugMenu="*res://autoload/debug_menu/debug_menu.tscn"
 
