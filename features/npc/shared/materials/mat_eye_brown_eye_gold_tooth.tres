@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://kqer4rqb2i8"]
+
+[ext_resource type="Texture2D" uid="uid://cu40rwfh0x67i" path="res://features/npc/shared/textures/eye_rysiek_BaseColor.jpg" id="1_1mlmh"]
+[ext_resource type="Texture2D" uid="uid://bhvcgb6jusbbq" path="res://features/npc/shared/textures/A_eye_Roughness.jpg" id="2_2y3ap"]
+
+[resource]
+albedo_texture = ExtResource("1_1mlmh")
+roughness_texture = ExtResource("2_2y3ap")
+roughness_texture_channel = 4

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bhur4wg0yvtso"]
+
+[ext_resource type="Texture2D" uid="uid://jnoyqk5wfpjq" path="res://features/npc/Facet1/textures/F1_body_Base_color.png" id="1_ykghd"]
+[ext_resource type="Texture2D" uid="uid://d1w48gwe73pir" path="res://features/npc/Facet1/textures/F_body_Roughness.png" id="2_g4yan"]
+
+[resource]
+resource_name = "F1_body"
+albedo_texture = ExtResource("1_ykghd")
+roughness_texture = ExtResource("2_g4yan")
+roughness_texture_channel = 4
+texture_filter = 2

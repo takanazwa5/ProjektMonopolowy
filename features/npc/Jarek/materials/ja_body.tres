@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://du40b5dkn74qg"]
+
+[ext_resource type="Texture2D" uid="uid://hcs5ewy2xttp" path="res://features/npc/Jarek/textures/ja_body_Base_color.png" id="1_gbga1"]
+[ext_resource type="Texture2D" uid="uid://c4p0go70ecg8m" path="res://features/npc/Jarek/textures/ja_body_Roughness.png" id="2_p1t8w"]
+
+[resource]
+resource_name = "ja_body"
+albedo_texture = ExtResource("1_gbga1")
+roughness_texture = ExtResource("2_p1t8w")
+roughness_texture_channel = 4
+texture_filter = 2

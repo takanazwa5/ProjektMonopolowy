@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cw2ohd3rqoc6p"]
+
+[ext_resource type="Texture2D" uid="uid://crpuel0ywqrmy" path="res://features/npc/Kobieta1/textures/K1_body_Base_color.png" id="1_qmajq"]
+[ext_resource type="Texture2D" uid="uid://bsk81uoslecal" path="res://features/npc/Kobieta1/textures/K_body_Roughness.png" id="2_nhh5n"]
+
+[resource]
+resource_name = "K1_body"
+albedo_texture = ExtResource("1_qmajq")
+roughness_texture = ExtResource("2_nhh5n")
+roughness_texture_channel = 4
+texture_filter = 2

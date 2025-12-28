@@ -1,0 +1,65 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://di1y4h4m77ebs"
+path="res://.godot/imported/character_dziadek2.glb-40d2d4727e77ba755c1d09fb3e2aaaf2.scn"
+
+[deps]
+
+source_file="res://features/npc/Dziadek2/meshes/character_dziadek2.glb"
+dest_files=["res://.godot/imported/character_dziadek2.glb-40d2d4727e77ba755c1d09fb3e2aaaf2.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"D2_body": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Dziadek2/materials/D2_body.tres",
+"use_external/path": "uid://ckot4a555dfti"
+},
+"D2_jacket": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Dziadek2/materials/D2_jacket.tres",
+"use_external/path": "uid://c34thsbri8ng5"
+},
+"D2_pants": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Dziadek2/materials/D2_pants.tres",
+"use_external/path": "uid://6yhe5yjlca6r"
+},
+"blue_eye": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/shared/materials/mat_eye_blue.tres",
+"use_external/path": "uid://bs3lbd4bg2dhd"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

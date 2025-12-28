@@ -54,7 +54,7 @@ _subresources={
 "use_external/fallback_path": "res://features/npc/Ojciec/materials/oj_pants.tres",
 "use_external/path": "uid://cq62cvhcwu75c"
 },
-"oj_vest_hair": {
+"oj_vest": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://features/npc/Ojciec/materials/oj_vest_hair.tres",
 "use_external/path": "uid://dkvqv5pgf21jo"

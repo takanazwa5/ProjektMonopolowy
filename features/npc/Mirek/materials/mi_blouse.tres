@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://qpsi2riya01u"]
+
+[ext_resource type="Texture2D" uid="uid://bq413yp0h44m4" path="res://features/npc/Mirek/textures/mi_blouse_Base_color.png" id="1_dob0b"]
+[ext_resource type="Texture2D" uid="uid://b4ccatpgieub6" path="res://features/npc/Mirek/textures/mi_blouse_Roughness.png" id="2_fh55r"]
+
+[resource]
+resource_name = "mi_blouse"
+albedo_texture = ExtResource("1_dob0b")
+roughness_texture = ExtResource("2_fh55r")
+roughness_texture_channel = 4
+texture_filter = 2

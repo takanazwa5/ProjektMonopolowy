@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://o3io6heph3p2"]
+
+[ext_resource type="Texture2D" uid="uid://bo47eolg4mwhq" path="res://features/npc/Babcia1/textures/B1_blouse_hair_Base_color.png" id="1_b7pf0"]
+[ext_resource type="Texture2D" uid="uid://b2humkp4dxjw6" path="res://features/npc/Babcia1/textures/B_blouse_hair_Roughness.png" id="2_1w22h"]
+
+[resource]
+resource_name = "B1_blouse"
+albedo_texture = ExtResource("1_b7pf0")
+roughness_texture = ExtResource("2_1w22h")
+roughness_texture_channel = 4
+texture_filter = 2

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://pwwu6mdxep21"]
+
+[ext_resource type="Texture2D" uid="uid://bw0bda6kp1qbe" path="res://features/npc/Kobieta1/textures/K1_blouse_hair_Base_color.png" id="1_xmnqo"]
+[ext_resource type="Texture2D" uid="uid://c6puhg07278ys" path="res://features/npc/Kobieta1/textures/K_blouse_hair_Roughness.png" id="2_j3fag"]
+
+[resource]
+resource_name = "K1_blouse"
+albedo_texture = ExtResource("1_xmnqo")
+roughness_texture = ExtResource("2_j3fag")
+roughness_texture_channel = 4
+texture_filter = 2

@@ -5,6 +5,7 @@ class_name Game extends Node
 @onready var level: Level = %Level
 @onready var player: Player = %Player
 @onready var loose_items: Node = %LooseItems
+@onready var npcs: Node = %NPCs
 
 
 func _ready() -> void:
@@ -29,7 +30,7 @@ func _process(_delta: float) -> void:
 func spawn_basia() -> void:
 	var basia_scene: PackedScene = load("uid://civlo6dh6d0kf")
 	var basia: NPC = basia_scene.instantiate()
-	add_child(basia)
+	npcs.add_child(basia)
 	basia.position = Vector3(-1.48, 0.125, 3.42)
 	basia.rotation_degrees = Vector3(0.0, -180.0, 0.0)
 

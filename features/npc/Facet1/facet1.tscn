@@ -1,0 +1,136 @@
+[gd_scene load_steps=20 format=3 uid="uid://dywvrgafvr8i7"]
+
+[ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/shared/npc.gd" id="1_885fk"]
+[ext_resource type="PackedScene" uid="uid://dauexmvaqrrs4" path="res://features/npc/Facet1/meshes/character_facet1.glb" id="2_kw84j"]
+[ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/npc/shared/Rig.glb" id="3_n56bv"]
+[ext_resource type="Script" uid="uid://de1lalif7l760" path="res://features/state_machine/state_machine.gd" id="4_yibi5"]
+[ext_resource type="Script" uid="uid://dwi10emqduq6r" path="res://features/npc/shared/states/entering_store_state.gd" id="5_5rnfv"]
+[ext_resource type="Script" uid="uid://bgodwf3y0m1ey" path="res://features/npc/shared/states/waiting_for_product_state.gd" id="6_r6po8"]
+[ext_resource type="Script" uid="uid://uuvn1btdq2f4" path="res://features/npc/shared/states/getting_product_state.gd" id="7_1lrce"]
+[ext_resource type="Script" uid="uid://cxwj4xkryi0sb" path="res://features/npc/shared/states/paying_state.gd" id="8_1nklj"]
+[ext_resource type="Script" uid="uid://y8uymo1mwu2j" path="res://features/npc/shared/states/packing_state.gd" id="9_1got2"]
+[ext_resource type="Script" uid="uid://j2c8p210clnr" path="res://features/npc/shared/states/exiting_store_state.gd" id="10_ofbe8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wmxm7"]
+radius = 0.3
+height = 1.8
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mi72n"]
+animation = &"Rig/PickUp_Base"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a8t5c"]
+animation = &"Rig/PutDown_Base"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_qlnrj"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_mi72n"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qlnrj"]
+animation = &"Rig/Idle_Base"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xcwia"]
+animation = &"Rig/Walk_Base"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_xgun3"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_qlnrj")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_xcwia")
+blend_point_1/pos = 1.0
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vssg2"]
+nodes/output/position = Vector2(540, 140)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_a8t5c")
+nodes/Animation/position = Vector2(-140, 240)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_mi72n")
+"nodes/Animation 2/position" = Vector2(80, 400)
+nodes/pick_up/node = SubResource("AnimationNodeOneShot_qlnrj")
+nodes/pick_up/position = Vector2(320, 80)
+nodes/put_down/node = SubResource("AnimationNodeOneShot_mi72n")
+nodes/put_down/position = Vector2(100, 80)
+nodes/walk_blend/node = SubResource("AnimationNodeBlendSpace1D_xgun3")
+nodes/walk_blend/position = Vector2(-120, 40)
+node_connections = [&"output", 0, &"pick_up", &"pick_up", 0, &"put_down", &"pick_up", 1, &"Animation 2", &"put_down", 0, &"walk_blend", &"put_down", 1, &"Animation"]
+
+[node name="Facet1" type="CharacterBody3D"]
+collision_layer = 8
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+script = ExtResource("1_885fk")
+metadata/can_interact = false
+metadata/reticle_tooltip = "Basia"
+
+[node name="character_facet1" parent="." instance=ExtResource("2_kw84j")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_wmxm7")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+unique_name_in_owner = true
+path_desired_distance = 0.25
+target_desired_distance = 0.1
+height = 2.0
+radius = 0.3
+debug_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("../character_facet1")
+libraries = {
+&"Rig": ExtResource("3_n56bv")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/../character_facet1")
+tree_root = SubResource("AnimationNodeBlendTree_vssg2")
+anim_player = NodePath("../AnimationPlayer")
+parameters/pick_up/active = false
+parameters/pick_up/internal_active = false
+parameters/pick_up/request = 0
+parameters/put_down/active = false
+parameters/put_down/internal_active = false
+parameters/put_down/request = 0
+parameters/walk_blend/blend_position = 0.0
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+unique_name_in_owner = true
+script = ExtResource("4_yibi5")
+initial_state = NodePath("EnteringStoreState")
+metadata/_custom_type_script = "uid://de1lalif7l760"
+
+[node name="EnteringStoreState" type="Node" parent="StateMachine"]
+script = ExtResource("5_5rnfv")
+metadata/_custom_type_script = "uid://dcedhanl8gfas"
+
+[node name="WaitingForProductState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("6_r6po8")
+metadata/_custom_type_script = "uid://dcedhanl8gfas"
+
+[node name="GettingProductState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("7_1lrce")
+metadata/_custom_type_script = "uid://dcedhanl8gfas"
+
+[node name="PayingState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("8_1nklj")
+metadata/_custom_type_script = "uid://q0lk35d56y2e"
+
+[node name="PackingState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("9_1got2")
+metadata/_custom_type_script = "uid://q0lk35d56y2e"
+
+[node name="ExitingStoreState" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("10_ofbe8")
+metadata/_custom_type_script = "uid://q0lk35d56y2e"
+
+[node name="StateLabel" type="Label3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86561, 0)
+billboard = 2
+font_size = 16
+outline_size = 6

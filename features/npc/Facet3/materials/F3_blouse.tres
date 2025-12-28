@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://caa10ji0yhgar"]
+
+[ext_resource type="Texture2D" uid="uid://b24cic34dglgs" path="res://features/npc/Facet3/textures/F3_blouse_Base_color.png" id="1_pf00b"]
+[ext_resource type="Texture2D" uid="uid://r4btxleqvctq" path="res://features/npc/Facet1/textures/F_blouse_Roughness.png" id="2_atrh3"]
+
+[resource]
+resource_name = "F1_blouse"
+albedo_texture = ExtResource("1_pf00b")
+roughness_texture = ExtResource("2_atrh3")
+roughness_texture_channel = 4
+texture_filter = 2

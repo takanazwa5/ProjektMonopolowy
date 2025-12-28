@@ -44,7 +44,7 @@ _subresources={
 "use_external/fallback_path": "res://features/npc/shared/materials/mat_eye_brown.tres",
 "use_external/path": "uid://cw1bliuramuqs"
 },
-"ma_blouse_hair": {
+"ma_blouse": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://features/npc/Madzia/materials/ma_blouse_hair.tres",
 "use_external/path": "uid://blkqk6k7jcp1e"

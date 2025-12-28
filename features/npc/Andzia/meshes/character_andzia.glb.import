@@ -44,15 +44,15 @@ _subresources={
 "use_external/fallback_path": "res://features/npc/Andzia/materials/an_body.tres",
 "use_external/path": "uid://bma12jej7q0ym"
 },
-"an_hair_skirt_boots": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://features/npc/Andzia/materials/an_hair_skirt_boots.tres",
-"use_external/path": "uid://b40vkdnj0vwk2"
-},
 "an_jacket": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://features/npc/Andzia/materials/an_jacket.tres",
 "use_external/path": "uid://doni8g6b44ujs"
+},
+"an_skirt": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Andzia/materials/an_hair_skirt_boots.tres",
+"use_external/path": "uid://b40vkdnj0vwk2"
 },
 "blue_eye": {
 "use_external/enabled": true,

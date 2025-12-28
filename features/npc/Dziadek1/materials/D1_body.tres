@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cpcqxa3ch0k76"]
+
+[ext_resource type="Texture2D" uid="uid://c6ux054aeebcn" path="res://features/npc/Dziadek1/textures/D1_body_Base_color.png" id="1_eb8kq"]
+[ext_resource type="Texture2D" uid="uid://dyv5c2cauv30j" path="res://features/npc/Dziadek1/textures/D_body_Roughness.png" id="2_ftgsd"]
+
+[resource]
+resource_name = "D1_body"
+albedo_texture = ExtResource("1_eb8kq")
+roughness_texture = ExtResource("2_ftgsd")
+roughness_texture_channel = 4
+texture_filter = 2

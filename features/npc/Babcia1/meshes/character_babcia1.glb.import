@@ -1,0 +1,65 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bcni8k42fuo5h"
+path="res://.godot/imported/character_babcia1.glb-7c429f5908b9437d9060b3d2f78cba03.scn"
+
+[deps]
+
+source_file="res://features/npc/Babcia1/meshes/character_babcia1.glb"
+dest_files=["res://.godot/imported/character_babcia1.glb-7c429f5908b9437d9060b3d2f78cba03.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"B1_blouse": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Babcia1/materials/B1_blouse.tres",
+"use_external/path": "uid://o3io6heph3p2"
+},
+"B1_body": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Babcia1/materials/B1_body.tres",
+"use_external/path": "uid://dbik5uy15fuhg"
+},
+"B1_skirt": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/Babcia1/materials/B1_skirt.tres",
+"use_external/path": "uid://vvqtlw4lji4"
+},
+"green_eye": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://features/npc/shared/materials/mat_eye_green.tres",
+"use_external/path": "uid://c1bx85e6wx1ye"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

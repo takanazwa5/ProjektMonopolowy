@@ -39,17 +39,17 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"brown_eye": {
+"brown_eye_gold_tooth": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://features/npc/shared/materials/mat_eye_brown.tres",
-"use_external/path": "uid://cw1bliuramuqs"
+"use_external/fallback_path": "res://features/npc/shared/materials/mat_eye_brown_eye_gold_tooth.tres",
+"use_external/path": "uid://kqer4rqb2i8"
 },
 "ry_body": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://features/npc/Rybak/materials/ry_body.tres",
 "use_external/path": "uid://d1jaf7gf1px1e"
 },
-"ry_jacket_hair": {
+"ry_jacket": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://features/npc/Rybak/materials/ry_jacket_hair.tres",
 "use_external/path": "uid://dtyyhf2goeflo"
