@@ -88,6 +88,6 @@ func _on_npc_exiting_tree(npc: NPC) -> void:
 	npc.interaction.disconnect(_on_npc_interaction)
 
 
-func _on_npc_interaction() -> void:
+func _on_npc_interaction(line_id: String) -> void:
 
-	start_dialogue("npc_basia_001") # TODO: For now.
+	start_dialogue(line_id) # TODO: For now.

@@ -1,7 +1,7 @@
 class_name NPC extends CharacterBody3D
 
 
-signal interaction
+signal interaction(line_id: String)
 
 
 const ROTATION_SPEED: float = 10.0
@@ -55,7 +55,7 @@ func _process(_delta: float) -> void:
 func interact(event: InputEvent) -> void:
 
 	if not event.is_action_pressed(&"interact"): return
-	interaction.emit()
+	interaction.emit("npc_basia_001")
 
 
 func navigate_to_node(node: Node3D) -> void:
