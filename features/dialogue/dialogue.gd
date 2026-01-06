@@ -13,7 +13,7 @@ const LINES: JSON = preload("res://features/dialogue/lines.json")
 @onready var npcs: Node = %NPCs
 
 
-func _init() -> void:
+func _enter_tree() -> void:
 
 	Global.dialogue = self
 

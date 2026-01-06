@@ -64,7 +64,7 @@ font_size = 20
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
-[node name="CashRegister" type="StaticBody3D" groups=["cash_register"]]
+[node name="CashRegister" type="StaticBody3D"]
 script = ExtResource("1_46s2n")
 metadata/can_interact = false
 metadata/reticle_tooltip = ""

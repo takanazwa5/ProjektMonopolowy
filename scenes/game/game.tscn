@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://daih55gqatj4l"]
+[gd_scene load_steps=8 format=3 uid="uid://daih55gqatj4l"]
 
 [ext_resource type="Script" uid="uid://rdgopf70q038" path="res://scenes/game/game.gd" id="1_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://cjhr0bs1pbymv" path="res://features/pause_menu/pause_menu.tscn" id="2_7jktm"]
 [ext_resource type="PackedScene" uid="uid://bs2knhaaun6oi" path="res://features/level/level.tscn" id="3_ryrav"]
 [ext_resource type="PackedScene" uid="uid://x8jwi5g1tqbc" path="res://features/player/player.tscn" id="4_eow3j"]
+[ext_resource type="PackedScene" uid="uid://c2klqufu8iang" path="res://features/counter/counter.tscn" id="5_bdhmt"]
 [ext_resource type="PackedScene" uid="uid://wxlg7byvgxeh" path="res://features/dialogue/dialogue.tscn" id="5_lfrn8"]
+[ext_resource type="PackedScene" uid="uid://cnw60p50n4kaf" path="res://features/cash_register/cash_register.tscn" id="6_87uf6"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_fc0e3")
@@ -19,7 +21,15 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 transform = Transform3D(-0.97183, 0, -0.235685, 0, 1, 0, 0.235685, 0, -0.97183, -1.56016, 1.125, -2.03091)
 
-[node name="LooseItems" type="Node3D" parent="."]
+[node name="Counter" parent="." groups=["navigation_mesh_source_group"] instance=ExtResource("5_bdhmt")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34766, 0.124331, -1.64097)
+
+[node name="CashRegister" parent="." instance=ExtResource("6_87uf6")]
+unique_name_in_owner = true
+transform = Transform3D(-0.992185, 0, -0.124779, 0, 1, 0, 0.124779, 0, -0.992185, 1.74809, 1.12412, -1.67112)
+
+[node name="LooseItems" type="Node" parent="."]
 unique_name_in_owner = true
 
 [node name="Dialogue" parent="." instance=ExtResource("5_lfrn8")]

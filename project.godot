@@ -49,11 +49,7 @@ folder_colors={
 [global_group]
 
 items=""
-counter=""
-player=""
-fridge=""
-main_door=""
-cash_register=""
+navigation_mesh_source_group=""
 
 [input]
 

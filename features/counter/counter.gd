@@ -18,6 +18,11 @@ var _misc_counter: int = 0
 @onready var _items: Node = %Items
 
 
+func _enter_tree() -> void:
+
+	Global.counter = self
+
+
 func interact(event: InputEvent, item_in_hand: Item) -> void:
 
 	if not event.is_action_pressed(&"interact"): return

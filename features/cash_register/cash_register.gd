@@ -4,21 +4,21 @@ class_name CashRegister extends StaticBody3D
 signal transaction_finished
 
 
-var total : float = 0.0
-var paid : float = 0.0
-var change : float = 0.0
+var total: float = 0.0
+var paid: float = 0.0
+var change: float = 0.0
 
 
-@onready var total_label : Label = %TotalLabel
-@onready var paid_label : Label = %PaidLabel
-@onready var change_label : Label = %ChangeLabel
-@onready var drawer : CashRegisterDrawer = %Drawer
-@onready var labels_container : VBoxContainer = %LabelsContainer
+@onready var total_label: Label = %TotalLabel
+@onready var paid_label: Label = %PaidLabel
+@onready var change_label: Label = %ChangeLabel
+@onready var drawer: CashRegisterDrawer = %Drawer
+@onready var labels_container: VBoxContainer = %LabelsContainer
 
 
 func _ready() -> void:
 
-	for node : Money in get_tree().get_nodes_in_group(&"Cash"):
+	for node: Money in get_tree().get_nodes_in_group(&"Cash"):
 
 		node.interaction.connect(_on_cash_interaction)
 
