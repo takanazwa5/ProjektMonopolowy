@@ -1,0 +1,89 @@
+[gd_scene load_steps=10 format=3 uid="uid://c7w2lm7caac5r"]
+
+[ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_hsk28"]
+[ext_resource type="Resource" uid="uid://bj6xuwcf5mxt7" path="res://features/level/assets/mop/data_mop.tres" id="2_hsk28"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xs10a"]
+radius = 0.05
+height = 1.2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hsk28"]
+size = Vector3(0.4, 0.1, 0.1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_xs10a"]
+radius = 0.05
+height = 1.2
+
+[sub_resource type="BoxMesh" id="BoxMesh_hsk28"]
+size = Vector3(0.4, 0.1, 0.1)
+
+[sub_resource type="Animation" id="Animation_hsk28"]
+resource_name = "USE"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Meshes:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.34906584), Vector3(0, 0, 0), Vector3(0, 0, -0.34906584), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hbjfh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Meshes:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s7f7j"]
+_data = {
+&"RESET": SubResource("Animation_hbjfh"),
+&"USE": SubResource("Animation_hsk28")
+}
+
+[node name="Mop" type="RigidBody3D" groups=["items"]]
+collision_layer = 4
+collision_mask = 5
+freeze = true
+script = ExtResource("1_hsk28")
+data = ExtResource("2_hsk28")
+metadata/can_interact = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_xs10a")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.55, 0)
+shape = SubResource("BoxShape3D_hsk28")
+
+[node name="Meshes" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Meshes"]
+mesh = SubResource("CapsuleMesh_xs10a")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.55, 0)
+mesh = SubResource("BoxMesh_hsk28")
+skeleton = NodePath("../..")
+
+[node name="BottomMarker" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_s7f7j")
+}
