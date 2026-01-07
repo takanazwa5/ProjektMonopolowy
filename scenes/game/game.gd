@@ -6,14 +6,12 @@ class_name Game extends Node
 @onready var player: Player = %Player
 @onready var loose_items: Node = %LooseItems
 @onready var npcs: Node = %NPCs
-@onready var counter: Counter = %Counter
-@onready var cash_register: CashRegister = %CashRegister
 
 
 func _ready() -> void:
 
-	player.item_rig.item_entered.connect(counter.on_item_entered_rig)
-	player.item_rig.item_exited.connect(counter.on_item_exited_rig)
+	player.item_rig.item_entered.connect(level.counter.on_item_entered_rig)
+	player.item_rig.item_exited.connect(level.counter.on_item_exited_rig)
 	pause_menu.paused.connect(player.hud.on_game_paused)
 	pause_menu.unpaused.connect(player.hud.on_game_unpaused)
 
