@@ -9,7 +9,7 @@ class_name NPCGettingProductState extends NPCState
 func enter() -> void:
 
 	animation_tree.animation_finished.connect(_on_animation_finished)
-	npc.navigate_to_node(Global.level.fridge)
+	npc.navigate_to_node(Level.instance.fridge)
 	await npc.nav_agent.navigation_finished
 	animation_tree.set(&"parameters/pick_up/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
@@ -31,7 +31,7 @@ func physics_update(_delta: float) -> void:
 
 func _on_animation_finished(anim_name: StringName) -> void:
 
-	if anim_name == &"Rig/PickUp_Base": npc.navigate_to_node(Global.counter)
+	if anim_name == &"Rig/PickUp_Base": npc.navigate_to_node(Counter.instance)
 	await npc.nav_agent.navigation_finished
 	transition.emit(paying_state)
 

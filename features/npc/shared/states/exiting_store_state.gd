@@ -4,7 +4,7 @@ class_name NPCExitingStoreState extends NPCState
 func enter() -> void:
 
 	print("Basia wychodzi ze sklepu")
-	npc.navigate_to_node(Global.level.main_door)
+	npc.navigate_to_node(Level.instance.main_door)
 	await npc.nav_agent.navigation_finished
 	npc.call_deferred(&"queue_free") # NOTE: Crash when not deferred
 

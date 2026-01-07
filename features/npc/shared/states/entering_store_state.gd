@@ -16,7 +16,7 @@ func enter() -> void:
 	if wants_help:
 
 		print("Basiula jest leniwa i chce miec produkt przyniesiony na lade.")
-		npc.navigate_to_node(Global.counter)
+		npc.navigate_to_node(Counter.instance)
 		await npc.nav_agent.navigation_finished
 		transition.emit(waiting_for_product_state)
 

@@ -4,6 +4,9 @@ class_name CashRegister extends StaticBody3D
 signal transaction_finished
 
 
+static var instance: CashRegister = self
+
+
 var total: float = 0.0
 var paid: float = 0.0
 var change: float = 0.0
