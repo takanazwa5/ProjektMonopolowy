@@ -12,4 +12,5 @@ albedo_texture = ExtResource("1_ei2xe")
 metallic_texture = ExtResource("2_alypv")
 metallic_texture_channel = 2
 roughness_texture = ExtResource("2_alypv")
-roughness_texture_channel = 1
+roughness_texture_channel = 4
+texture_filter = 2

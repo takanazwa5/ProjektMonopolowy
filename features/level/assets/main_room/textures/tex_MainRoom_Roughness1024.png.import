@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db7ws5g0uw8a3"
-path.s3tc="res://.godot/imported/MainRoom_Base.png-2737e80949ef21ee2aad5d605b8b88c9.s3tc.ctex"
+uid="uid://ctirbc1v446f7"
+path.s3tc="res://.godot/imported/tex_MainRoom_Roughness1024.png-d932a7d5a2b581807a6b353eb75427b9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://features/level/assets/main_room/textures/MainRoom_Base.png"
-dest_files=["res://.godot/imported/MainRoom_Base.png-2737e80949ef21ee2aad5d605b8b88c9.s3tc.ctex"]
+source_file="res://features/level/assets/main_room/textures/tex_MainRoom_Roughness1024.png"
+dest_files=["res://.godot/imported/tex_MainRoom_Roughness1024.png-d932a7d5a2b581807a6b353eb75427b9.s3tc.ctex"]
 
 [params]
 

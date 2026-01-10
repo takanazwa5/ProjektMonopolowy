@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://bs2knhaaun6oi"]
+[gd_scene load_steps=69 format=3 uid="uid://bs2knhaaun6oi"]
 
 [ext_resource type="Script" uid="uid://nllfvbeeh8hn" path="res://features/level/level.gd" id="1_5cegx"]
 [ext_resource type="PackedScene" uid="uid://bfrkhd5j505xi" path="res://features/level/assets/beer_crates/meshes/beer_crates/bobr_crate.gltf" id="4_3vdyf"]
@@ -63,6 +63,7 @@
 [ext_resource type="PackedScene" uid="uid://dkgly1aj712f6" path="res://features/items/beer/beer_JP_bottle.tscn" id="46_1bd8k"]
 [ext_resource type="PackedScene" uid="uid://b7wqysvqquowd" path="res://features/items/beer/beer_mech_bottle.tscn" id="46_pr3tj"]
 [ext_resource type="PackedScene" uid="uid://ctondefrj34dv" path="res://features/level/assets/furniture/szafka.tscn" id="50_g4do5"]
+[ext_resource type="PackedScene" uid="uid://cvoxcj04c61ig" path="res://features/level/assets/main_room/meshes/Drzwi.glb" id="64_rr5fb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_raucf"]
 
@@ -104,20 +105,20 @@ shadow_enabled = true
 navigation_mesh = SubResource("NavigationMesh_ksyp5")
 
 [node name="Szafka" parent="NavigationRegion3D" instance=ExtResource("50_g4do5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.733, 0.132, 2.516)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.733, 0.004460484, 2.516)
 
 [node name="Szafka2" parent="NavigationRegion3D" instance=ExtResource("50_g4do5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.733, 0.132, 1.516)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.733, 0.004460484, 1.516)
 
 [node name="Freezer" parent="NavigationRegion3D" instance=ExtResource("41_tg0fj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.68207, 0.138333, -0.432348)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.68207, 0.010793477, -0.432348)
 
 [node name="Counter" parent="NavigationRegion3D" instance=ExtResource("9_qqrg4")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34766, 0.124331, -1.64097)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34766, -0.003208518, -1.64097)
 
 [node name="Szafka_Wielka" parent="NavigationRegion3D" instance=ExtResource("5_g4do5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.724, 0.126, -3.843)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.724, -0.0015395135, -3.843)
 
 [node name="Fridge" parent="NavigationRegion3D" instance=ExtResource("41_bqyah")]
 unique_name_in_owner = true
@@ -126,6 +127,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43781, 0, 0.375733)
 [node name="MainRoom" parent="NavigationRegion3D" instance=ExtResource("7_ksyp5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77862, 0, -3.96313)
 
+[node name="Drzwi" parent="NavigationRegion3D" instance=ExtResource("64_rr5fb")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -1.9287621, 0.00062455237, 3.7800431)
+
 [node name="MainDoor" type="Marker3D" parent="NavigationRegion3D" groups=["main_door"]]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54038, 0.369053, 3.56369)
@@ -133,90 +137,90 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54038, 0.369053, 3.56369)
 [node name="Furniture" type="Node" parent="NavigationRegion3D"]
 
 [node name="Szafka" parent="NavigationRegion3D/Furniture" instance=ExtResource("50_g4do5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.011, 0.132, 0.661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.011, 0.004460484, 0.661)
 
 [node name="Szafka2" parent="NavigationRegion3D/Furniture" instance=ExtResource("50_g4do5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.011, 0.132, 1.661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.011, 0.004460484, 1.661)
 
 [node name="Szafka3" parent="NavigationRegion3D/Furniture" instance=ExtResource("50_g4do5")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.011, 0.132, 1.661)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.011, 0.004460484, 1.661)
 
 [node name="Szafka4" parent="NavigationRegion3D/Furniture" instance=ExtResource("50_g4do5")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.011, 0.132, 0.661)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.011, 0.004460484, 0.661)
 
 [node name="BeerCrates" type="Node3D" parent="NavigationRegion3D/Furniture"]
 
 [node name="bobr_crate" parent="NavigationRegion3D/Furniture/BeerCrates" instance=ExtResource("4_3vdyf")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43926, 0.132079, 3.4934)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43926, 0.0045394897, 3.4934)
 
 [node name="bobr_crate2" parent="NavigationRegion3D/Furniture/BeerCrates" instance=ExtResource("4_3vdyf")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43926, 0.411503, 3.4934)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43926, 0.28396347, 3.4934)
 
 [node name="bobr_crate3" parent="NavigationRegion3D/Furniture/BeerCrates" instance=ExtResource("4_3vdyf")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43926, 0.694182, 3.4934)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43926, 0.56664246, 3.4934)
 
 [node name="boskie_crate" parent="NavigationRegion3D/Furniture/BeerCrates" instance=ExtResource("5_leaar")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.98625, 0.132079, 3.48866)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.98625, 0.0045394897, 3.48866)
 
 [node name="boskie_crate2" parent="NavigationRegion3D/Furniture/BeerCrates" instance=ExtResource("5_leaar")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.98625, 0.41081, 3.48866)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.98625, 0.28327048, 3.48866)
 
 [node name="jp_crate" parent="NavigationRegion3D/Furniture/BeerCrates" instance=ExtResource("6_msrsj")]
-transform = Transform3D(-0.0437066, 0, 0.999044, 0, 1, 0, -0.999044, 0, -0.0437066, 1.52666, 0.132079, 3.4836)
+transform = Transform3D(-0.0437066, 0, 0.999044, 0, 1, 0, -0.999044, 0, -0.0437066, 1.52666, 0.0045394897, 3.4836)
 
 [node name="2jp_crate2" parent="NavigationRegion3D/Furniture/BeerCrates" instance=ExtResource("6_msrsj")]
-transform = Transform3D(-0.0437066, 0, 0.999044, 0, 1, 0, -0.999044, 0, -0.0437066, 1.52666, 0.411025, 3.4836)
+transform = Transform3D(-0.0437066, 0, 0.999044, 0, 1, 0, -0.999044, 0, -0.0437066, 1.52666, 0.28348547, 3.4836)
 
 [node name="mech_crate" parent="NavigationRegion3D/Furniture/BeerCrates" instance=ExtResource("7_0uke6")]
-transform = Transform3D(0.185992, 0, 0.982551, 0, 1, 0, -0.982551, 0, 0.185992, 2.43462, 0.132079, 2.55803)
+transform = Transform3D(0.185992, 0, 0.982551, 0, 1, 0, -0.982551, 0, 0.185992, 2.43462, 0.0045394897, 2.55803)
 
 [node name="ovecky_crate" parent="NavigationRegion3D/Furniture/BeerCrates" instance=ExtResource("8_qlrdg")]
-transform = Transform3D(-0.155314, 0, 0.987865, 0, 1, 0, -0.987865, 0, -0.155314, 2.43745, 0.132079, 3.06614)
+transform = Transform3D(-0.155314, 0, 0.987865, 0, 1, 0, -0.987865, 0, -0.155314, 2.43745, 0.0045394897, 3.06614)
 
 [node name="tarka_crate" parent="NavigationRegion3D/Furniture/BeerCrates" instance=ExtResource("9_uv5uh")]
-transform = Transform3D(-0.102063, 0, 0.994778, 0, 1, 0, -0.994778, 0, -0.102063, -2.41943, 0.132079, -0.496236)
+transform = Transform3D(-0.102063, 0, 0.994778, 0, 1, 0, -0.994778, 0, -0.102063, -2.41943, 0.0045394897, -0.496236)
 
 [node name="tarka_crate2" parent="NavigationRegion3D/Furniture/BeerCrates" instance=ExtResource("9_uv5uh")]
-transform = Transform3D(0.0886338, 0, 0.996064, 0, 1, 0, -0.996064, 0, 0.0886338, 1.05149, 0.132079, 3.48018)
+transform = Transform3D(0.0886338, 0, 0.996064, 0, 1, 0, -0.996064, 0, 0.0886338, 1.05149, 0.0045394897, 3.48018)
 
 [node name="SkrzynkaNaPiwo6" parent="NavigationRegion3D/Furniture/BeerCrates" instance=ExtResource("14_ksyp5")]
-transform = Transform3D(0.194234, 0, 0.980955, 0, 1, 0, -0.980955, 0, 0.194234, 1.89375, 0.12829, 3.03442)
+transform = Transform3D(0.194234, 0, 0.980955, 0, 1, 0, -0.980955, 0, 0.194234, 1.89375, 0.0007504821, 3.03442)
 
 [node name="SkrzynkaNaPiwo8" parent="NavigationRegion3D/Furniture/BeerCrates" instance=ExtResource("14_ksyp5")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.564952, 0.12829, 3.49109)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.564952, 0.0007504821, 3.49109)
 
 [node name="SkrzynkaNaPiwo7" parent="NavigationRegion3D/Furniture/BeerCrates" instance=ExtResource("14_ksyp5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5015, 0.12829, -0.939139)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5015, 0.0007504821, -0.939139)
 
 [node name="Lights" type="Node" parent="."]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27894, 2.65579, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27894, 2.6085355, 0)
 shadow_enabled = true
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.65579, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.6085355, 0)
 shadow_enabled = true
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27894, 2.65579, -2.11835)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27894, 2.6085355, -2.11835)
 shadow_enabled = true
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.65579, -2.11835)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.6085355, -2.11835)
 shadow_enabled = true
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27894, 2.65579, 2.13073)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27894, 2.6085355, 2.13073)
 shadow_enabled = true
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.65579, 2.13073)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.6085355, 2.13073)
 shadow_enabled = true
 
 [node name="CashRegister" parent="." instance=ExtResource("10_3y4uf")]
 unique_name_in_owner = true
-transform = Transform3D(-0.992185, 0, -0.124779, 0, 1, 0, 0.124779, 0, -0.992185, 1.74809, 1.12412, -1.67112)
+transform = Transform3D(-0.992185, 0, -0.124779, 0, 1, 0, 0.124779, 0, -0.992185, 1.74809, 0.9965805, -1.67112)
 
 [node name="Cigarettes" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.27704, 1.90024, -3.21985)
@@ -224,157 +228,157 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.2770
 [node name="Silne" type="Node3D" parent="Cigarettes"]
 
 [node name="CigarettesSilne" parent="Cigarettes/Silne" instance=ExtResource("18_nbpy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0742803, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.053259254, 0)
 
 [node name="visuals" type="Node3D" parent="Cigarettes/Silne"]
 
 [node name="fajki_01_1" parent="Cigarettes/Silne/visuals" instance=ExtResource("30_wlhjx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.06)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.059999943)
 
 [node name="fajki_01_2" parent="Cigarettes/Silne/visuals" instance=ExtResource("30_wlhjx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.119999886)
 
 [node name="fajki_01_3" parent="Cigarettes/Silne/visuals" instance=ExtResource("30_wlhjx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.18000007)
 
 [node name="fajki_01_4" parent="Cigarettes/Silne/visuals" instance=ExtResource("30_wlhjx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.24000001)
 
 [node name="fajki_01_5" parent="Cigarettes/Silne/visuals" instance=ExtResource("30_wlhjx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.29999995)
 
 [node name="fajki_01_6" parent="Cigarettes/Silne/visuals" instance=ExtResource("30_wlhjx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.36000013)
 
 [node name="Alpaca" type="Node3D" parent="Cigarettes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
 
 [node name="CigarettesAlpaca" parent="Cigarettes/Alpaca" instance=ExtResource("19_wfuu4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0742803, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.053259254, 0)
 
 [node name="visuals" type="Node3D" parent="Cigarettes/Alpaca"]
 
 [node name="fajki_02_1" parent="Cigarettes/Alpaca/visuals" instance=ExtResource("31_73ji2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.06)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.059999943)
 
 [node name="fajki_02_2" parent="Cigarettes/Alpaca/visuals" instance=ExtResource("31_73ji2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.119999886)
 
 [node name="fajki_02_3" parent="Cigarettes/Alpaca/visuals" instance=ExtResource("31_73ji2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.18000007)
 
 [node name="fajki_02_4" parent="Cigarettes/Alpaca/visuals" instance=ExtResource("31_73ji2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.24000001)
 
 [node name="fajki_02_5" parent="Cigarettes/Alpaca/visuals" instance=ExtResource("31_73ji2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.29999995)
 
 [node name="fajki_02_6" parent="Cigarettes/Alpaca/visuals" instance=ExtResource("31_73ji2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.36000013)
 
 [node name="Masterfield" type="Node3D" parent="Cigarettes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
 
 [node name="CigarettesMasterfield" parent="Cigarettes/Masterfield" instance=ExtResource("20_whwvd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0742803, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.053259254, 0)
 
 [node name="visuals" type="Node3D" parent="Cigarettes/Masterfield"]
 
 [node name="fajki_03_1" parent="Cigarettes/Masterfield/visuals" instance=ExtResource("32_gy3pj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.06)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.059999943)
 
 [node name="fajki_03_2" parent="Cigarettes/Masterfield/visuals" instance=ExtResource("32_gy3pj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.119999886)
 
 [node name="fajki_03_3" parent="Cigarettes/Masterfield/visuals" instance=ExtResource("32_gy3pj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.18000007)
 
 [node name="fajki_03_4" parent="Cigarettes/Masterfield/visuals" instance=ExtResource("32_gy3pj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.24000001)
 
 [node name="fajki_03_5" parent="Cigarettes/Masterfield/visuals" instance=ExtResource("32_gy3pj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.29999995)
 
 [node name="fajki_03_6" parent="Cigarettes/Masterfield/visuals" instance=ExtResource("32_gy3pj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.36000013)
 
 [node name="Kiceroy" type="Node3D" parent="Cigarettes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0)
 
 [node name="CigarettesKiceroy" parent="Cigarettes/Kiceroy" instance=ExtResource("21_whwvd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0742803, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.053259254, 0)
 
 [node name="visuals" type="Node3D" parent="Cigarettes/Kiceroy"]
 
 [node name="fajki_04_1" parent="Cigarettes/Kiceroy/visuals" instance=ExtResource("33_d4cch")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.06)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.059999943)
 
 [node name="fajki_04_2" parent="Cigarettes/Kiceroy/visuals" instance=ExtResource("33_d4cch")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.119999886)
 
 [node name="fajki_04_3" parent="Cigarettes/Kiceroy/visuals" instance=ExtResource("33_d4cch")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.18000007)
 
 [node name="fajki_04_4" parent="Cigarettes/Kiceroy/visuals" instance=ExtResource("33_d4cch")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.24000001)
 
 [node name="fajki_04_5" parent="Cigarettes/Kiceroy/visuals" instance=ExtResource("33_d4cch")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.299859)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.29985905)
 
 [node name="fajki_04_6" parent="Cigarettes/Kiceroy/visuals" instance=ExtResource("33_d4cch")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.36000013)
 
 [node name="Platinum" type="Node3D" parent="Cigarettes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0, 0)
 
 [node name="CigarettesPlatinum" parent="Cigarettes/Platinum" instance=ExtResource("22_wlhjx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0742803, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.053259254, 0)
 
 [node name="visuals" type="Node3D" parent="Cigarettes/Platinum"]
 
 [node name="fajki_05_1" parent="Cigarettes/Platinum/visuals" instance=ExtResource("34_0aatt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.06)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.059999943)
 
 [node name="fajki_05_2" parent="Cigarettes/Platinum/visuals" instance=ExtResource("34_0aatt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.119999886)
 
 [node name="fajki_05_3" parent="Cigarettes/Platinum/visuals" instance=ExtResource("34_0aatt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.18000007)
 
 [node name="fajki_05_4" parent="Cigarettes/Platinum/visuals" instance=ExtResource("34_0aatt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.24000001)
 
 [node name="fajki_05_5" parent="Cigarettes/Platinum/visuals" instance=ExtResource("34_0aatt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.29999995)
 
 [node name="fajki_05_6" parent="Cigarettes/Platinum/visuals" instance=ExtResource("34_0aatt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.36000013)
 
 [node name="Mamboro" type="Node3D" parent="Cigarettes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
 [node name="CigarettesMamboro" parent="Cigarettes/Mamboro" instance=ExtResource("23_73ji2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0742803, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.053259254, 0)
 
 [node name="visuals" type="Node3D" parent="Cigarettes/Mamboro"]
 
 [node name="fajki_06_1" parent="Cigarettes/Mamboro/visuals" instance=ExtResource("35_go7u1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.06)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.059999943)
 
 [node name="fajki_06_2" parent="Cigarettes/Mamboro/visuals" instance=ExtResource("35_go7u1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.119999886)
 
 [node name="fajki_06_3" parent="Cigarettes/Mamboro/visuals" instance=ExtResource("35_go7u1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.18000007)
 
 [node name="fajki_06_4" parent="Cigarettes/Mamboro/visuals" instance=ExtResource("35_go7u1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.24000001)
 
 [node name="fajki_06_5" parent="Cigarettes/Mamboro/visuals" instance=ExtResource("35_go7u1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.29999995)
 
 [node name="fajki_06_6" parent="Cigarettes/Mamboro/visuals" instance=ExtResource("35_go7u1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12753952, -0.36000013)
 
 [node name="Beers" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47983, 0.927546, 0)
@@ -1346,43 +1350,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8127259, 1.2054436, -3.426
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24256623, 0.84291315, 0)
 
 [node name="WinoDobreto_1" parent="Wines/Musujace" groups=["items"] instance=ExtResource("28_2xqc7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.12753952, 0)
 
 [node name="WinoKwiat_1" parent="Wines/Musujace" groups=["items"] instance=ExtResource("29_rr5fb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20000005, -0.12753952, 0)
 
 [node name="WinoPippolo_1" parent="Wines/Musujace" groups=["items"] instance=ExtResource("30_klck8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39999998, -0.12753952, 0)
 
 [node name="WinoRuskiSzampan_1" parent="Wines/Musujace" groups=["items"] instance=ExtResource("31_vk6of")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.100000024, -0.12753952, 0)
 
 [node name="Premium" type="Node3D" parent="Wines"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24256623, 0.4215163, 0)
 
 [node name="WinoBreslau_1" parent="Wines/Premium" groups=["items"] instance=ExtResource("32_2xqc7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.12753952, 0)
 
 [node name="WinoJabluszkoPomorskie_1" parent="Wines/Premium" groups=["items"] instance=ExtResource("33_rr5fb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20000005, -0.12753952, 0)
 
 [node name="WinoKrolewskie_1" parent="Wines/Premium" groups=["items"] instance=ExtResource("34_klck8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.100000024, -0.12753952, 0)
 
 [node name="WinoZofia_1" parent="Wines/Premium" groups=["items"] instance=ExtResource("35_vk6of")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39999998, -0.12753952, 0)
 
 [node name="Jabole" type="Node3D" parent="Wines"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24256623, 0.0016889572, 0)
 
 [node name="WinoArena_1" parent="Wines/Jabole" groups=["items"] instance=ExtResource("28_tksdx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.002, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.12953949, 0)
 
 [node name="WinoSierzant_1" parent="Wines/Jabole" groups=["items"] instance=ExtResource("29_nca55")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, -0.002, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20000005, -0.12953949, 0)
 
 [node name="WinoTasTas_1" parent="Wines/Jabole" groups=["items"] instance=ExtResource("30_wo7fh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.002, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.100000024, -0.12953949, 0)
 
 [node name="WinoWino_1" parent="Wines/Jabole" groups=["items"] instance=ExtResource("31_0muuh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -0.002, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39999998, -0.12953949, 0)

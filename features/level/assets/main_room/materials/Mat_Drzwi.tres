@@ -5,6 +5,8 @@
 
 [resource]
 resource_name = "Mat_Drzwi"
+transparency = 4
 albedo_texture = ExtResource("1_ui3d5")
 roughness_texture = ExtResource("2_p8lkx")
 roughness_texture_channel = 1
+texture_filter = 2

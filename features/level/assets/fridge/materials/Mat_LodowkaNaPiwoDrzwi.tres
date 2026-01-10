@@ -9,3 +9,4 @@ transparency = 1
 albedo_texture = ExtResource("1_otrio")
 roughness_texture = ExtResource("2_74pw5")
 roughness_texture_channel = 4
+texture_filter = 2
