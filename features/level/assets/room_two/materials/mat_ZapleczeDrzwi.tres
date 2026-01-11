@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cu1nmtvbcj8wj"]
+
+[ext_resource type="Texture2D" uid="uid://bniqflafruph3" path="res://features/level/assets/room_two/textures/tex_ZapleczeDrzwi_Base256.png" id="1_drra4"]
+[ext_resource type="Texture2D" uid="uid://meahyvp8xc85" path="res://features/level/assets/room_two/textures/tex_ZapleczeDrzwi_Roughness256.png" id="2_qkweu"]
+
+[resource]
+resource_name = "mat_ZapleczeDrzwi"
+cull_mode = 2
+albedo_texture = ExtResource("1_drra4")
+roughness_texture = ExtResource("2_qkweu")
+roughness_texture_channel = 1
+texture_filter = 2

@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://d0cdir7mseubo"]
+
+[ext_resource type="Texture2D" uid="uid://bxygfe74benvi" path="res://features/level/assets/room_two/textures/tex_Rura1_Base256.png" id="1_xvu4w"]
+[ext_resource type="Texture2D" uid="uid://dj2k267xmjkay" path="res://features/level/assets/room_two/textures/tex_Rura1_Roughness256.png" id="2_w2orc"]
+
+[resource]
+resource_name = "mat_Rura"
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+albedo_texture = ExtResource("1_xvu4w")
+roughness_texture = ExtResource("2_w2orc")
+roughness_texture_channel = 1
+texture_filter = 2

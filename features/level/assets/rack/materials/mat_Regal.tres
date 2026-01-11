@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cxl46ahm2t4ss"]
+
+[ext_resource type="Texture2D" uid="uid://bego4w4vhtpmd" path="res://features/level/assets/rack/textures/tex_Regal_Base256.png" id="1_v5udj"]
+[ext_resource type="Texture2D" uid="uid://tqp0m66fhpes" path="res://features/level/assets/rack/textures/tex_Regal_Roughness256.png" id="2_e3eph"]
+
+[resource]
+resource_name = "mat_Regal"
+transparency = 4
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+albedo_texture = ExtResource("1_v5udj")
+roughness_texture = ExtResource("2_e3eph")
+roughness_texture_channel = 1
+texture_filter = 2

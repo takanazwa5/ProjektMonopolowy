@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://8swj6j55boou"]
+
+[ext_resource type="Texture2D" uid="uid://6tn0dx68jtvc" path="res://features/level/assets/nightstand/textures/tex_Szafka_Base256.png" id="1_064oc"]
+[ext_resource type="Texture2D" uid="uid://cfs7hgo5dqsi1" path="res://features/level/assets/nightstand/textures/tex_Szafka_Roughness256.png" id="2_coo57"]
+
+[resource]
+resource_name = "mat_Szafka"
+cull_mode = 2
+albedo_texture = ExtResource("1_064oc")
+roughness_texture = ExtResource("2_coo57")
+roughness_texture_channel = 1
+texture_filter = 2

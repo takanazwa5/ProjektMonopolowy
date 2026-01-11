@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b7w7vet3p2fud"]
+
+[ext_resource type="Texture2D" uid="uid://by3atadc8gfn2" path="res://features/level/assets/toilet/textures/tex_Kibel_Base256.png" id="1_sek8o"]
+[ext_resource type="Texture2D" uid="uid://c6wc8k2we858h" path="res://features/level/assets/toilet/textures/tex_Kibel_Roughness256.png" id="2_0mrg5"]
+
+[resource]
+resource_name = "mat_Kibel"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_sek8o")
+roughness_texture = ExtResource("2_0mrg5")
+roughness_texture_channel = 1
+texture_filter = 2

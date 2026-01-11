@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://4nnv6xllxyq5"]
+
+[ext_resource type="Texture2D" uid="uid://c3aiers0y5smv" path="res://features/level/assets/lighting/textures/tex_Lampa_Base128.png" id="1_ttryn"]
+[ext_resource type="Texture2D" uid="uid://dx76tpvhnb2vo" path="res://features/level/assets/lighting/textures/tex_Lampa_Roughness128.png" id="2_a3pa6"]
+
+[resource]
+resource_name = "mat_Lampa"
+cull_mode = 2
+albedo_texture = ExtResource("1_ttryn")
+roughness_texture = ExtResource("2_a3pa6")
+roughness_texture_channel = 1
+texture_filter = 2

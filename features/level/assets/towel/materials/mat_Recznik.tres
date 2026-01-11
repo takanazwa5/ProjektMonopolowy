@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dl1swnkq62wuc"]
+
+[ext_resource type="Texture2D" uid="uid://breps8pyt17jb" path="res://features/level/assets/towel/textures/tex_Recznik_Base128.png" id="1_hwarn"]
+[ext_resource type="Texture2D" uid="uid://bxmairyaemqr2" path="res://features/level/assets/towel/textures/tex_Recznik_Roughness128.png" id="2_nbeir"]
+
+[resource]
+resource_name = "mat_Recznik"
+cull_mode = 2
+albedo_texture = ExtResource("1_hwarn")
+roughness_texture = ExtResource("2_nbeir")
+roughness_texture_channel = 1
+texture_filter = 2

@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bypjh2353yqrf"]
+
+[ext_resource type="Texture2D" uid="uid://dnjj862rvn626" path="res://features/level/assets/tap/textures/tex_Kran_Base128.png" id="1_ovmib"]
+[ext_resource type="Texture2D" uid="uid://brgojoimqhwdj" path="res://features/level/assets/tap/textures/tex_Kran_Roughness128.png" id="2_7f0xl"]
+
+[resource]
+resource_name = "mat_Kran"
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+albedo_texture = ExtResource("1_ovmib")
+roughness_texture = ExtResource("2_7f0xl")
+roughness_texture_channel = 1
+texture_filter = 2

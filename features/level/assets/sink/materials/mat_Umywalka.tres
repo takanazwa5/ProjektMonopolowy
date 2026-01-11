@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cax34epkyjgin"]
+
+[ext_resource type="Texture2D" uid="uid://b4uu83u2y17we" path="res://features/level/assets/sink/textures/tex_Umywalka_Base256.png" id="1_w0vpp"]
+[ext_resource type="Texture2D" uid="uid://d2kpvd5w4c6lm" path="res://features/level/assets/sink/textures/tex_Umywalka_Rougness256.png" id="2_lck57"]
+
+[resource]
+resource_name = "mat_Umywalka"
+cull_mode = 2
+albedo_texture = ExtResource("1_w0vpp")
+roughness_texture = ExtResource("2_lck57")
+roughness_texture_channel = 1
+texture_filter = 2

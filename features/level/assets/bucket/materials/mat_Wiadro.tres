@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://y8vyo0hdao3j"]
+
+[ext_resource type="Texture2D" uid="uid://b605i6vudpfxm" path="res://features/level/assets/bucket/textures/tex_Wiadro_Base128.png" id="1_ma72u"]
+[ext_resource type="Texture2D" uid="uid://jrec5kfdlni2" path="res://features/level/assets/bucket/textures/tex_Wiadro_Roughness128.png" id="2_7fybg"]
+
+[resource]
+resource_name = "mat_Wiadro"
+transparency = 4
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+albedo_texture = ExtResource("1_ma72u")
+metallic = 0.25
+roughness_texture = ExtResource("2_7fybg")
+roughness_texture_channel = 1

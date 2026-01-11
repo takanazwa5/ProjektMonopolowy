@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://odhunfumgx36"]
+
+[ext_resource type="Texture2D" uid="uid://d1gokhor3mel2" path="res://features/level/assets/room_two/textures/RoomTwo_Base.png" id="1_76m6i"]
+[ext_resource type="Texture2D" uid="uid://di8seeddpnw32" path="res://features/level/assets/room_two/textures/RoomTwo_Roughness.png" id="2_xbf3q"]
+
+[resource]
+resource_name = "mat_RoomTwo"
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+albedo_texture = ExtResource("1_76m6i")
+roughness_texture = ExtResource("2_xbf3q")
+roughness_texture_channel = 1
+texture_filter = 2

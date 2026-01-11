@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://vevx8lduvjvi"]
+
+[ext_resource type="Texture2D" uid="uid://b7yj4qo5d11rg" path="res://features/level/assets/garbage/textures/tex_Smieci_Base128.png" id="1_wsqpv"]
+[ext_resource type="Texture2D" uid="uid://we8lj7w26x67" path="res://features/level/assets/garbage/textures/tex_Smieci_Roughness128.png" id="2_qoibf"]
+
+[resource]
+resource_name = "mat_Smieci"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_wsqpv")
+roughness_texture = ExtResource("2_qoibf")
+roughness_texture_channel = 1
+texture_filter = 2

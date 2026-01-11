@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://cu70e13fi17u6"]
+
+[ext_resource type="Texture2D" uid="uid://c8bmpcn7j6tt2" path="res://features/level/assets/bulb/textures/tex_Bulb_Base128.png" id="1_0gh56"]
+[ext_resource type="Texture2D" uid="uid://cufmym472m8p8" path="res://features/level/assets/bulb/textures/tex_Bulb_Emission128.png" id="2_30u1r"]
+[ext_resource type="Texture2D" uid="uid://dh4g6iok6sq7e" path="res://features/level/assets/bulb/textures/tex_Bulb_Roughness128.png" id="3_lbng5"]
+
+[resource]
+resource_name = "mat_Bulb"
+transparency = 4
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+albedo_texture = ExtResource("1_0gh56")
+roughness_texture = ExtResource("3_lbng5")
+roughness_texture_channel = 1
+emission_enabled = true
+emission_energy_multiplier = 0.0
+emission_texture = ExtResource("2_30u1r")
+texture_filter = 2

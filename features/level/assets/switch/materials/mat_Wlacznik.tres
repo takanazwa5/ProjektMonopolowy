@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://brb5knhl3dlxc"]
+
+[ext_resource type="Texture2D" uid="uid://bq4f2lvel34tc" path="res://features/level/assets/switch/textures/tex_Wlacznik_Base32.png" id="1_tdx0w"]
+[ext_resource type="Texture2D" uid="uid://cobv0jfhw44df" path="res://features/level/assets/switch/textures/tex_Wlacznik_Roughness32.png" id="2_2h6p6"]
+
+[resource]
+resource_name = "mat_Wlacznik"
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+albedo_texture = ExtResource("1_tdx0w")
+roughness_texture = ExtResource("2_2h6p6")
+roughness_texture_channel = 1
+texture_filter = 2

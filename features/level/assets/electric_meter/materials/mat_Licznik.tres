@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cm8ukvbe83gb"]
+
+[ext_resource type="Texture2D" uid="uid://bg4hdcnw8vdty" path="res://features/level/assets/electric_meter/textures/tex_Licznik_Base128.png" id="1_j7wcr"]
+[ext_resource type="Texture2D" uid="uid://cm0i5bw48b2fx" path="res://features/level/assets/electric_meter/textures/tex_Licznik_Roughness128.png" id="2_xqrdg"]
+
+[resource]
+resource_name = "mat_Licznik"
+cull_mode = 2
+albedo_texture = ExtResource("1_j7wcr")
+roughness_texture = ExtResource("2_xqrdg")
+roughness_texture_channel = 1
+texture_filter = 2
