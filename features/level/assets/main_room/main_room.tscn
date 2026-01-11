@@ -31,7 +31,6 @@ size = Vector3(0.939453, 0.732736, 0.126463)
 [node name="MainRoom" type="StaticBody3D"]
 
 [node name="MainRoom" parent="." instance=ExtResource("1_vg28g")]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("WorldBoundaryShape3D_ksyp5")

@@ -128,7 +128,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43781, 0, 0.375733)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77862, 0, -3.96313)
 
 [node name="Drzwi" parent="NavigationRegion3D" instance=ExtResource("64_rr5fb")]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -1.9287621, 0.00062455237, 3.7800431)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9298159, 0, 3.7706223)
 
 [node name="MainDoor" type="Marker3D" parent="NavigationRegion3D" groups=["main_door"]]
 unique_name_in_owner = true
@@ -195,27 +195,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5015, 0.0007504821, -0.939
 [node name="Lights" type="Node" parent="."]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27894, 2.6085355, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27894, 2.6084735, 0)
 shadow_enabled = true
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.6085355, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.6084735, 0)
 shadow_enabled = true
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27894, 2.6085355, -2.11835)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27894, 2.6084735, -2.11835)
 shadow_enabled = true
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.6085355, -2.11835)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.6084735, -2.11835)
 shadow_enabled = true
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27894, 2.6085355, 2.13073)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27894, 2.6084735, 2.13073)
 shadow_enabled = true
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.6085355, 2.13073)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.6084735, 2.13073)
 shadow_enabled = true
 
 [node name="CashRegister" parent="." instance=ExtResource("10_3y4uf")]
