@@ -8,14 +8,22 @@ signal dialogue_ended
 const LINES: JSON = preload("res://features/dialogue/lines.json")
 
 
+static var instance: Dialogue
+
+
 @onready var text: Label = %Text
 @onready var answers_container: VBoxContainer = %AnswersContainer
 @onready var npcs: Node = %NPCs
 
 
-func _enter_tree() -> void:
+func _init() -> void:
 
-	Global.dialogue = self
+	# NOTE: To byl akurat ostatni skrypt, w ktorym robilem ta zmiane.
+	# Za chiny nie chcialo tutaj dzialac, jak sie robilo przypisanie od razu w momencie deklaracji.
+	# Zakladam, ze race condition... W kazdym razie przypisanie w init daje rade.
+	# Nie wiem, czy kiedys nie bedzie z tego problemow, ale imo still wyglada ladniej
+	# niz ten Global...
+	instance = self
 
 
 func _ready() -> void:

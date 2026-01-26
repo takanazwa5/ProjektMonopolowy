@@ -26,8 +26,8 @@ func _ready() -> void:
 	interaction_raycast.collider_changed.connect(_on_interaction_raycast_collider_changed)
 	item_preview.item_entered.connect(hud.reticle.hide.unbind(1))
 	item_preview.item_exited.connect(hud.reticle.show)
-	Global.dialogue.dialogue_started.connect(_on_dialogue_started)
-	Global.dialogue.dialogue_ended.connect(_on_dialogue_ended)
+	Dialogue.instance.dialogue_started.connect(_on_dialogue_started)
+	Dialogue.instance.dialogue_ended.connect(_on_dialogue_ended)
 
 
 func _unhandled_input(event: InputEvent) -> void:

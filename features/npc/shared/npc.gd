@@ -22,8 +22,8 @@ func _ready() -> void:
 
 	info_label.visible = OS.is_debug_build()
 	nav_agent.navigation_finished.connect(_on_navigation_finished)
-	Global.dialogue.dialogue_started.connect(_on_dialogue_started)
-	Global.dialogue.dialogue_ended.connect(_on_dialogue_ended)
+	Dialogue.instance.dialogue_started.connect(_on_dialogue_started)
+	Dialogue.instance.dialogue_ended.connect(_on_dialogue_ended)
 
 
 func _physics_process(delta: float) -> void:
