@@ -2,34 +2,34 @@ class_name CashRegister extends StaticBody3D
 
 
 signal transaction_finished
+signal add_money_to_tray(money: Money)
+signal remove_money_from_tray(money: Money)
+
+var total: float = 0.0
+var paid: float = 0.0
+var change: float = 0.0
 
 
-var total : float = 0.0
-var paid : float = 0.0
-var change : float = 0.0
-
-
-@onready var total_label : Label = %TotalLabel
-@onready var paid_label : Label = %PaidLabel
-@onready var change_label : Label = %ChangeLabel
-@onready var drawer : CashRegisterDrawer = %Drawer
-@onready var labels_container : VBoxContainer = %LabelsContainer
+@onready var total_label: Label = %TotalLabel
+@onready var paid_label: Label = %PaidLabel
+@onready var change_label: Label = %ChangeLabel
+@onready var drawer: CashRegisterDrawer = %Drawer
+@onready var labels_container: VBoxContainer = %LabelsContainer
 
 
 func _ready() -> void:
-
-	for node : Money in get_tree().get_nodes_in_group(&"Cash"):
-
+	for node: Money in get_tree().get_nodes_in_group(&"Cash"):
 		node.interaction.connect(_on_cash_interaction)
 
+	var cash_tray: CashTray = get_tree().get_first_node_in_group(&"counter").get_node("%CashTray") as CashTray
+	cash_tray.total_in_tray_changed.connect(_on_total_in_tray_changed)
 
 func generate_random_order() -> void:
-
-	var total_rounding : float = [1.0, 0.5].pick_random()
+	var total_rounding: float = [1.0, 0.5].pick_random()
 	total = randf_range(50.0, 200.0)
 	total = snappedf(total, total_rounding)
 
-	var paid_rounding : float = [10.0, 20.0, 50.0].pick_random()
+	var paid_rounding: float = [10.0, 20.0, 50.0].pick_random()
 	paid = snappedf(total, paid_rounding)
 	paid += paid_rounding if paid <= total else 0.0
 
@@ -39,16 +39,13 @@ func generate_random_order() -> void:
 	labels_container.show()
 
 	if not drawer.open:
-
 		drawer.open_drawer()
 
 
 func _change_value_changed(value: float) -> void:
-
 	change = clampf(change + value, 0.0, 1000.0)
 	change_label.text = str(change)
 	if is_equal_approx(paid, total + change):
-
 		drawer.close_drawer()
 		labels_container.hide()
 		total = 0.0
@@ -57,6 +54,12 @@ func _change_value_changed(value: float) -> void:
 		transaction_finished.emit()
 
 
-func _on_cash_interaction(value: float) -> void:
+func _on_cash_interaction(money: Money, interaction_sign: int) -> void:
+	if interaction_sign == Money.ADD_SIGN:
+		add_money_to_tray.emit(money)
+	else:
+		remove_money_from_tray.emit(money)
 
-	_change_value_changed(value)
+func _on_total_in_tray_changed(total_in_tray: float) -> void:
+	var difference: float = snappedf(total_in_tray - change, 0.01)
+	_change_value_changed(difference)

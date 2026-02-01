@@ -83,6 +83,7 @@ collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 1.0
+bill_type = 0
 metadata/can_interact = true
 metadata/reticle_tooltip = "1 zł"
 
@@ -98,6 +99,7 @@ collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 2.0
+bill_type = 0
 metadata/can_interact = true
 metadata/reticle_tooltip = "2 zł"
 
@@ -113,6 +115,7 @@ collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 0.05
+bill_type = 0
 metadata/can_interact = true
 metadata/reticle_tooltip = "5 gr"
 
@@ -128,6 +131,7 @@ collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 5.0
+bill_type = 0
 metadata/can_interact = true
 metadata/reticle_tooltip = "5 zł"
 
@@ -143,6 +147,7 @@ collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 0.1
+bill_type = 0
 metadata/can_interact = true
 metadata/reticle_tooltip = "10 gr"
 
@@ -173,6 +178,7 @@ collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 0.2
+bill_type = 0
 metadata/can_interact = true
 metadata/reticle_tooltip = "20 gr"
 
@@ -203,6 +209,7 @@ collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hfhvn")
 value = 0.5
+bill_type = 0
 metadata/can_interact = true
 metadata/reticle_tooltip = "50 gr"
 

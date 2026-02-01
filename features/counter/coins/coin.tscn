@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b50j7eiyqtvii"]
+
+[ext_resource type="Script" uid="uid://cyad1f8m7ny81" path="res://features/counter/coins/coin.gd" id="1_38bad"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_38bad"]
+lightmap_size_hint = Vector2i(5, 4)
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.02
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8gxxb"]
+height = 0.02
+radius = 0.05
+
+[node name="Coin" type="StaticBody3D"]
+script = ExtResource("1_38bad")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_38bad")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_8gxxb")
