@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://lluh4pryxyhh"]
+
+[ext_resource type="Script" uid="uid://bstg0mdk3fti7" path="res://features/npc/shared/inventory/inventory.gd" id="1_f2pgk"]
+
+[node name="Inventory" type="Node3D" unique_id=708751401]
+script = ExtResource("1_f2pgk")

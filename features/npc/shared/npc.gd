@@ -8,6 +8,7 @@ const ROTATION_SPEED: float = 10.0
 const WALKING_SPEED: float = 1.5
 
 
+var wanted_products: Array[StringName]
 var _target_node: Node3D
 var _navigation_interrupted: bool = false
 
@@ -15,7 +16,7 @@ var _navigation_interrupted: bool = false
 @onready var nav_agent: NavigationAgent3D = %NavigationAgent3D
 @onready var animation_tree: AnimationTree = %AnimationTree
 @onready var state_machine: StateMachine = %StateMachine
-@onready var info_label: Label3D = %StateLabel
+@onready var inventory: Inventory = %Inventory
 
 
 func _ready() -> void:
