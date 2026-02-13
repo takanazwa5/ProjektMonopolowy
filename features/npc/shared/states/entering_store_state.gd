@@ -13,6 +13,8 @@ func enter() -> void:
 	print("Basiula skonczyla wchodzic do sklepu.")
 	var wants_help: bool = [true, false].pick_random()
 	print("Tu bedzie losowanie produktow, jakie chce Basiula. Na razie chce browara.")
+	npc.wanted_products = Level.instance.available_items.get_all_item_names()
+	print("Basiula chce: %s" % npc.wanted_products)
 	if wants_help:
 
 		print("Basiula jest leniwa i chce miec produkt przyniesiony na lade.")

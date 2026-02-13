@@ -79,8 +79,7 @@ func _place_item_on_counter(item: Item) -> void:
 		target = _cig_targets[_cigs_counter]
 		_cigs_counter += 1
 
-	elif item.data.type == ItemData.Type.PIWO:
-
+	elif item.data.type == ItemData.Type.PIWO or item.data.type == ItemData.Type.WINO:
 		if _beer_counter >= _beer_targets.size(): return
 		target = _beer_targets[_beer_counter]
 		_beer_counter += 1

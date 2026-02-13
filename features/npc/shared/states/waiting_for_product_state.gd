@@ -27,8 +27,7 @@ func physics_update(_delta: float) -> void:
 
 
 func _on_counter_item_placed(item_data: ItemData) -> void:
-
-	if not item_data.name == "bubr_bottle": return
+	if not npc.wanted_products.has(item_data.name): return
 	transition.emit(paying_state)
 
 
