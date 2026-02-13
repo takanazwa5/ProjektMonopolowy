@@ -1,7 +1,7 @@
 class_name ItemData extends Resource
 
 
-enum Type {SZLUGI, PIWO, MISC, APPLIANCE}
+enum Type {SZLUGI, PIWO, WINO, MISC, APPLIANCE}
 
 
 @export var name: StringName
