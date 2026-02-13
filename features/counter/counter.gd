@@ -7,7 +7,7 @@ signal item_placed(item_data: ItemData)
 const TWEEN_DURATION: float = 0.25
 
 
-static var instance: Counter = self
+static var instance: Counter
 
 
 var _cigs_counter: int = 0
@@ -20,6 +20,8 @@ var _misc_counter: int = 0
 @onready var _misc_targets: Array[Node] = get_tree().get_nodes_in_group(&"_misc_targets")
 @onready var _items: Node = %Items
 
+func _init() -> void:
+	instance = self
 
 func interact(event: InputEvent, item_in_hand: Item) -> void:
 

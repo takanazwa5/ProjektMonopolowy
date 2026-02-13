@@ -4,7 +4,7 @@ class_name CashRegister extends StaticBody3D
 signal transaction_finished
 
 
-static var instance: CashRegister = self
+static var instance: CashRegister
 
 
 var total: float = 0.0
@@ -18,6 +18,8 @@ var change: float = 0.0
 @onready var drawer: CashRegisterDrawer = %Drawer
 @onready var labels_container: VBoxContainer = %LabelsContainer
 
+func _init() -> void:
+	instance = self
 
 func _ready() -> void:
 
