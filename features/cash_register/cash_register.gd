@@ -21,6 +21,11 @@ var change: float = 0.0
 func _init() -> void:
 	instance = self
 
+func _init() -> void:
+
+	instance = self
+
+
 func _ready() -> void:
 
 	for node: Money in get_tree().get_nodes_in_group(&"Cash"):

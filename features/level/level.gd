@@ -2,6 +2,7 @@ class_name Level extends Node3D
 
 
 static var instance: Level
+static var instance: Level
 
 
 @onready var fridge: Node3D = %Fridge

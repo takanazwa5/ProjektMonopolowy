@@ -23,6 +23,11 @@ var _misc_counter: int = 0
 func _init() -> void:
 	instance = self
 
+func _init() -> void:
+
+	instance = self
+
+
 func interact(event: InputEvent, item_in_hand: Item) -> void:
 
 	if not event.is_action_pressed(&"interact"): return

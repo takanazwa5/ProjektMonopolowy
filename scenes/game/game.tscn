@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://daih55gqatj4l"]
+[gd_scene format=3 uid="uid://daih55gqatj4l"]
 
 [ext_resource type="Script" uid="uid://rdgopf70q038" path="res://scenes/game/game.gd" id="1_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://cjhr0bs1pbymv" path="res://features/pause_menu/pause_menu.tscn" id="2_7jktm"]
@@ -7,26 +7,26 @@
 [ext_resource type="PackedScene" uid="uid://wxlg7byvgxeh" path="res://features/dialogue/dialogue.tscn" id="5_lfrn8"]
 [ext_resource type="PackedScene" uid="uid://c7w2lm7caac5r" path="res://features/level/assets/mop/mop.tscn" id="7_87uf6"]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" unique_id=307375700]
 script = ExtResource("1_fc0e3")
 
-[node name="PauseMenu" parent="." instance=ExtResource("2_7jktm")]
+[node name="PauseMenu" parent="." unique_id=428111200 instance=ExtResource("2_7jktm")]
 unique_name_in_owner = true
 
-[node name="Level" parent="." instance=ExtResource("3_ryrav")]
+[node name="Level" parent="." unique_id=664272314 instance=ExtResource("3_ryrav")]
 unique_name_in_owner = true
 
-[node name="Player" parent="." instance=ExtResource("4_eow3j")]
+[node name="Player" parent="." unique_id=1979569210 instance=ExtResource("4_eow3j")]
 unique_name_in_owner = true
 transform = Transform3D(-0.97183, 0, -0.235685, 0, 1, 0, 0.235685, 0, -0.97183, -1.56016, 1.125, -2.03091)
 
-[node name="LooseItems" type="Node" parent="."]
+[node name="LooseItems" type="Node" parent="." unique_id=1335240280]
 unique_name_in_owner = true
 
-[node name="Mop" parent="LooseItems" instance=ExtResource("7_87uf6")]
+[node name="Mop" parent="LooseItems" unique_id=173667048 instance=ExtResource("7_87uf6")]
 transform = Transform3D(-4.371139e-08, -0.42261827, 0.90630776, 0, 0.90630776, 0.42261827, -1, 1.8473232e-08, -3.961597e-08, -2.4268317, 0.6911658, -1.5418394)
 
-[node name="Dialogue" parent="." instance=ExtResource("5_lfrn8")]
+[node name="Dialogue" parent="." unique_id=443213632 instance=ExtResource("5_lfrn8")]
 
-[node name="NPCs" type="Node" parent="."]
+[node name="NPCs" type="Node" parent="." unique_id=1344174553]
 unique_name_in_owner = true
