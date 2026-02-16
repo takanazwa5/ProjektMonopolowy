@@ -39,7 +39,6 @@ func _unload_inventory_on_counter() -> void:
 		interact_event.pressed = true
 		Counter.instance.interact(interact_event, item)
 
-
 func _on_transaction_finished() -> void:
 
 	transition.emit(packing_state)

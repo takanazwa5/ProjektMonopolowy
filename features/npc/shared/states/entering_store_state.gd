@@ -14,16 +14,14 @@ func enter() -> void:
 	var wants_help: bool = [true, false].pick_random()
 	print("Tu bedzie losowanie produktow, jakie chce Basiula. Na razie chce browara.")
 	npc.wanted_products = Level.instance.available_items.get_all_item_names()
-	print("Basiula chce: %s" % npc.wanted_products)
+	print("Basiula chce: ", npc.wanted_products)
 	if wants_help:
-
 		print("Basiula jest leniwa i chce miec produkt przyniesiony na lade.")
 		npc.navigate_to_node(Counter.instance)
 		await npc.nav_agent.navigation_finished
 		transition.emit(waiting_for_product_state)
 
 	else:
-
 		print("Basiula sama sobie znajdzie produkt.")
 		transition.emit(getting_product_state)
 

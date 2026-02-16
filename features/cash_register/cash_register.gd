@@ -21,11 +21,6 @@ var change: float = 0.0
 func _init() -> void:
 	instance = self
 
-func _init() -> void:
-
-	instance = self
-
-
 func _ready() -> void:
 
 	for node: Money in get_tree().get_nodes_in_group(&"Cash"):
@@ -34,12 +29,11 @@ func _ready() -> void:
 
 
 func generate_random_order() -> void:
-
-	var total_rounding : float = [1.0, 0.5].pick_random()
+	var total_rounding: float = [1.0, 0.5].pick_random()
 	total = randf_range(50.0, 200.0)
 	total = snappedf(total, total_rounding)
 
-	var paid_rounding : float = [10.0, 20.0, 50.0].pick_random()
+	var paid_rounding: float = [10.0, 20.0, 50.0].pick_random()
 	paid = snappedf(total, paid_rounding)
 	paid += paid_rounding if paid <= total else 0.0
 
