@@ -29,7 +29,7 @@ func _ready() -> void:
 	var navigation_mesh_instance: NavigationMesh = self.navigation_region.navigation_mesh
 	for point in navigation_mesh_instance.get_vertices():
 		if not _is_point_in_bounds(point): continue # Ignore out of bounds spawn points
-	
+
 		self.spawn_points.append(point)
 		var key: Vector2 = Vector2(point.x, point.z)
 		self.trash_registry[key] = false
@@ -72,7 +72,7 @@ func spawn_trash(count: int) -> void:
 
 func _on_child_entered_tree(node: Node) -> void:
 	if node is Trash: self.current_trash_count += 1
-	
+
 func _on_child_exited_tree(node: Node) -> void:
 	if node is Trash:
 		self.current_trash_count -= 1

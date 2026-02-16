@@ -8,16 +8,19 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="ProjektMonopolowy"
 run/main_scene="res://scenes/game/game.tscn"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://autoload/global.gd"
 DebugPanel="*res://autoload/debug_panel/debug_panel.tscn"
 DebugMenu="*res://autoload/debug_menu/debug_menu.tscn"
 
@@ -49,11 +52,7 @@ folder_colors={
 [global_group]
 
 items=""
-counter=""
-player=""
-fridge=""
-main_door=""
-cash_register=""
+navigation_mesh_source_group=""
 
 [input]
 
