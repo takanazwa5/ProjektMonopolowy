@@ -3,6 +3,7 @@ class_name AvailableItems extends Node
 @export var item_name_to_instance_map: Dictionary[StringName, Item] = {}
 @export var item_type_to_destination_map: Dictionary[ItemData.Type, Node3D] = {}
 @export var item_name_to_destination_map: Dictionary[StringName, Node3D] = {}
+@export var pickup_at_counter_required: Dictionary[StringName, bool] = {}
 
 func get_item(item_name: StringName) -> Item:
 	if item_name in item_name_to_instance_map:
@@ -15,6 +16,9 @@ func get_all_item_names() -> Array[StringName]:
 	return item_name_to_instance_map.keys()
 
 func get_item_destination_position(item_name: StringName) -> Node3D:
+	if pickup_at_counter_required.get(item_name, false):
+		return Counter.instance
+
 	if item_name in item_name_to_destination_map:
 		return item_name_to_destination_map[item_name]
 	

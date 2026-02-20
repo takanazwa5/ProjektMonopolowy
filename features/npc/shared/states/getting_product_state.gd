@@ -1,33 +1,44 @@
 class_name NPCGettingProductState extends NPCState
 
 var wanted_products: Array[StringName]
+var counter_pickup_required_products: Array[StringName]
 var current_product: StringName
 
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 @onready var animation_tree: AnimationTree = %AnimationTree
-@onready var paying_state: NPCPayingState = %PayingState
+@onready var standing_in_queue_state: NPCStandingInQueueState = %StandingInQueueState
 
 
 func enter() -> void:
-
 	animation_tree.animation_finished.connect(_on_animation_finished)
-	wanted_products = npc.wanted_products.duplicate()
-	current_product = wanted_products.pop_front()
-	_get_product(current_product)
+	counter_pickup_required_products = []
+	wanted_products = []
+	for product_name in npc.wanted_products:
+		if Level.instance.available_items.pickup_at_counter_required.get(product_name, false):
+			counter_pickup_required_products.append(product_name)
+		else:
+			wanted_products.append(product_name)
+
+	_go_to_next_product()
 
 
 func input_event(_event: InputEvent) -> void:
-
 	pass
 
 
 func update(_delta: float) -> void:
-
 	pass
 
 
 func physics_update(_delta: float) -> void:
 	pass
+
+func _go_to_next_product() -> void:
+	if wanted_products.size() > 0:
+		current_product = wanted_products.pop_front()
+		_get_product(current_product)
+	else:
+		transition.emit(standing_in_queue_state)
 
 func _get_product(product_name: StringName) -> void:
 	var item: Item = Level.instance.available_items.get_item(product_name)
@@ -48,15 +59,8 @@ func _get_product(product_name: StringName) -> void:
 func _on_animation_finished(anim_name: StringName) -> void:
 	if not anim_name == &"Rig/PickUp_Base": return
 
-	if wanted_products.size() > 0:
-		current_product = wanted_products.pop_front()
-		_get_product(current_product)
-	else:
-		npc.navigate_to_node(Counter.instance)
-		await npc.nav_agent.navigation_finished
-		transition.emit(paying_state)
+	_go_to_next_product()
 
 
 func exit() -> void:
-
 	animation_tree.animation_finished.disconnect(_on_animation_finished)

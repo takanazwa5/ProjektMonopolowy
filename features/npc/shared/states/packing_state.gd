@@ -35,5 +35,9 @@ func _on_animation_finished(anim_name: StringName) -> void:
 
 
 func exit() -> void:
-
 	animation_tree.animation_finished.disconnect(_on_animation_finished)
+	if Game.instance.npc_queue.peek() == npc:
+		Game.instance.npc_queue.dequeue()
+		Game.instance.move_npc_queue()
+	else:
+		push_error("NPC opuszczający kolejkę nie jest na jej początku!")

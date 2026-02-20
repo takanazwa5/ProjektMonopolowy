@@ -29,15 +29,7 @@ func physics_update(_delta: float) -> void:
 
 func _on_animation_finished(anim_name: StringName) -> void:
 	if anim_name == &"Rig/PutDown_Base":
-		_unload_inventory_on_counter()
 		CashRegister.instance.generate_random_order()
-
-func _unload_inventory_on_counter() -> void:
-	for item: Item in npc.inventory.get_items():
-		var interact_event: InputEventAction = InputEventAction.new()
-		interact_event.action = &"interact"
-		interact_event.pressed = true
-		Counter.instance.interact(interact_event, item)
 
 func _on_transaction_finished() -> void:
 

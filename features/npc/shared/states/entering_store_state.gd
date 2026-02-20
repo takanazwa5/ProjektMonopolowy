@@ -2,6 +2,7 @@ class_name NPCEnteringStoreState extends NPCState
 
 
 @onready var waiting_for_product_state: NPCWaitingForProductState = %WaitingForProductState
+@onready var standing_in_queue_state: NPCStandingInQueueState = %StandingInQueueState
 @onready var getting_product_state: NPCGettingProductState = %GettingProductState
 
 
@@ -17,10 +18,7 @@ func enter() -> void:
 	print("Basiula chce: ", npc.wanted_products)
 	if wants_help:
 		print("Basiula jest leniwa i chce miec produkt przyniesiony na lade.")
-		npc.navigate_to_node(Counter.instance)
-		await npc.nav_agent.navigation_finished
-		transition.emit(waiting_for_product_state)
-
+		transition.emit(standing_in_queue_state)
 	else:
 		print("Basiula sama sobie znajdzie produkt.")
 		transition.emit(getting_product_state)

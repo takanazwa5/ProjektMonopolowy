@@ -110,6 +110,10 @@ item_type_to_destination_map = {
 0: NodePath("../Szafka_Wielka"),
 1: NodePath("../Fridge")
 }
+pickup_at_counter_required = Dictionary[StringName, bool]({
+&"jabluszko_pomorskie": true,
+&"kiceroy": true
+})
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1955529485]
 environment = SubResource("Environment_l7qvs")
