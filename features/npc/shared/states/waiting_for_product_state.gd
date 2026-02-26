@@ -11,11 +11,11 @@ func enter() -> void:
 	npc.set_meta(&"can_interact", true)
 	print("Basiula podeszla do lady. Tu bedzie okienko dialogowe. Na razie czeka na bobra w butelce.")
 
-	if npc.inventory.get_items().size() > 0:
+	if not npc.inventory.get_items().is_empty():
 		print("Basiula ma loot w eq. Odkłada produkty na ladę.")
 		animation_tree.set(&"parameters/put_down/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
-	if npc.wanted_products.size() == 0:
+	if npc.wanted_products.is_empty():
 		transition.emit(paying_state)
 
 func input_event(_event: InputEvent) -> void:
@@ -37,7 +37,7 @@ func _on_counter_item_placed(item_data: ItemData) -> void:
 	if npc.wanted_products.has(item_data.name):
 		npc.wanted_products.erase(item_data.name)
 
-	if npc.wanted_products.size() == 0:
+	if npc.wanted_products.is_empty():
 		transition.emit(paying_state)
 
 func _unload_inventory_on_counter() -> void:

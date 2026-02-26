@@ -9,4 +9,4 @@ static var instance: Level
 @onready var available_items: AvailableItems = %AvailableItems
 
 func _init() -> void:
-  instance = self
+	instance = self

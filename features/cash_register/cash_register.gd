@@ -59,6 +59,7 @@ func _change_value_changed(value: float) -> void:
 		paid = 0.0
 		change = 0.0
 		transaction_finished.emit()
+	change_label.text = str(change)
 
 
 func _on_cash_interaction(value: float) -> void:

@@ -6,7 +6,7 @@ func _ready() -> void:
 	child_exiting_tree.connect(_on_item_exited_tree)
 
 func add_item(item: Item) -> void:
-	item.reparent(self )
+	item.reparent(self)
 
 func get_items() -> Array:
 	return get_children()
