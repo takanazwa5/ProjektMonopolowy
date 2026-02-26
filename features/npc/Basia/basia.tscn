@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://civlo6dh6d0kf"]
+[gd_scene format=3 uid="uid://civlo6dh6d0kf"]
 
 [ext_resource type="PackedScene" uid="uid://b6mt6074im8pm" path="res://features/npc/Basia/meshes/character_basia.glb" id="1_al82x"]
 [ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/shared/npc.gd" id="1_qlnrj"]
@@ -10,6 +10,8 @@
 [ext_resource type="Script" uid="uid://cxwj4xkryi0sb" path="res://features/npc/shared/states/paying_state.gd" id="8_a8t5c"]
 [ext_resource type="Script" uid="uid://y8uymo1mwu2j" path="res://features/npc/shared/states/packing_state.gd" id="9_mi72n"]
 [ext_resource type="Script" uid="uid://j2c8p210clnr" path="res://features/npc/shared/states/exiting_store_state.gd" id="10_qlnrj"]
+[ext_resource type="PackedScene" uid="uid://lluh4pryxyhh" path="res://features/npc/shared/inventory/inventory.tscn" id="11_xcwia"]
+[ext_resource type="Script" uid="uid://bvy8dv8yf6kir" path="res://features/npc/shared/states/standing_in_queue_state.gd" id="11_xgun3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wmxm7"]
 radius = 0.3
@@ -38,7 +40,6 @@ blend_point_1/node = SubResource("AnimationNodeAnimation_xcwia")
 blend_point_1/pos = 1.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vssg2"]
-graph_offset = Vector2(-334.674, 32.3195)
 nodes/output/position = Vector2(540, 140)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_a8t5c")
 nodes/Animation/position = Vector2(-140, 240)
@@ -52,7 +53,7 @@ nodes/walk_blend/node = SubResource("AnimationNodeBlendSpace1D_xgun3")
 nodes/walk_blend/position = Vector2(-120, 40)
 node_connections = [&"output", 0, &"pick_up", &"pick_up", 0, &"put_down", &"pick_up", 1, &"Animation 2", &"put_down", 0, &"walk_blend", &"put_down", 1, &"Animation"]
 
-[node name="Basia" type="CharacterBody3D"]
+[node name="Basia" type="CharacterBody3D" unique_id=1083104306]
 collision_layer = 8
 axis_lock_angular_x = true
 axis_lock_angular_z = true
@@ -60,13 +61,13 @@ script = ExtResource("1_qlnrj")
 metadata/can_interact = true
 metadata/reticle_tooltip = "Basia"
 
-[node name="character_basia" parent="." instance=ExtResource("1_al82x")]
+[node name="character_basia" parent="." unique_id=1559659875 instance=ExtResource("1_al82x")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=257209342]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CapsuleShape3D_wmxm7")
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=296371660]
 unique_name_in_owner = true
 path_desired_distance = 0.25
 target_desired_distance = 0.1
@@ -75,14 +76,12 @@ height = 2.0
 radius = 0.3
 debug_enabled = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=321422824]
 unique_name_in_owner = true
 root_node = NodePath("../character_basia")
-libraries = {
-&"Rig": ExtResource("2_0suly")
-}
+libraries/Rig = ExtResource("2_0suly")
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=2097160580]
 unique_name_in_owner = true
 root_node = NodePath("%AnimationTree/../character_basia")
 tree_root = SubResource("AnimationNodeBlendTree_vssg2")
@@ -95,44 +94,53 @@ parameters/put_down/internal_active = false
 parameters/put_down/request = 0
 parameters/walk_blend/blend_position = 0.0
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+[node name="StateMachine" type="Node" parent="." unique_id=178847961 node_paths=PackedStringArray("initial_state")]
 unique_name_in_owner = true
 script = ExtResource("4_atgwo")
 initial_state = NodePath("EnteringStoreState")
 metadata/_custom_type_script = "uid://de1lalif7l760"
 
-[node name="EnteringStoreState" type="Node" parent="StateMachine"]
+[node name="EnteringStoreState" type="Node" parent="StateMachine" unique_id=1954863897]
 script = ExtResource("5_fyrb5")
 metadata/_custom_type_script = "uid://dcedhanl8gfas"
 
-[node name="WaitingForProductState" type="Node" parent="StateMachine"]
+[node name="WaitingForProductState" type="Node" parent="StateMachine" unique_id=561394203]
 unique_name_in_owner = true
 script = ExtResource("6_a8t5c")
 metadata/_custom_type_script = "uid://dcedhanl8gfas"
 
-[node name="GettingProductState" type="Node" parent="StateMachine"]
+[node name="GettingProductState" type="Node" parent="StateMachine" unique_id=467135730]
 unique_name_in_owner = true
 script = ExtResource("7_mi72n")
 metadata/_custom_type_script = "uid://dcedhanl8gfas"
 
-[node name="PayingState" type="Node" parent="StateMachine"]
+[node name="PayingState" type="Node" parent="StateMachine" unique_id=1667042142]
 unique_name_in_owner = true
 script = ExtResource("8_a8t5c")
 metadata/_custom_type_script = "uid://q0lk35d56y2e"
 
-[node name="PackingState" type="Node" parent="StateMachine"]
+[node name="PackingState" type="Node" parent="StateMachine" unique_id=1870856866]
 unique_name_in_owner = true
 script = ExtResource("9_mi72n")
 metadata/_custom_type_script = "uid://q0lk35d56y2e"
 
-[node name="ExitingStoreState" type="Node" parent="StateMachine"]
+[node name="ExitingStoreState" type="Node" parent="StateMachine" unique_id=1730727420]
 unique_name_in_owner = true
 script = ExtResource("10_qlnrj")
 metadata/_custom_type_script = "uid://q0lk35d56y2e"
 
-[node name="StateLabel" type="Label3D" parent="."]
+[node name="StandingInQueueState" type="Node" parent="StateMachine" unique_id=987379819]
+unique_name_in_owner = true
+script = ExtResource("11_xgun3")
+
+[node name="StateLabel" type="Label3D" parent="." unique_id=1254783342]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86561, 0)
 billboard = 2
 font_size = 16
 outline_size = 6
+
+[node name="Inventory" parent="." unique_id=708751401 instance=ExtResource("11_xcwia")]
+unique_name_in_owner = true
+
+[editable path="Inventory"]

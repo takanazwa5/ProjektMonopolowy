@@ -35,21 +35,27 @@ func _unhandled_input(event: InputEvent) -> void:
 		rotate_x(event.relative.y * 0.001)
 
 	if event.is_action_pressed(&"interact"):
-
+		var are_hands_full: bool = is_instance_valid(item_rig.current_item)
 		if not _current_item.loose: _current_item.interaction.connect(_on_item_interaction)
-		_current_item.reparent(item_rig)
-		get_viewport().set_input_as_handled()
+		if not are_hands_full:
+			_current_item.reparent(item_rig)
+			get_viewport().set_input_as_handled()
+		else:
+			_remove_item_from_preview()
+			get_viewport().set_input_as_handled()
 
 	elif event.is_action_pressed(&"drop_item"):
+		_remove_item_from_preview()
+		get_viewport().set_input_as_handled()
 
-		if _current_item.loose:
+func _remove_item_from_preview() -> void:
+	if _current_item.loose:
+		_current_item.freeze = false
+		_current_item.transform = _original_transform
+		var game: Game = get_tree().current_scene
+		_current_item.reparent(game.loose_items, false)
 
-			_current_item.freeze = false
-			_current_item.transform = _original_transform
-			var game: Game = get_tree().current_scene
-			_current_item.reparent(game.loose_items, false)
-
-		else: _current_item.queue_free()
+	else: _current_item.queue_free()
 
 
 func _move_item_to_preview(item: Item) -> void:

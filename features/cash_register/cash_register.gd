@@ -18,11 +18,8 @@ var change: float = 0.0
 @onready var drawer: CashRegisterDrawer = %Drawer
 @onready var labels_container: VBoxContainer = %LabelsContainer
 
-
 func _init() -> void:
-
 	instance = self
-
 
 func _ready() -> void:
 
@@ -32,12 +29,11 @@ func _ready() -> void:
 
 
 func generate_random_order() -> void:
-
-	var total_rounding : float = [1.0, 0.5].pick_random()
+	var total_rounding: float = [1.0, 0.5].pick_random()
 	total = randf_range(50.0, 200.0)
 	total = snappedf(total, total_rounding)
 
-	var paid_rounding : float = [10.0, 20.0, 50.0].pick_random()
+	var paid_rounding: float = [10.0, 20.0, 50.0].pick_random()
 	paid = snappedf(total, paid_rounding)
 	paid += paid_rounding if paid <= total else 0.0
 
@@ -63,6 +59,7 @@ func _change_value_changed(value: float) -> void:
 		paid = 0.0
 		change = 0.0
 		transaction_finished.emit()
+	change_label.text = str(change)
 
 
 func _on_cash_interaction(value: float) -> void:

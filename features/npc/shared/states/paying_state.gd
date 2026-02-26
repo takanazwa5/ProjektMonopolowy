@@ -28,9 +28,8 @@ func physics_update(_delta: float) -> void:
 
 
 func _on_animation_finished(anim_name: StringName) -> void:
-
-	if anim_name == &"Rig/PutDown_Base": CashRegister.instance.generate_random_order()
-
+	if anim_name == &"Rig/PutDown_Base":
+		CashRegister.instance.generate_random_order()
 
 func _on_transaction_finished() -> void:
 
