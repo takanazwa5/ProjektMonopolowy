@@ -42,7 +42,7 @@ func _move_in_queue(queued_npc: Game.QueuedNPC) -> void:
 	if Game.instance.npc_queue.peek() == npc:
 		_move_to_counter()
 	else:
-		_move_behind_npc(queued_npc.npc)
+		_move_behind_npc(queued_npc.previous.npc)
 
 func _move_behind_npc(target_npc: NPC) -> void:
 	var queue_position: Node3D = _create_temporary_position_node()
