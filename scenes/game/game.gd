@@ -22,6 +22,7 @@ func _ready() -> void:
 	pause_menu.unpaused.connect(player.hud.on_game_unpaused)
 
 	DebugMenu.add_button(spawn_basia)
+	DebugMenu.add_button(spawn_babcia)
 	DebugMenu.add_button(change_window_mode)
 
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -34,14 +35,11 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	DebugPanel.add_property(Engine.get_frames_per_second(), "FPS", 1000)
 
-
 func spawn_basia() -> void:
-	var basia_scene: PackedScene = load("uid://civlo6dh6d0kf")
-	var basia: NPC = basia_scene.instantiate()
-	npcs.add_child(basia)
-	basia.position = Vector3(-1.48, 0.125, 3.42)
-	basia.rotation_degrees = Vector3(0.0, -180.0, 0.0)
+	_spawn_npc("uid://civlo6dh6d0kf", Vector3(-1.48, 0.125, 3.42), Vector3(0.0, -180.0, 0.0))
 
+func spawn_babcia() -> void:
+	_spawn_npc("uid://cnriyx451qbnt", Vector3(-1.48, 0.125, 3.42), Vector3(0.0, -180.0, 0.0))
 
 func change_window_mode() -> void:
 	var window: Window = get_window()
@@ -52,6 +50,13 @@ func move_npc_queue() -> void:
 	for queued_npc in npc_queue.list():
 		npc_in_queue_moved.emit(queued_npc)
 		await queued_npc.npc.nav_agent.navigation_finished
+
+func _spawn_npc(resource_id: String, position: Vector3, rotation_degrees: Vector3) -> void:
+	var npc_scene: PackedScene = load(resource_id)
+	var npc: NPC = npc_scene.instantiate()
+	npcs.add_child(npc)
+	npc.position = position
+	npc.rotation_degrees = rotation_degrees
 
 class NPCQueue:
 	var head: QueuedNPC
