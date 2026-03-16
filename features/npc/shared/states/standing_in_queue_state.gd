@@ -3,14 +3,12 @@ extends NPCState
 
 const QUEUE_SPACING: float = 1.0
 
-@onready var waiting_for_product_state: NPCWaitingForProductState = %WaitingForProductState
-
 func enter() -> void:
 	if Game.instance.npc_queue.is_empty():
 		print("Kolejka jest pusta.")
 		_move_to_counter()
 	else:
-		print("Basia staje w kolejce.")
+		print("%s staje w kolejce." % npc.name)
 		_move_to_queue_end()
 		
 	Game.instance.npc_queue.enqueue(npc)
@@ -26,19 +24,19 @@ func physics_update(_delta: float) -> void:
 	pass
 
 func _move_to_counter() -> void:
-	print("Basia podchodzi do lady.")
+	print("%s podchodzi do lady." % npc.name)
 	npc.navigate_to_node(Counter.instance)
 	await npc.nav_agent.navigation_finished
-	transition.emit(waiting_for_product_state)
+	transition.emit(npc.brain.get_next_state(self))
 
 func _move_to_queue_end() -> void:
-	print("Basia przesuwa się na koniec kolejki.")
+	print("%s przesuwa się na koniec kolejki." % npc.name)
 	_move_behind_npc(Game.instance.npc_queue.peek_tail())
 
 func _move_in_queue(queued_npc: Game.QueuedNPC) -> void:
 	if queued_npc.npc != npc: return
 
-	print("Basia przesuwa się w kolejce.")
+	print("%s przesuwa się w kolejce." % npc.name)
 	if Game.instance.npc_queue.peek() == npc:
 		_move_to_counter()
 	else:
