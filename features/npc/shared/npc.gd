@@ -18,7 +18,7 @@ var _navigation_interrupted: bool = false
 @onready var state_machine: StateMachine = %StateMachine
 @onready var info_label: Label3D = %StateLabel
 @onready var inventory: Inventory = %Inventory
-
+@onready var brain: NPCBrain = %Brain
 
 func _ready() -> void:
 
