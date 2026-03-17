@@ -1,3 +1,4 @@
+@abstract
 class_name NPCBrain
 extends Node
 
@@ -20,4 +21,5 @@ func get_next_state(state: NPCState) -> NPCState:
 		if state_from == state and (transition.size() <= 2 or transition[2].call()):
 			return state_to
 
+	push_error("No valid state transition found from state %s in NPC %s!" % [state.name, npc.name])
 	return null

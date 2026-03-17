@@ -1,6 +1,6 @@
 class_name Game extends Node
 
-signal npc_in_queue_moved(queued_npc: QueuedNPC)
+signal npc_in_queue_moved(queued_npc: QueuedNPC, position_in_queue: int)
 
 static var instance: Game
 
@@ -47,9 +47,11 @@ func change_window_mode() -> void:
 	else: window.mode = Window.MODE_WINDOWED
 
 func move_npc_queue() -> void:
+	var index: int = 0
 	for queued_npc in npc_queue.list():
-		npc_in_queue_moved.emit(queued_npc)
+		npc_in_queue_moved.emit(queued_npc, index)
 		await queued_npc.npc.nav_agent.navigation_finished
+		index += 1
 
 func _spawn_npc(resource_id: String, position: Vector3, rotation_degrees: Vector3) -> void:
 	var npc_scene: PackedScene = load(resource_id)
