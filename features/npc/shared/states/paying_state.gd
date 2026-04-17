@@ -2,28 +2,23 @@ class_name NPCPayingState extends NPCState
 
 
 @onready var animation_tree: AnimationTree = %AnimationTree
-@onready var packing_state: NPCPackingState = %PackingState
 
 
 func enter() -> void:
-
 	animation_tree.animation_finished.connect(_on_animation_finished)
 	CashRegister.instance.transaction_finished.connect(_on_transaction_finished)
 	animation_tree.set(&"parameters/put_down/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
 
 func input_event(_event: InputEvent) -> void:
-
 	pass
 
 
 func update(_delta: float) -> void:
-
 	pass
 
 
 func physics_update(_delta: float) -> void:
-
 	pass
 
 
@@ -32,11 +27,9 @@ func _on_animation_finished(anim_name: StringName) -> void:
 		CashRegister.instance.generate_random_order()
 
 func _on_transaction_finished() -> void:
-
-	transition.emit(packing_state)
+	transition.emit(npc.brain.get_next_state(self))
 
 
 func exit() -> void:
-
 	animation_tree.animation_finished.disconnect(_on_animation_finished)
 	CashRegister.instance.transaction_finished.disconnect(_on_transaction_finished)

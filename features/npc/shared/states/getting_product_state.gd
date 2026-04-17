@@ -6,7 +6,6 @@ var current_product: StringName
 
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 @onready var animation_tree: AnimationTree = %AnimationTree
-@onready var standing_in_queue_state: NPCStandingInQueueState = %StandingInQueueState
 
 
 func enter() -> void:
@@ -38,7 +37,7 @@ func _go_to_next_product() -> void:
 		current_product = wanted_products.pop_front()
 		_get_product(current_product)
 	else:
-		transition.emit(standing_in_queue_state)
+		transition.emit(npc.brain.get_next_state(self))
 
 func _get_product(product_name: StringName) -> void:
 	var item: Item = Level.instance.available_items.get_item(product_name)

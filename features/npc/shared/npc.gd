@@ -18,7 +18,7 @@ var _navigation_interrupted: bool = false
 @onready var state_machine: StateMachine = %StateMachine
 @onready var info_label: Label3D = %StateLabel
 @onready var inventory: Inventory = %Inventory
-
+@onready var brain: NPCBrain = %Brain
 
 func _ready() -> void:
 
@@ -65,6 +65,11 @@ func navigate_to_node(node: Node3D) -> void:
 	_target_node = node
 	nav_agent.target_position = _target_node.global_position
 
+func has_items_to_unload() -> bool:
+	return not inventory.get_items().is_empty()
+
+func wants_more_items() -> bool:
+	return not wanted_products.is_empty()
 
 func _on_navigation_finished() -> void:
 
