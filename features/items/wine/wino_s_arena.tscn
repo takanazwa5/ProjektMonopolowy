@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://brlv4vr5lvuuu"]
+[gd_scene format=3 uid="uid://brlv4vr5lvuuu"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_2f1pp"]
 [ext_resource type="Resource" uid="uid://hx04otlco6x8" path="res://features/items/item_data/wines/data_arena.tres" id="2_87viv"]
@@ -7,7 +7,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
 size = Vector3(0.10644531, 0.3695612, 0.12207031)
 
-[node name="WinoArena" type="RigidBody3D"]
+[node name="WinoArena" type="RigidBody3D" unique_id=2035769072 groups=["items"]]
 collision_layer = 4
 collision_mask = 5
 freeze = true
@@ -16,13 +16,13 @@ data = ExtResource("2_87viv")
 metadata/can_interact = true
 metadata/reticle_tooltip = "Arena"
 
-[node name="wino_s_arena" parent="." instance=ExtResource("2_ed0pj")]
+[node name="wino_s_arena" parent="." unique_id=709076203 instance=ExtResource("2_ed0pj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1399579825]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.045084834, 0)
 shape = SubResource("BoxShape3D_af87y")
 
-[node name="BottomMarker" type="Marker3D" parent="."]
+[node name="BottomMarker" type="Marker3D" parent="." unique_id=1082795624]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)
