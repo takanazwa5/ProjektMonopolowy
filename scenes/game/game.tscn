@@ -27,6 +27,7 @@ unique_name_in_owner = true
 transform = Transform3D(-4.371139e-08, -0.42261827, 0.90630776, 0, 0.90630776, 0.42261827, -1, 1.8473232e-08, -3.961597e-08, -2.4268317, 0.6911658, -1.5418394)
 
 [node name="Dialogue" parent="." unique_id=443213632 instance=ExtResource("5_lfrn8")]
+visible = false
 
 [node name="NPCs" type="Node" parent="." unique_id=1344174553]
 unique_name_in_owner = true

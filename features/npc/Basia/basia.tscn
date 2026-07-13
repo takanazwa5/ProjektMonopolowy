@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://civlo6dh6d0kf"]
 
+[ext_resource type="Script" uid="uid://ckjtqj244jejg" path="res://features/npc/Basia/basia.gd" id="1_26rf4"]
 [ext_resource type="PackedScene" uid="uid://b6mt6074im8pm" path="res://features/npc/Basia/meshes/character_basia.glb" id="1_al82x"]
-[ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/shared/npc.gd" id="1_qlnrj"]
 [ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/npc/shared/Rig.glb" id="2_0suly"]
 [ext_resource type="Script" uid="uid://de1lalif7l760" path="res://features/state_machine/state_machine.gd" id="4_atgwo"]
 [ext_resource type="Script" uid="uid://dppr5ot05fn28" path="res://features/npc/Basia/basia_brain.gd" id="4_vssg2"]
@@ -38,8 +38,10 @@ animation = &"Rig/Walk_Base"
 [sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_xgun3"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_qlnrj")
 blend_point_0/pos = 0.0
+blend_point_0/name = &"0"
 blend_point_1/node = SubResource("AnimationNodeAnimation_xcwia")
 blend_point_1/pos = 1.0
+blend_point_1/name = &"1"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vssg2"]
 nodes/output/position = Vector2(540, 140)
@@ -59,7 +61,7 @@ node_connections = [&"output", 0, &"pick_up", &"pick_up", 0, &"put_down", &"pick
 collision_layer = 8
 axis_lock_angular_x = true
 axis_lock_angular_z = true
-script = ExtResource("1_qlnrj")
+script = ExtResource("1_26rf4")
 metadata/can_interact = true
 metadata/reticle_tooltip = "Basia"
 

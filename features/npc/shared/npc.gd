@@ -1,6 +1,7 @@
 class_name NPC extends CharacterBody3D
 
 
+@warning_ignore("unused_signal")
 signal interaction(line_id: String)
 
 
@@ -52,12 +53,6 @@ func _process(_delta: float) -> void:
 	animation_tree.set(&"parameters/walk_blend/blend_position", blend_pos)
 
 	info_label.text = "vel: %.2f\n%s" % [velocity.length(), state_machine.current_state.name]
-
-
-func interact(event: InputEvent) -> void:
-
-	if not event.is_action_pressed(&"interact"): return
-	interaction.emit("npc_basia_001")
 
 
 func navigate_to_node(node: Node3D) -> void:
