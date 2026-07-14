@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://c8qn1016t6p06"]
+
+[ext_resource type="Script" uid="uid://dql1l8g8no421" path="res://features/loading_screen/loading_screen.gd" id="1_3siig"]
+
+[sub_resource type="Gradient" id="Gradient_4kr6d"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0.75, 0.8125, 1)
+colors = PackedColorArray(0.627451, 0.627451, 0.627451, 0, 0.627451, 0.627451, 0.627451, 1, 1, 1, 1, 0)
+metadata/_snap_enabled = true
+metadata/_snap_count = 16
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fi8pe"]
+gradient = SubResource("Gradient_4kr6d")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0.125)
+metadata/_snap_enabled = true
+metadata/_snap_count = 16
+
+[sub_resource type="Gradient" id="Gradient_3siig"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0.6875, 0.8125, 1)
+colors = PackedColorArray(0.36862746, 0.627451, 0.627451, 0, 0.36862746, 0.627451, 0.627451, 1, 1, 1, 1, 0)
+metadata/_snap_enabled = true
+metadata/_snap_count = 16
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4kr6d"]
+gradient = SubResource("Gradient_3siig")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0.125)
+metadata/_snap_enabled = true
+metadata/_snap_count = 16
+
+[node name="LoadingScreen" type="CanvasLayer" unique_id=1790536966]
+follow_viewport_enabled = true
+script = ExtResource("1_3siig")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1829383327]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="LoadingIndicator" type="TextureProgressBar" parent="ColorRect" unique_id=1305431668]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -64.0
+grow_horizontal = 0
+grow_vertical = 0
+value = 50.0
+fill_mode = 4
+texture_under = SubResource("GradientTexture2D_fi8pe")
+texture_progress = SubResource("GradientTexture2D_4kr6d")

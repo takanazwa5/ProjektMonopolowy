@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://byqugljogsx07"]
+[gd_scene format=3 uid="uid://byqugljogsx07"]
 
 [ext_resource type="Script" uid="uid://df18ypuxawk2o" path="res://scenes/main_menu/main_menu.gd" id="1_xtl3e"]
 [ext_resource type="AudioStream" uid="uid://dhtqahbcgq3xl" path="res://scenes/main_menu/assets/61392__gleepglop__beercanopening.wav" id="2_4gv6e"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=1365689591]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,13 +12,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xtl3e")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=183295392]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.15625, 0.15625, 0.15625, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=669407971]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -29,18 +29,18 @@ offset_right = 410.0
 offset_bottom = 49.0
 grow_vertical = 2
 
-[node name="StartButton" type="Button" parent="VBoxContainer"]
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=394475517]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "Graj"
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=1717967021]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "Wyjdź"
 
-[node name="BeerCanOpeningSound" type="AudioStreamPlayer" parent="."]
+[node name="BeerCanOpeningSound" type="AudioStreamPlayer" parent="." unique_id=313730604]
 unique_name_in_owner = true
 stream = ExtResource("2_4gv6e")

@@ -2,28 +2,31 @@ class_name Game extends Node
 
 signal npc_in_queue_moved(queued_npc: QueuedNPC, position_in_queue: int)
 
-static var instance: Game
+static var instance: Game = null
 
 @onready var pause_menu: PauseMenu = %PauseMenu
-@onready var level: Level = %Level
 @onready var player: Player = %Player
-@onready var loose_items: Node = %LooseItems
 @onready var npcs: Node = %NPCs
 
 var npc_queue: NPCQueue
+var debug_buttons: Array[Node] = []
 
 func _init() -> void:
 	instance = self
 
 func _ready() -> void:
-	player.item_rig.item_entered.connect(level.counter.on_item_entered_rig)
-	player.item_rig.item_exited.connect(level.counter.on_item_exited_rig)
+	LevelManager.level_unload_started.connect(_on_level_unload_started)
+	LevelManager.level_loaded.connect(_on_level_loaded)
+
+	if Level.instance == null:
+		LevelManager.load_from_initial_level()
+
 	pause_menu.paused.connect(player.hud.on_game_paused)
 	pause_menu.unpaused.connect(player.hud.on_game_unpaused)
 
-	DebugMenu.add_button(spawn_basia)
-	DebugMenu.add_button(spawn_babcia)
-	DebugMenu.add_button(change_window_mode)
+	debug_buttons.append(DebugMenu.add_button(spawn_basia))
+	debug_buttons.append(DebugMenu.add_button(spawn_babcia))
+	debug_buttons.append(DebugMenu.add_button(change_window_mode))
 
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -31,9 +34,22 @@ func _ready() -> void:
 
 	print("Game scene ready.")
 
-
 func _process(_delta: float) -> void:
 	DebugPanel.add_property(Engine.get_frames_per_second(), "FPS", 1000)
+
+func _notification(what: int) -> void:
+	if what != NOTIFICATION_PREDELETE: return
+
+	for button in debug_buttons:
+		button.queue_free()
+
+func connect_level_signals() -> void:
+	player.item_rig.item_entered.connect(Level.instance.counter.on_item_entered_rig)
+	player.item_rig.item_exited.connect(Level.instance.counter.on_item_exited_rig)
+
+func disconnect_level_signals() -> void:
+	player.item_rig.item_entered.disconnect(Level.instance.counter.on_item_entered_rig)
+	player.item_rig.item_exited.disconnect(Level.instance.counter.on_item_exited_rig)
 
 func spawn_basia() -> void:
 	_spawn_npc("uid://civlo6dh6d0kf", Vector3(-1.48, 0.125, 3.42), Vector3(0.0, -180.0, 0.0))
@@ -52,6 +68,16 @@ func move_npc_queue() -> void:
 		npc_in_queue_moved.emit(queued_npc, index)
 		await queued_npc.npc.nav_agent.navigation_finished
 		index += 1
+
+func _on_level_unload_started(_level: Level) -> void:
+	disconnect_level_signals()
+	for npc in npcs.get_children():
+		npc.queue_free()
+
+	npc_queue.clear()
+
+func _on_level_loaded(_level: Level) -> void:
+	connect_level_signals()
 
 func _spawn_npc(resource_id: String, position: Vector3, rotation_degrees: Vector3) -> void:
 	var npc_scene: PackedScene = load(resource_id)
@@ -87,6 +113,10 @@ class NPCQueue:
 				head.previous = null
 			return npc
 		return null
+
+	func clear() -> void:
+		head = null
+		tail = null
 
 	func peek() -> NPC:
 		if not self.is_empty():
