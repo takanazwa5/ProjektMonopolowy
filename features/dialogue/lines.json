@@ -19,6 +19,15 @@
 	},
 	"npc_basia_003": {
 		"speaker": "Basia",
-		"text": "test"
+		"text": "test",
+		"answers": [
+			{
+				"text": "powruuut",
+				"change_to": "npc_basia_001"
+			},
+			{
+				"text": "a jednak nie"
+			}
+		]
 	}
 }

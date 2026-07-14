@@ -3,6 +3,7 @@ class_name DialogueUI extends Control
 
 signal dialogue_ended
 signal next_line_requested(next: String)
+signal line_change_requested(change_to: String)
 
 
 @onready var npc_text: Label = %NPCText
@@ -23,17 +24,17 @@ func start_dialogue(speaker: String, text: String, answers: Array) -> void:
 		_add_answer("")
 
 	for answer: Dictionary in answers:
-		_add_answer(answer.get("text"), answer.get("next", ""))
+		_add_answer(answer.get("text"), answer.get("next", ""), answer.get("change_to", ""))
 
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	show()
 
 
-func _add_answer(text: String, next: String = "") -> void:
+func _add_answer(text: String, next: String = "", change_to: String = "") -> void:
 	var answer_button: Button = Button.new()
 	answer_button.text = text
 	answers_container.add_child(answer_button)
-	answer_button.pressed.connect(_on_answer_button_pressed.bind(next))
+	answer_button.pressed.connect(_on_answer_button_pressed.bind(next, change_to))
 	if next.is_empty():
 		answer_button.text += " [END CONVERSATION]"
 
@@ -44,9 +45,12 @@ func _end_dialogue() -> void:
 	dialogue_ended.emit()
 
 
-func _on_answer_button_pressed(next: String) -> void:
-	if next.is_empty():
-		_end_dialogue()
-		return
+func _on_answer_button_pressed(next: String, change_to: String) -> void:
+	if not change_to.is_empty():
+		line_change_requested.emit(change_to)
 
-	next_line_requested.emit(next)
+	if not next.is_empty():
+		next_line_requested.emit(next)
+
+	else:
+		_end_dialogue()
