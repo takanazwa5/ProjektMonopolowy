@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://gti6b8rgs80s"]
+
+[ext_resource type="Texture2D" uid="uid://cmhx83p14j5yj" path="res://features/items/vodka/textures/mat_wudeczka_Base_color.png" id="1_hcar2"]
+[ext_resource type="Texture2D" uid="uid://35jc57ojneko" path="res://features/items/vodka/textures/mat_wudeczka_Roughness.png" id="2_st0tt"]
+
+[resource]
+resource_name = "mat_wudeczka"
+albedo_texture = ExtResource("1_hcar2")
+roughness_texture = ExtResource("2_st0tt")
+roughness_texture_channel = 4

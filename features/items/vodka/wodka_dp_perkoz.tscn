@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dgog6c6qpajkv"]
+
+[ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_5nj21"]
+[ext_resource type="Resource" uid="uid://dm48vl6n3re8n" path="res://features/items/item_data/wines/data_dobreto.tres" id="2_gbknu"]
+[ext_resource type="PackedScene" uid="uid://dl3s87iu2aomg" path="res://features/items/vodka/meshes/wodka_dp_perkoz.glb" id="3_k0hhw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
+size = Vector3(0.095703125, 0.37017155, 0.111328125)
+
+[node name="WodkaPerkoz" type="RigidBody3D" unique_id=642046256 groups=["items"]]
+collision_layer = 4
+collision_mask = 5
+freeze = true
+script = ExtResource("1_5nj21")
+data = ExtResource("2_gbknu")
+metadata/can_interact = true
+metadata/reticle_tooltip = "Dobreto"
+
+[node name="wodka_dp_perkoz" parent="." unique_id=626923924 instance=ExtResource("3_k0hhw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1401683, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=278508955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04490173, 0)
+shape = SubResource("BoxShape3D_af87y")
+
+[node name="BottomMarker" type="Marker3D" parent="." unique_id=198277209]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13998117, 0)
