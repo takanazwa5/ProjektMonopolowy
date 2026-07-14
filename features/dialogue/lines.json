@@ -2,21 +2,23 @@
 	"npc_basia_001": {
 		"speaker": "Basia",
 		"text": "Bubr kurwa.",
-		"choices": [
+		"answers": [
 			{
 				"text": "yeet",
 				"next": "npc_basia_002"
 			},
 			{
-				"text": "ja pierdole jakie bydle XD",
-				"next": null
+				"text": "ja pierdole jakie bydle XD"
 			}
 		]
 	},
 	"npc_basia_002": {
 		"speaker": "Basia",
 		"text": "what's a yeet?",
-		"next": null,
-		"choices": null
+		"change_to": "npc_basia_003"
+	},
+	"npc_basia_003": {
+		"speaker": "Basia",
+		"text": "test"
 	}
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c00ket2ygk543"]
+[gd_scene format=3 uid="uid://c00ket2ygk543"]
 
 [ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_4gt0v"]
 [ext_resource type="PackedScene" uid="uid://bw1j0bcfw3cov" path="res://features/items/wine/meshes/wino_p_jabluszko_pomorskie.glb" id="2_4gt0v"]

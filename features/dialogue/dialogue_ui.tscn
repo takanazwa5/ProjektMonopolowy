@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://wxlg7byvgxeh"]
 
-[ext_resource type="Script" uid="uid://dcajhertautgu" path="res://features/dialogue/dialogue.gd" id="1_htxws"]
+[ext_resource type="Script" uid="uid://dcajhertautgu" path="res://features/dialogue/dialogue_ui.gd" id="1_of0ei"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_htxws"]
 font_size = 22
 
-[node name="Dialogue" type="Control" unique_id=761827991]
+[node name="DialogueUI" type="Control" unique_id=761827991]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_htxws")
+script = ExtResource("1_of0ei")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1355225434]
 layout_mode = 1
@@ -51,7 +51,7 @@ theme_override_constants/margin_bottom = 10
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/ScrollContainer/MarginContainer" unique_id=1937489529]
 layout_mode = 2
 
-[node name="Text" type="Label" parent="MarginContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" unique_id=785305337]
+[node name="NPCText" type="Label" parent="MarginContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" unique_id=785305337]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
