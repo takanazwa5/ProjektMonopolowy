@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://x8jwi5g1tqbc"]
+[gd_scene format=3 uid="uid://x8jwi5g1tqbc"]
 
 [ext_resource type="Script" uid="uid://xwirk8k81n2g" path="res://features/player/player.gd" id="1_k7k3i"]
 [ext_resource type="Script" uid="uid://de1lalif7l760" path="res://features/state_machine/state_machine.gd" id="2_abh15"]
@@ -214,75 +214,71 @@ _data = {
 &"RESET": SubResource("Animation_727pu")
 }
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" unique_id=1536598275]
 collision_layer = 2
 collision_mask = 9
 script = ExtResource("1_k7k3i")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1741102714]
 mesh = SubResource("CapsuleMesh_u4ddl")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1844459868]
 shape = SubResource("CapsuleShape3D_nkte3")
 
-[node name="CrouchCast" type="ShapeCast3D" parent="."]
+[node name="CrouchCast" type="ShapeCast3D" parent="." unique_id=737485962]
 unique_name_in_owner = true
 shape = SubResource("SphereShape3D_1j0sm")
 target_position = Vector3(0, 0.701, 0)
 
-[node name="CameraRoot" type="Node3D" parent="."]
+[node name="CameraRoot" type="Node3D" parent="." unique_id=1159598995]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
 
-[node name="Camera" type="Camera3D" parent="CameraRoot"]
+[node name="Camera" type="Camera3D" parent="CameraRoot" unique_id=448157770]
 unique_name_in_owner = true
 
-[node name="InteractionRaycast" parent="CameraRoot/Camera" node_paths=PackedStringArray("item_preview", "item_rig") instance=ExtResource("2_uqugw")]
+[node name="InteractionRaycast" parent="CameraRoot/Camera" unique_id=486293014 node_paths=PackedStringArray("item_preview", "item_rig") instance=ExtResource("2_uqugw")]
 unique_name_in_owner = true
 item_preview = NodePath("../ItemPreview")
 item_rig = NodePath("../ItemRig")
 
-[node name="ItemRig" parent="CameraRoot/Camera" instance=ExtResource("3_uqugw")]
+[node name="ItemRig" parent="CameraRoot/Camera" unique_id=115337645 instance=ExtResource("3_uqugw")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.093, -0.056, -0.123)
 
-[node name="ItemPreview" parent="CameraRoot/Camera" instance=ExtResource("4_uqugw")]
+[node name="ItemPreview" parent="CameraRoot/Camera" unique_id=1519468753 instance=ExtResource("4_uqugw")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15)
 
-[node name="HUD" parent="." node_paths=PackedStringArray("_item_preview") instance=ExtResource("5_k34i2")]
+[node name="HUD" parent="." unique_id=232565730 node_paths=PackedStringArray("_item_preview") instance=ExtResource("5_k34i2")]
 unique_name_in_owner = true
 _item_preview = NodePath("../CameraRoot/Camera/ItemPreview")
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+[node name="StateMachine" type="Node" parent="." unique_id=1633961503 node_paths=PackedStringArray("initial_state")]
 unique_name_in_owner = true
 script = ExtResource("2_abh15")
 initial_state = NodePath("IdleState")
 metadata/_custom_type_script = "uid://de1lalif7l760"
 
-[node name="IdleState" type="Node" parent="StateMachine"]
+[node name="IdleState" type="Node" parent="StateMachine" unique_id=836411561]
 unique_name_in_owner = true
 script = ExtResource("3_16d0v")
 
-[node name="WalkingState" type="Node" parent="StateMachine"]
+[node name="WalkingState" type="Node" parent="StateMachine" unique_id=1575047467]
 unique_name_in_owner = true
 script = ExtResource("4_5h70g")
 
-[node name="CrouchingState" type="Node" parent="StateMachine"]
+[node name="CrouchingState" type="Node" parent="StateMachine" unique_id=1700589582]
 unique_name_in_owner = true
 script = ExtResource("5_uxnsi")
 
-[node name="Animations" type="Node" parent="."]
+[node name="Animations" type="Node" parent="." unique_id=1644430181]
 
-[node name="HeadbobAnimationPlayer" type="AnimationPlayer" parent="Animations"]
+[node name="HeadbobAnimationPlayer" type="AnimationPlayer" parent="Animations" unique_id=1368079113]
 unique_name_in_owner = true
 root_node = NodePath("../..")
-libraries = {
-&"": SubResource("AnimationLibrary_lvrtv")
-}
+libraries/ = SubResource("AnimationLibrary_lvrtv")
 
-[node name="CrouchAnimationPlayer" type="AnimationPlayer" parent="Animations"]
+[node name="CrouchAnimationPlayer" type="AnimationPlayer" parent="Animations" unique_id=719649484]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_7rbjb")
-}
+libraries/ = SubResource("AnimationLibrary_7rbjb")

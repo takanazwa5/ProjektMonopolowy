@@ -25,18 +25,20 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	if event.is_action_pressed(&"drop_item"):
 
-		var game: Game = get_tree().current_scene
 		current_item.freeze = false
 		current_item.apply_impulse(-get_viewport().get_camera_3d().global_basis.z)
-		current_item.reparent(game.loose_items)
+		current_item.reparent(Level.instance.loose_items)
 
 	elif event.is_action_pressed(&"yeet_item"):
 
-		var game: Game = get_tree().current_scene
 		current_item.freeze = false
 		current_item.apply_impulse(-get_viewport().get_camera_3d().global_basis.z * YEET_FORCE)
-		current_item.reparent(game.loose_items)
+		current_item.reparent(Level.instance.loose_items)
 
+func reset_rig() -> void:
+	if is_instance_valid(current_item):
+		current_item.freeze = false
+		current_item.reparent(Level.instance.loose_items)
 
 func _move_item_to_rig(item: Item) -> void:
 

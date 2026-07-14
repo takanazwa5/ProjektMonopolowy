@@ -20,9 +20,7 @@ func _ready() -> void:
 
 	child_entered_tree.connect(_on_child_entered_tree)
 	child_exiting_tree.connect(_on_child_exited_tree)
-	for item: Item in get_tree().get_nodes_in_group(&"items"):
-
-		item.interaction.connect(_on_item_interaction)
+	connect_item_interactions()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -48,12 +46,19 @@ func _unhandled_input(event: InputEvent) -> void:
 		_remove_item_from_preview()
 		get_viewport().set_input_as_handled()
 
+func connect_item_interactions() -> void:
+	for item: Item in get_tree().get_nodes_in_group(&"items"):
+		item.interaction.connect(_on_item_interaction)
+
+func disconnect_item_interactions() -> void:
+	for item: Item in get_tree().get_nodes_in_group(&"items"):
+		item.interaction.disconnect(_on_item_interaction)
+
 func _remove_item_from_preview() -> void:
 	if _current_item.loose:
 		_current_item.freeze = false
 		_current_item.transform = _original_transform
-		var game: Game = get_tree().current_scene
-		_current_item.reparent(game.loose_items, false)
+		_current_item.reparent(Level.instance.loose_items, false)
 
 	else: _current_item.queue_free()
 

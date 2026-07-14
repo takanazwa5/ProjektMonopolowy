@@ -11,6 +11,7 @@ signal closed
 func _ready() -> void:
 
 	back_button.pressed.connect(_on_back_button_pressed)
+	LevelManager.level_unloaded.connect(_close)
 
 
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -29,7 +30,7 @@ func _close() -> void:
 	closed.emit()
 
 
-func add_button(callable: Callable) -> void:
+func add_button(callable: Callable) -> Node:
 
 	var button: Button = Button.new()
 	var script_name: StringName = callable.get_object().get_script().get_global_name()
@@ -38,6 +39,7 @@ func add_button(callable: Callable) -> void:
 	button.pressed.connect(callable)
 	buttons_container.add_child(button)
 	buttons_container.move_child(button, 0)
+	return button
 
 
 func _on_back_button_pressed() -> void:

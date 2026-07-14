@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelStateData" format=3 uid="uid://rxu7vmxcmr8q"]
+
+[ext_resource type="Script" uid="uid://cagluo3p4lry4" path="res://autoload/level_manager/level_state_data.gd" id="1_mumgs"]
+
+[resource]
+script = ExtResource("1_mumgs")
+cash_in_register = 10.0
+metadata/_custom_type_script = "uid://cagluo3p4lry4"
