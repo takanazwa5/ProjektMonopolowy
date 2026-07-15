@@ -56,3 +56,4 @@ func _look_at_counter() -> void:
 
 func exit() -> void:
 	Game.instance.npc_in_queue_moved.disconnect(_move_in_queue)
+	CashRegister.instance.start_new_order()
