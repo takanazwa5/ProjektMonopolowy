@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://bu7l60yv00wc"]
+[gd_resource type="Resource" script_class="ProductData" format=3 uid="uid://bu7l60yv00wc"]
 
-[ext_resource type="Script" uid="uid://rfypjk406hn7" path="res://features/items/item_data/item_data.gd" id="1_52tqu"]
+[ext_resource type="Script" uid="uid://bjdyvmcp7aon" path="res://features/items/item_data/product_data.gd" id="1_52tqu"]
 
 [resource]
 script = ExtResource("1_52tqu")
+price = 2.6
 name = &"mech_bottle"
 type = 1
 preview_zoom = -0.28
-metadata/_custom_type_script = "uid://rfypjk406hn7"
+metadata/_custom_type_script = "uid://bjdyvmcp7aon"

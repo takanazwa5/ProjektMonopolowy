@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bultpbaukmflj"]
+[gd_resource type="Resource" script_class="ProductData" format=3 uid="uid://bultpbaukmflj"]
 
-[ext_resource type="Script" uid="uid://rfypjk406hn7" path="res://features/items/item_data/item_data.gd" id="1_867ok"]
+[ext_resource type="Script" uid="uid://bjdyvmcp7aon" path="res://features/items/item_data/product_data.gd" id="1_867ok"]
 
 [resource]
 script = ExtResource("1_867ok")
+price = 3.5
 name = &"tas_tas"
 type = 2
 preview_zoom = -0.4
-metadata/_custom_type_script = "uid://rfypjk406hn7"
+metadata/_custom_type_script = "uid://bjdyvmcp7aon"

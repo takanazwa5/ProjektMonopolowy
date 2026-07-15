@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bivetmp0xkw1r"]
+[gd_resource type="Resource" script_class="ProductData" format=3 uid="uid://bivetmp0xkw1r"]
 
-[ext_resource type="Script" uid="uid://rfypjk406hn7" path="res://features/items/item_data/item_data.gd" id="1_v2o1i"]
+[ext_resource type="Script" uid="uid://bjdyvmcp7aon" path="res://features/items/item_data/product_data.gd" id="1_v2o1i"]
 
 [resource]
 script = ExtResource("1_v2o1i")
+price = 3.5
 name = &"krolewskie"
 type = 2
 preview_zoom = -0.4
-metadata/_custom_type_script = "uid://rfypjk406hn7"
+metadata/_custom_type_script = "uid://bjdyvmcp7aon"
