@@ -11,6 +11,7 @@ signal level_loaded(level: Level)
 @export var main_menu_scene: PackedScene = null
 
 var level_state: LevelStateData = null
+var current_level_data: LevelData = null
 
 func _ready() -> void:
 	if level_queue.size() == 0:
@@ -49,9 +50,11 @@ func _load_level(level_data: LevelData) -> void:
 	var level_instance: Node = level_data.level_scene.instantiate()
 	var game_scene: Node = get_tree().current_scene
 	if game_scene is Game:
+		current_level_data = level_data
 		game_scene.add_child(level_instance)
 	else:
 		push_error("Current scene is not a Game scene. Cannot add level instance.")
+		current_level_data = null
 		level_load_failed.emit(level_data.level_scene, ERR_SCRIPT_FAILED)
 		return
 	
@@ -61,5 +64,6 @@ func _unload_previous_level() -> void:
 	if Level.instance == null: return
 	level_unload_started.emit(Level.instance)
 	
+	current_level_data = null
 	Level.instance.queue_free()
 	level_unloaded.emit()

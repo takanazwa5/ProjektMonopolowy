@@ -4,14 +4,8 @@
 [ext_resource type="Resource" uid="uid://rxu7vmxcmr8q" path="res://config/initial_level_state.tres" id="2_3vvs6"]
 [ext_resource type="Script" uid="uid://d0nkoyxfafos7" path="res://autoload/level_manager/level_data.gd" id="3_5hb4k"]
 [ext_resource type="PackedScene" uid="uid://byqugljogsx07" path="res://scenes/main_menu/main_menu.tscn" id="4_v24mw"]
-[ext_resource type="PackedScene" uid="uid://bs2knhaaun6oi" path="res://features/level/level.tscn" id="4_wclss"]
+[ext_resource type="Resource" uid="uid://dy062cfd6qfun" path="res://autoload/level_manager/levels/level0.tres" id="4_wclss"]
 [ext_resource type="PackedScene" uid="uid://7aruhk73v6yi" path="res://features/level/level1.tscn" id="5_hdikn"]
-
-[sub_resource type="Resource" id="Resource_8udjp"]
-script = ExtResource("3_5hb4k")
-level_name = "Level0"
-level_scene = ExtResource("4_wclss")
-metadata/_custom_type_script = "uid://d0nkoyxfafos7"
 
 [sub_resource type="Resource" id="Resource_1xmrj"]
 script = ExtResource("3_5hb4k")
@@ -22,5 +16,5 @@ metadata/_custom_type_script = "uid://d0nkoyxfafos7"
 [node name="LevelManager" type="Node" unique_id=144135371]
 script = ExtResource("1_7j12w")
 initial_level_state = ExtResource("2_3vvs6")
-level_queue = Array[ExtResource("3_5hb4k")]([SubResource("Resource_8udjp"), SubResource("Resource_1xmrj")])
+level_queue = Array[ExtResource("3_5hb4k")]([ExtResource("4_wclss"), SubResource("Resource_1xmrj")])
 main_menu_scene = ExtResource("4_v24mw")
