@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://nllfvbeeh8hn" path="res://features/level/level.gd" id="1_q40se"]
 [ext_resource type="Script" uid="uid://c8vbghjub1kln" path="res://features/level/assets/available_items/available_items.gd" id="2_45e65"]
+[ext_resource type="PackedScene" uid="uid://dad06ncahlhw5" path="res://features/level_event/level_events_manager.tscn" id="3_q40se"]
 [ext_resource type="PackedScene" uid="uid://c2klqufu8iang" path="res://features/counter/counter.tscn" id="3_wdhnv"]
+[ext_resource type="PackedScene" uid="uid://cmdf8awahumc3" path="res://features/level/npc_spawner.tscn" id="4_45e65"]
 [ext_resource type="PackedScene" uid="uid://cnw60p50n4kaf" path="res://features/cash_register/cash_register.tscn" id="4_ll4kl"]
 [ext_resource type="PackedScene" uid="uid://c35ghy3nh7v8p" path="res://features/level/assets/freezer/freezer.tscn" id="6_v6tcu"]
 [ext_resource type="PackedScene" uid="uid://bf60h6vttmjmp" path="res://features/level/assets/furniture/szafka_wielka.tscn" id="7_03up3"]
@@ -94,7 +96,7 @@ agent_radius = 0.3
 agent_max_climb = 0.1
 edge_max_error = 1.0
 
-[node name="Level" type="Node3D" unique_id=1068480335]
+[node name="Level1" type="Node3D" unique_id=1068480335]
 script = ExtResource("1_q40se")
 
 [node name="AvailableItems" type="Node" parent="." unique_id=1624505476]
@@ -104,6 +106,12 @@ pickup_at_counter_required = Dictionary[StringName, bool]({
 &"jabluszko_pomorskie": true,
 &"kiceroy": true
 })
+
+[node name="LevelEventsManager" parent="." unique_id=1034128931 instance=ExtResource("3_q40se")]
+
+[node name="NpcSpawner" parent="." unique_id=314849636 node_paths=PackedStringArray("spawn_point") instance=ExtResource("4_45e65")]
+unique_name_in_owner = true
+spawn_point = NodePath("../MainDoor")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1955529485]
 environment = SubResource("Environment_l7qvs")

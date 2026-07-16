@@ -1,4 +1,5 @@
-class_name Level extends Node3D
+class_name Level 
+extends Node3D
 
 
 static var instance: Level
@@ -9,6 +10,8 @@ static var instance: Level
 @onready var loose_items: Node = %LooseItems
 @onready var player_start: Marker3D = %PlayerStart
 @onready var available_items: AvailableItems = %AvailableItems
+@onready var npc_spawner: NPCSpawner = %NpcSpawner
+@onready var trash_container: TrashContainer = %TrashContainer
 
 func _init() -> void:
 	instance = self

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dad06ncahlhw5"]
+
+[ext_resource type="Script" uid="uid://bwxl0hw16yv0b" path="res://features/level_event/level_events_manager.gd" id="1_1hk8p"]
+
+[node name="LevelEventsManager" type="Node" unique_id=1034128931]
+script = ExtResource("1_1hk8p")
+metadata/_custom_type_script = "uid://bwxl0hw16yv0b"
+
+[node name="CooldownTimer" type="Timer" parent="." unique_id=9296617]
+unique_name_in_owner = true
+one_shot = true
