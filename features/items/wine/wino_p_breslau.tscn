@@ -14,7 +14,7 @@ freeze = true
 script = ExtResource("1_or3wt")
 data = ExtResource("2_2tulp")
 metadata/can_interact = true
-metadata/reticle_tooltip = ""
+metadata/reticle_tooltip = "Breslau"
 
 [node name="wino_p_breslau" parent="." unique_id=1296700530 instance=ExtResource("2_or3wt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)

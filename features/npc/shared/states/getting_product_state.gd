@@ -13,10 +13,17 @@ func enter() -> void:
 	counter_pickup_required_products = []
 	wanted_products = []
 	for product_name in npc.wanted_products:
-		if Level.instance.available_items.pickup_at_counter_required.get(product_name, false):
+		var available_items: AvailableItems = Level.instance.available_items
+		if available_items.pickup_at_counter_required.get(product_name, false):
 			counter_pickup_required_products.append(product_name)
-		else:
-			wanted_products.append(product_name)
+			continue
+
+		var product_type: ItemData.Type = available_items.get_item(product_name).data.type
+		if available_items.pickup_at_counter_type_required.get(product_type, false):
+			counter_pickup_required_products.append(product_name)
+			continue
+
+		wanted_products.append(product_name)
 
 	_go_to_next_product()
 

@@ -38,8 +38,10 @@ animation = &"Rig/Walk_Base"
 [sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_xgun3"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_qlnrj")
 blend_point_0/pos = 0.0
+blend_point_0/name = &"0"
 blend_point_1/node = SubResource("AnimationNodeAnimation_xcwia")
 blend_point_1/pos = 1.0
+blend_point_1/name = &"1"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vssg2"]
 nodes/output/position = Vector2(540, 140)
@@ -60,6 +62,8 @@ collision_layer = 8
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 script = ExtResource("1_qlnrj")
+number_of_products_wanted = 4
+wanted_product_categories = Array[int]([0, 1, 2])
 metadata/can_interact = true
 metadata/reticle_tooltip = "Basia"
 

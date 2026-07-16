@@ -12,6 +12,8 @@ var wanted_products: Array[StringName]
 var _target_node: Node3D
 var _navigation_interrupted: bool = false
 
+@export var number_of_products_wanted: int = 3
+@export var wanted_product_categories: Array[ItemData.Type] = [ItemData.Type.SZLUGI, ItemData.Type.PIWO, ItemData.Type.WINO, ItemData.Type.MISC]
 
 @onready var nav_agent: NavigationAgent3D = %NavigationAgent3D
 @onready var animation_tree: AnimationTree = %AnimationTree

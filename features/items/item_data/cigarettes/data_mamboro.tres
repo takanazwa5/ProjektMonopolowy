@@ -1,11 +1,9 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://d3yqe5yr5yh78"]
+[gd_resource type="Resource" script_class="ProductData" format=3 uid="uid://d3yqe5yr5yh78"]
 
-[ext_resource type="Script" uid="uid://rfypjk406hn7" path="res://features/items/item_data/item_data.gd" id="1_dc2ji"]
+[ext_resource type="Script" uid="uid://bjdyvmcp7aon" path="res://features/items/item_data/product_data.gd" id="1_dc2ji"]
 
 [resource]
 script = ExtResource("1_dc2ji")
+price = 8.0
 name = &"mamboro"
-type = 0
-preview_zoom = -0.15
-rig_position = Vector3(0.1, -0.075, -0.2)
-metadata/_custom_type_script = "uid://rfypjk406hn7"
+metadata/_custom_type_script = "uid://bjdyvmcp7aon"

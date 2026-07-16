@@ -6,7 +6,7 @@ class_name NPCUnloadingProductsOnCounterState extends NPCState
 
 func enter() -> void:
 	animation_tree.animation_finished.connect(_on_animation_finished)
-	Counter.instance.item_placed.connect(_on_counter_item_placed)
+	Counter.instance.product_placed.connect(_on_counter_product_placed)
 
 	if not npc.inventory.get_items().is_empty():
 		print("%s ma loot w eq. Odkłada produkty na ladę." % npc.name)
@@ -29,20 +29,16 @@ func _on_animation_finished(anim_name: StringName) -> void:
 	if anim_name == &"Rig/PutDown_Base":
 		_unload_inventory_on_counter()
 
-func _on_counter_item_placed(item_data: ItemData) -> void:
+func _on_counter_product_placed(item_data: ProductData) -> void:
 	if npc.wanted_products.has(item_data.name):
 		npc.wanted_products.erase(item_data.name)
 
-	if npc.wanted_products.is_empty():
-		transition.emit(npc.brain.get_next_state(self))
-
 func _unload_inventory_on_counter() -> void:
 	for item: Item in npc.inventory.get_items():
-		var interact_event: InputEventAction = InputEventAction.new()
-		interact_event.action = &"interact"
-		interact_event.pressed = true
-		Counter.instance.interact(interact_event, item)
+		Counter.instance.place_item_from_npc(item)
+
+	transition.emit(npc.brain.get_next_state(self))
 
 func exit() -> void:
 	animation_tree.animation_finished.disconnect(_on_animation_finished)
-	Counter.instance.item_placed.disconnect(_on_counter_item_placed)
+	Counter.instance.product_placed.disconnect(_on_counter_product_placed)
