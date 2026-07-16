@@ -21,7 +21,14 @@ func _ready() -> void:
 	dialogue_ui.line_change_requested.connect(_on_line_change_requested)
 
 
-func _parse_line_data(line_id: String) -> Array:
+func _parse_line_data(line_id: String) -> Error:
+	if lines.has(line_id):
+		return OK
+	push_error("Nonexistent dialogue line id \"%s\"" % line_id)
+	return FAILED
+
+
+func _get_line_data(line_id: String) -> Array:
 	var line_data: Dictionary = lines.get(line_id)
 	var speaker: String = line_data.get("speaker")
 	var text: String = line_data.get("text")
@@ -31,14 +38,20 @@ func _parse_line_data(line_id: String) -> Array:
 
 
 func _on_npc_interaction(npc: NPC) -> void:
+	if not _parse_line_data(npc.dialogue_line) == OK:
+		return
+
 	_current_npc = npc
-	var line_data: Array = _parse_line_data(npc.dialogue_line)
+	var line_data: Array = _get_line_data(npc.dialogue_line)
 	dialogue_ui.start_dialogue(line_data[0], line_data[1], line_data[2])
 	dialogue_started.emit()
 
 
 func _on_next_line_requested(next: String) -> void:
-	var line_data: Array = _parse_line_data(next)
+	if not _parse_line_data(next) == OK:
+		return
+
+	var line_data: Array = _get_line_data(next)
 	dialogue_ui.start_dialogue(line_data[0], line_data[1], line_data[2])
 
 

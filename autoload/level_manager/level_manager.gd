@@ -54,12 +54,12 @@ func _load_level(level_data: LevelData) -> void:
 		push_error("Current scene is not a Game scene. Cannot add level instance.")
 		level_load_failed.emit(level_data.level_scene, ERR_SCRIPT_FAILED)
 		return
-	
+
 	level_loaded.emit(level_instance)
 
 func _unload_previous_level() -> void:
 	if Level.instance == null: return
 	level_unload_started.emit(Level.instance)
-	
+
 	Level.instance.queue_free()
 	level_unloaded.emit()
