@@ -21,6 +21,9 @@ var can_move: bool = true
 
 func _ready() -> void:
 
+	LevelManager.level_loaded.connect(_on_level_loaded)
+	LevelManager.level_unload_started.connect(_on_level_unload_started)
+
 	item_preview.item_entered.connect(_on_item_entered_preview)
 	item_preview.item_exited.connect(_on_item_exited_preview)
 	interaction_raycast.collider_changed.connect(_on_interaction_raycast_collider_changed)
@@ -69,6 +72,22 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+
+func _on_level_loaded(_level: Level) -> void:
+	item_preview.connect_item_interactions()
+	if Level.instance != null and Level.instance.player_start != null:
+		global_transform.origin = Level.instance.player_start.global_transform.origin
+		rotation = Level.instance.player_start.rotation
+
+	can_move = true
+	can_move_camera = true
+
+func _on_level_unload_started(_level: Level) -> void:
+	item_preview.disconnect_item_interactions()
+	item_rig.reset_rig()
+
+	can_move = false
+	can_move_camera = false
 
 func _on_item_entered_preview(_item: Item) -> void:
 

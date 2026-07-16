@@ -24,7 +24,8 @@ func physics_update(_delta: float) -> void:
 
 func _on_animation_finished(anim_name: StringName) -> void:
 	if anim_name == &"Rig/PutDown_Base":
-		CashRegister.instance.generate_random_order()
+		# CashRegister.instance.generate_random_order()
+		CashRegister.instance.generate_order_and_payment()
 
 func _on_transaction_finished() -> void:
 	transition.emit(npc.brain.get_next_state(self))

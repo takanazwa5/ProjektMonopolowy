@@ -5,9 +5,10 @@ class_name NPCWaitingForProductState extends NPCState
 
 
 func enter() -> void:
-	Counter.instance.item_placed.connect(_on_counter_item_placed)
+	Counter.instance.product_placed.connect(_on_counter_product_placed)
 	npc.set_meta(&"can_interact", true)
 	print("%s podchodzi do lady. Tu bedzie okienko dialogowe. Na razie czeka na : %s" % [npc.name, ", ".join(npc.wanted_products)])
+	Counter.instance.npc_at_counter = npc
 
 func input_event(_event: InputEvent) -> void:
 	pass
@@ -20,7 +21,7 @@ func update(_delta: float) -> void:
 func physics_update(_delta: float) -> void:
 	pass
 
-func _on_counter_item_placed(item_data: ItemData) -> void:
+func _on_counter_product_placed(item_data: ProductData) -> void:
 	if npc.wanted_products.has(item_data.name):
 		npc.wanted_products.erase(item_data.name)
 
@@ -28,5 +29,6 @@ func _on_counter_item_placed(item_data: ItemData) -> void:
 		transition.emit(npc.brain.get_next_state(self))
 
 func exit() -> void:
-	Counter.instance.item_placed.disconnect(_on_counter_item_placed)
+	Counter.instance.product_placed.disconnect(_on_counter_product_placed)
+	Counter.instance.npc_at_counter = null
 	npc.set_meta(&"can_interact", false)

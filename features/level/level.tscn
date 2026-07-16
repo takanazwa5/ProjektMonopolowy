@@ -47,7 +47,7 @@
 [ext_resource type="PackedScene" uid="uid://bgi3sn72fpicy" path="res://features/items/beer/beer_ovecky_bottle.tscn" id="32_gb2y8"]
 [ext_resource type="PackedScene" uid="uid://k58bns261dml" path="res://features/items/cigarettes/meshes/fajki_03.gltf" id="32_gy3pj"]
 [ext_resource type="PackedScene" uid="uid://c2a2asi2lh4im" path="res://features/items/cigarettes/meshes/fajki_04.gltf" id="33_d4cch"]
-[ext_resource type="PackedScene" uid="uid://c00ket2ygk543" path="res://features/items/wine/wino_p_Jabluszko_pomorskie.tscn" id="33_rr5fb"]
+[ext_resource type="PackedScene" path="res://features/items/wine/wino_p_jabluszko_pomorskie.tscn" id="33_rr5fb"]
 [ext_resource type="PackedScene" uid="uid://b73pyd8yanm3n" path="res://features/items/cigarettes/meshes/fajki_05.gltf" id="34_0aatt"]
 [ext_resource type="PackedScene" uid="uid://37ile3adfut7" path="res://features/items/beer/beer_boskie_bottle.tscn" id="34_f2wry"]
 [ext_resource type="PackedScene" uid="uid://bamiv2fbdo4tf" path="res://features/items/wine/wino_p_krolewskie.tscn" id="34_klck8"]
@@ -66,6 +66,7 @@
 [ext_resource type="PackedScene" uid="uid://ctondefrj34dv" path="res://features/level/assets/furniture/szafka.tscn" id="50_g4do5"]
 [ext_resource type="PackedScene" uid="uid://cpwtxey58juae" path="res://features/level/assets/trash_can/trash_can.tscn" id="64_klck8"]
 [ext_resource type="Script" uid="uid://cs1g3amumal8s" path="res://features/trash/trash_container.gd" id="64_rr5fb"]
+[ext_resource type="PackedScene" uid="uid://c7w2lm7caac5r" path="res://features/level/assets/mop/mop.tscn" id="67_dwqpw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_raucf"]
 
@@ -97,22 +98,14 @@ edge_max_error = 1.0
 [node name="Level" type="Node3D" unique_id=1068480335]
 script = ExtResource("1_5cegx")
 
-[node name="AvailableItems" type="Node" parent="." unique_id=1624505476 node_paths=PackedStringArray("item_name_to_instance_map", "item_type_to_destination_map")]
+[node name="AvailableItems" type="Node" parent="." unique_id=1624505476 node_paths=PackedStringArray("item_type_to_destination_map")]
 unique_name_in_owner = true
 script = ExtResource("2_vk6of")
-item_name_to_instance_map = {
-&"bubr_bottle": NodePath("../Beers/BobrBottles/BeerBobrBottle_1"),
-&"bubr_can": NodePath("../Beers/BobrCans/BeerBobrCan_1"),
-&"jabluszko_pomorskie": NodePath("../Wines/Premium/WinoJabluszkoPomorskie_1"),
-&"kiceroy": NodePath("../Cigarettes/Kiceroy/CigarettesKiceroy")
-}
 item_type_to_destination_map = {
-0: NodePath("../Szafka_Wielka"),
 1: NodePath("../Fridge")
 }
-pickup_at_counter_required = Dictionary[StringName, bool]({
-&"jabluszko_pomorskie": true,
-&"kiceroy": true
+pickup_at_counter_type_required = Dictionary[int, bool]({
+0: true
 })
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1955529485]
@@ -125,6 +118,10 @@ shadow_enabled = true
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=2139591322]
 unique_name_in_owner = true
 navigation_mesh = SubResource("NavigationMesh_ksyp5")
+
+[node name="PlayerStart" type="Marker3D" parent="." unique_id=349217306]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.3437771, 0, -1.5351305)
 
 [node name="Counter" parent="." unique_id=428888485 groups=["navigation_mesh_source_group"] instance=ExtResource("2_klck8")]
 unique_name_in_owner = true
@@ -1367,13 +1364,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8127259, 1.2054436, -3.426
 [node name="Musujace" type="Node3D" parent="Wines" unique_id=938223728]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24256623, 0.84291315, 0)
 
-[node name="WinoDobreto_1" parent="Wines/Musujace" unique_id=1206098617 groups=["items"] instance=ExtResource("28_2xqc7")]
+[node name="WinoDobreto_1" parent="Wines/Musujace" unique_id=1206098617 instance=ExtResource("28_2xqc7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
 
-[node name="WinoKwiat_1" parent="Wines/Musujace" unique_id=1377027596 groups=["items"] instance=ExtResource("29_rr5fb")]
+[node name="WinoKwiat_1" parent="Wines/Musujace" unique_id=1377027596 instance=ExtResource("29_rr5fb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
 
-[node name="WinoPippolo_1" parent="Wines/Musujace" unique_id=1825170910 groups=["items"] instance=ExtResource("30_klck8")]
+[node name="WinoPippolo_1" parent="Wines/Musujace" unique_id=1825170910 instance=ExtResource("30_klck8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
 
 [node name="WinoRuskiSzampan_1" parent="Wines/Musujace" unique_id=2136340655 groups=["items"] instance=ExtResource("31_vk6of")]
@@ -1382,31 +1379,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
 [node name="Premium" type="Node3D" parent="Wines" unique_id=751346383]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24256623, 0.4215163, 0)
 
-[node name="WinoBreslau_1" parent="Wines/Premium" unique_id=980329770 groups=["items"] instance=ExtResource("32_2xqc7")]
+[node name="WinoBreslau_1" parent="Wines/Premium" unique_id=980329770 instance=ExtResource("32_2xqc7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
 
 [node name="WinoJabluszkoPomorskie_1" parent="Wines/Premium" unique_id=568082716 groups=["items"] instance=ExtResource("33_rr5fb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
 
-[node name="WinoKrolewskie_1" parent="Wines/Premium" unique_id=1434197325 groups=["items"] instance=ExtResource("34_klck8")]
+[node name="WinoKrolewskie_1" parent="Wines/Premium" unique_id=1434197325 instance=ExtResource("34_klck8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
 
-[node name="WinoZofia_1" parent="Wines/Premium" unique_id=265223509 groups=["items"] instance=ExtResource("35_vk6of")]
+[node name="WinoZofia_1" parent="Wines/Premium" unique_id=265223509 instance=ExtResource("35_vk6of")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
 
 [node name="Jabole" type="Node3D" parent="Wines" unique_id=51893507]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24256623, 0.0016889572, 0)
 
-[node name="WinoArena_1" parent="Wines/Jabole" unique_id=614513481 groups=["items"] instance=ExtResource("28_tksdx")]
+[node name="WinoArena_1" parent="Wines/Jabole" unique_id=614513481 instance=ExtResource("28_tksdx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.002, 0)
 
-[node name="WinoSierzant_1" parent="Wines/Jabole" unique_id=1993698628 groups=["items"] instance=ExtResource("29_nca55")]
+[node name="WinoSierzant_1" parent="Wines/Jabole" unique_id=1993698628 instance=ExtResource("29_nca55")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, -0.002, 0)
 
-[node name="WinoTasTas_1" parent="Wines/Jabole" unique_id=1086607232 groups=["items"] instance=ExtResource("30_wo7fh")]
+[node name="WinoTasTas_1" parent="Wines/Jabole" unique_id=1086607232 instance=ExtResource("30_wo7fh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.002, 0)
 
-[node name="WinoWino_1" parent="Wines/Jabole" unique_id=88664543 groups=["items"] instance=ExtResource("31_0muuh")]
+[node name="WinoWino_1" parent="Wines/Jabole" unique_id=88664543 instance=ExtResource("31_0muuh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -0.002, 0)
 
 [node name="TrashCan" parent="." unique_id=2097062338 instance=ExtResource("64_klck8")]
@@ -1419,3 +1416,9 @@ script = ExtResource("64_rr5fb")
 spawn_height_offset = 0.15
 room_x_thresholds = Vector2(-3, 3)
 room_z_thresholds = Vector2(-4, 4)
+
+[node name="LooseItems" type="Node" parent="." unique_id=1700068043]
+unique_name_in_owner = true
+
+[node name="Mop" parent="LooseItems" unique_id=1099867490 instance=ExtResource("67_dwqpw")]
+transform = Transform3D(-4.371139e-08, -0.42261827, 0.90630776, 0, 0.90630776, 0.42261827, -1, 1.8473232e-08, -3.961597e-08, -2.4268317, 0.6911658, -1.5418394)

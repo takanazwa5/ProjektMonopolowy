@@ -1,0 +1,1403 @@
+[gd_scene format=3 uid="uid://7aruhk73v6yi"]
+
+[ext_resource type="Script" uid="uid://nllfvbeeh8hn" path="res://features/level/level.gd" id="1_q40se"]
+[ext_resource type="Script" uid="uid://c8vbghjub1kln" path="res://features/level/assets/available_items/available_items.gd" id="2_45e65"]
+[ext_resource type="PackedScene" uid="uid://c2klqufu8iang" path="res://features/counter/counter.tscn" id="3_wdhnv"]
+[ext_resource type="PackedScene" uid="uid://cnw60p50n4kaf" path="res://features/cash_register/cash_register.tscn" id="4_ll4kl"]
+[ext_resource type="PackedScene" uid="uid://c35ghy3nh7v8p" path="res://features/level/assets/freezer/freezer.tscn" id="6_v6tcu"]
+[ext_resource type="PackedScene" uid="uid://bf60h6vttmjmp" path="res://features/level/assets/furniture/szafka_wielka.tscn" id="7_03up3"]
+[ext_resource type="PackedScene" uid="uid://qo1sj118adj7" path="res://features/level/assets/fridge/fridge.tscn" id="8_n406w"]
+[ext_resource type="PackedScene" uid="uid://btc2kupth45cq" path="res://features/level/assets/main_room/main_room.tscn" id="9_w3sk1"]
+[ext_resource type="PackedScene" uid="uid://bfrkhd5j505xi" path="res://features/level/assets/beer_crates/meshes/beer_crates/bobr_crate.gltf" id="10_ffgr4"]
+[ext_resource type="PackedScene" uid="uid://b5fjwjemdsw77" path="res://features/level/assets/beer_crates/meshes/beer_crates/boskie_crate.gltf" id="11_ohmbg"]
+[ext_resource type="PackedScene" uid="uid://cam8fx48wcwee" path="res://features/level/assets/beer_crates/meshes/beer_crates/jp_crate.gltf" id="12_c0rwy"]
+[ext_resource type="PackedScene" uid="uid://dm37ts7fiuxnu" path="res://features/level/assets/beer_crates/meshes/beer_crates/mech_crate.gltf" id="13_56pyd"]
+[ext_resource type="PackedScene" uid="uid://8m2a6mm6ah1l" path="res://features/level/assets/beer_crates/meshes/beer_crates/ovecky_crate.gltf" id="14_d54hf"]
+[ext_resource type="PackedScene" uid="uid://dm325ggpwb4ik" path="res://features/level/assets/beer_crates/meshes/beer_crates/tarka_crate.gltf" id="15_epy4u"]
+[ext_resource type="PackedScene" uid="uid://d3h2fjf6suckp" path="res://features/level/assets/beer_crates/meshes/beer_crates/beer_crate_empty.glb" id="16_sqo1u"]
+[ext_resource type="PackedScene" uid="uid://4y0ner578dpr" path="res://features/items/cigarettes/cigarettes_silne.tscn" id="17_bv62t"]
+[ext_resource type="PackedScene" uid="uid://bhabrte0atjfl" path="res://features/items/cigarettes/meshes/fajki_01.gltf" id="18_giuyc"]
+[ext_resource type="PackedScene" uid="uid://bgqkchyu8eo7y" path="res://features/items/cigarettes/cigarettes_alpaca.tscn" id="19_l8j1p"]
+[ext_resource type="PackedScene" uid="uid://rwxraqe1im77" path="res://features/items/cigarettes/meshes/fajki_02.gltf" id="20_rte50"]
+[ext_resource type="PackedScene" uid="uid://ccgg8gddpnlep" path="res://features/items/cigarettes/cigarettes_masterfield.tscn" id="21_qllk4"]
+[ext_resource type="PackedScene" uid="uid://k58bns261dml" path="res://features/items/cigarettes/meshes/fajki_03.gltf" id="22_fgkpg"]
+[ext_resource type="PackedScene" uid="uid://lcbivolyicax" path="res://features/items/cigarettes/cigarettes_kiceroy.tscn" id="23_81evf"]
+[ext_resource type="PackedScene" uid="uid://c2a2asi2lh4im" path="res://features/items/cigarettes/meshes/fajki_04.gltf" id="24_sauct"]
+[ext_resource type="PackedScene" uid="uid://bnvmokptttdgm" path="res://features/items/cigarettes/cigarettes_platinum.tscn" id="25_5oose"]
+[ext_resource type="PackedScene" uid="uid://b73pyd8yanm3n" path="res://features/items/cigarettes/meshes/fajki_05.gltf" id="26_rb1m2"]
+[ext_resource type="PackedScene" uid="uid://6coqkgfn1tvj" path="res://features/items/cigarettes/cigarettes_mamboro.tscn" id="27_gcgks"]
+[ext_resource type="PackedScene" uid="uid://dux72a2lllv80" path="res://features/items/cigarettes/meshes/fajki_06.gltf" id="28_w5gw8"]
+[ext_resource type="PackedScene" uid="uid://br5d6d1c4fjbr" path="res://features/items/beer/beer_ovecky_can.tscn" id="29_1bb36"]
+[ext_resource type="PackedScene" uid="uid://bxjucsr360222" path="res://features/items/beer/meshes/ovecky_can.glb" id="30_v4pg8"]
+[ext_resource type="PackedScene" uid="uid://bgi3sn72fpicy" path="res://features/items/beer/beer_ovecky_bottle.tscn" id="31_axyj8"]
+[ext_resource type="PackedScene" uid="uid://6pidgavolruj" path="res://features/items/beer/meshes/ovecky_bottle.glb" id="32_smg2u"]
+[ext_resource type="PackedScene" uid="uid://o3uvc53yiig" path="res://features/items/beer/beer_boskie_can.tscn" id="33_wg8ux"]
+[ext_resource type="PackedScene" uid="uid://g7taxpc5p3k1" path="res://features/items/beer/meshes/boskie_can.glb" id="34_abbki"]
+[ext_resource type="PackedScene" uid="uid://37ile3adfut7" path="res://features/items/beer/beer_boskie_bottle.tscn" id="35_n15cb"]
+[ext_resource type="PackedScene" uid="uid://dhmgu1ne3d7jl" path="res://features/items/beer/meshes/boskie_bottle.glb" id="36_b6onn"]
+[ext_resource type="PackedScene" uid="uid://btib7p5g7httd" path="res://features/items/beer/beer_bobr_can.tscn" id="37_kis3h"]
+[ext_resource type="PackedScene" uid="uid://bskt7g4r1dx1o" path="res://features/items/beer/meshes/bobr_can.glb" id="38_r4xrt"]
+[ext_resource type="PackedScene" uid="uid://mb35j338gfy4" path="res://features/items/beer/beer_bobr_bottle.tscn" id="39_fe6qw"]
+[ext_resource type="PackedScene" uid="uid://dmtrisyvy531c" path="res://features/items/beer/meshes/bobr_bottle.glb" id="40_l1mhl"]
+[ext_resource type="PackedScene" uid="uid://mn8ukej62qoi" path="res://features/items/beer/beer_tarka_can.tscn" id="41_013cl"]
+[ext_resource type="PackedScene" uid="uid://ddmy1pl53qi61" path="res://features/items/beer/meshes/tarka_can.glb" id="42_uwc7r"]
+[ext_resource type="PackedScene" uid="uid://b0m3anq2rdsy1" path="res://features/items/beer/beer_tarka_bottle.tscn" id="43_5p5cl"]
+[ext_resource type="PackedScene" uid="uid://ca7esyvakgb4f" path="res://features/items/beer/meshes/tarka_bottle.glb" id="44_6jiab"]
+[ext_resource type="PackedScene" uid="uid://vk4ygcsxweuu" path="res://features/items/beer/beer_mech_can.tscn" id="45_hswwh"]
+[ext_resource type="PackedScene" uid="uid://b5bu4yq8urd1b" path="res://features/items/beer/meshes/mech_can.glb" id="46_8i8hy"]
+[ext_resource type="PackedScene" uid="uid://b7wqysvqquowd" path="res://features/items/beer/beer_mech_bottle.tscn" id="47_tgwfj"]
+[ext_resource type="PackedScene" uid="uid://7tyqtishxcbh" path="res://features/items/beer/meshes/mech_bottle.glb" id="48_s6poh"]
+[ext_resource type="PackedScene" uid="uid://df3dtr61w0e3k" path="res://features/items/beer/beer_JP_can.tscn" id="49_aecrh"]
+[ext_resource type="PackedScene" uid="uid://cn0kid5awlouy" path="res://features/items/beer/meshes/jp_can.glb" id="50_5ce7q"]
+[ext_resource type="PackedScene" uid="uid://dkgly1aj712f6" path="res://features/items/beer/beer_JP_bottle.tscn" id="51_cveak"]
+[ext_resource type="PackedScene" uid="uid://clpknu2jm8h44" path="res://features/items/beer/meshes/jp_bottle.glb" id="52_f25ou"]
+[ext_resource type="PackedScene" uid="uid://csyrprtxqvao2" path="res://features/items/wine/wino_m_dobreto.tscn" id="53_lp1n1"]
+[ext_resource type="PackedScene" uid="uid://b1xojbafxnjo0" path="res://features/items/wine/wino_m_kwiat.tscn" id="54_silsy"]
+[ext_resource type="PackedScene" uid="uid://cyuotmgytmcxd" path="res://features/items/wine/wino_m_pippolo.tscn" id="55_7mfxo"]
+[ext_resource type="PackedScene" uid="uid://t0pcv51vktr4" path="res://features/items/wine/wino_m_ruski_szampan.tscn" id="56_xtgde"]
+[ext_resource type="PackedScene" uid="uid://h4nn4lnkqys6" path="res://features/items/wine/wino_p_breslau.tscn" id="57_fgv1h"]
+[ext_resource type="PackedScene" path="res://features/items/wine/wino_p_jabluszko_pomorskie.tscn" id="58_f8nfe"]
+[ext_resource type="PackedScene" uid="uid://bamiv2fbdo4tf" path="res://features/items/wine/wino_p_krolewskie.tscn" id="59_2viwx"]
+[ext_resource type="PackedScene" uid="uid://ccqhyjjalr6hq" path="res://features/items/wine/wino_p_zofia.tscn" id="60_16gfv"]
+[ext_resource type="PackedScene" uid="uid://brlv4vr5lvuuu" path="res://features/items/wine/wino_s_arena.tscn" id="61_1vfrm"]
+[ext_resource type="PackedScene" uid="uid://2c0cmi7vjbqb" path="res://features/items/wine/wino_s_sierzant.tscn" id="62_nj6t0"]
+[ext_resource type="PackedScene" uid="uid://b1qxruckkksun" path="res://features/items/wine/wino_s_tastas.tscn" id="63_cpaqx"]
+[ext_resource type="PackedScene" uid="uid://nhaawaydste7" path="res://features/items/wine/wino_s_wino.tscn" id="64_3oe50"]
+[ext_resource type="PackedScene" uid="uid://cpwtxey58juae" path="res://features/level/assets/trash_can/trash_can.tscn" id="65_0obmn"]
+[ext_resource type="Script" uid="uid://cs1g3amumal8s" path="res://features/trash/trash_container.gd" id="66_lli4t"]
+[ext_resource type="PackedScene" uid="uid://c7w2lm7caac5r" path="res://features/level/assets/mop/mop.tscn" id="67_e8y4n"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_raucf"]
+
+[sub_resource type="Sky" id="Sky_s5glk"]
+sky_material = SubResource("ProceduralSkyMaterial_raucf")
+
+[sub_resource type="Environment" id="Environment_l7qvs"]
+background_mode = 2
+sky = SubResource("Sky_s5glk")
+tonemap_mode = 3
+tonemap_white = 7.0
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ksyp5"]
+vertices = PackedVector3Array(-2.571943, 3.1, -3.6660671, -2.571943, 3.1, 3.6339328, 2.528057, 3.1, 3.6339328, 2.528057, 3.1, -3.6660671, -2.371943, 0.3, -2.966067, -2.371943, 0.3, -1.4660671, -2.171943, 0.3, -1.4660671, -0.371943, 0.3, -2.1660671, -0.17194295, 0.3, -2.366067, -1.9719429, 0.3, -1.1660671, -0.371943, 0.3, -1.1660671, 1.8280573, 0.3, -2.366067, 1.8280573, 0.3, -2.966067, 0.22805715, 0.3, 2.933933, 0.5280571, 0.3, 2.933933, 0.42805696, 0.3, 2.533933, -0.77194285, 0.3, 2.533933, -0.071943045, 0.3, -0.16606712, -0.071943045, 0.3, -0.766067, -0.371943, 0.3, -0.9660671, -0.77194285, 0.3, -0.16606712, -1.771943, 0.3, 3.1339328, -0.971943, 0.3, 2.333933, -1.771943, 0.3, -0.36606693, -0.971943, 0.3, 0.033932924, 0.028057098, 0.3, 3.333933, -1.9719429, 0.3, 3.333933, 0.72805715, 0.3, 2.533933, 0.72805715, 0.3, -0.766067, 0.628057, 0.3, -0.9660671, 0.22805715, 0.3, -0.9660671, 0.128057, 0.3, -0.766067, 0.72805715, 0.3, -0.16606712, 1.8280573, 0.3, 0.7339332, 1.628057, 0.3, 0.5339329, 0.92805696, 0.3, 0.033932924, 0.92805696, 0.3, 2.333933, 1.5280571, 0.3, 2.433933, 2.128057, 0.3, 2.033933, 1.628057, 0.3, -0.9660671, 1.128057, 0.3, -0.9660671, 1.0280571, 0.3, -0.766067, 2.4280572, 0.3, 1.0339329, 2.3280573, 0.3, 0.7339332, 2.3280573, 0.3, 2.033933, 1.3280573, 0.3, 2.933933, 1.3280573, 0.3, 2.6339328, 1.8280573, 0.3, 2.433933)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 7), PackedInt32Array(7, 4, 8), PackedInt32Array(9, 6, 10), PackedInt32Array(10, 6, 7), PackedInt32Array(11, 8, 12), PackedInt32Array(12, 8, 4), PackedInt32Array(14, 13, 15), PackedInt32Array(15, 13, 16), PackedInt32Array(18, 17, 19), PackedInt32Array(19, 17, 20), PackedInt32Array(22, 16, 21), PackedInt32Array(19, 20, 10), PackedInt32Array(10, 20, 24), PackedInt32Array(10, 24, 23), PackedInt32Array(10, 23, 9), PackedInt32Array(24, 22, 23), PackedInt32Array(23, 22, 21), PackedInt32Array(13, 25, 16), PackedInt32Array(16, 25, 21), PackedInt32Array(21, 25, 26), PackedInt32Array(14, 15, 27), PackedInt32Array(29, 28, 30), PackedInt32Array(30, 28, 31), PackedInt32Array(31, 28, 32), PackedInt32Array(31, 32, 17), PackedInt32Array(34, 33, 35), PackedInt32Array(35, 33, 38), PackedInt32Array(35, 38, 37), PackedInt32Array(35, 37, 36), PackedInt32Array(41, 40, 39), PackedInt32Array(17, 18, 31), PackedInt32Array(43, 42, 33), PackedInt32Array(33, 42, 38), PackedInt32Array(38, 42, 44), PackedInt32Array(36, 46, 27), PackedInt32Array(27, 46, 45), PackedInt32Array(27, 45, 14), PackedInt32Array(32, 28, 41), PackedInt32Array(32, 41, 35), PackedInt32Array(35, 41, 39), PackedInt32Array(35, 39, 34), PackedInt32Array(36, 37, 46), PackedInt32Array(38, 47, 37)]
+geometry_source_geometry_mode = 1
+cell_size = 0.1
+cell_height = 0.1
+agent_height = 2.0
+agent_radius = 0.3
+agent_max_climb = 0.1
+edge_max_error = 1.0
+
+[node name="Level" type="Node3D" unique_id=1068480335]
+script = ExtResource("1_q40se")
+
+[node name="AvailableItems" type="Node" parent="." unique_id=1624505476]
+unique_name_in_owner = true
+script = ExtResource("2_45e65")
+pickup_at_counter_required = Dictionary[StringName, bool]({
+&"jabluszko_pomorskie": true,
+&"kiceroy": true
+})
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1955529485]
+environment = SubResource("Environment_l7qvs")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=445798792]
+transform = Transform3D(0.965926, -0.0669873, -0.25, 0.258819, 0.25, 0.933013, 0, -0.965926, 0.258819, 0, 0, 0)
+shadow_enabled = true
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=2139591322]
+unique_name_in_owner = true
+navigation_mesh = SubResource("NavigationMesh_ksyp5")
+
+[node name="PlayerStart" type="Marker3D" parent="." unique_id=349217306]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.8890438, 0, -0.6586907)
+
+[node name="Counter" parent="." unique_id=428888485 groups=["navigation_mesh_source_group"] instance=ExtResource("3_wdhnv")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34766, 0.124331, -1.64097)
+
+[node name="CashRegister" parent="." unique_id=1568794516 instance=ExtResource("4_ll4kl")]
+transform = Transform3D(-0.992185, 0, -0.124779, 0, 1, 0, 0.124779, 0, -0.992185, 1.74809, 1.12412, -1.67112)
+
+[node name="Freezer" parent="." unique_id=716930214 groups=["navigation_mesh_source_group"] instance=ExtResource("6_v6tcu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.68207, 0.138333, -0.432348)
+
+[node name="Szafka_Wielka" parent="." unique_id=1512719388 groups=["navigation_mesh_source_group"] instance=ExtResource("7_03up3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71959, 0.126, -3.8442314)
+
+[node name="Fridge" parent="." unique_id=821305824 groups=["navigation_mesh_source_group"] instance=ExtResource("8_n406w")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43781, 0, 0.375733)
+
+[node name="MainRoom" parent="." unique_id=1654364168 groups=["navigation_mesh_source_group"] instance=ExtResource("9_w3sk1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77862, 0, -3.96313)
+
+[node name="MainDoor" type="Marker3D" parent="." unique_id=1641899381]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54038, 0.369053, 3.56369)
+
+[node name="Furniture" type="Node" parent="." unique_id=434958746 groups=["navigation_mesh_source_group"]]
+
+[node name="BeerCrates" type="Node3D" parent="Furniture" unique_id=2139895818]
+
+[node name="bobr_crate" parent="Furniture/BeerCrates" unique_id=1343954306 instance=ExtResource("10_ffgr4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43926, 0.132079, 3.4934)
+
+[node name="bobr_crate2" parent="Furniture/BeerCrates" unique_id=1097290165 instance=ExtResource("10_ffgr4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43926, 0.411503, 3.4934)
+
+[node name="bobr_crate3" parent="Furniture/BeerCrates" unique_id=855130380 instance=ExtResource("10_ffgr4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43926, 0.694182, 3.4934)
+
+[node name="boskie_crate" parent="Furniture/BeerCrates" unique_id=1125473515 instance=ExtResource("11_ohmbg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.98625, 0.132079, 3.48866)
+
+[node name="boskie_crate2" parent="Furniture/BeerCrates" unique_id=1918071356 instance=ExtResource("11_ohmbg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.98625, 0.41081, 3.48866)
+
+[node name="jp_crate" parent="Furniture/BeerCrates" unique_id=1836770761 instance=ExtResource("12_c0rwy")]
+transform = Transform3D(-0.0437066, 0, 0.999044, 0, 1, 0, -0.999044, 0, -0.0437066, 1.52666, 0.132079, 3.4836)
+
+[node name="2jp_crate2" parent="Furniture/BeerCrates" unique_id=317573522 instance=ExtResource("12_c0rwy")]
+transform = Transform3D(-0.0437066, 0, 0.999044, 0, 1, 0, -0.999044, 0, -0.0437066, 1.52666, 0.411025, 3.4836)
+
+[node name="mech_crate" parent="Furniture/BeerCrates" unique_id=352437811 instance=ExtResource("13_56pyd")]
+transform = Transform3D(0.185992, 0, 0.982551, 0, 1, 0, -0.982551, 0, 0.185992, 2.43462, 0.132079, 2.55803)
+
+[node name="ovecky_crate" parent="Furniture/BeerCrates" unique_id=380819792 instance=ExtResource("14_d54hf")]
+transform = Transform3D(-0.155314, 0, 0.987865, 0, 1, 0, -0.987865, 0, -0.155314, 2.43745, 0.132079, 3.06614)
+
+[node name="tarka_crate" parent="Furniture/BeerCrates" unique_id=559514821 instance=ExtResource("15_epy4u")]
+transform = Transform3D(-0.102063, 0, 0.994778, 0, 1, 0, -0.994778, 0, -0.102063, -2.41943, 0.132079, -0.496236)
+
+[node name="tarka_crate2" parent="Furniture/BeerCrates" unique_id=972270639 instance=ExtResource("15_epy4u")]
+transform = Transform3D(0.0886338, 0, 0.996064, 0, 1, 0, -0.996064, 0, 0.0886338, 1.05149, 0.132079, 3.48018)
+
+[node name="SkrzynkaNaPiwo6" parent="Furniture/BeerCrates" unique_id=662829218 instance=ExtResource("16_sqo1u")]
+transform = Transform3D(0.194234, 0, 0.980955, 0, 1, 0, -0.980955, 0, 0.194234, 1.89375, 0.12829, 3.03442)
+
+[node name="SkrzynkaNaPiwo8" parent="Furniture/BeerCrates" unique_id=55857707 instance=ExtResource("16_sqo1u")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.564952, 0.12829, 3.49109)
+
+[node name="SkrzynkaNaPiwo7" parent="Furniture/BeerCrates" unique_id=1898009652 instance=ExtResource("16_sqo1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5015, 0.12829, -0.939139)
+
+[node name="Lights" type="Node" parent="." unique_id=518488471]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights" unique_id=1686847070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27894, 2.65579, 0)
+shadow_enabled = true
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights" unique_id=1009797634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.65579, 0)
+shadow_enabled = true
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights" unique_id=1478336942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27894, 2.65579, -2.11835)
+shadow_enabled = true
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Lights" unique_id=256165909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.65579, -2.11835)
+shadow_enabled = true
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Lights" unique_id=1156324405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27894, 2.65579, 2.13073)
+shadow_enabled = true
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Lights" unique_id=175084120]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34889, 2.65579, 2.13073)
+shadow_enabled = true
+
+[node name="Cigarettes" type="Node3D" parent="." unique_id=857060430]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.27704, 1.90024, -3.21985)
+
+[node name="Silne" type="Node3D" parent="Cigarettes" unique_id=533167869]
+
+[node name="CigarettesSilne" parent="Cigarettes/Silne" unique_id=1349128766 instance=ExtResource("17_bv62t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0742803, 0)
+
+[node name="visuals" type="Node3D" parent="Cigarettes/Silne" unique_id=1683392553]
+
+[node name="fajki_01_1" parent="Cigarettes/Silne/visuals" unique_id=1873753928 instance=ExtResource("18_giuyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.06)
+
+[node name="fajki_01_2" parent="Cigarettes/Silne/visuals" unique_id=68195464 instance=ExtResource("18_giuyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12)
+
+[node name="fajki_01_3" parent="Cigarettes/Silne/visuals" unique_id=1470208063 instance=ExtResource("18_giuyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18)
+
+[node name="fajki_01_4" parent="Cigarettes/Silne/visuals" unique_id=1456184283 instance=ExtResource("18_giuyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.24)
+
+[node name="fajki_01_5" parent="Cigarettes/Silne/visuals" unique_id=174220212 instance=ExtResource("18_giuyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="fajki_01_6" parent="Cigarettes/Silne/visuals" unique_id=981346496 instance=ExtResource("18_giuyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36)
+
+[node name="Alpaca" type="Node3D" parent="Cigarettes" unique_id=346796042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
+
+[node name="CigarettesAlpaca" parent="Cigarettes/Alpaca" unique_id=1799540076 instance=ExtResource("19_l8j1p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0742803, 0)
+
+[node name="visuals" type="Node3D" parent="Cigarettes/Alpaca" unique_id=2087553190]
+
+[node name="fajki_02_1" parent="Cigarettes/Alpaca/visuals" unique_id=1979813304 instance=ExtResource("20_rte50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.06)
+
+[node name="fajki_02_2" parent="Cigarettes/Alpaca/visuals" unique_id=796805513 instance=ExtResource("20_rte50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12)
+
+[node name="fajki_02_3" parent="Cigarettes/Alpaca/visuals" unique_id=246861854 instance=ExtResource("20_rte50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18)
+
+[node name="fajki_02_4" parent="Cigarettes/Alpaca/visuals" unique_id=1642157409 instance=ExtResource("20_rte50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.24)
+
+[node name="fajki_02_5" parent="Cigarettes/Alpaca/visuals" unique_id=1426929228 instance=ExtResource("20_rte50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="fajki_02_6" parent="Cigarettes/Alpaca/visuals" unique_id=1946576987 instance=ExtResource("20_rte50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36)
+
+[node name="Masterfield" type="Node3D" parent="Cigarettes" unique_id=113247833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+
+[node name="CigarettesMasterfield" parent="Cigarettes/Masterfield" unique_id=1903019512 instance=ExtResource("21_qllk4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0742803, 0)
+
+[node name="visuals" type="Node3D" parent="Cigarettes/Masterfield" unique_id=933167690]
+
+[node name="fajki_03_1" parent="Cigarettes/Masterfield/visuals" unique_id=826709252 instance=ExtResource("22_fgkpg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.06)
+
+[node name="fajki_03_2" parent="Cigarettes/Masterfield/visuals" unique_id=1310164507 instance=ExtResource("22_fgkpg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12)
+
+[node name="fajki_03_3" parent="Cigarettes/Masterfield/visuals" unique_id=1720508020 instance=ExtResource("22_fgkpg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18)
+
+[node name="fajki_03_4" parent="Cigarettes/Masterfield/visuals" unique_id=1640359919 instance=ExtResource("22_fgkpg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.24)
+
+[node name="fajki_03_5" parent="Cigarettes/Masterfield/visuals" unique_id=1782380579 instance=ExtResource("22_fgkpg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="fajki_03_6" parent="Cigarettes/Masterfield/visuals" unique_id=23757083 instance=ExtResource("22_fgkpg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36)
+
+[node name="Kiceroy" type="Node3D" parent="Cigarettes" unique_id=1369734031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0)
+
+[node name="CigarettesKiceroy" parent="Cigarettes/Kiceroy" unique_id=647038325 instance=ExtResource("23_81evf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0742803, 0)
+
+[node name="visuals" type="Node3D" parent="Cigarettes/Kiceroy" unique_id=1776773442]
+
+[node name="fajki_04_1" parent="Cigarettes/Kiceroy/visuals" unique_id=1976254433 instance=ExtResource("24_sauct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.06)
+
+[node name="fajki_04_2" parent="Cigarettes/Kiceroy/visuals" unique_id=920398029 instance=ExtResource("24_sauct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12)
+
+[node name="fajki_04_3" parent="Cigarettes/Kiceroy/visuals" unique_id=1351555397 instance=ExtResource("24_sauct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18)
+
+[node name="fajki_04_4" parent="Cigarettes/Kiceroy/visuals" unique_id=758518422 instance=ExtResource("24_sauct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.24)
+
+[node name="fajki_04_5" parent="Cigarettes/Kiceroy/visuals" unique_id=1901562475 instance=ExtResource("24_sauct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.299859)
+
+[node name="fajki_04_6" parent="Cigarettes/Kiceroy/visuals" unique_id=1364836299 instance=ExtResource("24_sauct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36)
+
+[node name="Platinum" type="Node3D" parent="Cigarettes" unique_id=815641608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0, 0)
+
+[node name="CigarettesPlatinum" parent="Cigarettes/Platinum" unique_id=606655869 instance=ExtResource("25_5oose")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0742803, 0)
+
+[node name="visuals" type="Node3D" parent="Cigarettes/Platinum" unique_id=2066509634]
+
+[node name="fajki_05_1" parent="Cigarettes/Platinum/visuals" unique_id=1123352735 instance=ExtResource("26_rb1m2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.06)
+
+[node name="fajki_05_2" parent="Cigarettes/Platinum/visuals" unique_id=1304210047 instance=ExtResource("26_rb1m2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12)
+
+[node name="fajki_05_3" parent="Cigarettes/Platinum/visuals" unique_id=1253248412 instance=ExtResource("26_rb1m2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18)
+
+[node name="fajki_05_4" parent="Cigarettes/Platinum/visuals" unique_id=550319796 instance=ExtResource("26_rb1m2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.24)
+
+[node name="fajki_05_5" parent="Cigarettes/Platinum/visuals" unique_id=446151908 instance=ExtResource("26_rb1m2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="fajki_05_6" parent="Cigarettes/Platinum/visuals" unique_id=2057212019 instance=ExtResource("26_rb1m2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36)
+
+[node name="Mamboro" type="Node3D" parent="Cigarettes" unique_id=1915568844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="CigarettesMamboro" parent="Cigarettes/Mamboro" unique_id=697725845 instance=ExtResource("27_gcgks")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0742803, 0)
+
+[node name="visuals" type="Node3D" parent="Cigarettes/Mamboro" unique_id=1128815727]
+
+[node name="fajki_06_1" parent="Cigarettes/Mamboro/visuals" unique_id=1599203449 instance=ExtResource("28_w5gw8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.06)
+
+[node name="fajki_06_2" parent="Cigarettes/Mamboro/visuals" unique_id=1145663797 instance=ExtResource("28_w5gw8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12)
+
+[node name="fajki_06_3" parent="Cigarettes/Mamboro/visuals" unique_id=1809366308 instance=ExtResource("28_w5gw8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18)
+
+[node name="fajki_06_4" parent="Cigarettes/Mamboro/visuals" unique_id=2093541928 instance=ExtResource("28_w5gw8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.24)
+
+[node name="fajki_06_5" parent="Cigarettes/Mamboro/visuals" unique_id=663741808 instance=ExtResource("28_w5gw8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="fajki_06_6" parent="Cigarettes/Mamboro/visuals" unique_id=1202512966 instance=ExtResource("28_w5gw8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36)
+
+[node name="Beers" type="Node3D" parent="." unique_id=184302696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47983, 0.927546, 0)
+
+[node name="OveckyCans" type="Node3D" parent="Beers" unique_id=1829891643]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, 1.01852, 0.476)
+
+[node name="BeerOveckyCan_1" parent="Beers/OveckyCans" unique_id=8365509 instance=ExtResource("29_1bb36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0.0940616)
+
+[node name="BeerOveckyCan_2" parent="Beers/OveckyCans" unique_id=1511363704 instance=ExtResource("29_1bb36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.1, 0.0940616)
+
+[node name="BeerOveckyCan_3" parent="Beers/OveckyCans" unique_id=1375010423 instance=ExtResource("29_1bb36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.1, 0.0940616)
+
+[node name="BeerOveckyCan_4" parent="Beers/OveckyCans" unique_id=783942269 instance=ExtResource("29_1bb36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.1, 0.0940616)
+
+[node name="BeerOveckyCan_5" parent="Beers/OveckyCans" unique_id=1945444165 instance=ExtResource("29_1bb36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.1, 0.0940616)
+
+[node name="visuals" type="Node3D" parent="Beers/OveckyCans" unique_id=1631338941]
+visible = false
+
+[node name="OveckyCan_1" parent="Beers/OveckyCans/visuals" unique_id=1277047690 instance=ExtResource("30_v4pg8")]
+
+[node name="OveckyCan_2" parent="Beers/OveckyCans/visuals" unique_id=1571768867 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0999999)
+
+[node name="OveckyCan_3" parent="Beers/OveckyCans/visuals" unique_id=475817032 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+
+[node name="OveckyCan_4" parent="Beers/OveckyCans/visuals" unique_id=1411009075 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="OveckyCan_5" parent="Beers/OveckyCans/visuals" unique_id=1064356190 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
+
+[node name="OveckyCan_6" parent="Beers/OveckyCans/visuals" unique_id=1961749205 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.0999999)
+
+[node name="OveckyCan_7" parent="Beers/OveckyCans/visuals" unique_id=865984797 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.2)
+
+[node name="OveckyCan_8" parent="Beers/OveckyCans/visuals" unique_id=1481151877 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.3)
+
+[node name="OveckyCan_9" parent="Beers/OveckyCans/visuals" unique_id=1864613870 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
+
+[node name="OveckyCan_10" parent="Beers/OveckyCans/visuals" unique_id=1409574015 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.0999999)
+
+[node name="OveckyCan_11" parent="Beers/OveckyCans/visuals" unique_id=1634907840 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.2)
+
+[node name="OveckyCan_12" parent="Beers/OveckyCans/visuals" unique_id=1066421622 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.3)
+
+[node name="OveckyCan_13" parent="Beers/OveckyCans/visuals" unique_id=2065190533 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, 0)
+
+[node name="OveckyCan_14" parent="Beers/OveckyCans/visuals" unique_id=2008372639 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -0.0999999)
+
+[node name="OveckyCan_15" parent="Beers/OveckyCans/visuals" unique_id=342426384 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -0.2)
+
+[node name="OveckyCan_16" parent="Beers/OveckyCans/visuals" unique_id=1353076272 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -0.3)
+
+[node name="OveckyCan_17" parent="Beers/OveckyCans/visuals" unique_id=1491818162 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0)
+
+[node name="OveckyCan_18" parent="Beers/OveckyCans/visuals" unique_id=1348140481 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.0999999)
+
+[node name="OveckyCan_19" parent="Beers/OveckyCans/visuals" unique_id=1819690664 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.2)
+
+[node name="OveckyCan_20" parent="Beers/OveckyCans/visuals" unique_id=1241956843 instance=ExtResource("30_v4pg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.3)
+
+[node name="OveckyBottles" type="Node3D" parent="Beers" unique_id=867737928]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, 1.01658, 0.28)
+
+[node name="BeerOveckyBottle_1" parent="Beers/OveckyBottles" unique_id=560450240 instance=ExtResource("31_axyj8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.148057, 0.0999999)
+
+[node name="BeerOveckyBottle_2" parent="Beers/OveckyBottles" unique_id=272103053 instance=ExtResource("31_axyj8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.148057, 0.0999999)
+
+[node name="BeerOveckyBottle_3" parent="Beers/OveckyBottles" unique_id=39736444 instance=ExtResource("31_axyj8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.148057, 0.0999999)
+
+[node name="BeerOveckyBottle_4" parent="Beers/OveckyBottles" unique_id=207365251 instance=ExtResource("31_axyj8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.148057, 0.0999999)
+
+[node name="BeerOveckyBottle_5" parent="Beers/OveckyBottles" unique_id=1990074792 instance=ExtResource("31_axyj8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.148057, 0.0999999)
+
+[node name="visuals" type="Node3D" parent="Beers/OveckyBottles" unique_id=360186056]
+visible = false
+
+[node name="OveckyBottle_1" parent="Beers/OveckyBottles/visuals" unique_id=1116348332 instance=ExtResource("32_smg2u")]
+
+[node name="OveckyBottle_2" parent="Beers/OveckyBottles/visuals" unique_id=396887159 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0999999)
+
+[node name="OveckyBottle_3" parent="Beers/OveckyBottles/visuals" unique_id=1456109742 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+
+[node name="OveckyBottle_4" parent="Beers/OveckyBottles/visuals" unique_id=840572946 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="OveckyBottle_5" parent="Beers/OveckyBottles/visuals" unique_id=994662551 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
+
+[node name="OveckyBottle_6" parent="Beers/OveckyBottles/visuals" unique_id=1311200222 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.0999999)
+
+[node name="OveckyBottle_7" parent="Beers/OveckyBottles/visuals" unique_id=1392713152 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.2)
+
+[node name="OveckyBottle_8" parent="Beers/OveckyBottles/visuals" unique_id=1433379872 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.3)
+
+[node name="OveckyBottle_9" parent="Beers/OveckyBottles/visuals" unique_id=887381000 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
+
+[node name="OveckyBottle_10" parent="Beers/OveckyBottles/visuals" unique_id=468847623 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.0999999)
+
+[node name="OveckyBottle_11" parent="Beers/OveckyBottles/visuals" unique_id=696611064 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.2)
+
+[node name="OveckyBottle_12" parent="Beers/OveckyBottles/visuals" unique_id=44436318 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.3)
+
+[node name="OveckyBottle_13" parent="Beers/OveckyBottles/visuals" unique_id=621958465 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0)
+
+[node name="OveckyBottle_14" parent="Beers/OveckyBottles/visuals" unique_id=1220558190 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.0999999)
+
+[node name="OveckyBottle_15" parent="Beers/OveckyBottles/visuals" unique_id=2115432230 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.2)
+
+[node name="OveckyBottle_16" parent="Beers/OveckyBottles/visuals" unique_id=1807764119 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.3)
+
+[node name="OveckyBottle_17" parent="Beers/OveckyBottles/visuals" unique_id=1651161176 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+
+[node name="OveckyBottle_18" parent="Beers/OveckyBottles/visuals" unique_id=1267224542 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.0999999)
+
+[node name="OveckyBottle_19" parent="Beers/OveckyBottles/visuals" unique_id=1715866927 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.2)
+
+[node name="OveckyBottle_20" parent="Beers/OveckyBottles/visuals" unique_id=604921303 instance=ExtResource("32_smg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.3)
+
+[node name="BoskieCans" type="Node3D" parent="Beers" unique_id=2134544879]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, 0.716136, 0.474537)
+
+[node name="BeerBoskieCan_1" parent="Beers/BoskieCans" unique_id=376077609 instance=ExtResource("33_wg8ux")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0991153, 0.0953155)
+
+[node name="BeerBoskieCan_2" parent="Beers/BoskieCans" unique_id=1611488265 instance=ExtResource("33_wg8ux")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.0991153, 0.0953155)
+
+[node name="BeerBoskieCan_3" parent="Beers/BoskieCans" unique_id=652271184 instance=ExtResource("33_wg8ux")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.0991153, 0.0953155)
+
+[node name="BeerBoskieCan_4" parent="Beers/BoskieCans" unique_id=787304347 instance=ExtResource("33_wg8ux")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.0991153, 0.0953155)
+
+[node name="BeerBoskieCan_5" parent="Beers/BoskieCans" unique_id=611518351 instance=ExtResource("33_wg8ux")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.0991153, 0.0953155)
+
+[node name="visuals" type="Node3D" parent="Beers/BoskieCans" unique_id=1349481362]
+visible = false
+
+[node name="BoskieCan_1" parent="Beers/BoskieCans/visuals" unique_id=483394694 instance=ExtResource("34_abbki")]
+
+[node name="BoskieCan_2" parent="Beers/BoskieCans/visuals" unique_id=661529445 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
+
+[node name="BoskieCan_3" parent="Beers/BoskieCans/visuals" unique_id=1197848857 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+
+[node name="BoskieCan_4" parent="Beers/BoskieCans/visuals" unique_id=874015828 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="BoskieCan_5" parent="Beers/BoskieCans/visuals" unique_id=1090074096 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
+
+[node name="BoskieCan_6" parent="Beers/BoskieCans/visuals" unique_id=111693904 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.0999999)
+
+[node name="BoskieCan_7" parent="Beers/BoskieCans/visuals" unique_id=1633336980 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.2)
+
+[node name="BoskieCan_8" parent="Beers/BoskieCans/visuals" unique_id=218177880 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.3)
+
+[node name="BoskieCan_9" parent="Beers/BoskieCans/visuals" unique_id=333633005 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
+
+[node name="BoskieCan_10" parent="Beers/BoskieCans/visuals" unique_id=445382385 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.0999999)
+
+[node name="BoskieCan_11" parent="Beers/BoskieCans/visuals" unique_id=1058745974 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.2)
+
+[node name="BoskieCan_12" parent="Beers/BoskieCans/visuals" unique_id=1862734140 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.3)
+
+[node name="BoskieCan_13" parent="Beers/BoskieCans/visuals" unique_id=905873979 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, 0)
+
+[node name="BoskieCan_14" parent="Beers/BoskieCans/visuals" unique_id=1040874258 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -0.0999999)
+
+[node name="BoskieCan_15" parent="Beers/BoskieCans/visuals" unique_id=1548421229 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -0.2)
+
+[node name="BoskieCan_16" parent="Beers/BoskieCans/visuals" unique_id=36371634 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -0.3)
+
+[node name="BoskieCan_17" parent="Beers/BoskieCans/visuals" unique_id=280271902 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399861, 0, 0)
+
+[node name="BoskieCan_18" parent="Beers/BoskieCans/visuals" unique_id=1874953093 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399861, 0, -0.0999999)
+
+[node name="BoskieCan_19" parent="Beers/BoskieCans/visuals" unique_id=993613688 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399861, 0, -0.2)
+
+[node name="BoskieCan_20" parent="Beers/BoskieCans/visuals" unique_id=892559626 instance=ExtResource("34_abbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399861, 0, -0.3)
+
+[node name="BoskieBottles" type="Node3D" parent="Beers" unique_id=1912589891]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, 0.715031, 0.28)
+
+[node name="BeerBoskieBottle_1" parent="Beers/BoskieBottles" unique_id=457512398 instance=ExtResource("35_n15cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.149042, 0.0999999)
+
+[node name="BeerBoskieBottle_2" parent="Beers/BoskieBottles" unique_id=818180352 instance=ExtResource("35_n15cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.149042, 0.0999999)
+
+[node name="BeerBoskieBottle_3" parent="Beers/BoskieBottles" unique_id=1516649348 instance=ExtResource("35_n15cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.149042, 0.0999999)
+
+[node name="BeerBoskieBottle_4" parent="Beers/BoskieBottles" unique_id=1362156063 instance=ExtResource("35_n15cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.149042, 0.0999999)
+
+[node name="BeerBoskieBottle_5" parent="Beers/BoskieBottles" unique_id=1960311835 instance=ExtResource("35_n15cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.149042, 0.0999999)
+
+[node name="visuals" type="Node3D" parent="Beers/BoskieBottles" unique_id=125635550]
+visible = false
+
+[node name="BoskieBottle_1" parent="Beers/BoskieBottles/visuals" unique_id=174896141 instance=ExtResource("36_b6onn")]
+
+[node name="BoskieBottle_2" parent="Beers/BoskieBottles/visuals" unique_id=109833725 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0999999)
+
+[node name="BoskieBottle_3" parent="Beers/BoskieBottles/visuals" unique_id=1913547463 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+
+[node name="BoskieBottle_4" parent="Beers/BoskieBottles/visuals" unique_id=1061173136 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="BoskieBottle_5" parent="Beers/BoskieBottles/visuals" unique_id=1225607148 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
+
+[node name="BoskieBottle_6" parent="Beers/BoskieBottles/visuals" unique_id=569270749 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.0999999)
+
+[node name="BoskieBottle_7" parent="Beers/BoskieBottles/visuals" unique_id=379730654 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.2)
+
+[node name="BoskieBottle_8" parent="Beers/BoskieBottles/visuals" unique_id=995588805 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.3)
+
+[node name="BoskieBottle_9" parent="Beers/BoskieBottles/visuals" unique_id=1818076285 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
+
+[node name="BoskieBottle_10" parent="Beers/BoskieBottles/visuals" unique_id=2121088436 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.0999999)
+
+[node name="BoskieBottle_11" parent="Beers/BoskieBottles/visuals" unique_id=1839063096 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.2)
+
+[node name="BoskieBottle_12" parent="Beers/BoskieBottles/visuals" unique_id=1289884624 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.3)
+
+[node name="BoskieBottle_13" parent="Beers/BoskieBottles/visuals" unique_id=1971855339 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0)
+
+[node name="BoskieBottle_14" parent="Beers/BoskieBottles/visuals" unique_id=665429843 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.0999999)
+
+[node name="BoskieBottle_15" parent="Beers/BoskieBottles/visuals" unique_id=2043632174 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.2)
+
+[node name="BoskieBottle_16" parent="Beers/BoskieBottles/visuals" unique_id=2126050819 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.3)
+
+[node name="BoskieBottle_17" parent="Beers/BoskieBottles/visuals" unique_id=1971583695 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+
+[node name="BoskieBottle_18" parent="Beers/BoskieBottles/visuals" unique_id=63865060 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.0999999)
+
+[node name="BoskieBottle_19" parent="Beers/BoskieBottles/visuals" unique_id=1550337906 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.2)
+
+[node name="BoskieBottle_20" parent="Beers/BoskieBottles/visuals" unique_id=1776948114 instance=ExtResource("36_b6onn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.3)
+
+[node name="BobrCans" type="Node3D" parent="Beers" unique_id=491201930]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.855032, 0.412348, 0.475894)
+
+[node name="BeerBobrCan_1" parent="Beers/BobrCans" unique_id=1557170380 instance=ExtResource("37_kis3h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.101159, 0.0999999)
+
+[node name="BeerBobrCan_2" parent="Beers/BobrCans" unique_id=1121274731 instance=ExtResource("37_kis3h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.101159, 0.0999999)
+
+[node name="BeerBobrCan_3" parent="Beers/BobrCans" unique_id=971103205 instance=ExtResource("37_kis3h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.101159, 0.0999999)
+
+[node name="BeerBobrCan_4" parent="Beers/BobrCans" unique_id=1944017090 instance=ExtResource("37_kis3h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.101159, 0.0999999)
+
+[node name="BeerBobrCan_5" parent="Beers/BobrCans" unique_id=503242061 instance=ExtResource("37_kis3h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.101159, 0.0999999)
+
+[node name="visuals" type="Node3D" parent="Beers/BobrCans" unique_id=1045607493]
+visible = false
+
+[node name="BobrCan_1" parent="Beers/BobrCans/visuals" unique_id=1483602333 instance=ExtResource("38_r4xrt")]
+
+[node name="BobrCan_2" parent="Beers/BobrCans/visuals" unique_id=1029598826 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0999999)
+
+[node name="BobrCan_3" parent="Beers/BobrCans/visuals" unique_id=328640151 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+
+[node name="BobrCan_4" parent="Beers/BobrCans/visuals" unique_id=1900404059 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="BobrCan_5" parent="Beers/BobrCans/visuals" unique_id=140357173 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
+
+[node name="BobrCan_6" parent="Beers/BobrCans/visuals" unique_id=1487974251 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.0999999)
+
+[node name="BobrCan_7" parent="Beers/BobrCans/visuals" unique_id=772543306 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.2)
+
+[node name="BobrCan_8" parent="Beers/BobrCans/visuals" unique_id=1721872154 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.3)
+
+[node name="BobrCan_9" parent="Beers/BobrCans/visuals" unique_id=1142299482 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
+
+[node name="BobrCan_10" parent="Beers/BobrCans/visuals" unique_id=1936198943 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.0999999)
+
+[node name="BobrCan_11" parent="Beers/BobrCans/visuals" unique_id=1890842910 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.2)
+
+[node name="BobrCan_12" parent="Beers/BobrCans/visuals" unique_id=1928336917 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.3)
+
+[node name="BobrCan_13" parent="Beers/BobrCans/visuals" unique_id=723312486 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.300265, 0, 0)
+
+[node name="BobrCan_14" parent="Beers/BobrCans/visuals" unique_id=1271651310 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.300265, 0, -0.0999999)
+
+[node name="BobrCan_15" parent="Beers/BobrCans/visuals" unique_id=1835204071 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.300265, 0, -0.2)
+
+[node name="BobrCan_16" parent="Beers/BobrCans/visuals" unique_id=1139390931 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.300265, 0, -0.3)
+
+[node name="BobrCan_17" parent="Beers/BobrCans/visuals" unique_id=212724642 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0)
+
+[node name="BobrCan_18" parent="Beers/BobrCans/visuals" unique_id=1320843568 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.0999999)
+
+[node name="BobrCan_19" parent="Beers/BobrCans/visuals" unique_id=1987686078 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.2)
+
+[node name="BobrCan_20" parent="Beers/BobrCans/visuals" unique_id=859220312 instance=ExtResource("38_r4xrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.3)
+
+[node name="BobrBottles" type="Node3D" parent="Beers" unique_id=354728931]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.85105, 0.41378, 0.280048)
+
+[node name="BeerBobrBottle_1" parent="Beers/BobrBottles" unique_id=380562389 instance=ExtResource("39_fe6qw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.145, 0.0999999)
+
+[node name="BeerBobrBottle_2" parent="Beers/BobrBottles" unique_id=1469237332 instance=ExtResource("39_fe6qw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.145, 0.0999999)
+
+[node name="BeerBobrBottle_3" parent="Beers/BobrBottles" unique_id=103641487 instance=ExtResource("39_fe6qw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.145, 0.0999999)
+
+[node name="BeerBobrBottle_4" parent="Beers/BobrBottles" unique_id=1114344357 instance=ExtResource("39_fe6qw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.145, 0.0999999)
+
+[node name="BeerBobrBottle_5" parent="Beers/BobrBottles" unique_id=1169650019 instance=ExtResource("39_fe6qw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.145, 0.0999999)
+
+[node name="visuals" type="Node3D" parent="Beers/BobrBottles" unique_id=1391174008]
+visible = false
+
+[node name="BobrBottle_1" parent="Beers/BobrBottles/visuals" unique_id=385077293 instance=ExtResource("40_l1mhl")]
+
+[node name="BobrBottle_2" parent="Beers/BobrBottles/visuals" unique_id=603095462 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0999999)
+
+[node name="BobrBottle_3" parent="Beers/BobrBottles/visuals" unique_id=1232737185 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+
+[node name="BobrBottle_4" parent="Beers/BobrBottles/visuals" unique_id=1992044342 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="BobrBottle_5" parent="Beers/BobrBottles/visuals" unique_id=872401163 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
+
+[node name="BobrBottle_6" parent="Beers/BobrBottles/visuals" unique_id=1350955231 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.0999999)
+
+[node name="BobrBottle_7" parent="Beers/BobrBottles/visuals" unique_id=51687268 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.2)
+
+[node name="BobrBottle_8" parent="Beers/BobrBottles/visuals" unique_id=836661641 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.3)
+
+[node name="BobrBottle_9" parent="Beers/BobrBottles/visuals" unique_id=924482043 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.200252, 0, 0)
+
+[node name="BobrBottle_10" parent="Beers/BobrBottles/visuals" unique_id=1591434940 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.200252, 0, -0.0999999)
+
+[node name="BobrBottle_11" parent="Beers/BobrBottles/visuals" unique_id=1067201386 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.200252, 0, -0.2)
+
+[node name="BobrBottle_12" parent="Beers/BobrBottles/visuals" unique_id=1919776238 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.200252, 0, -0.3)
+
+[node name="BobrBottle_13" parent="Beers/BobrBottles/visuals" unique_id=1457746193 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0)
+
+[node name="BobrBottle_14" parent="Beers/BobrBottles/visuals" unique_id=1963019707 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.0999999)
+
+[node name="BobrBottle_15" parent="Beers/BobrBottles/visuals" unique_id=1588959182 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.2)
+
+[node name="BobrBottle_16" parent="Beers/BobrBottles/visuals" unique_id=1135765222 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.3)
+
+[node name="BobrBottle_17" parent="Beers/BobrBottles/visuals" unique_id=579335516 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+
+[node name="BobrBottle_18" parent="Beers/BobrBottles/visuals" unique_id=1009767662 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.0999999)
+
+[node name="BobrBottle_19" parent="Beers/BobrBottles/visuals" unique_id=1702032570 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.2)
+
+[node name="BobrBottle_20" parent="Beers/BobrBottles/visuals" unique_id=52717478 instance=ExtResource("40_l1mhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.3)
+
+[node name="TarkaCans" type="Node3D" parent="Beers" unique_id=1960027479]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, 0.113, 0.476)
+
+[node name="BeerTarkaCan_1" parent="Beers/TarkaCans" unique_id=1710364299 instance=ExtResource("41_013cl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0.0999999)
+
+[node name="BeerTarkaCan_2" parent="Beers/TarkaCans" unique_id=236294774 instance=ExtResource("41_013cl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.1, 0.0999999)
+
+[node name="BeerTarkaCan_3" parent="Beers/TarkaCans" unique_id=1095615680 instance=ExtResource("41_013cl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.1, 0.0999999)
+
+[node name="BeerTarkaCan_4" parent="Beers/TarkaCans" unique_id=456383006 instance=ExtResource("41_013cl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.1, 0.0999999)
+
+[node name="BeerTarkaCan_5" parent="Beers/TarkaCans" unique_id=137378755 instance=ExtResource("41_013cl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.1, 0.0999999)
+
+[node name="visuals" type="Node3D" parent="Beers/TarkaCans" unique_id=740089590]
+visible = false
+
+[node name="TarkaCan_1" parent="Beers/TarkaCans/visuals" unique_id=1270448616 instance=ExtResource("42_uwc7r")]
+
+[node name="TarkaCan_2" parent="Beers/TarkaCans/visuals" unique_id=799236495 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
+
+[node name="TarkaCan_3" parent="Beers/TarkaCans/visuals" unique_id=1968047201 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+
+[node name="TarkaCan_4" parent="Beers/TarkaCans/visuals" unique_id=1649719755 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="TarkaCan_5" parent="Beers/TarkaCans/visuals" unique_id=854967981 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
+
+[node name="TarkaCan_6" parent="Beers/TarkaCans/visuals" unique_id=1333884514 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.0999999)
+
+[node name="TarkaCan_7" parent="Beers/TarkaCans/visuals" unique_id=1668497029 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.2)
+
+[node name="TarkaCan_8" parent="Beers/TarkaCans/visuals" unique_id=839078520 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.3)
+
+[node name="TarkaCan_9" parent="Beers/TarkaCans/visuals" unique_id=1686076329 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
+
+[node name="TarkaCan_10" parent="Beers/TarkaCans/visuals" unique_id=1451135764 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.0999999)
+
+[node name="TarkaCan_11" parent="Beers/TarkaCans/visuals" unique_id=2055608118 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.2)
+
+[node name="TarkaCan_12" parent="Beers/TarkaCans/visuals" unique_id=1642397152 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.3)
+
+[node name="TarkaCan_13" parent="Beers/TarkaCans/visuals" unique_id=1183272941 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, 0)
+
+[node name="TarkaCan_14" parent="Beers/TarkaCans/visuals" unique_id=486926014 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -0.0999999)
+
+[node name="TarkaCan_15" parent="Beers/TarkaCans/visuals" unique_id=1961622134 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -0.2)
+
+[node name="TarkaCan_16" parent="Beers/TarkaCans/visuals" unique_id=1662389840 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -0.3)
+
+[node name="TarkaCan_17" parent="Beers/TarkaCans/visuals" unique_id=1194861972 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0)
+
+[node name="TarkaCan_18" parent="Beers/TarkaCans/visuals" unique_id=1475096393 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.0999999)
+
+[node name="TarkaCan_19" parent="Beers/TarkaCans/visuals" unique_id=1884932152 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.2)
+
+[node name="TarkaCan_20" parent="Beers/TarkaCans/visuals" unique_id=1146873062 instance=ExtResource("42_uwc7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.3)
+
+[node name="TarkaBottles" type="Node3D" parent="Beers" unique_id=847487792]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, 0.113, 0.28)
+
+[node name="BeerTarkaBottle_1" parent="Beers/TarkaBottles" unique_id=1022013997 instance=ExtResource("43_5p5cl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.146, 0.1)
+
+[node name="BeerTarkaBottle_2" parent="Beers/TarkaBottles" unique_id=2027651748 instance=ExtResource("43_5p5cl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.146, 0.0999999)
+
+[node name="BeerTarkaBottle_3" parent="Beers/TarkaBottles" unique_id=1235512983 instance=ExtResource("43_5p5cl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.146, 0.0999999)
+
+[node name="BeerTarkaBottle_4" parent="Beers/TarkaBottles" unique_id=406273051 instance=ExtResource("43_5p5cl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.146, 0.0999999)
+
+[node name="BeerTarkaBottle_5" parent="Beers/TarkaBottles" unique_id=1889157966 instance=ExtResource("43_5p5cl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.146, 0.0999999)
+
+[node name="visuals" type="Node3D" parent="Beers/TarkaBottles" unique_id=1735470222]
+visible = false
+
+[node name="TarkaBottle_1" parent="Beers/TarkaBottles/visuals" unique_id=541665381 instance=ExtResource("44_6jiab")]
+
+[node name="TarkaBottle_2" parent="Beers/TarkaBottles/visuals" unique_id=162039876 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
+
+[node name="TarkaBottle_3" parent="Beers/TarkaBottles/visuals" unique_id=689996363 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+
+[node name="TarkaBottle_4" parent="Beers/TarkaBottles/visuals" unique_id=49305060 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="TarkaBottle_5" parent="Beers/TarkaBottles/visuals" unique_id=1714692006 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
+
+[node name="TarkaBottle_6" parent="Beers/TarkaBottles/visuals" unique_id=1772266626 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.0999999)
+
+[node name="TarkaBottle_7" parent="Beers/TarkaBottles/visuals" unique_id=1151442060 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.2)
+
+[node name="TarkaBottle_8" parent="Beers/TarkaBottles/visuals" unique_id=192789644 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.3)
+
+[node name="TarkaBottle_9" parent="Beers/TarkaBottles/visuals" unique_id=2012107045 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
+
+[node name="TarkaBottle_10" parent="Beers/TarkaBottles/visuals" unique_id=1568259993 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.0999999)
+
+[node name="TarkaBottle_11" parent="Beers/TarkaBottles/visuals" unique_id=449170982 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.2)
+
+[node name="TarkaBottle_12" parent="Beers/TarkaBottles/visuals" unique_id=230233795 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.3)
+
+[node name="TarkaBottle_13" parent="Beers/TarkaBottles/visuals" unique_id=1275028384 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0)
+
+[node name="TarkaBottle_14" parent="Beers/TarkaBottles/visuals" unique_id=402412964 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.0999999)
+
+[node name="TarkaBottle_15" parent="Beers/TarkaBottles/visuals" unique_id=307695712 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.2)
+
+[node name="TarkaBottle_16" parent="Beers/TarkaBottles/visuals" unique_id=3925799 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.3)
+
+[node name="TarkaBottle_17" parent="Beers/TarkaBottles/visuals" unique_id=216470035 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+
+[node name="TarkaBottle_18" parent="Beers/TarkaBottles/visuals" unique_id=1944646715 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.0999999)
+
+[node name="TarkaBottle_19" parent="Beers/TarkaBottles/visuals" unique_id=2080392597 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.2)
+
+[node name="TarkaBottle_20" parent="Beers/TarkaBottles/visuals" unique_id=610780762 instance=ExtResource("44_6jiab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.3)
+
+[node name="MechCans" type="Node3D" parent="Beers" unique_id=60521214]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, -0.191369, 0.476)
+
+[node name="BeerMechCan_1" parent="Beers/MechCans" unique_id=1024332843 instance=ExtResource("45_hswwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0.0937853)
+
+[node name="BeerMechCan_2" parent="Beers/MechCans" unique_id=1901097945 instance=ExtResource("45_hswwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.1, 0.0937853)
+
+[node name="BeerMechCan_3" parent="Beers/MechCans" unique_id=332672749 instance=ExtResource("45_hswwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.1, 0.0937853)
+
+[node name="BeerMechCan_4" parent="Beers/MechCans" unique_id=1113043156 instance=ExtResource("45_hswwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.1, 0.0937853)
+
+[node name="BeerMechCan_5" parent="Beers/MechCans" unique_id=87335769 instance=ExtResource("45_hswwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.1, 0.0937853)
+
+[node name="visuals" type="Node3D" parent="Beers/MechCans" unique_id=75628437]
+visible = false
+
+[node name="MechCan_1" parent="Beers/MechCans/visuals" unique_id=551319063 instance=ExtResource("46_8i8hy")]
+
+[node name="MechCan_2" parent="Beers/MechCans/visuals" unique_id=2038022255 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0999999)
+
+[node name="MechCan_3" parent="Beers/MechCans/visuals" unique_id=56471658 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+
+[node name="MechCan_4" parent="Beers/MechCans/visuals" unique_id=587519906 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="MechCan_5" parent="Beers/MechCans/visuals" unique_id=1044952977 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
+
+[node name="MechCan_6" parent="Beers/MechCans/visuals" unique_id=1351102537 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.0999999)
+
+[node name="MechCan_7" parent="Beers/MechCans/visuals" unique_id=869190459 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.2)
+
+[node name="MechCan_8" parent="Beers/MechCans/visuals" unique_id=1787697460 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.3)
+
+[node name="MechCan_9" parent="Beers/MechCans/visuals" unique_id=959518269 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
+
+[node name="MechCan_10" parent="Beers/MechCans/visuals" unique_id=1487488819 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.0999999)
+
+[node name="MechCan_11" parent="Beers/MechCans/visuals" unique_id=1361719271 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.2)
+
+[node name="MechCan_12" parent="Beers/MechCans/visuals" unique_id=590513580 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.3)
+
+[node name="MechCan_13" parent="Beers/MechCans/visuals" unique_id=308339188 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, 0)
+
+[node name="MechCan_14" parent="Beers/MechCans/visuals" unique_id=350365514 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -0.0999999)
+
+[node name="MechCan_15" parent="Beers/MechCans/visuals" unique_id=1133156750 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -0.2)
+
+[node name="MechCan_16" parent="Beers/MechCans/visuals" unique_id=2106464214 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -0.3)
+
+[node name="MechCan_17" parent="Beers/MechCans/visuals" unique_id=569924831 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0)
+
+[node name="MechCan_18" parent="Beers/MechCans/visuals" unique_id=190162147 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.0999999)
+
+[node name="MechCan_19" parent="Beers/MechCans/visuals" unique_id=1779592407 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.2)
+
+[node name="MechCan_20" parent="Beers/MechCans/visuals" unique_id=1285807191 instance=ExtResource("46_8i8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.3)
+
+[node name="MechBottles" type="Node3D" parent="Beers" unique_id=666362681]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, -0.191832, 0.28)
+
+[node name="BeerMechBottle_1" parent="Beers/MechBottles" unique_id=548572824 instance=ExtResource("47_tgwfj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.150645, 0.0999999)
+
+[node name="BeerMechBottle_2" parent="Beers/MechBottles" unique_id=2002220281 instance=ExtResource("47_tgwfj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.150645, 0.0999999)
+
+[node name="BeerMechBottle_3" parent="Beers/MechBottles" unique_id=1223450408 instance=ExtResource("47_tgwfj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.150645, 0.0999999)
+
+[node name="BeerMechBottle_4" parent="Beers/MechBottles" unique_id=1441554572 instance=ExtResource("47_tgwfj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.151, 0.1)
+
+[node name="BeerMechBottle_5" parent="Beers/MechBottles" unique_id=2090007903 instance=ExtResource("47_tgwfj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.151, 0.1)
+
+[node name="visuals" type="Node3D" parent="Beers/MechBottles" unique_id=968364051]
+visible = false
+
+[node name="MechBottle_1" parent="Beers/MechBottles/visuals" unique_id=1873742822 instance=ExtResource("48_s6poh")]
+
+[node name="MechBottle_2" parent="Beers/MechBottles/visuals" unique_id=1280311250 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0999999)
+
+[node name="MechBottle_3" parent="Beers/MechBottles/visuals" unique_id=558412942 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+
+[node name="MechBottle_4" parent="Beers/MechBottles/visuals" unique_id=500875423 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="MechBottle_5" parent="Beers/MechBottles/visuals" unique_id=1345843804 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
+
+[node name="MechBottle_6" parent="Beers/MechBottles/visuals" unique_id=663984828 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.0999999)
+
+[node name="MechBottle_7" parent="Beers/MechBottles/visuals" unique_id=47302560 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.2)
+
+[node name="MechBottle_8" parent="Beers/MechBottles/visuals" unique_id=1633846154 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.3)
+
+[node name="MechBottle_9" parent="Beers/MechBottles/visuals" unique_id=40781302 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
+
+[node name="MechBottle_10" parent="Beers/MechBottles/visuals" unique_id=272824226 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.0999999)
+
+[node name="MechBottle_11" parent="Beers/MechBottles/visuals" unique_id=2097361906 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.2)
+
+[node name="MechBottle_12" parent="Beers/MechBottles/visuals" unique_id=291234332 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.3)
+
+[node name="MechBottle_13" parent="Beers/MechBottles/visuals" unique_id=317048229 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0)
+
+[node name="MechBottle_14" parent="Beers/MechBottles/visuals" unique_id=1287702270 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.0999999)
+
+[node name="MechBottle_15" parent="Beers/MechBottles/visuals" unique_id=214690295 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.2)
+
+[node name="MechBottle_16" parent="Beers/MechBottles/visuals" unique_id=263717605 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.3)
+
+[node name="MechBottle_17" parent="Beers/MechBottles/visuals" unique_id=98806060 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+
+[node name="MechBottle_18" parent="Beers/MechBottles/visuals" unique_id=1174936656 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.0999999)
+
+[node name="MechBottle_19" parent="Beers/MechBottles/visuals" unique_id=1151422385 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.2)
+
+[node name="MechBottle_20" parent="Beers/MechBottles/visuals" unique_id=1746587885 instance=ExtResource("48_s6poh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.3)
+
+[node name="JPCans" type="Node3D" parent="Beers" unique_id=491121683]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, -0.487, 0.476)
+
+[node name="BeerJPCan_1" parent="Beers/JPCans" unique_id=2009040224 instance=ExtResource("49_aecrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0.0956385)
+
+[node name="BeerJPCan_2" parent="Beers/JPCans" unique_id=1884905229 instance=ExtResource("49_aecrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.1, 0.0956385)
+
+[node name="BeerJPCan_3" parent="Beers/JPCans" unique_id=2091218600 instance=ExtResource("49_aecrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.1, 0.0956385)
+
+[node name="BeerJPCan_4" parent="Beers/JPCans" unique_id=343817156 instance=ExtResource("49_aecrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.1, 0.0956385)
+
+[node name="BeerJPCan_5" parent="Beers/JPCans" unique_id=645231121 instance=ExtResource("49_aecrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.1, 0.0956385)
+
+[node name="visuals" type="Node3D" parent="Beers/JPCans" unique_id=1039221659]
+visible = false
+
+[node name="JPCan_1" parent="Beers/JPCans/visuals" unique_id=1696891115 instance=ExtResource("50_5ce7q")]
+
+[node name="JPCan_2" parent="Beers/JPCans/visuals" unique_id=1520446056 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0999999)
+
+[node name="JPCan_3" parent="Beers/JPCans/visuals" unique_id=1447563456 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+
+[node name="JPCan_4" parent="Beers/JPCans/visuals" unique_id=1902037476 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="JPCan_5" parent="Beers/JPCans/visuals" unique_id=420361875 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
+
+[node name="JPCan_6" parent="Beers/JPCans/visuals" unique_id=809583236 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.0999999)
+
+[node name="JPCan_7" parent="Beers/JPCans/visuals" unique_id=1978654828 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.2)
+
+[node name="JPCan_8" parent="Beers/JPCans/visuals" unique_id=447138992 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.3)
+
+[node name="JPCan_9" parent="Beers/JPCans/visuals" unique_id=210740362 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
+
+[node name="JPCan_10" parent="Beers/JPCans/visuals" unique_id=1418773277 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.0999999)
+
+[node name="JPCan_11" parent="Beers/JPCans/visuals" unique_id=1544135956 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.2)
+
+[node name="JPCan_12" parent="Beers/JPCans/visuals" unique_id=89613714 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.3)
+
+[node name="JPCan_13" parent="Beers/JPCans/visuals" unique_id=34559197 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, 0)
+
+[node name="JPCan_14" parent="Beers/JPCans/visuals" unique_id=1712469743 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -0.0999999)
+
+[node name="JPCan_15" parent="Beers/JPCans/visuals" unique_id=513016421 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -0.2)
+
+[node name="JPCan_16" parent="Beers/JPCans/visuals" unique_id=1451700288 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -0.3)
+
+[node name="JPCan_17" parent="Beers/JPCans/visuals" unique_id=1647002741 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0)
+
+[node name="JPCan_18" parent="Beers/JPCans/visuals" unique_id=569713256 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.0999999)
+
+[node name="JPCan_19" parent="Beers/JPCans/visuals" unique_id=1913722127 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.2)
+
+[node name="JPCan_20" parent="Beers/JPCans/visuals" unique_id=1331146911 instance=ExtResource("50_5ce7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.3)
+
+[node name="JPBottles" type="Node3D" parent="Beers" unique_id=1542633794]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.850987, -0.487, 0.28)
+
+[node name="BeerJPBottle_1" parent="Beers/JPBottles" unique_id=40029458 instance=ExtResource("51_cveak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.140599, 0.0999999)
+
+[node name="BeerJPBottle_2" parent="Beers/JPBottles" unique_id=1059732869 instance=ExtResource("51_cveak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.140599, 0.0999999)
+
+[node name="BeerJPBottle_3" parent="Beers/JPBottles" unique_id=1893997889 instance=ExtResource("51_cveak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.140599, 0.0999999)
+
+[node name="BeerJPBottle_4" parent="Beers/JPBottles" unique_id=1206103121 instance=ExtResource("51_cveak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.140599, 0.0999999)
+
+[node name="BeerJPBottle_5" parent="Beers/JPBottles" unique_id=282546167 instance=ExtResource("51_cveak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.140599, 0.0999999)
+
+[node name="visuals" type="Node3D" parent="Beers/JPBottles" unique_id=225378686]
+visible = false
+
+[node name="JPBottle_1" parent="Beers/JPBottles/visuals" unique_id=2035427010 instance=ExtResource("52_f25ou")]
+
+[node name="JPBottle_2" parent="Beers/JPBottles/visuals" unique_id=205259084 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0999999)
+
+[node name="JPBottle_3" parent="Beers/JPBottles/visuals" unique_id=869163080 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+
+[node name="JPBottle_4" parent="Beers/JPBottles/visuals" unique_id=1804259946 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
+
+[node name="JPBottle_5" parent="Beers/JPBottles/visuals" unique_id=563530705 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
+
+[node name="JPBottle_6" parent="Beers/JPBottles/visuals" unique_id=1209577847 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.0999999)
+
+[node name="JPBottle_7" parent="Beers/JPBottles/visuals" unique_id=106873497 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.2)
+
+[node name="JPBottle_8" parent="Beers/JPBottles/visuals" unique_id=388726003 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.3)
+
+[node name="JPBottle_9" parent="Beers/JPBottles/visuals" unique_id=972477135 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
+
+[node name="JPBottle_10" parent="Beers/JPBottles/visuals" unique_id=1252758622 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.0999999)
+
+[node name="JPBottle_11" parent="Beers/JPBottles/visuals" unique_id=546895289 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.2)
+
+[node name="JPBottle_12" parent="Beers/JPBottles/visuals" unique_id=630563481 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.3)
+
+[node name="JPBottle_13" parent="Beers/JPBottles/visuals" unique_id=97174039 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0)
+
+[node name="JPBottle_14" parent="Beers/JPBottles/visuals" unique_id=1635394519 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.0999999)
+
+[node name="JPBottle_15" parent="Beers/JPBottles/visuals" unique_id=1531687001 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.2)
+
+[node name="JPBottle_16" parent="Beers/JPBottles/visuals" unique_id=2120381218 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.3)
+
+[node name="JPBottle_17" parent="Beers/JPBottles/visuals" unique_id=352637334 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+
+[node name="JPBottle_18" parent="Beers/JPBottles/visuals" unique_id=393352925 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.0999999)
+
+[node name="JPBottle_19" parent="Beers/JPBottles/visuals" unique_id=889493823 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.2)
+
+[node name="JPBottle_20" parent="Beers/JPBottles/visuals" unique_id=424231597 instance=ExtResource("52_f25ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.3)
+
+[node name="Wines" type="Node3D" parent="." unique_id=43048887]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8127259, 1.2054436, -3.42605)
+
+[node name="Musujace" type="Node3D" parent="Wines" unique_id=938223728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24256623, 0.84291315, 0)
+
+[node name="WinoDobreto_1" parent="Wines/Musujace" unique_id=1206098617 instance=ExtResource("53_lp1n1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+
+[node name="WinoKwiat_1" parent="Wines/Musujace" unique_id=1377027596 instance=ExtResource("54_silsy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
+
+[node name="WinoPippolo_1" parent="Wines/Musujace" unique_id=1825170910 instance=ExtResource("55_7mfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+
+[node name="WinoRuskiSzampan_1" parent="Wines/Musujace" unique_id=2136340655 groups=["items"] instance=ExtResource("56_xtgde")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
+
+[node name="Premium" type="Node3D" parent="Wines" unique_id=751346383]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24256623, 0.4215163, 0)
+
+[node name="WinoBreslau_1" parent="Wines/Premium" unique_id=980329770 instance=ExtResource("57_fgv1h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+
+[node name="WinoJabluszkoPomorskie_1" parent="Wines/Premium" unique_id=568082716 groups=["items"] instance=ExtResource("58_f8nfe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
+
+[node name="WinoKrolewskie_1" parent="Wines/Premium" unique_id=1434197325 instance=ExtResource("59_2viwx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
+
+[node name="WinoZofia_1" parent="Wines/Premium" unique_id=265223509 instance=ExtResource("60_16gfv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+
+[node name="Jabole" type="Node3D" parent="Wines" unique_id=51893507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24256623, 0.0016889572, 0)
+
+[node name="WinoArena_1" parent="Wines/Jabole" unique_id=614513481 instance=ExtResource("61_1vfrm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.002, 0)
+
+[node name="WinoSierzant_1" parent="Wines/Jabole" unique_id=1993698628 instance=ExtResource("62_nj6t0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, -0.002, 0)
+
+[node name="WinoTasTas_1" parent="Wines/Jabole" unique_id=1086607232 instance=ExtResource("63_cpaqx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.002, 0)
+
+[node name="WinoWino_1" parent="Wines/Jabole" unique_id=88664543 instance=ExtResource("64_3oe50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -0.002, 0)
+
+[node name="TrashCan" parent="." unique_id=2097062338 instance=ExtResource("65_0obmn")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.511217, 0.132, -2.2046173)
+
+[node name="TrashContainer" type="Node3D" parent="." unique_id=155074659]
+unique_name_in_owner = true
+script = ExtResource("66_lli4t")
+spawn_height_offset = 0.15
+room_x_thresholds = Vector2(-3, 3)
+room_z_thresholds = Vector2(-4, 4)
+
+[node name="LooseItems" type="Node" parent="." unique_id=1700068043]
+unique_name_in_owner = true
+
+[node name="Mop" parent="LooseItems" unique_id=1099867490 instance=ExtResource("67_e8y4n")]
+transform = Transform3D(-4.371139e-08, -0.42261827, 0.90630776, 0, 0.90630776, 0.42261827, -1, 1.8473232e-08, -3.961597e-08, -2.4268317, 0.6911658, -1.5418394)

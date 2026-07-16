@@ -1,14 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://6q6gxagxmntn"]
+[gd_scene format=3 uid="uid://6q6gxagxmntn"]
 
 [ext_resource type="Script" uid="uid://chqoglnpde4ok" path="res://autoload/debug_menu/debug_menu.gd" id="1_y2716"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="CanvasLayer" type="CanvasLayer" unique_id=163241637]
 process_mode = 2
 layer = 3
 visible = false
 script = ExtResource("1_y2716")
 
-[node name="DebugMenu" type="Control" parent="."]
+[node name="DebugMenu" type="Control" parent="." unique_id=1466478126]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,7 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ButtonsContainer" type="VBoxContainer" parent="DebugMenu"]
+[node name="ButtonsContainer" type="VBoxContainer" parent="DebugMenu" unique_id=1766600330]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
@@ -31,7 +31,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BackButton" type="Button" parent="DebugMenu/ButtonsContainer"]
+[node name="BackButton" type="Button" parent="DebugMenu/ButtonsContainer" unique_id=1586878059]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Back"

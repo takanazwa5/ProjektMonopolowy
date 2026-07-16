@@ -27,7 +27,6 @@ func _move_to_queue_position(index: int) -> void:
 	var queue_position: Node3D
 	if index == 0:
 		npc.navigate_to_node(Counter.instance)
-		await npc.nav_agent.navigation_finished
 	else:
 		var base_position: Vector3 = Counter.instance.global_position
 
@@ -37,7 +36,8 @@ func _move_to_queue_position(index: int) -> void:
 
 	await npc.nav_agent.navigation_finished
 	_look_at_counter()
-	queue_position.queue_free()
+	if queue_position != null:
+		queue_position.queue_free()
 
 	if index == 0:
 		transition.emit(npc.brain.get_next_state(self))
@@ -56,3 +56,4 @@ func _look_at_counter() -> void:
 
 func exit() -> void:
 	Game.instance.npc_in_queue_moved.disconnect(_move_in_queue)
+	CashRegister.instance.start_new_order()

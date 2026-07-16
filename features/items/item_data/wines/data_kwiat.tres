@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bn120kxh7rpyj"]
+[gd_resource type="Resource" script_class="ProductData" format=3 uid="uid://bn120kxh7rpyj"]
 
-[ext_resource type="Script" uid="uid://rfypjk406hn7" path="res://features/items/item_data/item_data.gd" id="1_qal6x"]
+[ext_resource type="Script" uid="uid://bjdyvmcp7aon" path="res://features/items/item_data/product_data.gd" id="1_qal6x"]
 
 [resource]
 script = ExtResource("1_qal6x")
+price = 3.5
 name = &"kwiat"
 type = 2
 preview_zoom = -0.4
-metadata/_custom_type_script = "uid://rfypjk406hn7"
+metadata/_custom_type_script = "uid://bjdyvmcp7aon"
