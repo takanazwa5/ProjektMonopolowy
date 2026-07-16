@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="SpawnTrashEvent" format=3 uid="uid://c781mp2nyj18d"]
+
+[ext_resource type="Script" uid="uid://dg4ur7vtnwgtm" path="res://features/level_event/event_definitions/spawn_trash_event.gd" id="1_msjo2"]
+
+[resource]
+script = ExtResource("1_msjo2")
+metadata/_custom_type_script = "uid://dg4ur7vtnwgtm"
