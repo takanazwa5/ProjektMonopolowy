@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://nllfvbeeh8hn" path="res://features/level/level.gd" id="1_5cegx"]
 [ext_resource type="PackedScene" uid="uid://c2klqufu8iang" path="res://features/counter/counter.tscn" id="2_klck8"]
 [ext_resource type="Script" uid="uid://c8vbghjub1kln" path="res://features/level/assets/available_items/available_items.gd" id="2_vk6of"]
+[ext_resource type="PackedScene" uid="uid://dad06ncahlhw5" path="res://features/level_event/level_events_manager.tscn" id="3_pukx6"]
 [ext_resource type="PackedScene" uid="uid://cnw60p50n4kaf" path="res://features/cash_register/cash_register.tscn" id="3_vk6of"]
 [ext_resource type="PackedScene" uid="uid://bfrkhd5j505xi" path="res://features/level/assets/beer_crates/meshes/beer_crates/bobr_crate.gltf" id="4_3vdyf"]
+[ext_resource type="PackedScene" uid="uid://cmdf8awahumc3" path="res://features/level/npc_spawner.tscn" id="4_s5b4y"]
 [ext_resource type="PackedScene" uid="uid://bf60h6vttmjmp" path="res://features/level/assets/furniture/szafka_wielka.tscn" id="5_g4do5"]
 [ext_resource type="PackedScene" uid="uid://b5fjwjemdsw77" path="res://features/level/assets/beer_crates/meshes/beer_crates/boskie_crate.gltf" id="5_leaar"]
 [ext_resource type="PackedScene" uid="uid://cam8fx48wcwee" path="res://features/level/assets/beer_crates/meshes/beer_crates/jp_crate.gltf" id="6_msrsj"]
@@ -107,6 +109,14 @@ item_type_to_destination_map = {
 pickup_at_counter_type_required = Dictionary[int, bool]({
 0: true
 })
+
+[node name="LevelEventsManager" parent="." unique_id=1034128931 instance=ExtResource("3_pukx6")]
+
+[node name="NpcSpawner" parent="." unique_id=314849636 node_paths=PackedStringArray("spawn_point") instance=ExtResource("4_s5b4y")]
+unique_name_in_owner = true
+spawn_point = NodePath("../MainDoor")
+spawn_rotation_offset = Vector3(0, 180, 0)
+spawn_offset = Vector3(0, -0.25, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1955529485]
 environment = SubResource("Environment_l7qvs")

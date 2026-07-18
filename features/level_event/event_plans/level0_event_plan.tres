@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="EventPlan" format=3 uid="uid://bat8emey6d3ub"]
+
+[ext_resource type="Script" uid="uid://de5y1mkdd5cf3" path="res://features/level_event/resources/event_block.gd" id="1_yqb08"]
+[ext_resource type="Script" uid="uid://cbg8waxu5ut4j" path="res://features/level_event/resources/event_entry.gd" id="2_stivl"]
+[ext_resource type="Resource" uid="uid://d1x8iyk3ith7c" path="res://features/level_event/event_data/spawn_basia.tres" id="3_3wibm"]
+[ext_resource type="Resource" uid="uid://cxf6it671kcio" path="res://features/level_event/event_data/spawn_customer.tres" id="4_yqb08"]
+[ext_resource type="Resource" uid="uid://c781mp2nyj18d" path="res://features/level_event/event_data/spawn_trash_event.tres" id="5_yqb08"]
+[ext_resource type="Script" uid="uid://ds16tsbh5mgqt" path="res://features/level_event/resources/event_plan.gd" id="6_m8fye"]
+
+[sub_resource type="Resource" id="Resource_myhs1"]
+script = ExtResource("2_stivl")
+event = ExtResource("3_3wibm")
+delay = 1.0
+metadata/_custom_type_script = "uid://cbg8waxu5ut4j"
+
+[sub_resource type="Resource" id="Resource_kcrox"]
+script = ExtResource("2_stivl")
+event = ExtResource("4_yqb08")
+delay = 3.0
+repeatable = true
+cooldown = 8.0
+number_of_repeats = 3
+metadata/_custom_type_script = "uid://cbg8waxu5ut4j"
+
+[sub_resource type="Resource" id="Resource_s5b4y"]
+script = ExtResource("1_yqb08")
+events = Array[ExtResource("2_stivl")]([SubResource("Resource_myhs1"), SubResource("Resource_kcrox")])
+metadata/_custom_type_script = "uid://de5y1mkdd5cf3"
+
+[sub_resource type="Resource" id="Resource_stivl"]
+script = ExtResource("2_stivl")
+event = ExtResource("5_yqb08")
+repeatable = true
+cooldown = 0.01
+number_of_repeats = 5
+metadata/_custom_type_script = "uid://cbg8waxu5ut4j"
+
+[sub_resource type="Resource" id="Resource_3wibm"]
+script = ExtResource("1_yqb08")
+events = Array[ExtResource("2_stivl")]([SubResource("Resource_stivl")])
+metadata/_custom_type_script = "uid://de5y1mkdd5cf3"
+
+[resource]
+script = ExtResource("6_m8fye")
+event_blocks = Array[ExtResource("1_yqb08")]([SubResource("Resource_s5b4y"), SubResource("Resource_3wibm")])
+metadata/_custom_type_script = "uid://ds16tsbh5mgqt"

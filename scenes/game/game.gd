@@ -52,10 +52,10 @@ func disconnect_level_signals() -> void:
 	player.item_rig.item_exited.disconnect(Level.instance.counter.on_item_exited_rig)
 
 func spawn_basia() -> void:
-	_spawn_npc("uid://civlo6dh6d0kf", Vector3(-1.48, 0.125, 3.42), Vector3(0.0, -180.0, 0.0))
+	Level.instance.npc_spawner.spawn_npc("uid://civlo6dh6d0kf")
 
 func spawn_babcia() -> void:
-	_spawn_npc("uid://cnriyx451qbnt", Vector3(-1.48, 0.125, 3.42), Vector3(0.0, -180.0, 0.0))
+	Level.instance.npc_spawner.spawn_npc("uid://cnriyx451qbnt")
 
 func change_window_mode() -> void:
 	var window: Window = get_window()
@@ -78,13 +78,6 @@ func _on_level_unload_started(_level: Level) -> void:
 
 func _on_level_loaded(_level: Level) -> void:
 	connect_level_signals()
-
-func _spawn_npc(resource_id: String, position: Vector3, rotation_degrees: Vector3) -> void:
-	var npc_scene: PackedScene = load(resource_id)
-	var npc: NPC = npc_scene.instantiate()
-	npcs.add_child(npc)
-	npc.position = position
-	npc.rotation_degrees = rotation_degrees
 
 class NPCQueue:
 	var head: QueuedNPC

@@ -1,15 +1,17 @@
-[gd_scene load_steps=20 format=3 uid="uid://bnchhoowjled2"]
+[gd_scene format=3 uid="uid://bnchhoowjled2"]
 
 [ext_resource type="Script" uid="uid://ck2xha2c0x33n" path="res://features/npc/shared/npc.gd" id="1_b47pd"]
 [ext_resource type="PackedScene" uid="uid://cgm4gq44455ix" path="res://features/npc/Babcia2/meshes/character_babcia2.glb" id="2_27gm4"]
 [ext_resource type="AnimationLibrary" uid="uid://bdh170ip7kmc8" path="res://features/npc/shared/Rig.glb" id="3_fp7vc"]
 [ext_resource type="Script" uid="uid://de1lalif7l760" path="res://features/state_machine/state_machine.gd" id="4_bgaiv"]
+[ext_resource type="Script" uid="uid://hdtv4grs8ppu" path="res://features/npc/shared/brains/customer_brain.gd" id="4_mdjk3"]
 [ext_resource type="Script" uid="uid://dwi10emqduq6r" path="res://features/npc/shared/states/entering_store_state.gd" id="5_lojlh"]
 [ext_resource type="Script" uid="uid://bgodwf3y0m1ey" path="res://features/npc/shared/states/waiting_for_product_state.gd" id="6_rsu1t"]
-[ext_resource type="Script" uid="uid://uuvn1btdq2f4" path="res://features/npc/shared/states/getting_product_state.gd" id="7_a0rgu"]
 [ext_resource type="Script" uid="uid://cxwj4xkryi0sb" path="res://features/npc/shared/states/paying_state.gd" id="8_n3q7x"]
 [ext_resource type="Script" uid="uid://y8uymo1mwu2j" path="res://features/npc/shared/states/packing_state.gd" id="9_l1ujy"]
 [ext_resource type="Script" uid="uid://j2c8p210clnr" path="res://features/npc/shared/states/exiting_store_state.gd" id="10_74j2j"]
+[ext_resource type="Script" uid="uid://bvy8dv8yf6kir" path="res://features/npc/shared/states/standing_in_queue_state.gd" id="11_mdjk3"]
+[ext_resource type="PackedScene" uid="uid://lluh4pryxyhh" path="res://features/npc/shared/inventory/inventory.tscn" id="12_1e7tb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wmxm7"]
 radius = 0.3
@@ -34,8 +36,10 @@ animation = &"Rig/Walk_Base"
 [sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_xgun3"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_qlnrj")
 blend_point_0/pos = 0.0
+blend_point_0/name = &"0"
 blend_point_1/node = SubResource("AnimationNodeAnimation_xcwia")
 blend_point_1/pos = 1.0
+blend_point_1/name = &"1"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vssg2"]
 nodes/output/position = Vector2(540, 140)
@@ -51,7 +55,7 @@ nodes/walk_blend/node = SubResource("AnimationNodeBlendSpace1D_xgun3")
 nodes/walk_blend/position = Vector2(-120, 40)
 node_connections = [&"output", 0, &"pick_up", &"pick_up", 0, &"put_down", &"pick_up", 1, &"Animation 2", &"put_down", 0, &"walk_blend", &"put_down", 1, &"Animation"]
 
-[node name="Babcia2" type="CharacterBody3D"]
+[node name="Babcia2" type="CharacterBody3D" unique_id=1698927072]
 collision_layer = 8
 axis_lock_angular_x = true
 axis_lock_angular_z = true
@@ -59,13 +63,13 @@ script = ExtResource("1_b47pd")
 metadata/can_interact = false
 metadata/reticle_tooltip = "Basia"
 
-[node name="character_babcia2" parent="." instance=ExtResource("2_27gm4")]
+[node name="character_babcia2" parent="." unique_id=695956495 instance=ExtResource("2_27gm4")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1235173156]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CapsuleShape3D_wmxm7")
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=198097321]
 unique_name_in_owner = true
 path_desired_distance = 0.25
 target_desired_distance = 0.1
@@ -73,14 +77,12 @@ height = 2.0
 radius = 0.3
 debug_enabled = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=883874306]
 unique_name_in_owner = true
 root_node = NodePath("../character_babcia2")
-libraries = {
-&"Rig": ExtResource("3_fp7vc")
-}
+libraries/Rig = ExtResource("3_fp7vc")
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1278740892]
 unique_name_in_owner = true
 root_node = NodePath("%AnimationTree/../character_babcia2")
 tree_root = SubResource("AnimationNodeBlendTree_vssg2")
@@ -93,44 +95,51 @@ parameters/put_down/internal_active = false
 parameters/put_down/request = 0
 parameters/walk_blend/blend_position = 0.0
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+[node name="Brain" type="Node" parent="." unique_id=696813260]
+unique_name_in_owner = true
+script = ExtResource("4_mdjk3")
+
+[node name="StateMachine" type="Node" parent="." unique_id=33773739 node_paths=PackedStringArray("initial_state")]
 unique_name_in_owner = true
 script = ExtResource("4_bgaiv")
 initial_state = NodePath("EnteringStoreState")
 metadata/_custom_type_script = "uid://de1lalif7l760"
 
-[node name="EnteringStoreState" type="Node" parent="StateMachine"]
+[node name="EnteringStoreState" type="Node" parent="StateMachine" unique_id=729166959]
+unique_name_in_owner = true
 script = ExtResource("5_lojlh")
 metadata/_custom_type_script = "uid://dcedhanl8gfas"
 
-[node name="WaitingForProductState" type="Node" parent="StateMachine"]
+[node name="WaitingForProductState" type="Node" parent="StateMachine" unique_id=814411989]
 unique_name_in_owner = true
 script = ExtResource("6_rsu1t")
 metadata/_custom_type_script = "uid://dcedhanl8gfas"
 
-[node name="GettingProductState" type="Node" parent="StateMachine"]
-unique_name_in_owner = true
-script = ExtResource("7_a0rgu")
-metadata/_custom_type_script = "uid://dcedhanl8gfas"
-
-[node name="PayingState" type="Node" parent="StateMachine"]
+[node name="PayingState" type="Node" parent="StateMachine" unique_id=1729789269]
 unique_name_in_owner = true
 script = ExtResource("8_n3q7x")
 metadata/_custom_type_script = "uid://q0lk35d56y2e"
 
-[node name="PackingState" type="Node" parent="StateMachine"]
+[node name="PackingState" type="Node" parent="StateMachine" unique_id=187965206]
 unique_name_in_owner = true
 script = ExtResource("9_l1ujy")
 metadata/_custom_type_script = "uid://q0lk35d56y2e"
 
-[node name="ExitingStoreState" type="Node" parent="StateMachine"]
+[node name="ExitingStoreState" type="Node" parent="StateMachine" unique_id=2115585854]
 unique_name_in_owner = true
 script = ExtResource("10_74j2j")
 metadata/_custom_type_script = "uid://q0lk35d56y2e"
 
-[node name="StateLabel" type="Label3D" parent="."]
+[node name="StandingInQueueState" type="Node" parent="StateMachine" unique_id=626067238]
+unique_name_in_owner = true
+script = ExtResource("11_mdjk3")
+
+[node name="StateLabel" type="Label3D" parent="." unique_id=1014931768]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86561, 0)
 billboard = 2
 font_size = 16
 outline_size = 6
+
+[node name="Inventory" parent="." unique_id=708751401 instance=ExtResource("12_1e7tb")]
+unique_name_in_owner = true
