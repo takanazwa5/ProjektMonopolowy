@@ -57,7 +57,7 @@ func _load_level(level_data: LevelData) -> void:
 		current_level_data = null
 		level_load_failed.emit(level_data.level_scene, ERR_SCRIPT_FAILED)
 		return
-	
+
 	level_loaded.emit(level_instance)
 
 func _unload_previous_level() -> void:

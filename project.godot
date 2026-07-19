@@ -24,6 +24,8 @@ config/icon="res://icon.svg"
 DebugPanel="*res://autoload/debug_panel/debug_panel.tscn"
 DebugMenu="*res://autoload/debug_menu/debug_menu.tscn"
 LevelManager="*uid://dwljhuc7iua31"
+DialogueManager="*uid://b4xraj610jovv"
+NPCManager="*uid://05oskj7eabma"
 
 [debug]
 
