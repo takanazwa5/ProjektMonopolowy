@@ -7,7 +7,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
 size = Vector3(0.16235352, 0.22828507, 0.1875)
 
-[node name="WinoDobreto" type="RigidBody3D" unique_id=642046256 groups=["items"]]
+[node name="JarBuraczki" type="RigidBody3D" unique_id=642046256 groups=["items"]]
 collision_layer = 4
 collision_mask = 5
 freeze = true

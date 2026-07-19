@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0ib7ahqe1bfm"
-path.s3tc="res://.godot/imported/jars_Roughness.png-ed7347c744b9c400c83381985d00edf8.s3tc.ctex"
+uid="uid://badpg8fc7gq1n"
+path.s3tc="res://.godot/imported/tex_piwo_base_color.jpg-6d90bb9e26e333b99447aa98a01438f4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://features/items/jars/textures/jars_Roughness.png"
-dest_files=["res://.godot/imported/jars_Roughness.png-ed7347c744b9c400c83381985d00edf8.s3tc.ctex"]
+source_file="res://features/items/beer/textures/tex_piwo_base_color.jpg"
+dest_files=["res://.godot/imported/tex_piwo_base_color.jpg-6d90bb9e26e333b99447aa98a01438f4.s3tc.ctex"]
 
 [params]
 
