@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://lt5ogri6jpxt"]
+
+[ext_resource type="Texture2D" uid="uid://badpg8fc7gq1n" path="res://features/items/beer/textures/tex_piwo_base_color.jpg" id="1_so7ar"]
+[ext_resource type="Texture2D" uid="uid://cgs7ogvic5k8d" path="res://features/items/beer/textures/tex_piwo_roughness.jpg" id="2_qfndj"]
+
+[resource]
+resource_name = "Material"
+albedo_texture = ExtResource("1_so7ar")
+roughness_texture = ExtResource("2_qfndj")
+roughness_texture_channel = 4

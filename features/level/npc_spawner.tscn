@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cmdf8awahumc3"]
+
+[ext_resource type="Script" uid="uid://dppob3b3k3h8k" path="res://features/level/npc_spawner.gd" id="1_hwwpc"]
+
+[node name="NpcSpawner" type="Node" unique_id=314849636]
+script = ExtResource("1_hwwpc")
+metadata/_custom_type_script = "uid://dppob3b3k3h8k"

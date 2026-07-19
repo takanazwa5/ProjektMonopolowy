@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgs7ogvic5k8d"
-path.s3tc="res://.godot/imported/piwo_roughness_256.jpg-31f3cb13f95682ba890081cc520f5cd7.s3tc.ctex"
+uid="uid://brtand8imn0mt"
+path.s3tc="res://.godot/imported/tex_alko_importowane_Roughness.png-5420dece167c3c336343f80a6516c72c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://features/items/beer/textures/piwo_roughness_256.jpg"
-dest_files=["res://.godot/imported/piwo_roughness_256.jpg-31f3cb13f95682ba890081cc520f5cd7.s3tc.ctex"]
+source_file="res://features/items/foreign_alcohols/textures/tex_alko_importowane_Roughness.png"
+dest_files=["res://.godot/imported/tex_alko_importowane_Roughness.png-5420dece167c3c336343f80a6516c72c.s3tc.ctex"]
 
 [params]
 

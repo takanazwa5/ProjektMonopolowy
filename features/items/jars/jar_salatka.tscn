@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bdcy8ro2j6kb3"]
+
+[ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_g0c8b"]
+[ext_resource type="Resource" uid="uid://dm48vl6n3re8n" path="res://features/items/item_data/wines/data_dobreto.tres" id="2_g3j83"]
+[ext_resource type="PackedScene" uid="uid://bli6wlr1mi2oi" path="res://features/items/jars/meshes/jar_salatka.glb" id="3_eqynt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
+size = Vector3(0.16235352, 0.22827828, 0.1875)
+
+[node name="JarSalatka" type="RigidBody3D" unique_id=642046256 groups=["items"]]
+collision_layer = 4
+collision_mask = 5
+freeze = true
+script = ExtResource("1_g0c8b")
+data = ExtResource("2_g3j83")
+metadata/can_interact = true
+metadata/reticle_tooltip = "Dobreto"
+
+[node name="jar_salatka" parent="." unique_id=610219145 instance=ExtResource("3_eqynt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=278508955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02508834, 0)
+shape = SubResource("BoxShape3D_af87y")
+
+[node name="BottomMarker" type="Marker3D" parent="." unique_id=198277209]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13998117, 0)

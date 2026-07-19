@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cdce6qbbbvhte"]
+
+[ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_ybnf6"]
+[ext_resource type="Resource" uid="uid://dm48vl6n3re8n" path="res://features/items/item_data/wines/data_dobreto.tres" id="2_5ac42"]
+[ext_resource type="PackedScene" uid="uid://c82xjhxpvq4uk" path="res://features/items/foreign_alcohols/meshes/g_gin_suchy.glb" id="3_kj6xg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
+size = Vector3(0.08691406, 0.37061226, 0.103515625)
+
+[node name="GinSuchy" type="RigidBody3D" unique_id=642046256 groups=["items"]]
+collision_layer = 4
+collision_mask = 5
+freeze = true
+script = ExtResource("1_ybnf6")
+data = ExtResource("2_5ac42")
+metadata/can_interact = true
+metadata/reticle_tooltip = "Dobreto"
+
+[node name="g_gin_suchy" parent="." unique_id=768320045 instance=ExtResource("3_kj6xg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=278508955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.045122087, 0)
+shape = SubResource("BoxShape3D_af87y")
+
+[node name="BottomMarker" type="Marker3D" parent="." unique_id=198277209]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13998117, 0)

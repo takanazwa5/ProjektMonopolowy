@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btomuxiewgsbb"
-path.s3tc="res://.godot/imported/wina_Base_color.png-7b0064096985af74c4183fa6d31dafef.s3tc.ctex"
+uid="uid://b0ib7ahqe1bfm"
+path.s3tc="res://.godot/imported/tex_jars_Roughness.png-17f644370c40d5612f25dbe7c275765e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://features/items/wine/textures/wina_Base_color.png"
-dest_files=["res://.godot/imported/wina_Base_color.png-7b0064096985af74c4183fa6d31dafef.s3tc.ctex"]
+source_file="res://features/items/jars/textures/tex_jars_Roughness.png"
+dest_files=["res://.godot/imported/tex_jars_Roughness.png-17f644370c40d5612f25dbe7c275765e.s3tc.ctex"]
 
 [params]
 

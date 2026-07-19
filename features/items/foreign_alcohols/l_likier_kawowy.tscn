@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bc4tfum03xjpf"]
+
+[ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_65xrx"]
+[ext_resource type="Resource" uid="uid://dm48vl6n3re8n" path="res://features/items/item_data/wines/data_dobreto.tres" id="2_dju43"]
+[ext_resource type="PackedScene" uid="uid://cstan7d32euy6" path="res://features/items/foreign_alcohols/meshes/l_likier_kawowy.glb" id="3_jo5i5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
+size = Vector3(0.092041016, 0.37005785, 0.10546875)
+
+[node name="LikierKawowy" type="RigidBody3D" unique_id=642046256 groups=["items"]]
+collision_layer = 4
+collision_mask = 5
+freeze = true
+script = ExtResource("1_65xrx")
+data = ExtResource("2_dju43")
+metadata/can_interact = true
+metadata/reticle_tooltip = "Dobreto"
+
+[node name="l_likier_kawowy" parent="." unique_id=6646950 instance=ExtResource("3_jo5i5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=278508955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04484488, 0)
+shape = SubResource("BoxShape3D_af87y")
+
+[node name="BottomMarker" type="Marker3D" parent="." unique_id=198277209]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13998117, 0)

@@ -10,7 +10,7 @@ const WALKING_SPEED: float = 1.5
 
 
 var dialogue_line: String
-var wanted_products: Array[StringName]
+var wanted_products: Array[StringName] = []
 var _target_node: Node3D
 var _navigation_interrupted: bool = false
 

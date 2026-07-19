@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch8rcim0vfaq0"
-path.s3tc="res://.godot/imported/wina_Roughness.png-9b5aa07316e703fed67e88d70308c76b.s3tc.ctex"
+path.s3tc="res://.godot/imported/tex_wina_Roughness.png-23ea7bed68ccfe4543bf7ea5cbadedda.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://features/items/wine/textures/wina_Roughness.png"
-dest_files=["res://.godot/imported/wina_Roughness.png-9b5aa07316e703fed67e88d70308c76b.s3tc.ctex"]
+source_file="res://features/items/wine/textures/tex_wina_Roughness.png"
+dest_files=["res://.godot/imported/tex_wina_Roughness.png-23ea7bed68ccfe4543bf7ea5cbadedda.s3tc.ctex"]
 
 [params]
 

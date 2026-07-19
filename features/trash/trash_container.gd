@@ -1,3 +1,4 @@
+class_name TrashContainer
 extends Node3D
 
 signal trash_spawned(trash: Trash)
@@ -64,6 +65,7 @@ func spawn_trash(count: int) -> void:
 
 		add_child(trash_instance)
 		trash_instance.global_position = random_point + Vector3.DOWN * self.spawn_height_offset
+		trash_instance.rotation_degrees = Vector3(0, randf_range(0, 360), 0)
 		var key: Vector2 = Vector2(random_point.x, random_point.z)
 		trash_registry[key] = true
 
