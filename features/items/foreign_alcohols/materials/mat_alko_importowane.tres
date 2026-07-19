@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cyivs2xf5b8f0"]
+
+[ext_resource type="Texture2D" uid="uid://27bw4p1tqlg" path="res://features/items/foreign_alcohols/textures/tex_alko_importowane_Base_color.png" id="1_b4g0p"]
+[ext_resource type="Texture2D" uid="uid://brtand8imn0mt" path="res://features/items/foreign_alcohols/textures/tex_alko_importowane_Roughness.png" id="2_ynjw8"]
+
+[resource]
+resource_name = "mat_alko_mocne"
+albedo_texture = ExtResource("1_b4g0p")
+roughness_texture = ExtResource("2_ynjw8")
+roughness_texture_channel = 4

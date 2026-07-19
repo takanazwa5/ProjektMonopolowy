@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c1xfld5u8eik8"]
+
+[ext_resource type="Script" uid="uid://d15v28iqbs55f" path="res://features/items/item.gd" id="1_d4w3i"]
+[ext_resource type="Resource" uid="uid://dm48vl6n3re8n" path="res://features/items/item_data/wines/data_dobreto.tres" id="2_3egae"]
+[ext_resource type="PackedScene" uid="uid://bgx6gd4ukwpje" path="res://features/items/foreign_alcohols/meshes/w_whisky_lojalne.glb" id="3_la6yf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_af87y"]
+size = Vector3(0.08984375, 0.3700009, 0.10449219)
+
+[node name="WhiskyLojalne" type="RigidBody3D" unique_id=642046256 groups=["items"]]
+collision_layer = 4
+collision_mask = 5
+freeze = true
+script = ExtResource("1_d4w3i")
+data = ExtResource("2_3egae")
+metadata/can_interact = true
+metadata/reticle_tooltip = "Dobreto"
+
+[node name="w_whisky_lojalne" parent="." unique_id=760981048 instance=ExtResource("3_la6yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=278508955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.044816405, 0)
+shape = SubResource("BoxShape3D_af87y")
+
+[node name="BottomMarker" type="Marker3D" parent="." unique_id=198277209]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13998117, 0)
